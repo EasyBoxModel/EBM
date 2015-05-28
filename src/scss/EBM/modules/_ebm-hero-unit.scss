@@ -1,19 +1,20 @@
 /* 
 	Hero unit
 */
+$hero-unit-height-control: 490px;
 .hero-unit {
 	@include bg-img-control;
-	height: $video-bg-height;
+	height: $hero-unit-height-control;
 	position: relative;
 	overflow: hidden;
 	&.video-bg {
 		overflow: hidden;
-		height: $video-bg-height;
+		height: $hero-unit-height-control;
 	}
 	.overlay,
 	.hero-unit-pic {
 		@include position(absolute, 0 0 0 0);
-		height: $video-bg-height;
+		height: $hero-unit-height-control;
 	}
 	.hero-unit-pic {
 		img {

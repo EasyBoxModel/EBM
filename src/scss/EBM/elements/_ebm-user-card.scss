@@ -2,6 +2,8 @@
 	EBM:Ref
 	User cards
 */
+$user-card-height: 42px; // User cards
+$user-card-width: 70px;
 .user-card {
 	@include normalize-text;
 	@include flex-row;

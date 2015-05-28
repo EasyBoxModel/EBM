@@ -1,16 +1,21 @@
+/*
+	Dashboard wrapper
+*/
+$site-menu-width-control: 101px; // Site menu
+$menu-list-icons-width: 35px;
 header {
 	height: $header-height-control;
 	border-bottom: 1px solid $gray-lighter;
 	@include flex-space-between;
 	@include normalize-text;
-	.left,
-	.center,
-	.right {
+	.header-left,
+	.header-center,
+	.header-right {
 		@include flex-middle-center;
 	}
-	.left {}
-	.center {}
-	.right {}
+	.header-left {}
+	.header-center {}
+	.header-right {}
 }
 
 .site-wrapper {

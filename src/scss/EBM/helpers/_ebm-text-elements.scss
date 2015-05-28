@@ -1,0 +1,8 @@
+// Text elements mixin
+@mixin text-elements {
+  #{$headings-list},
+  #{$headings-class-list},
+  #{$text-responsive-elements-list} {
+    @content;
+  }
+}

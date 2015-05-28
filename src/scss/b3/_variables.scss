@@ -134,6 +134,37 @@ $text-elements-list:
   "strong",
   "li";
 
+// EBM:REF
+$headings-list: 
+  "h1",
+  "h2",
+  "h3",
+  "h4",
+  "h5",
+  "h6";
+
+// EBM:REF
+$headings-class-list:
+  ".h1",
+  ".h2",
+  ".h3",
+  ".h4",
+  ".h5",
+  ".h6";
+
+// EBM:REF
+$text-responsive-elements-list: 
+  "p", ".p",
+  "span",
+  "em",
+  "strong",
+  "label",
+  "a",
+  "i",
+  "ul",
+  "ol",
+  "li";
+
 
 //== Scaffolding
 //
@@ -172,6 +203,15 @@ $font-size-h3:            ceil(($font-size-base * 1.7)) !default; // ~24px
 $font-size-h4:            ceil(($font-size-base * 1.25)) !default; // ~18px
 $font-size-h5:            $font-size-base !default;
 $font-size-h6:            ceil(($font-size-base * 0.85)) !default; // ~12px
+
+// EBM:REF
+$font-size-list: 
+  $font-size-h1,
+  $font-size-h2,
+  $font-size-h3,
+  $font-size-h4,
+  $font-size-h5,
+  $font-size-h6;
 
 //** Unit-less `line-height` for use in components like buttons.
 $line-height-base:        1.428571429 !default; // 20/14

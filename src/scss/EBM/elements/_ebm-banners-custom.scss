@@ -2,6 +2,7 @@
 /* I created a global sufix var in _settings.scss to experiment with HTML5 elements. 
 	See its use on the experimental.html file.
  */
+$banner-height: 350px; // Banners
 #{$global-sufix}banner,
 .banner {
 	@include clearfix;

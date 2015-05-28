@@ -51,52 +51,8 @@ $line-height-sm-only: 1.2;
 $text-in-rems-xs-only: 3;
 $line-height-xs-only: 1.1;
 
-$font-size-list: 
-  $font-size-h1,
-  $font-size-h2,
-  $font-size-h3,
-  $font-size-h4,
-  $font-size-h5,
-  $font-size-h6;
-
-$headings-list: 
-  "h1",
-  "h2",
-  "h3",
-  "h4",
-  "h5",
-  "h6";
-
-$headings-class-list:
-  ".h1",
-  ".h2",
-  ".h3",
-  ".h4",
-  ".h5",
-  ".h6";
-
-$text-elements-list: 
-  "p", ".p",
-  "span",
-  "em",
-  "strong",
-  "label",
-  "a",
-  "i",
-  "ul",
-  "ol",
-  "li";
-
-@mixin text-elements {
-  #{$headings-list},
-  #{$headings-class-list},
-  #{$text-elements-list} {
-    @content;
-  }
-}
-
 // LEAD TEXT ELEMENTS
-#{$text-elements-list} {
+#{$text-responsive-elements-list} {
   &.lead {
     font-size: $font-size-base + $text-in-rems-md-up ;
     font-size: rem($font-size-base + $text-in-rems-md-up) ;
@@ -118,7 +74,7 @@ $text-elements-list:
   }
 }
 .lead-ch {
-  #{$text-elements-list} {
+  #{$text-responsive-elements-list} {
     font-size: $font-size-base + $text-in-rems-md-up ;
     font-size: rem($font-size-base + $text-in-rems-md-up) ;
     line-height: $line-height-md-up;
@@ -250,8 +206,8 @@ $text-elements-list:
 // }
 
 // // TEXT IN REMS
-// @for $i from 1 through length($text-elements-list) {
-//   #{nth($text-elements-list, $i)} {
+// @for $i from 1 through length($text-responsive-elements-list) {
+//   #{nth($text-responsive-elements-list, $i)} {
 //     font-size: $font-size-base;
 //     font-size: rem($font-size-base);
 //   }

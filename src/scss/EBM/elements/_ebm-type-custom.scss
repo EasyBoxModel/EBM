@@ -18,13 +18,6 @@ a {
 // }
 
 // REMOVE DEFAULT MARGINS MIXIN
-@mixin normalize-text {
-  #{$headings-list}, 
-  #{$headings-class-list},
-  #{$text-elements-list} {
-    margin: 0;
-  }
-}
 .normalize-text {
   @include normalize-text;
 }

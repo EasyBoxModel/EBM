@@ -1,4 +1,5 @@
 // VIDEOCOVER
+$video-bg-height: 490px; // Hero Unit and Videocover
 .videocover {
 	@include position(absolute, null 0 0 null);	
 	min-width: 100%;

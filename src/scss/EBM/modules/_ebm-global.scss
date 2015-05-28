@@ -1,14 +1,6 @@
-// SIZE CONTROL VARS
-$size-control-placeholder: 530px;
-$banner-height: 350px; // Banners
-$site-menu-width-control: 101px; // Site menu
-$menu-list-icons-width: 35px;
-$header-height-control: 70px; // Header
-$mobile-navbar-height: 56px; // Mobile header
-$video-bg-height: 490px; // Hero Unit and Videocover
-$user-card-height: 42px; // User cards
-$user-card-width: 70px;
-
+/*
+	EBM Global styles
+*/
 html,
 body {
 	background-color: $body-bg;	
@@ -21,3 +13,21 @@ body {
 .site-content {
 	position: relative;
 }
+
+/*
+	Media queries
+*/
+$xl-desktop: 1500px;
+$xxl-desktop: 1980px;
+@media #{$xs-only} {}
+@media #{$sm-only} {}
+@media #{$md-only} {}
+@media #{$lg-only} {}
+@media #{$sm-down} {}
+@media #{$md-down} {}
+@media #{$lg-down} {}
+@media #{$sm-up} {}
+@media #{$md-up} {}
+@media #{$lg-up} {}
+@media only screen and (min-width: $xl-desktop) {}
+@media only screen and (min-width: $xxl-desktop) {}
