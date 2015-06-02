@@ -75,3 +75,23 @@
     }
   }
 }
+
+// CHildren elements
+@for $i from 0 through 10 {
+  @for $j from 1 through length($box-model-sides) {
+    .#{nth($box-model-ch-abbr-percentage, $j)}-#{$i*$times} {
+      #{$children-elements} {
+        #{nth($box-model-sides, $j)}: percentage(($i*($times/100))) #{$importantize};
+      }
+    }
+    @for $k from 1 through length($breakpoints-sufix-list) {
+      @media #{nth($media-control-list, $k)} {
+        .#{nth($box-model-ch-abbr-percentage, $j)}-#{$i*$times}-#{nth($breakpoints-sufix-list, $k)} {
+          #{$children-elements} {
+            #{nth($box-model-sides, $j)}: percentage(($i*($times/100))) #{$importantize};
+          }
+        }
+      }
+    }
+  }
+}
