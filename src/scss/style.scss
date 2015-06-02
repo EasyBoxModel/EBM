@@ -1,48 +1,29 @@
 @charset "UTF-8";
 /*
-  Easy Box Model Import
-  Last update: 14.05.15
+  Easy Box Model Imports
+  Last update: 01.06.15
   Author: @MadeByGus - G. Andres Ibarra yo@soygus.com
-
+	
+	Optional without Grunt:
   sass --watch style.scss:style.css
   sass --watch style.scss:style.css -t compressed
 */
-@import "b3/b3";
+@import "b3/variables";
+@import "b3/mixins";
 @import "bourbon/bourbon";
-@import "EBM/ebm-variables";
+
+// EBM Setup
+@import "EBM/setup/ebm-variables";
+@import "EBM/setup/ebm-fonts-setup";
 @import "EBM/ebm-dist";
 // @import "EBM/ebm-full";
+
+// The global custom styles file
+@import "EBM/ebm-global";
+
+// EBM Control
+@import "EBM/control/ebm-ie-control";
+// @import "EBM/control/ebm-size-control";
+
+// Third party:
 // @import "animate/animate-init";
-
-/*
-	App custom
-*/
-// GLOBAL STYLES DEFINITION
-@import "EBM/elements/ebm-fonts-custom";
-@import "EBM/elements/ebm-text-responsive";
-@import "EBM/elements/ebm-type-custom";
-@import "EBM/modules/ebm-global";
-
-// APP Includes
-@import "EBM/elements/ebm-buttons-custom";
-// @import "EBM/elements/ebm-icons";
-// @import "EBM/elements/ebm-button-icons";
-// @import "EBM/elements/ebm-banners-custom";
-// @import "EBM/elements/ebm-forms-custom";
-// @import "EBM/elements/ebm-forms-multiuser";
-// @import "EBM/elements/ebm-user-card";
-// @import "EBM/elements/ebm-panels-custom";
-
-// APP Modules
-@import "EBM/modules/ebm-ie-control";
-// @import "EBM/modules/ebm-header";
-// @import "EBM/modules/ebm-footer";
-// @import "EBM/modules/ebm-size-control";
-// @import "EBM/modules/ebm-videocover";
-// @import "EBM/modules/ebm-scrollto-auto-anchors";
-// @import "EBM/modules/ebm-dashboard-wrapper";
-// @import "EBM/modules/ebm-mobile-menu";
-// @import "EBM/modules/ebm-section-scroll";
-// @import "EBM/modules/ebm-style-guide";
-// @import "EBM/modules/ebm-bg-gallery";
-// @import "EBM/modules/ebm-hero-unit";

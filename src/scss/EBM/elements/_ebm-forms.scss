@@ -43,26 +43,5 @@ $input-type-list:
   text-overflow: "";
   &.input-lg {
     line-height: 28px;
-    // background: white url(/img/arrow-down.svg) no-repeat 98%;
   }
-}
-
-form {
-	label {
-		color: white;
-		text-transform: uppercase;
-		font-size: $font-size-h5;
-		@include light;
-	}
-	@for $i from 1 through length($input-type-list) {
-		input[type="#{nth($input-type-list, $i)}"] {
-			background-color: transparent;
-			border: 2px solid white;
-		}
-	}
-	select {}
-	textarea.form-control {
-		background-color: transparent;
-		border: 2px solid white;
-	}
 }

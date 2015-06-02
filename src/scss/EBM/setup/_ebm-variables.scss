@@ -1,0 +1,185 @@
+/*
+	EBM Variables
+*/
+
+//== Colors
+//
+//## Gray, brand and blue scale colors for use across EBM.
+$blue-base: #3A4959;
+
+$blue-darker:            lighten($blue-base, 0%) !default; // #222
+$blue-dark:              lighten($blue-base, 21%) !default;   // #333
+$blue:                   lighten($blue-base, 35%) !default; // #555
+$blue-light:             lighten($blue-base, 63%) !default;   // #999
+$blue-lighter:           lighten($blue-base, 70%) !default; // #eee
+
+// EBM:REF
+$brand-inverse: 				#081A26 !default;
+
+// EBM:REF
+// SOCIAL COLORS
+$color-facebook: 		#3B5998 !default;
+$color-twitter: 		#34CCFE !default;
+$color-pinterest: 	#D02420 !default;
+$color-google-plus: #DC4335 !default;
+$color-linkedin: 		#1C87BD !default;
+$color-youtube: 		#F23030 !default;
+$color-instagram: 	#4187FB !default;
+
+// COLOR LISTS
+// EBM:REF
+$grayscale-list: 
+	$gray-darker, 
+	$gray-dark, 
+	$gray, 
+	$gray-light, 
+	$gray-lighter, 
+	#fff;
+
+$brand-colors-list: 
+	$brand-primary, 
+	$brand-success, 
+	$brand-info, 
+	$brand-warning, 
+	$brand-danger, 
+	$blue-darker, 
+	$blue-dark, 
+	$blue, 
+	$blue-light, 
+	$blue-lighter;
+
+$social-colors-list: 
+	$color-facebook,
+	$color-twitter, 	
+	$color-pinterest, 
+	$color-google-plus,
+	$color-youtube,
+	$color-instagram,
+	$color-linkedin; 	
+
+// COLOR SUFIX's
+// EBM:REF
+$grayscale-sufix-list: 
+	'gray-darker', 
+	'gray-dark', 
+	'gray', 
+	'gray-light', 
+	'gray-lighter', 
+	'white';
+
+$brand-colors-sufix-list: 
+	'primary', 
+	'success', 
+	'info', 
+	'warning', 
+	'danger',
+	'blue-darker', 
+	'blue-dark', 
+	'blue', 
+	'blue-light', 
+	'blue-lighter';
+
+$social-colors-sufix-list: 
+	'facebook',
+	'twitter',	
+	'pinterest',
+	'google-plus',
+	'youtube',
+	'instagram',
+	'linkedin';
+
+// EBM:REF
+$breakpoints-sufix-list:  
+	'xs', 
+	'sm', 
+	'md', 
+	'lg';
+
+// EBM:REF
+$sizes-list:
+	"xs",
+	"sm",
+	"lg",
+	"xl";
+
+// EBM:REF
+$text-elements-list: 
+  "h1",
+  "h2",
+  "h3",
+  "h4",
+  "h5",
+  "h6",
+  "p",
+  "span",
+  "a",
+  "em",
+  "i",
+  "strong",
+  "li";
+
+// EBM:REF
+$headings-list: 
+  "h1",
+  "h2",
+  "h3",
+  "h4",
+  "h5",
+  "h6";
+
+// EBM:REF
+$headings-class-list:
+  ".h1",
+  ".h2",
+  ".h3",
+  ".h4",
+  ".h5",
+  ".h6";
+
+// EBM:REF
+$text-responsive-elements-list: 
+  "p", ".p",
+  "span",
+  "em",
+  "strong",
+  "label",
+  "a",
+  "i",
+  "ul",
+  "ol",
+  "li";
+
+// Set the global measure (range: 1 - 9)
+$times: 7; 
+
+// Define the em-base for rems to px conversion
+$px-to-rems: true;    // True if you want them on rems 
+$em-base: 14px; 
+
+// Include EBM in "%" units?
+$percentage: false;
+
+// Include and determine border radius:
+$rounded-borders: true;  // If no bootstrap
+
+// Include and determine box shadows:
+$box-shadows: true;
+$x-axis: 0px;
+$y-axis: 3px;
+$blur: 3px;
+$size: 0px;
+$color: #313233;
+$alpha: 0.15;
+
+// Global sufix
+$global-sufix: 							"ebm-" !default;
+
+// Add !important value to all EBM : Experimental, look on _type-custom.scss for usage
+$importantize: 							"!important" 		!default;
+
+// ALT FONT for FONTS_CUSTOM
+$font-family-alt:         "alt-name", $font-family-sans-serif;
+
+// CUSTOM CONTAINER VARIABLE
+$container-xs: 								((480px + $grid-gutter-width)) !default;
+$container-fluid: 						 $grid-gutter-width / 2;

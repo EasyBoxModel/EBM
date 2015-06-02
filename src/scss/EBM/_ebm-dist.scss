@@ -1,4 +1,4 @@
-@import "ebm-variables";
+@import "setup/ebm-variables";
 
 @import 
   "helpers/ebm-times-range",
@@ -14,6 +14,6 @@
   "helpers/ebm-text-elements",
   "helpers/ebm-normalize-text",
   
-  "ebm-box-shadow",
-  "ebm-bg-img-control",
-  "ebm-flexbox";
+  "control/ebm-bg-img-control",
+  "control/ebm-box-shadow-control",
+  "control/ebm-flexbox-control";

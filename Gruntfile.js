@@ -432,9 +432,9 @@ module.exports = function (grunt) {
     // 'concat:dev',
     // 'responsive_images:dev',
     // 'responsive_images_extender:dev',
-    'connect:livereload',
-    'uglify',
-    'open',
+    // 'connect:livereload',
+    // 'uglify',
+    // 'open',
     'watch'
   ]);
 

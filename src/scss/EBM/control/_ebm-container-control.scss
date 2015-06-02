@@ -1,6 +1,10 @@
 /*
 	Containers-custom
 */
+.container-fluid {
+	width: 100%;
+}
+
 @media #{$sm-up} {
 	.container-xs,
 	.container-sm,

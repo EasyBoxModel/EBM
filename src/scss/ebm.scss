@@ -7,6 +7,6 @@
 	sass --watch ebm.scss:ebm.css
   sass --watch ebm.scss:ebm.css -t compressed
 */
-@import "bourbon/bourbon"; 
-@import "b3/variables";
+@import "b3/b3";
+@import "bourbon/bourbon";
 @import "EBM/ebm-full";
