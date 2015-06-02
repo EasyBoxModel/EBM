@@ -1,0 +1,32 @@
+// Alignment
+.text-left {
+  text-align: left #{$importantize};
+}
+.text-right {
+  text-align: right #{$importantize};
+}
+// Center on Mobile or Tablet
+
+@for $i from 1 through length($breakpoints-sufix-list) {
+  .text-left-#{nth($breakpoints-sufix-list, $i)} {
+    @media #{nth($media-only-list, $i)} {
+      text-align: left #{$importantize};
+    }
+  }
+}
+
+@for $i from 1 through length($breakpoints-sufix-list) {
+  .text-right-#{nth($breakpoints-sufix-list, $i)} {
+    @media #{nth($media-only-list, $i)} {
+      text-align: right #{$importantize};
+    }
+  }
+}
+
+@for $i from 1 through length($breakpoints-sufix-list) {
+  .text-center-#{nth($breakpoints-sufix-list, $i)} {
+    @media #{nth($media-only-list, $i)} {
+      text-align: center #{$importantize};
+    }
+  }
+}

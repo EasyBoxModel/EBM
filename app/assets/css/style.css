@@ -4,8 +4,7 @@
   Author: @MadeByGus - G. Andres Ibarra yo@soygus.com
 	
 	Optional without Grunt:
-  sass --watch style.scss:style.css
-  sass --watch style.scss:style.css -t compressed
+  sass --watch src/scss/style.scss:app/assets/css/style.css
 */
 /*
 	EBM Variables

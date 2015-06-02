@@ -5,7 +5,7 @@
   Author: @MadeByGus - G. Andres Ibarra yo@soygus.com
 	
 	Optional without Grunt:
-  sass --watch src/scss/style.scss:app/assets/css/style.css
+  sass --watch src/scss/style.min.scss:app/assets/css/style.min.css -t compressed
 */
 @import "b3/variables";
 @import "b3/mixins";
@@ -14,7 +14,7 @@
 // EBM Setup
 @import "EBM/setup/ebm-variables";
 @import "EBM/setup/ebm-fonts-setup";
-@import "EBM/ebm-dist";
+@import "EBM/ebm-full";
 
 // The global custom styles file
 @import "EBM/ebm-global";

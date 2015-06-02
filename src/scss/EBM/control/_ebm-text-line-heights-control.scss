@@ -1,0 +1,20 @@
+// LINE HEIGHTS
+// LINE HEIGHTS
+@mixin lh-sm {
+  line-height: rem(19px);
+}
+@mixin lh-md {
+  line-height: rem(21px);
+}
+@mixin lh-lg {
+  line-height: rem(28px);
+}
+.lh-sm {
+  @include lh-sm;
+}
+.lh-md {
+  @include lh-md;
+}
+.lh-lg {
+  @include lh-lg;
+}

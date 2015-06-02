@@ -149,12 +149,61 @@ $text-responsive-elements-list:
   "ol",
   "li";
 
+// Box Model abbreviations list
+$box-model-abbr: 
+  'p', 
+  'pt', 
+  'pr', 
+  'pb', 
+  'pl', 
+  'm', 
+  'mt', 
+  'mr', 
+  'mb', 
+  'ml';
+
+$box-model-sides: 
+  'padding', 
+  'padding-top', 
+  'padding-right', 
+  'padding-bottom', 
+  'padding-left', 
+  'margin', 
+  'margin-top', 
+  'margin-right', 
+  'margin-bottom', 
+  'margin-left';
+
+$box-model-ch-abbr: 
+  'p-ch', 
+  'pt-ch', 
+  'pr-ch', 
+  'pb-ch', 
+  'pl-ch', 
+  'm-ch', 
+  'mt-ch', 
+  'mr-ch', 
+  'mb-ch', 
+  'ml-ch';
+
+$box-model-ch-abbr-percentage: 
+  'pp-ch', 
+  'ptp-ch', 
+  'prp-ch', 
+  'pbp-ch', 
+  'plp-ch', 
+  'mp-ch', 
+  'mtp-ch', 
+  'mrp-ch', 
+  'mbp-ch', 
+  'mlp-ch';
+
 // Set the global measure (range: 1 - 9)
 $times: 7; 
 
 // Define the em-base for rems to px conversion
 $px-to-rems: true;    // True if you want them on rems 
-$em-base: 14px; 
+$em-base: $font-size-base;
 
 // Include EBM in "%" units?
 $percentage: false;
@@ -170,6 +219,12 @@ $blur: 3px;
 $size: 0px;
 $color: #313233;
 $alpha: 0.15;
+
+// Buttons control variables
+$buttons-custom-border-size: 1px;
+$buttons-custom-border-style: solid;
+$buttons-custom-color-control: 18%;
+$button-icon-height-control: 36px;
 
 // Global sufix
 $global-sufix: 							"ebm-" !default;

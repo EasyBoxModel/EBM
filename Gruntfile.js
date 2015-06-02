@@ -22,37 +22,20 @@ var mountFolder = function (connect, dir) {
  */
 module.exports = function (grunt) {
 
-  /**
-   * Dynamically load npm tasks
-   */
+  // Dynamically load npm tasks
   require('matchdep').filterDev('grunt-*').forEach(grunt.loadNpmTasks);
 
-  /**
-   * FireShell Grunt config
-   */
+  // EBM Grunt config
   grunt.initConfig({
-
     pkg: grunt.file.readJSON('package.json'),
-
-    /**
-     * Set project info
-     */
     project: {
       src: 'src',
       app: 'app',
       assets: '<%= project.app %>/assets',
-      css: [
-        '<%= project.src %>/scss/style.scss'
-      ],
-      ebm: [
-        '<%= project.src %>/scss/ebm.scss'
-      ],
-      js: [
-        '<%= project.src %>/js/lib/*.js'
-      ],
-      coffee: [
-        '<%= project.src %>/coffee/*.coffee'
-      ]
+      css: [ '<%= project.src %>/scss/style.scss' ],
+      ebm: [ '<%= project.src %>/scss/ebm.scss' ],
+      js: [ '<%= project.src %>/js/*.js' ],
+      coffee: [ '<%= project.src %>/coffee/*.coffee' ]
     },
 
     /**
@@ -107,11 +90,10 @@ module.exports = function (grunt) {
      * https://github.com/gruntjs/grunt-contrib-coffee
      * Compiles all COFFEESCRIPT files
      */
-
     coffee: {
       dev: {
         files: {
-          '<%= project.src %>/js/lib/coffeeCompile.js': '<%= project.coffee %>'
+          '<%= project.src %>/js/coffeeCompile.js': '<%= project.coffee %>'
         }
       }
     },
@@ -121,33 +103,15 @@ module.exports = function (grunt) {
      * https://github.com/gruntjs/grunt-contrib-jshint
      * Manage the options inside .jshintrc file
      */
-    // jshint: {
-    //   files: [
-    //     'src/js/{,*/}*/{,*/}*.js',
-    //     'Gruntfile.js'
-    //   ],
-    //   options: {
-    //     jshintrc: '.jshintrc'
-    //   }
-    // },
-
-    /**
-     * Concatenate JavaScript files
-     * https://github.com/gruntjs/grunt-contrib-concat
-     * Imports all .js files and appends project banner
-     */
-    // concat: {
-    //   dev: {
-    //     files: {
-    //       '<%= project.src %>/js/scripts.min.js': '<%= project.js %>'
-    //     }
-    //   },
-    //   options: {
-    //     stripBanners: true,
-    //     nonull: true,
-    //     banner: '<%= tag.banner %>'
-    //   }
-    // },
+    jshint: {
+      files: [
+        'src/js/{,*/}*/{,*/}*.js',
+        'Gruntfile.js'
+      ],
+      options: {
+        jshintrc: '.jshintrc'
+      }
+    },
 
     /**
      * Uglify (minify) JavaScript files
@@ -161,17 +125,16 @@ module.exports = function (grunt) {
       },
       dist: {
         files: {
-          // '<%= project.assets %>/js/scripts.min.js': '<%= project.js %>', 
           '<%= project.assets %>/js/scripts.min.js': [
-            // '<%= project.src %>/js/lib/TweenMax.min.js',
-            // '<%= project.src %>/js/lib/ScrollToPlugin.js',
-            // '<%= project.src %>/js/lib/ScrollMagic.js',
-            // '<%= project.src %>/js/lib/jquery.scrollmagic.debug.js',
-            // '<%= project.src %>/js/lib/imagesloaded.pkgd.min.js',
-            // '<%= project.src %>/js/lib/isotope.pkgd.min.js',
-            // '<%= project.src %>/js/lib/lickity.pkgd.min.js',
-            // '<%= project.src %>/js/lib/transformicons.js',
-            '<%= project.src %>/js/lib/coffeeCompile.js'
+            // '<%= project.src %>/js/TweenMax.min.js',
+            // '<%= project.src %>/js/ScrollToPlugin.js',
+            // '<%= project.src %>/js/ScrollMagic.js',
+            // '<%= project.src %>/js/jquery.scrollmagic.debug.js',
+            // '<%= project.src %>/js/imagesloaded.pkgd.min.js',
+            // '<%= project.src %>/js/isotope.pkgd.min.js',
+            // '<%= project.src %>/js/lickity.pkgd.min.js',
+            // '<%= project.src %>/js/transformicons.js',
+            '<%= project.src %>/js/coffeeCompile.js'
           ]
         }
       }
@@ -201,68 +164,10 @@ module.exports = function (grunt) {
       },
       dist: {
         options: {
-          style: 'expanded'
+          style: 'compressed'
         },
         files: {
-          '<%= project.assets %>/css/style.pkgd.min.css': '<%= project.src %>/scss/style.pkgd.scss'
-          // '<%= project.assets %>/css/style.unprefixed.css': '<%= project.css %>'
-        }
-      }
-    },    
-
-    /**
-     * Autoprefixer
-     * Adds vendor prefixes automatically
-     * https://github.com/nDmitry/grunt-autoprefixer
-     */
-    autoprefixer: {
-      options: {
-        browsers: [
-          'last 2 version',
-          'safari 6',
-          'ie 9',
-          'opera 12.1',
-          'ios 6',
-          'android 4'
-        ]
-      },
-      dev: {
-        files: {
-          '<%= project.assets %>/css/style.min.css': ['<%= project.assets %>/css/style.unprefixed.css']
-        }
-      },
-      dist: {
-        files: {
-          '<%= project.assets %>/css/style.prefixed.css': ['<%= project.assets %>/css/style.unprefixed.css']
-        }
-      }
-    },
-
-    /**
-     * CSSMin
-     * CSS minification
-     * https://github.com/gruntjs/grunt-contrib-cssmin
-     */
-    cssmin: {
-      // dev: {
-      //   options: {
-      //     banner: '<%= tag.banner %>'
-      //   },
-      //   files: {
-      //     '<%= project.assets %>/css/style.min.css': [
-      //       '<%= project.src %>/components/normalize-css/normalize.css',
-      //       '<%= project.assets %>/css/style.unprefixed.css'
-      //     ]
-      //   }
-      // },
-      dist: {
-        options: {
-          banner: '<%= tag.banner %>'
-        },
-        files: {
-          '<%= project.assets %>/css/style.min.css': [
-            '<%= project.assets %>/css/style.pkgd.min.css'
-          ]
+          '<%= project.assets %>/css/style.min.css': '<%= project.src %>/scss/style.min.scss'
         }
       }
     },
@@ -297,7 +202,6 @@ module.exports = function (grunt) {
      * http://www.andismith.com/grunt-responsive-images/
      * https://github.com/andismith/grunt-responsive-images/
      */
-
     responsive_images: {
       dev: {
         options: {
@@ -329,7 +233,6 @@ module.exports = function (grunt) {
      * Responsive images extender
      * https://github.com/smaxtastic/grunt-responsive-images-extender
      */
-
     responsive_images_extender: {
       dev: {
         options: {
@@ -375,21 +278,23 @@ module.exports = function (grunt) {
     /**
      * Runs tasks against changed watched files
      * https://github.com/gruntjs/grunt-contrib-watch
-     * Watching development files and run concat/compile tasks
      * Livereload the browser once complete
      */
     watch: {
-      // concat: {
-      //   files: '<%= project.src %>/js/{,*/}*.js',
-      //   tasks: ['concat:dev', 'jshint']
-      // },
       uglify: {
         files: '<%= project.src %>/js/lib/*.js',
-        tasks: ['uglify']
+        tasks: 'uglify'
       },
-      sass: {
+      style: {
+        files: [
+          '<%= project.src %>/scss/style.scss',
+          '<%= project.src %>/scss/EBM/_ebm-global.scss',
+          '<%= project.src %>/scss/EBM/_ebm-dist.scss'],
+        tasks: 'sass:dev'
+      },
+      ebm: {
         files: '<%= project.src %>/scss/{,*/}*/{,*/}*.{scss,sass}',
-        tasks: ['sass:dev']
+        tasks: 'sass:ebm'
       },
       coffee: {
         files: '<%= project.src %>/coffee/*.coffee',
@@ -417,40 +322,48 @@ module.exports = function (grunt) {
     }
   });
 
-  /**
-   * Default task
-   * Run `grunt` on the command line
-   */
+  // Default task
   grunt.registerTask('default', [
-    // 'coffee:dev',
     'sass:ebm',
     'sass:dev',
-    // 'bower:dev',
-    // 'autoprefixer:dev',
-    // 'cssmin:dev',
-    // 'jshint',
-    // 'concat:dev',
-    // 'responsive_images:dev',
-    // 'responsive_images_extender:dev',
-    // 'connect:livereload',
-    // 'uglify',
-    // 'open',
+    'bower:dev',
+    'connect:livereload',
+    'uglify',
+    'open',
     'watch'
   ]);
 
-  /**
-   * Build task
-   * Run `grunt build` on the command line
-   * Then compress all JS/CSS files
-   */
-  grunt.registerTask('build', [
-    'sass:dist',
-    'bower:dist',
-    // 'autoprefixer:dist',
-    'cssmin:dist',
-    'clean:dist',
-    // 'jshint',
-    'uglify'
+  // Watch for images in the src/img folder 
+  grunt.registerTask('responsive', [
+    'coffee:dev',
+    'sass:ebm',
+    'sass:dev',
+    'bower:dev',
+    'responsive_images:dev',
+    'responsive_images_extender:dev',
+    'connect:livereload',
+    'uglify',
+    'open',
+    'watch'
   ]);
 
+  // JavaScript Ninja task
+  grunt.registerTask('js-ninja', [
+    'coffee:dev',
+    'sass:ebm',
+    'sass:dev',
+    'bower:dev',
+    'jshint',
+    'connect:livereload',
+    'uglify',
+    'open',
+    'watch'
+  ]);
+
+  // Build task
+  grunt.registerTask('build', [
+    'sass:dist',
+    'clean:dist',
+    'uglify'
+  ]);
 };
