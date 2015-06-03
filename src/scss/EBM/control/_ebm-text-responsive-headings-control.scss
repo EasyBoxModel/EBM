@@ -1,0 +1,11 @@
+// RESPONSIVE HEADINGS CLASSES
+@for $i from 1 through length($headings-class-list) {
+  @for $k from 1 through length($breakpoints-sufix-list) {
+    @media #{nth($media-control-list, $k)} {
+      #{nth($headings-class-list, $i)}-#{nth($breakpoints-sufix-list, $k)} {
+        font-size: #{nth($font-size-list, $i)} ;
+        font-size: #{rem(nth($font-size-list, $i))} ;
+      }
+    }
+  }
+}

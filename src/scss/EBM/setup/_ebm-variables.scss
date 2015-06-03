@@ -198,6 +198,15 @@ $box-model-ch-abbr-percentage:
   'mbp-ch', 
   'mlp-ch';
 
+// Fontsize list
+$font-size-list: 
+  $font-size-h1,
+  $font-size-h2,
+  $font-size-h3,
+  $font-size-h4,
+  $font-size-h5,
+  $font-size-h6;
+
 // Set the global measure (range: 1 - 9)
 $times: 7; 
 
