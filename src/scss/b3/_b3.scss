@@ -2,9 +2,10 @@
 =          Twitter Bootstrap v3.3.2      =
 ========================================*/
 // Core variables and mixins
-@import 
-	"variables";
-	"mixins";
+@import "variables";
+@import "mixins";
+// Override default values
+@import "../EBM/setup/ebm-variables";
 
 // Reset
 @import "normalize";
@@ -50,6 +51,5 @@
 
 
 // Utility classes
-@import 
-	"utilities";
-	"responsive-utilities";
+@import "utilities";
+@import "responsive-utilities";

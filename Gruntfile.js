@@ -330,11 +330,11 @@ module.exports = function (grunt) {
   grunt.registerTask('default', [
     'sass:ebm',
     'sass:dev',
-    'bower:dev',
-    'connect:livereload',
-    'uglify',
-    'open',
-    'watch'
+    // 'bower:dev',
+    // 'connect:livereload',
+    // 'uglify',
+    // 'open',
+    // 'watch'
   ]);
 
   // Watch for images in the src/img folder 
