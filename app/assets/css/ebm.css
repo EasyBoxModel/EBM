@@ -12,6 +12,10 @@
 /*
 	EBM Variables
 */
+/* 
+  Text in rem units
+  Used in text-control partials
+*/
 /*! normalize.css v3.0.2 | MIT License | git.io/normalize */
 html {
   font-family: sans-serif;
@@ -435,6 +439,10 @@ hr {
   clip: auto;
 }
 
+[role="button"] {
+  cursor: pointer;
+}
+
 h1, h2, h3, h4, h5, h6,
 .h1, .h2, .h3, .h4, .h5, .h6 {
   font-family: inherit;
@@ -544,7 +552,7 @@ small,
 
 mark,
 .mark {
-  background-color: #f0ad4e;
+  background-color: #fcf8e3;
   padding: .2em;
 }
 
@@ -572,7 +580,7 @@ mark,
   text-transform: lowercase;
 }
 
-.text-uppercase {
+.text-uppercase, .initialism {
   text-transform: uppercase;
 }
 
@@ -593,35 +601,35 @@ a.text-primary:hover {
 }
 
 .text-success {
-  color: #5cb85c;
+  color: #3c763d;
 }
 
 a.text-success:hover {
-  color: #449d44;
+  color: #2b542c;
 }
 
 .text-info {
-  color: #5bc0de;
+  color: #31708f;
 }
 
 a.text-info:hover {
-  color: #31b0d5;
+  color: #245269;
 }
 
 .text-warning {
-  color: #f0ad4e;
+  color: #8a6d3b;
 }
 
 a.text-warning:hover {
-  color: #ec971f;
+  color: #66512c;
 }
 
 .text-danger {
-  color: #d9534f;
+  color: #a94442;
 }
 
 a.text-danger:hover {
-  color: #c9302c;
+  color: #843534;
 }
 
 .bg-primary {
@@ -637,35 +645,35 @@ a.bg-primary:hover {
 }
 
 .bg-success {
-  background-color: #5cb85c;
+  background-color: #dff0d8;
 }
 
 a.bg-success:hover {
-  background-color: #449d44;
+  background-color: #c1e2b3;
 }
 
 .bg-info {
-  background-color: #5bc0de;
+  background-color: #d9edf7;
 }
 
 a.bg-info:hover {
-  background-color: #31b0d5;
+  background-color: #afd9ee;
 }
 
 .bg-warning {
-  background-color: #f0ad4e;
+  background-color: #fcf8e3;
 }
 
 a.bg-warning:hover {
-  background-color: #ec971f;
+  background-color: #f7ecb5;
 }
 
 .bg-danger {
-  background-color: #d9534f;
+  background-color: #f2dede;
 }
 
 a.bg-danger:hover {
-  background-color: #c9302c;
+  background-color: #e4b9b9;
 }
 
 .page-header {
@@ -750,7 +758,6 @@ abbr[data-original-title] {
 
 .initialism {
   font-size: 90%;
-  text-transform: uppercase;
 }
 
 blockquote {
@@ -1867,9 +1874,11 @@ output {
   color: #999;
 }
 .form-control[disabled], .form-control[readonly], fieldset[disabled] .form-control {
-  cursor: not-allowed;
   background-color: #F0F0F0;
   opacity: 1;
+}
+.form-control[disabled], fieldset[disabled] .form-control {
+  cursor: not-allowed;
 }
 
 textarea.form-control {
@@ -1942,6 +1951,7 @@ input[type="search"] {
 
 .radio-inline,
 .checkbox-inline {
+  position: relative;
   display: inline-block;
   padding-left: 20px;
   margin-bottom: 0;
@@ -1979,6 +1989,7 @@ input[type="checkbox"] {
   padding-top: 7px;
   padding-bottom: 7px;
   margin-bottom: 0;
+  min-height: 43px;
 }
 .form-control-static.input-lg, .form-control-static.input-sm {
   padding-left: 0;
@@ -2023,6 +2034,7 @@ select[multiple].input-sm {
   padding: 5px 10px;
   font-size: 14px;
   line-height: 1.5;
+  min-height: 41px;
 }
 
 .input-lg {
@@ -2063,6 +2075,7 @@ select[multiple].input-lg {
   padding: 10px 16px;
   font-size: 20px;
   line-height: 1.33333;
+  min-height: 47px;
 }
 
 .has-feedback {
@@ -2103,25 +2116,25 @@ select[multiple].input-lg {
 .has-success .checkbox,
 .has-success .radio-inline,
 .has-success .checkbox-inline, .has-success.radio label, .has-success.checkbox label, .has-success.radio-inline label, .has-success.checkbox-inline label {
-  color: #5cb85c;
+  color: #3c763d;
 }
 .has-success .form-control {
-  border-color: #5cb85c;
+  border-color: #3c763d;
   -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
 }
 .has-success .form-control:focus {
-  border-color: #449d44;
-  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #a3d7a3;
-  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #a3d7a3;
+  border-color: #2b542c;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #67b168;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #67b168;
 }
 .has-success .input-group-addon {
-  color: #5cb85c;
-  border-color: #5cb85c;
-  background-color: #5cb85c;
+  color: #3c763d;
+  border-color: #3c763d;
+  background-color: #dff0d8;
 }
 .has-success .form-control-feedback {
-  color: #5cb85c;
+  color: #3c763d;
 }
 
 .has-warning .help-block,
@@ -2130,25 +2143,25 @@ select[multiple].input-lg {
 .has-warning .checkbox,
 .has-warning .radio-inline,
 .has-warning .checkbox-inline, .has-warning.radio label, .has-warning.checkbox label, .has-warning.radio-inline label, .has-warning.checkbox-inline label {
-  color: #f0ad4e;
+  color: #8a6d3b;
 }
 .has-warning .form-control {
-  border-color: #f0ad4e;
+  border-color: #8a6d3b;
   -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
 }
 .has-warning .form-control:focus {
-  border-color: #ec971f;
-  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #f8d9ac;
-  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #f8d9ac;
+  border-color: #66512c;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #c0a16b;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #c0a16b;
 }
 .has-warning .input-group-addon {
-  color: #f0ad4e;
-  border-color: #f0ad4e;
-  background-color: #f0ad4e;
+  color: #8a6d3b;
+  border-color: #8a6d3b;
+  background-color: #fcf8e3;
 }
 .has-warning .form-control-feedback {
-  color: #f0ad4e;
+  color: #8a6d3b;
 }
 
 .has-error .help-block,
@@ -2157,25 +2170,25 @@ select[multiple].input-lg {
 .has-error .checkbox,
 .has-error .radio-inline,
 .has-error .checkbox-inline, .has-error.radio label, .has-error.checkbox label, .has-error.radio-inline label, .has-error.checkbox-inline label {
-  color: #d9534f;
+  color: #a94442;
 }
 .has-error .form-control {
-  border-color: #d9534f;
+  border-color: #a94442;
   -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
 }
 .has-error .form-control:focus {
-  border-color: #c9302c;
-  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #eba5a3;
-  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #eba5a3;
+  border-color: #843534;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #ce8483;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #ce8483;
 }
 .has-error .input-group-addon {
-  color: #d9534f;
-  border-color: #d9534f;
-  background-color: #d9534f;
+  color: #a94442;
+  border-color: #a94442;
+  background-color: #f2dede;
 }
 .has-error .form-control-feedback {
-  color: #d9534f;
+  color: #a94442;
 }
 
 .has-feedback label ~ .form-control-feedback {
@@ -2566,7 +2579,6 @@ input[type="button"].btn-block {
 
 .hidden {
   display: none !important;
-  visibility: hidden !important;
 }
 
 .affix {
@@ -2827,6 +2839,10 @@ input[type="button"].btn-block {
 }
 /*
 	EBM Variables
+*/
+/* 
+  Text in rem units
+  Used in text-control partials
 */
 /* PROJECT ESPECIFIC FONTS */
 .p-0 {
@@ -5149,23 +5165,22 @@ html .h1, html .h2, html .h3, html .h4, html .h5, html .h6 {
   }
 }
 
-/* TEXT IN REMS */
 p.lead, .p.lead, span.lead, em.lead, strong.lead, label.lead, a.lead, i.lead, ul.lead, ol.lead, li.lead {
-  font-size: 25px;
-  font-size: 1.5625rem;
+  font-size: 23px;
+  font-size: 1.4375rem;
   line-height: 1.3;
 }
 @media only screen and (max-width: 480px) {
   p.lead, .p.lead, span.lead, em.lead, strong.lead, label.lead, a.lead, i.lead, ul.lead, ol.lead, li.lead {
-    font-size: 19px;
-    font-size: 1.1875rem;
+    font-size: 21px;
+    font-size: 1.3125rem;
     line-height: 1.1;
   }
 }
 @media only screen and (min-width: 480px) and (max-width: 768px) {
   p.lead, .p.lead, span.lead, em.lead, strong.lead, label.lead, a.lead, i.lead, ul.lead, ol.lead, li.lead {
-    font-size: 21px;
-    font-size: 1.3125rem;
+    font-size: 22px;
+    font-size: 1.375rem;
     line-height: 1.2;
   }
 }
@@ -5174,21 +5189,21 @@ h1 {
   font-size: 2.5625rem;
 }
 h1.lead {
-  font-size: 50px;
-  font-size: 3.125rem;
+  font-size: 48px;
+  font-size: 3rem;
   line-height: 1.3;
 }
 @media only screen and (max-width: 480px) {
   h1.lead {
-    font-size: 44px;
-    font-size: 2.75rem;
+    font-size: 46px;
+    font-size: 2.875rem;
     line-height: 1.1;
   }
 }
 @media only screen and (min-width: 480px) and (max-width: 768px) {
   h1.lead {
-    font-size: 46px;
-    font-size: 2.875rem;
+    font-size: 47px;
+    font-size: 2.9375rem;
     line-height: 1.2;
   }
 }
@@ -5197,21 +5212,21 @@ h2 {
   font-size: 2.125rem;
 }
 h2.lead {
-  font-size: 43px;
-  font-size: 2.6875rem;
+  font-size: 41px;
+  font-size: 2.5625rem;
   line-height: 1.3;
 }
 @media only screen and (max-width: 480px) {
   h2.lead {
-    font-size: 37px;
-    font-size: 2.3125rem;
+    font-size: 39px;
+    font-size: 2.4375rem;
     line-height: 1.1;
   }
 }
 @media only screen and (min-width: 480px) and (max-width: 768px) {
   h2.lead {
-    font-size: 39px;
-    font-size: 2.4375rem;
+    font-size: 40px;
+    font-size: 2.5rem;
     line-height: 1.2;
   }
 }
@@ -5220,21 +5235,21 @@ h3 {
   font-size: 1.75rem;
 }
 h3.lead {
-  font-size: 37px;
-  font-size: 2.3125rem;
+  font-size: 35px;
+  font-size: 2.1875rem;
   line-height: 1.3;
 }
 @media only screen and (max-width: 480px) {
   h3.lead {
-    font-size: 31px;
-    font-size: 1.9375rem;
+    font-size: 33px;
+    font-size: 2.0625rem;
     line-height: 1.1;
   }
 }
 @media only screen and (min-width: 480px) and (max-width: 768px) {
   h3.lead {
-    font-size: 33px;
-    font-size: 2.0625rem;
+    font-size: 34px;
+    font-size: 2.125rem;
     line-height: 1.2;
   }
 }
@@ -5243,21 +5258,21 @@ h4 {
   font-size: 1.25rem;
 }
 h4.lead {
-  font-size: 29px;
-  font-size: 1.8125rem;
+  font-size: 27px;
+  font-size: 1.6875rem;
   line-height: 1.3;
 }
 @media only screen and (max-width: 480px) {
   h4.lead {
-    font-size: 23px;
-    font-size: 1.4375rem;
+    font-size: 25px;
+    font-size: 1.5625rem;
     line-height: 1.1;
   }
 }
 @media only screen and (min-width: 480px) and (max-width: 768px) {
   h4.lead {
-    font-size: 25px;
-    font-size: 1.5625rem;
+    font-size: 26px;
+    font-size: 1.625rem;
     line-height: 1.2;
   }
 }
@@ -5266,21 +5281,21 @@ h5 {
   font-size: 1rem;
 }
 h5.lead {
-  font-size: 25px;
-  font-size: 1.5625rem;
+  font-size: 23px;
+  font-size: 1.4375rem;
   line-height: 1.3;
 }
 @media only screen and (max-width: 480px) {
   h5.lead {
-    font-size: 19px;
-    font-size: 1.1875rem;
+    font-size: 21px;
+    font-size: 1.3125rem;
     line-height: 1.1;
   }
 }
 @media only screen and (min-width: 480px) and (max-width: 768px) {
   h5.lead {
-    font-size: 21px;
-    font-size: 1.3125rem;
+    font-size: 22px;
+    font-size: 1.375rem;
     line-height: 1.2;
   }
 }
@@ -5289,21 +5304,21 @@ h6 {
   font-size: 0.875rem;
 }
 h6.lead {
-  font-size: 23px;
-  font-size: 1.4375rem;
+  font-size: 21px;
+  font-size: 1.3125rem;
   line-height: 1.3;
 }
 @media only screen and (max-width: 480px) {
   h6.lead {
-    font-size: 17px;
-    font-size: 1.0625rem;
+    font-size: 19px;
+    font-size: 1.1875rem;
     line-height: 1.1;
   }
 }
 @media only screen and (min-width: 480px) and (max-width: 768px) {
   h6.lead {
-    font-size: 19px;
-    font-size: 1.1875rem;
+    font-size: 20px;
+    font-size: 1.25rem;
     line-height: 1.2;
   }
 }
@@ -5312,21 +5327,21 @@ h6.lead {
   font-size: 2.5625rem;
 }
 .h1.lead {
-  font-size: 50px;
-  font-size: 3.125rem;
+  font-size: 48px;
+  font-size: 3rem;
   line-height: 1.3;
 }
 @media only screen and (max-width: 480px) {
   .h1.lead {
-    font-size: 44px;
-    font-size: 2.75rem;
+    font-size: 46px;
+    font-size: 2.875rem;
     line-height: 1.1;
   }
 }
 @media only screen and (min-width: 480px) and (max-width: 768px) {
   .h1.lead {
-    font-size: 46px;
-    font-size: 2.875rem;
+    font-size: 47px;
+    font-size: 2.9375rem;
     line-height: 1.2;
   }
 }
@@ -5335,21 +5350,21 @@ h6.lead {
   font-size: 2.125rem;
 }
 .h2.lead {
-  font-size: 43px;
-  font-size: 2.6875rem;
+  font-size: 41px;
+  font-size: 2.5625rem;
   line-height: 1.3;
 }
 @media only screen and (max-width: 480px) {
   .h2.lead {
-    font-size: 37px;
-    font-size: 2.3125rem;
+    font-size: 39px;
+    font-size: 2.4375rem;
     line-height: 1.1;
   }
 }
 @media only screen and (min-width: 480px) and (max-width: 768px) {
   .h2.lead {
-    font-size: 39px;
-    font-size: 2.4375rem;
+    font-size: 40px;
+    font-size: 2.5rem;
     line-height: 1.2;
   }
 }
@@ -5358,21 +5373,21 @@ h6.lead {
   font-size: 1.75rem;
 }
 .h3.lead {
-  font-size: 37px;
-  font-size: 2.3125rem;
+  font-size: 35px;
+  font-size: 2.1875rem;
   line-height: 1.3;
 }
 @media only screen and (max-width: 480px) {
   .h3.lead {
-    font-size: 31px;
-    font-size: 1.9375rem;
+    font-size: 33px;
+    font-size: 2.0625rem;
     line-height: 1.1;
   }
 }
 @media only screen and (min-width: 480px) and (max-width: 768px) {
   .h3.lead {
-    font-size: 33px;
-    font-size: 2.0625rem;
+    font-size: 34px;
+    font-size: 2.125rem;
     line-height: 1.2;
   }
 }
@@ -5381,21 +5396,21 @@ h6.lead {
   font-size: 1.25rem;
 }
 .h4.lead {
-  font-size: 29px;
-  font-size: 1.8125rem;
+  font-size: 27px;
+  font-size: 1.6875rem;
   line-height: 1.3;
 }
 @media only screen and (max-width: 480px) {
   .h4.lead {
-    font-size: 23px;
-    font-size: 1.4375rem;
+    font-size: 25px;
+    font-size: 1.5625rem;
     line-height: 1.1;
   }
 }
 @media only screen and (min-width: 480px) and (max-width: 768px) {
   .h4.lead {
-    font-size: 25px;
-    font-size: 1.5625rem;
+    font-size: 26px;
+    font-size: 1.625rem;
     line-height: 1.2;
   }
 }
@@ -5404,21 +5419,21 @@ h6.lead {
   font-size: 1rem;
 }
 .h5.lead {
-  font-size: 25px;
-  font-size: 1.5625rem;
+  font-size: 23px;
+  font-size: 1.4375rem;
   line-height: 1.3;
 }
 @media only screen and (max-width: 480px) {
   .h5.lead {
-    font-size: 19px;
-    font-size: 1.1875rem;
+    font-size: 21px;
+    font-size: 1.3125rem;
     line-height: 1.1;
   }
 }
 @media only screen and (min-width: 480px) and (max-width: 768px) {
   .h5.lead {
-    font-size: 21px;
-    font-size: 1.3125rem;
+    font-size: 22px;
+    font-size: 1.375rem;
     line-height: 1.2;
   }
 }
@@ -5427,21 +5442,21 @@ h6.lead {
   font-size: 0.875rem;
 }
 .h6.lead {
-  font-size: 23px;
-  font-size: 1.4375rem;
+  font-size: 21px;
+  font-size: 1.3125rem;
   line-height: 1.3;
 }
 @media only screen and (max-width: 480px) {
   .h6.lead {
-    font-size: 17px;
-    font-size: 1.0625rem;
+    font-size: 19px;
+    font-size: 1.1875rem;
     line-height: 1.1;
   }
 }
 @media only screen and (min-width: 480px) and (max-width: 768px) {
   .h6.lead {
-    font-size: 19px;
-    font-size: 1.1875rem;
+    font-size: 20px;
+    font-size: 1.25rem;
     line-height: 1.2;
   }
 }

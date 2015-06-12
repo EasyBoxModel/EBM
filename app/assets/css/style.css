@@ -9,6 +9,10 @@
 /*
 	EBM Variables
 */
+/* 
+  Text in rem units
+  Used in text-control partials
+*/
 /* PROJECT ESPECIFIC FONTS */
 /* Background image blocks */
 .bg-img-block {
@@ -973,13 +977,12 @@
 /*
 	EBM Global styles
 */
-html,
+html::-webkit-scrollbar {
+  display: none;
+}
+
 body {
   background-color: #fff;
-}
-html::-webkit-scrollbar,
-body::-webkit-scrollbar {
-  display: none;
 }
 
 .site-wrapper,
@@ -990,19 +993,5 @@ body::-webkit-scrollbar {
 /*
 	Media queries
 */
-/* Prevent layout breakage on unsupporting browsers */
-html.no-js .flex-space-between:before, html.no-js .flex-space-between:after {
-  content: " ";
-  display: table;
-}
-html.no-js .flex-space-between:after {
-  clear: both;
-}
-html.no-js .flex-space-between .left {
-  float: left;
-}
-html.no-js .flex-space-between .right {
-  float: right;
-}
 
 /*# sourceMappingURL=style.css.map */

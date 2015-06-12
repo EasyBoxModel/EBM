@@ -212,6 +212,9 @@ $input-height-large:             (ceil($font-size-large * $line-height-large) + 
 //** Small `.form-control` height
 $input-height-small:             (floor($font-size-small * $line-height-small) + ($padding-small-vertical * 2) + 2) !default;
 
+//** `.form-group` margin
+$form-group-margin-bottom:       15px !default;
+
 $legend-color:                   $gray-dark !default;
 $legend-border-color:            #e5e5e5 !default;
 
@@ -271,7 +274,8 @@ $zindex-dropdown:          1000 !default;
 $zindex-popover:           1060 !default;
 $zindex-tooltip:           1070 !default;
 $zindex-navbar-fixed:      1030 !default;
-$zindex-modal:             1040 !default;
+$zindex-modal-background:  1040 !default;
+$zindex-modal:             1050 !default;
 
 
 //== Media queries breakpoints
@@ -491,20 +495,20 @@ $jumbotron-font-size:            ceil(($font-size-base * 1.5)) !default;
 //
 //## Define colors for form feedback states and, by default, alerts.
 
-$state-success-text:             $brand-success !default;
-$state-success-bg:               $brand-success !default;
+$state-success-text:             #3c763d !default;
+$state-success-bg:               #dff0d8 !default;
 $state-success-border:           darken(adjust-hue($state-success-bg, -10), 5%) !default;
 
-$state-info-text:                $brand-info !default;
-$state-info-bg:                  $brand-info !default;
+$state-info-text:                #31708f !default;
+$state-info-bg:                  #d9edf7 !default;
 $state-info-border:              darken(adjust-hue($state-info-bg, -10), 7%) !default;
 
-$state-warning-text:             $brand-warning !default;
-$state-warning-bg:               $brand-warning !default;
+$state-warning-text:             #8a6d3b !default;
+$state-warning-bg:               #fcf8e3 !default;
 $state-warning-border:           darken(adjust-hue($state-warning-bg, -10), 5%) !default;
 
-$state-danger-text:              $brand-danger !default;
-$state-danger-bg:                $brand-danger !default;
+$state-danger-text:              #a94442 !default;
+$state-danger-bg:                #f2dede !default;
 $state-danger-border:            darken(adjust-hue($state-danger-bg, -10), 5%) !default;
 
 
