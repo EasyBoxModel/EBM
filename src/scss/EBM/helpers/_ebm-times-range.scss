@@ -1,15 +1,15 @@
-// Check if $times is a number between 1 and 9
-@function times-range($times) {
-  @if unit($times) != "" {
-    @warn "The $times variable needs to be an integer without units";
+// Check if $ebm-times is a number between 1 and 9
+@function times-range($ebm-times) {
+  @if unit($ebm-times) != "" {
+    @warn "The $ebm-times variable needs to be an integer without units";
     @return false;
-  } @else if $times < 1 {
-    @warn "The $times variable needs to be a number between 1 and 9";
+  } @else if $ebm-times < 1 {
+    @warn "The $ebm-times variable needs to be a number between 1 and 9";
     @return false;
-  } @else if $times > 9 {
-    @warn "The $times variable needs to be a number between 1 and 9";
+  } @else if $ebm-times > 9 {
+    @warn "The $ebm-times variable needs to be a number between 1 and 9";
     @return false;
   } @else {
-    @return $times;
+    @return $ebm-times;
   }
 }

@@ -47,6 +47,26 @@ hr {
 		}
 	}
 }
+@for $i from 1 through length($bluescale-sufix-list) {
+	hr {
+		&.hr-#{nth($bluescale-sufix-list, $i)},
+		&.hr-custom-#{nth($bluescale-sufix-list, $i)}{
+			border-top: $hr-width $hr-style #{nth($bluescale-list, $i)} !important;
+			margin: $container-fluid 0;
+		}
+		&.hr-#{nth($bluescale-sufix-list, $i)} {
+		}
+		&.hr-custom-#{nth($bluescale-sufix-list, $i)} {
+			&:before {
+				width: 140px;
+				height: 3px;
+				position: absolute;
+				content: "";
+				background: #{nth($bluescale-list, $i)};
+			}
+		}
+	}
+}
 
 .hr-custom-center {
 	&:before {

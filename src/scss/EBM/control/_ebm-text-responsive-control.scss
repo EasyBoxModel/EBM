@@ -22,14 +22,6 @@ html {
   }
 }
 
-/* TEXT IN REMS */
-$text-in-rems-md-up: 9;
-$line-height-md-up: 1.3;
-$text-in-rems-sm-only: 5;
-$line-height-sm-only: 1.2;
-$text-in-rems-xs-only: 3;
-$line-height-xs-only: 1.1;
-
 // LEAD TEXT ELEMENTS
 #{$text-responsive-elements-list} {
   &.lead {

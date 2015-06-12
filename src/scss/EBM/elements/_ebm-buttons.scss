@@ -54,6 +54,19 @@ input[type="submit"].btn,
 			}
 		}
 	}
+	// Bluescale Buttons Extension
+	@for $i from 1 through length($bluescale-sufix-list) {
+		&.btn-#{nth($bluescale-sufix-list, $i)} { 
+			color: white;
+			border-color: #{nth($bluescale-list, $i)};
+		  background-color: #{nth($bluescale-list, $i)}; 
+			&:hover {
+				background-color: #{darken(nth($bluescale-list, $i), $buttons-custom-color-control)};
+				color: darken(white, 3%);
+				border-color: #{darken(nth($bluescale-list, $i), 3%)};
+			}
+		}
+	}
 	// Brand colors and bluescale extension
 	@for $i from 1 through length($brand-colors-sufix-list) {
 		&.btn-#{nth($brand-colors-sufix-list, $i)} { 

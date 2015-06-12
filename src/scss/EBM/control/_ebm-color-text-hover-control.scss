@@ -41,6 +41,24 @@
   }
 }
 
+@for $i from 1 through length($bluescale-list) {
+  .text-hover-#{nth($bluescale-sufix-list, $i)} {
+    a:not(.btn) {
+      &:hover {
+        color: #{darken(nth($bluescale-list, $i), 12%)};
+      }
+    }
+    &:hover {
+      color: #{darken(nth($bluescale-list, $i), 12%)};
+    }
+  }
+  a.text-hover-#{nth($bluescale-sufix-list, $i)}:not(.btn) {
+    &:hover {
+      color: #{darken(nth($bluescale-list, $i), 12%)};
+    }
+  }
+}
+
 @for $i from 1 through length($social-colors-list) {
   .text-hover-#{nth($social-colors-sufix-list, $i)} {
     a:not(.btn) {

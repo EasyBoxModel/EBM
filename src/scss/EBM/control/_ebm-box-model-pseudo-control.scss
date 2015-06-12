@@ -1,29 +1,23 @@
 // BEFORE & AFTER pseudoclasses margins
-@for $i from 0 through 10 {
+@for $i from 0 through $loop-limit {
   @for $j from 6 through length($box-model-sides) {
-    .#{nth($box-model-abbr, $j)}-#{$i*$times}-bf {
+    .#{nth($box-model-abbr, $j)}-#{$i*$ebm-times}-before {
       &:before {
-        #{nth($box-model-sides, $j)}: ($i*$times) + px #{$importantize};
+        #{nth($box-model-sides, $j)}: ($i*$ebm-times) + px #{$importantize};
         // REMs for modern browsers
         @if $px-to-rems == true {
-          #{nth($box-model-sides, $j)}: rem($i*$times) #{$importantize};
+          #{nth($box-model-sides, $j)}: rem($i*$ebm-times) #{$importantize};
         }
       }
     }
-    
-    @for $k from 1 through length($breakpoints-sufix-list) {
-      @media #{nth($media-control-list, $k)} {
-        .#{nth($box-model-abbr, $j)}-#{$i*$times}-#{nth($breakpoints-sufix-list, $k)}-bf {       
-          &:before {
-            #{nth($box-model-sides, $j)}: ($i*$times) + px #{$importantize};
-            // REMs for modern browsers
-            @if $px-to-rems == true {
-              #{nth($box-model-sides, $j)}: rem($i*$times) #{$importantize};
-            }
-          }
+    .#{nth($box-model-abbr, $j)}-#{$i*$ebm-times}-after {
+      &:after {
+        #{nth($box-model-sides, $j)}: ($i*$ebm-times) + px #{$importantize};
+        // REMs for modern browsers
+        @if $px-to-rems == true {
+          #{nth($box-model-sides, $j)}: rem($i*$ebm-times) #{$importantize};
         }
       }
     }
-
   }
 }

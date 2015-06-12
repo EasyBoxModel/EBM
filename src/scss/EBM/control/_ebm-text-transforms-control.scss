@@ -1,17 +1,14 @@
 // Text transforms and decorations
-.uppercase {
-  text-transform: uppercase;
+.text-none {
+  text-transform: none;
 }
 
-.lowercase {
-  text-transform: none #{$importantize};
+.text-underline {
+  text-decoration: underline;
 }
 
-.underline {
-  text-decoration: underline #{$importantize};
-}
-
-a.not-underline {
+a.text-not-underline {
+	text-decoration: none;
   &:hover {
     text-decoration: none;
   }

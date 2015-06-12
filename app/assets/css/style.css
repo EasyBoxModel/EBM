@@ -10,9 +10,6 @@
 	EBM Variables
 */
 /* PROJECT ESPECIFIC FONTS */
-/*
-	EBM Variables
-*/
 /* Background image blocks */
 .bg-img-block {
   background-repeat: no-repeat;
@@ -62,7 +59,7 @@
   background-position-x: right;
 }
 
-.bg-img-control-size-100 {
+.bg-img-block-size-100 {
   background-size: 100%;
 }
 

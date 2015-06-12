@@ -288,6 +288,7 @@ module.exports = function (grunt) {
       style: {
         files: [
           '<%= project.src %>/scss/style.scss',
+          '<%= project.src %>/scss/b3/_variables.scss',
           '<%= project.src %>/scss/EBM/_ebm-global.scss',
           '<%= project.src %>/scss/EBM/_ebm-dist.scss'],
         tasks: 'sass:dev'
@@ -330,11 +331,11 @@ module.exports = function (grunt) {
   grunt.registerTask('default', [
     'sass:ebm',
     'sass:dev',
-    // 'bower:dev',
-    // 'connect:livereload',
-    // 'uglify',
-    // 'open',
-    // 'watch'
+    'bower:dev',
+    'connect:livereload',
+    'uglify',
+    'open',
+    'watch'
   ]);
 
   // Watch for images in the src/img folder 

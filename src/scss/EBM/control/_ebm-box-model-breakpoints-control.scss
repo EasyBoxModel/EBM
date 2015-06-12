@@ -1,0 +1,73 @@
+// Change for empty string to remove !important
+$importantize: "!important";
+
+@for $i from 0 through $loop-limit {
+  @for $j from 1 through length($box-model-sides) {
+    @for $k from 1 through length($breakpoints-sufix-list) {
+      @media #{nth($media-control-list, $k)} {
+        .#{nth($box-model-abbr, $j)}-#{$i*$ebm-times}-#{nth($breakpoints-sufix-list, $k)} {          
+          // For <IE8
+          #{nth($box-model-sides, $j)}: ($i*$ebm-times) + px #{$importantize};
+          // REMs for modern browsers
+          @if $px-to-rems == true {
+            #{nth($box-model-sides, $j)}: rem($i*$ebm-times) #{$importantize};
+          }
+        }
+      }
+    }
+  }
+}
+
+// PADDING VERTICAL & HORIZONTAL
+@for $i from 0 through $loop-limit {
+  @for $k from 1 through length($breakpoints-sufix-list) {
+    @media #{nth($media-control-list, $k)} {
+      .pv-#{$i*$ebm-times}-#{nth($breakpoints-sufix-list, $k)} {
+        padding-top: ($i*$ebm-times) + px #{$importantize};
+        padding-bottom: ($i*$ebm-times) + px #{$importantize};
+        padding-top: rem($i*$ebm-times) #{$importantize};
+        padding-bottom: rem($i*$ebm-times) #{$importantize};
+      }
+    }
+  }
+}
+
+@for $i from 0 through $loop-limit {
+  @for $k from 1 through length($breakpoints-sufix-list) {
+    @media #{nth($media-control-list, $k)} {
+      .ph-#{$i*$ebm-times}-#{nth($breakpoints-sufix-list, $k)} {
+        padding-left: ($i*$ebm-times) + px #{$importantize};
+        padding-right: ($i*$ebm-times) + px #{$importantize};
+        padding-left: rem($i*$ebm-times) #{$importantize};
+        padding-right: rem($i*$ebm-times) #{$importantize};
+      }
+    }
+  }
+}
+
+// MARGIN VERTICAL & HORIZONTAL
+@for $i from 0 through $loop-limit {
+  @for $k from 1 through length($breakpoints-sufix-list) {
+    @media #{nth($media-control-list, $k)} {
+      .mv-#{$i*$ebm-times}-#{nth($breakpoints-sufix-list, $k)} {
+        margin-top: ($i*$ebm-times) + px #{$importantize};
+        margin-bottom: ($i*$ebm-times) + px #{$importantize};
+        margin-top: rem($i*$ebm-times) #{$importantize};
+        margin-bottom: rem($i*$ebm-times) #{$importantize};
+      }
+    }
+  }
+}
+
+@for $i from 0 through $loop-limit {
+  @for $k from 1 through length($breakpoints-sufix-list) {
+    @media #{nth($media-control-list, $k)} {
+      .mh-#{$i*$ebm-times}-#{nth($breakpoints-sufix-list, $k)} {
+        margin-left: ($i*$ebm-times) + px #{$importantize};
+        margin-right: ($i*$ebm-times) + px #{$importantize};
+        margin-left: rem($i*$ebm-times) #{$importantize};
+        margin-right: rem($i*$ebm-times) #{$importantize};
+      }
+    }
+  }
+}

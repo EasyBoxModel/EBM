@@ -1,12 +1,14 @@
 /*
 	EBM Global styles
 */
-html,
-body {
-	background-color: $body-bg;	
+html {
 	&::-webkit-scrollbar { 
     display: none; 
 	}
+}
+
+body {
+	background-color: $body-bg;	
 }
 
 .site-wrapper,

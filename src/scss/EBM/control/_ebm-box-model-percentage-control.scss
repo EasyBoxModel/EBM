@@ -1,96 +1,48 @@
 // Box model sizes percentage control
-@for $i from 0 through 10 {
+@for $i from 0 through $loop-limit {
   @for $j from 1 through length($box-model-sides) {
-    .#{nth($box-model-abbr, $j)}p-#{$i*$times} {
-      #{nth($box-model-sides, $j)}: percentage(($i*($times/100))) #{$importantize};
-    }
-    @for $k from 1 through length($breakpoints-sufix-list) {
-      @media #{nth($media-control-list, $k)} {
-        .#{nth($box-model-abbr, $j)}p-#{$i*$times}-#{nth($breakpoints-sufix-list, $k)} {
-          #{nth($box-model-sides, $j)}: percentage(($i*($times/100))) #{$importantize}; 
-        }
-      }
+    .#{nth($box-model-abbr, $j)}p-#{$i*$ebm-times} {
+      #{nth($box-model-sides, $j)}: percentage(($i*($ebm-times/100))) #{$importantize};
     }
   }
 }
 
 // PADDING VERTICAL & HORIZONTAL
-@for $i from 0 through 20 {
-  .pvp-#{$i*$times} {
-    padding-top: percentage(($i*($times/100))) #{$importantize};
-    padding-bottom: percentage(($i*($times/100))) #{$importantize};
-  }
-  @for $k from 1 through length($breakpoints-sufix-list) {
-    @media #{nth($media-control-list, $k)} {
-      .pvp-#{$i*$times}-#{nth($breakpoints-sufix-list, $k)} {
-        padding-top: percentage(($i*($times/100))) #{$importantize};
-        padding-bottom: percentage(($i*($times/100))) #{$importantize};
-      }
-    }
+@for $i from 0 through $loop-limit {
+  .pvp-#{$i*$ebm-times} {
+    padding-top: percentage(($i*($ebm-times/100))) #{$importantize};
+    padding-bottom: percentage(($i*($ebm-times/100))) #{$importantize};
   }
 }
 
-@for $i from 0 through 10 {
-  .php-#{$i*$times} {
-    padding-left: percentage(($i*($times/100))) #{$importantize};
-    padding-right: percentage(($i*($times/100))) #{$importantize};
-  }
-  @for $k from 1 through length($breakpoints-sufix-list) {
-    @media #{nth($media-control-list, $k)} {
-      .php-#{$i*$times}-#{nth($breakpoints-sufix-list, $k)} {
-        padding-left: percentage(($i*($times/100))) #{$importantize};
-        padding-right: percentage(($i*($times/100))) #{$importantize};
-      }
-    }
+@for $i from 0 through $loop-limit {
+  .php-#{$i*$ebm-times} {
+    padding-left: percentage(($i*($ebm-times/100))) #{$importantize};
+    padding-right: percentage(($i*($ebm-times/100))) #{$importantize};
   }
 }
 
 // MARGIN VERTICAL & HORIZONTAL
-@for $i from 0 through 10 {
-  .mvp-#{$i*$times} {
-    margin-top: percentage(($i*($times/100))) #{$importantize};
-    margin-bottom: percentage(($i*($times/100))) #{$importantize};
-  }
-  @for $k from 1 through length($breakpoints-sufix-list) {
-    @media #{nth($media-control-list, $k)} {
-      .mvp-#{$i*$times}-#{nth($breakpoints-sufix-list, $k)} {
-        margin-top: percentage(($i*($times/100))) #{$importantize};
-        margin-bottom: percentage(($i*($times/100))) #{$importantize};
-      }
-    }
+@for $i from 0 through $loop-limit {
+  .mvp-#{$i*$ebm-times} {
+    margin-top: percentage(($i*($ebm-times/100))) #{$importantize};
+    margin-bottom: percentage(($i*($ebm-times/100))) #{$importantize};
   }
 }
 
-@for $i from 0 through 10 {
-  .mhp-#{$i*$times} {
-    margin-left: percentage(($i*($times/100))) #{$importantize};
-    margin-right: percentage(($i*($times/100))) #{$importantize};
-  }
-  @for $k from 1 through length($breakpoints-sufix-list) {
-    @media #{nth($media-control-list, $k)} {
-      .mhp-#{$i*$times}-#{nth($breakpoints-sufix-list, $k)} {
-        margin-left: percentage(($i*($times/100))) #{$importantize};
-        margin-right: percentage(($i*($times/100))) #{$importantize};
-      }
-    }
+@for $i from 0 through $loop-limit {
+  .mhp-#{$i*$ebm-times} {
+    margin-left: percentage(($i*($ebm-times/100))) #{$importantize};
+    margin-right: percentage(($i*($ebm-times/100))) #{$importantize};
   }
 }
 
 // CHildren elements
-@for $i from 0 through 10 {
+@for $i from 0 through $loop-limit {
   @for $j from 1 through length($box-model-sides) {
-    .#{nth($box-model-ch-abbr-percentage, $j)}-#{$i*$times} {
+    .#{nth($box-model-ch-abbr-percentage, $j)}-#{$i*$ebm-times} {
       #{$children-elements} {
-        #{nth($box-model-sides, $j)}: percentage(($i*($times/100))) #{$importantize};
-      }
-    }
-    @for $k from 1 through length($breakpoints-sufix-list) {
-      @media #{nth($media-control-list, $k)} {
-        .#{nth($box-model-ch-abbr-percentage, $j)}-#{$i*$times}-#{nth($breakpoints-sufix-list, $k)} {
-          #{$children-elements} {
-            #{nth($box-model-sides, $j)}: percentage(($i*($times/100))) #{$importantize};
-          }
-        }
+        #{nth($box-model-sides, $j)}: percentage(($i*($ebm-times/100))) #{$importantize};
       }
     }
   }

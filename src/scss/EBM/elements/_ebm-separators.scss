@@ -43,6 +43,23 @@ $separator-margin-bottom: $container-fluid;
 		}
 	}
 }
+@for $i from 1 through length($bluescale-sufix-list) {
+	.separator-#{nth($bluescale-sufix-list, $i)} {
+		border-top: $separator-height $separator-style #{nth($bluescale-list, $i)} !important;
+		margin-top: $separator-margin-top;
+		margin-bottom: $separator-margin-bottom;
+		width: $separator-width;
+		width: rem($separator-width);
+		height: $separator-height;
+		height: rem($separator-height);
+		@for $z from 1 through length($breakpoints-sufix-list) {
+			&.separator-#{nth($breakpoints-sufix-list, $z)} {
+				width: $separator-width * $z;
+				width: rem($separator-width * $z);
+			}
+		}
+	}
+}
 
 .separator {
 	&.separator-centered {

@@ -18,3 +18,13 @@
     }
   }
 }
+
+@for $i from 1 through length($text-elements-list) {
+  @for $z from 1 through length($bluescale-list) {
+    .#{nth($text-elements-list, $i)}-ch-#{nth($bluescale-sufix-list, $z)} {
+      #{nth($text-elements-list, $i)} {
+        color: #{nth($bluescale-list, $z)};
+      }
+    }
+  }
+}

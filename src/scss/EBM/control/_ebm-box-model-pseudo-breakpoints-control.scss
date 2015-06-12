@@ -1,0 +1,18 @@
+// BEFORE & AFTER pseudoclasses margins
+@for $i from 0 through $loop-limit {
+  @for $j from 6 through length($box-model-sides) {
+    @for $k from 1 through length($breakpoints-sufix-list) {
+      @media #{nth($media-control-list, $k)} {
+        .#{nth($box-model-abbr, $j)}-#{$i*$ebm-times}-#{nth($breakpoints-sufix-list, $k)}-bf {       
+          &:before {
+            #{nth($box-model-sides, $j)}: ($i*$ebm-times) + px #{$importantize};
+            // REMs for modern browsers
+            @if $px-to-rems == true {
+              #{nth($box-model-sides, $j)}: rem($i*$ebm-times) #{$importantize};
+            }
+          }
+        }
+      }
+    }
+  }
+}

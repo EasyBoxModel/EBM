@@ -41,6 +41,13 @@ $border-style: solid;
 		}
 	}
 }
+@for $z from 1 through length($border-sides-list) {
+	@for $i from 1 to length($bluescale-sufix-list) {
+		.border-#{nth($border-sides-list, $z)}-#{nth($bluescale-sufix-list, $i)} {
+			border-#{nth($border-sides-list, $z)}: $border-width $border-style #{nth($bluescale-list, $i)};
+		}
+	}
+}
 
 // Border sizes
 @for $z from 2 through length($sizes-list) {

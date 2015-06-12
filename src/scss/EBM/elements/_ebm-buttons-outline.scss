@@ -29,4 +29,17 @@ input[type="submit"].btn,
 			}
 		}
 	}
+	@for $i from 1 through length($bluescale-sufix-list) {
+		&.btn-#{nth($bluescale-sufix-list, $i)}.btn-outline {
+			background: none;
+			border: $buttons-custom-border-size $buttons-custom-border-style #{nth($bluescale-list, $i)};;
+			border-radius: $border-radius-base;
+			color: #{nth($bluescale-list, $i)};
+			&:hover {
+				background: none;
+				border: $buttons-custom-border-size $buttons-custom-border-style #{darken(nth($bluescale-list, $i), $buttons-custom-color-control)};
+				color: #{darken(nth($bluescale-list, $i), $buttons-custom-color-control)};
+			}
+		}
+	}
 }
