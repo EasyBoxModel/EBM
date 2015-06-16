@@ -265,6 +265,17 @@ module.exports = function (grunt) {
       }
     },
 
+    purifycss: {
+      dist: {
+        options: {},
+        target: {
+          src: ['<%= project.app %>/*.{html,htm,php}', '<%= project.app %>/assets/js/*.js'],
+          css: ['<%= project.app %>/assets/css/*.css'],
+          dest: '<%= project.app %>/assets/css/pure.style.css'
+        },
+      }
+    },
+
     /**
      * Opens the web server in the browser
      * https://github.com/jsoverson/grunt-open
