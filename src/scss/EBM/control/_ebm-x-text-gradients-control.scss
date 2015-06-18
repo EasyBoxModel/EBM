@@ -1,0 +1,17 @@
+// TEXT GRADIENTS
+@mixin text-fill-color($color) {
+  @include prefixer(text-fill-color, $color, webkit moz spec);
+}
+
+@mixin background-clip($clip) {
+  @include prefixer(background-clip, $clip, webkit moz spec);
+}
+
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+  .text-gradient {
+    @include background(linear-gradient(left, $brand-primary, $brand-info, $brand-success) repeat);
+    @include background-clip(text);
+    @include text-fill-color(transparent);
+  }
+}
+// END:TEXT GRADIENTS
