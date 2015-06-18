@@ -6,7 +6,7 @@ The EBM is a structured set of frontend libraries and tools and a workflow propo
 
 ### Thoughts about time
 
-After having worked on at least 20 web projects throughout 18 months, we discovered that __time tracking does not objectively measure productivity__, instead, we prefer talking about __time efficiency__, where the ammount of time taken to complete a project in the stages of development, Q&Aand production can be decreased if each individual inside the development team uses __productivity resources__.
+After having worked on at least 20 web projects throughout 18 months, we discovered that __time tracking does not objectively measure productivity__, instead, we prefer talking about __time efficiency__, where the ammount of time taken to complete a project in the stages of development, Q&A and production can be decreased if each individual inside the development team uses __productivity resources__.
 
 ### Productivity resources
 
@@ -80,7 +80,7 @@ What does quality mean?
 
 ## How to contribute
 
-As preivously stated, the EBM is a proposal on how to use the selected libraries and tools, it was born as an always-evolving structure and methodology so it's on its nature to be like that. 
+As previously stated, the EBM is a proposal on how to use the selected libraries and tools, it was born as an always-evolving structure and methodology so it's on its nature to be like that. 
 
 There are 3 ways to contribute:
 
