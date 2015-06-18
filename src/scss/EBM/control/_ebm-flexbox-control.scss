@@ -2,63 +2,12 @@
 	EBM:Ref
 	Flexbox
 */
-// HORIZONTAL DISTRIBUTION SHORTHANDS
-@mixin flex-row {
-	@include display(flex);
-	@include flex-direction(row);
-}
-@mixin flex-row-center {
-	@include flex-row;
-	@include justify-content(center);
-}
-@mixin flex-row-end {
-	@include flex-row;
-	@include justify-content(flex-end);
-}
-@mixin flex-row-space-between {
-	@include flex-row;
-	@include justify-content(space-between);
-}
-@mixin flex-row-space-around {
-	@include flex-row;
-	@include justify-content(space-around);
-}
-// VERTICAL DISTRIBUTION SHORTHANDS
-@mixin flex-column {
-	@include display(flex);
-	@include flex-direction(column);
-}
-@mixin flex-column-center {
-	@include flex-column;
-	@include justify-content(center);
-}
-@mixin flex-column-end {
-	@include flex-column;
-	@include justify-content(flex-end);
-}
-@mixin flex-column-space-between {
-	@include flex-column;
-	@include justify-content(space-between);
-}
-@mixin flex-column-space-around {
-	@include flex-column;
-	@include justify-content(space-around);
-}
-
-// FLEX Align
-@mixin flex-align-center {
-	@include align-items(center);
-}
-@mixin flex-align-end {
-	@include align-items(flex-end);
-}
-@mixin flex-align-stretch {
-	@include align-items(stretch);
-}
-
 // FLEXBOX Classes
 .flex-row {
 	@include flex-row;
+	@include children-elements {
+		@include flex(1);
+	}
 }
 .flex-row-ch {
 	@include children-elements {
@@ -67,6 +16,9 @@
 }
 .flex-row-center {
 	@include flex-row-center;
+	@include children-elements {
+		@include flex(1);
+	}
 }
 .flex-row-center-ch {
 	@include children-elements {
@@ -75,6 +27,9 @@
 }
 .flex-row-end {
 	@include flex-row-end;
+	@include children-elements {
+		@include flex(1);
+	}
 }
 .flex-row-end-ch {
 	@include children-elements {
@@ -83,6 +38,9 @@
 }
 .flex-row-space-between {
 	@include flex-row-space-between;
+	@include children-elements {
+		@include flex(1);
+	}
 }
 .flex-row-space-between-ch {
 	@include children-elements {
@@ -91,6 +49,9 @@
 }
 .flex-row-space-around {
 	@include flex-row-space-around;
+	@include children-elements {
+		@include flex(1);
+	}
 }
 .flex-row-space-around-ch {
 	@include children-elements {
@@ -99,6 +60,9 @@
 }
 .flex-column {
 	@include flex-column;
+	@include children-elements {
+		@include flex(1);
+	}
 }
 .flex-column-ch {
 	@include children-elements {
@@ -107,6 +71,9 @@
 }
 .flex-column-center {
 	@include flex-column-center;
+	@include children-elements {
+		@include flex(1);
+	}
 }
 .flex-column-center-ch {
 	@include children-elements {
@@ -115,6 +82,9 @@
 }
 .flex-column-end {
 	@include flex-column-end;
+	@include children-elements {
+		@include flex(1);
+	}
 }
 .flex-column-end-ch {
 	@include children-elements {
@@ -123,6 +93,9 @@
 }
 .flex-column-space-between {
 	@include flex-column-space-between;
+	@include children-elements {
+		@include flex(1);
+	}
 }
 .flex-column-space-between-ch {
 	@include children-elements {
@@ -131,6 +104,9 @@
 }
 .flex-column-space-around {
 	@include flex-column-space-around;
+	@include children-elements {
+		@include flex(1);
+	}
 }
 .flex-column-space-around-ch {
 	@include children-elements {
