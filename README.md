@@ -1,5 +1,15 @@
 # Easy Box Model (EBM)
 
+## Getting started
+
+- `git clone https://github.com/EasyBoxModel/EBM.git name_of_your_project`
+- Mac users: `sudo npm install` - Windows users: `npm install`
+- `grunt`
+
+That's it. Start coding in the `app/index.html` file and style it on the `src/scss/EBM/_ebm-global.scss` file. Grunt will live-reload any changes on a localhost:9000 server. 
+
+Read the documentation for more details: [easyboxmodel.com](http://easyboxmodel.com/category/getting-started)
+
 ## Description
 
 The EBM is a structured set of frontend libraries and tools and a workflow proposal on how to use them to drastically increase web development productivity.
