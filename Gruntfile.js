@@ -300,8 +300,7 @@ module.exports = function (grunt) {
         files: [
           '<%= project.src %>/scss/style.scss',
           '<%= project.src %>/scss/b3/_variables.scss',
-          '<%= project.src %>/scss/EBM/_ebm-global.scss',
-          '<%= project.src %>/scss/EBM/_ebm-dist.scss'],
+          '<%= project.src %>/scss/EBM/_ebm-global.scss'],
         tasks: 'sass:dev'
       },
       ebm: {
@@ -309,7 +308,7 @@ module.exports = function (grunt) {
           '<%= project.src %>/scss/{,*/}*/{,*/}*.{scss,sass}', 
           '!<%= project.src %>/scss/style.scss',
           '!<%= project.src %>/scss/EBM/_ebm-global.scss',
-          '!<%= project.src %>/scss/EBM/_ebm-dist.scss'],
+          '!<%= project.src %>/scss/EBM/_ebm-imports.scss'],
         tasks: 'sass:ebm'
       },
       coffee: {

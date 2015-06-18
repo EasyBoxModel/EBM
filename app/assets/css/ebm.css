@@ -2838,6 +2838,10 @@ input[type="button"].btn-block {
   }
 }
 /*
+	EBM:Ref
+	Flexbox
+*/
+/*
 	EBM Variables
 */
 /* 
@@ -7270,13 +7274,15 @@ h6.lead {
 	Flexbox
 */
 .flex-row {
-  display: -webkit-box;
-  display: -moz-box;
-  display: box;
-  display: -webkit-flex;
-  display: -moz-flex;
-  display: -ms-flexbox;
-  display: flex;
+  -webkit-box-align: start;
+  -moz-box-align: start;
+  box-align: start;
+  -webkit-align-items: flex-start;
+  -moz-align-items: flex-start;
+  -ms-align-items: flex-start;
+  -o-align-items: flex-start;
+  align-items: flex-start;
+  -ms-flex-align: start;
   -webkit-box-orient: horizontal;
   -moz-box-orient: horizontal;
   box-orient: horizontal;
@@ -7287,6 +7293,23 @@ h6.lead {
   -moz-flex-direction: row;
   flex-direction: row;
   -ms-flex-direction: row;
+  display: -webkit-box;
+  display: -moz-box;
+  display: box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+.flex-row > div, .flex-row > section, .flex-row > header, .flex-row > footer, .flex-row > main, .flex-row > aside, .flex-row > article,
+.flex-row > a, .flex-row > span, .flex-row > li, .flex-row > p, .flex-row > i, .flex-row > em, .flex-row > small, .flex-row > blockquote, .flex-row > pre, .flex-row > code
+> h1, .flex-row > h2, .flex-row > h3, .flex-row > h4, .flex-row > h5, .flex-row > h6,
+.flex-row > .h1, .flex-row > .h2, .flex-row > .h3, .flex-row > .h4, .flex-row > .h5, .flex-row > .h6, .flex-row > .p,
+.flex-row > ul, .flex-row > ol, .flex-row > button {
+  -webkit-flex-grow: 1;
+  -moz-flex-grow: 1;
+  flex-grow: 1;
+  -ms-flex-positive: 1;
 }
 
 .flex-row-ch > div, .flex-row-ch > section, .flex-row-ch > header, .flex-row-ch > footer, .flex-row-ch > main, .flex-row-ch > aside, .flex-row-ch > article,
@@ -7294,13 +7317,15 @@ h6.lead {
 > h1, .flex-row-ch > h2, .flex-row-ch > h3, .flex-row-ch > h4, .flex-row-ch > h5, .flex-row-ch > h6,
 .flex-row-ch > .h1, .flex-row-ch > .h2, .flex-row-ch > .h3, .flex-row-ch > .h4, .flex-row-ch > .h5, .flex-row-ch > .h6, .flex-row-ch > .p,
 .flex-row-ch > ul, .flex-row-ch > ol, .flex-row-ch > button {
-  display: -webkit-box;
-  display: -moz-box;
-  display: box;
-  display: -webkit-flex;
-  display: -moz-flex;
-  display: -ms-flexbox;
-  display: flex;
+  -webkit-box-align: start;
+  -moz-box-align: start;
+  box-align: start;
+  -webkit-align-items: flex-start;
+  -moz-align-items: flex-start;
+  -ms-align-items: flex-start;
+  -o-align-items: flex-start;
+  align-items: flex-start;
+  -ms-flex-align: start;
   -webkit-box-orient: horizontal;
   -moz-box-orient: horizontal;
   box-orient: horizontal;
@@ -7311,26 +7336,16 @@ h6.lead {
   -moz-flex-direction: row;
   flex-direction: row;
   -ms-flex-direction: row;
+  display: -webkit-box;
+  display: -moz-box;
+  display: box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .flex-row-center {
-  display: -webkit-box;
-  display: -moz-box;
-  display: box;
-  display: -webkit-flex;
-  display: -moz-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -moz-box-orient: horizontal;
-  box-orient: horizontal;
-  -webkit-box-direction: normal;
-  -moz-box-direction: normal;
-  box-direction: normal;
-  -webkit-flex-direction: row;
-  -moz-flex-direction: row;
-  flex-direction: row;
-  -ms-flex-direction: row;
   -webkit-box-pack: center;
   -moz-box-pack: center;
   box-pack: center;
@@ -7340,6 +7355,51 @@ h6.lead {
   -o-justify-content: center;
   justify-content: center;
   -ms-flex-pack: center;
+  -webkit-box-align: start;
+  -moz-box-align: start;
+  box-align: start;
+  -webkit-align-items: flex-start;
+  -moz-align-items: flex-start;
+  -ms-align-items: flex-start;
+  -o-align-items: flex-start;
+  align-items: flex-start;
+  -ms-flex-align: start;
+  -webkit-box-align: start;
+  -moz-box-align: start;
+  box-align: start;
+  -webkit-align-items: flex-start;
+  -moz-align-items: flex-start;
+  -ms-align-items: flex-start;
+  -o-align-items: flex-start;
+  align-items: flex-start;
+  -ms-flex-align: start;
+  -webkit-box-orient: horizontal;
+  -moz-box-orient: horizontal;
+  box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -moz-box-direction: normal;
+  box-direction: normal;
+  -webkit-flex-direction: row;
+  -moz-flex-direction: row;
+  flex-direction: row;
+  -ms-flex-direction: row;
+  display: -webkit-box;
+  display: -moz-box;
+  display: box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+.flex-row-center > div, .flex-row-center > section, .flex-row-center > header, .flex-row-center > footer, .flex-row-center > main, .flex-row-center > aside, .flex-row-center > article,
+.flex-row-center > a, .flex-row-center > span, .flex-row-center > li, .flex-row-center > p, .flex-row-center > i, .flex-row-center > em, .flex-row-center > small, .flex-row-center > blockquote, .flex-row-center > pre, .flex-row-center > code
+> h1, .flex-row-center > h2, .flex-row-center > h3, .flex-row-center > h4, .flex-row-center > h5, .flex-row-center > h6,
+.flex-row-center > .h1, .flex-row-center > .h2, .flex-row-center > .h3, .flex-row-center > .h4, .flex-row-center > .h5, .flex-row-center > .h6, .flex-row-center > .p,
+.flex-row-center > ul, .flex-row-center > ol, .flex-row-center > button {
+  -webkit-flex-grow: 1;
+  -moz-flex-grow: 1;
+  flex-grow: 1;
+  -ms-flex-positive: 1;
 }
 
 .flex-row-center-ch > div, .flex-row-center-ch > section, .flex-row-center-ch > header, .flex-row-center-ch > footer, .flex-row-center-ch > main, .flex-row-center-ch > aside, .flex-row-center-ch > article,
@@ -7347,23 +7407,6 @@ h6.lead {
 > h1, .flex-row-center-ch > h2, .flex-row-center-ch > h3, .flex-row-center-ch > h4, .flex-row-center-ch > h5, .flex-row-center-ch > h6,
 .flex-row-center-ch > .h1, .flex-row-center-ch > .h2, .flex-row-center-ch > .h3, .flex-row-center-ch > .h4, .flex-row-center-ch > .h5, .flex-row-center-ch > .h6, .flex-row-center-ch > .p,
 .flex-row-center-ch > ul, .flex-row-center-ch > ol, .flex-row-center-ch > button {
-  display: -webkit-box;
-  display: -moz-box;
-  display: box;
-  display: -webkit-flex;
-  display: -moz-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -moz-box-orient: horizontal;
-  box-orient: horizontal;
-  -webkit-box-direction: normal;
-  -moz-box-direction: normal;
-  box-direction: normal;
-  -webkit-flex-direction: row;
-  -moz-flex-direction: row;
-  flex-direction: row;
-  -ms-flex-direction: row;
   -webkit-box-pack: center;
   -moz-box-pack: center;
   box-pack: center;
@@ -7373,16 +7416,24 @@ h6.lead {
   -o-justify-content: center;
   justify-content: center;
   -ms-flex-pack: center;
-}
-
-.flex-row-end {
-  display: -webkit-box;
-  display: -moz-box;
-  display: box;
-  display: -webkit-flex;
-  display: -moz-flex;
-  display: -ms-flexbox;
-  display: flex;
+  -webkit-box-align: start;
+  -moz-box-align: start;
+  box-align: start;
+  -webkit-align-items: flex-start;
+  -moz-align-items: flex-start;
+  -ms-align-items: flex-start;
+  -o-align-items: flex-start;
+  align-items: flex-start;
+  -ms-flex-align: start;
+  -webkit-box-align: start;
+  -moz-box-align: start;
+  box-align: start;
+  -webkit-align-items: flex-start;
+  -moz-align-items: flex-start;
+  -ms-align-items: flex-start;
+  -o-align-items: flex-start;
+  align-items: flex-start;
+  -ms-flex-align: start;
   -webkit-box-orient: horizontal;
   -moz-box-orient: horizontal;
   box-orient: horizontal;
@@ -7393,6 +7444,16 @@ h6.lead {
   -moz-flex-direction: row;
   flex-direction: row;
   -ms-flex-direction: row;
+  display: -webkit-box;
+  display: -moz-box;
+  display: box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.flex-row-end {
   -webkit-box-pack: end;
   -moz-box-pack: end;
   box-pack: end;
@@ -7402,6 +7463,51 @@ h6.lead {
   -o-justify-content: flex-end;
   justify-content: flex-end;
   -ms-flex-pack: end;
+  -webkit-box-align: start;
+  -moz-box-align: start;
+  box-align: start;
+  -webkit-align-items: flex-start;
+  -moz-align-items: flex-start;
+  -ms-align-items: flex-start;
+  -o-align-items: flex-start;
+  align-items: flex-start;
+  -ms-flex-align: start;
+  -webkit-box-align: start;
+  -moz-box-align: start;
+  box-align: start;
+  -webkit-align-items: flex-start;
+  -moz-align-items: flex-start;
+  -ms-align-items: flex-start;
+  -o-align-items: flex-start;
+  align-items: flex-start;
+  -ms-flex-align: start;
+  -webkit-box-orient: horizontal;
+  -moz-box-orient: horizontal;
+  box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -moz-box-direction: normal;
+  box-direction: normal;
+  -webkit-flex-direction: row;
+  -moz-flex-direction: row;
+  flex-direction: row;
+  -ms-flex-direction: row;
+  display: -webkit-box;
+  display: -moz-box;
+  display: box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+.flex-row-end > div, .flex-row-end > section, .flex-row-end > header, .flex-row-end > footer, .flex-row-end > main, .flex-row-end > aside, .flex-row-end > article,
+.flex-row-end > a, .flex-row-end > span, .flex-row-end > li, .flex-row-end > p, .flex-row-end > i, .flex-row-end > em, .flex-row-end > small, .flex-row-end > blockquote, .flex-row-end > pre, .flex-row-end > code
+> h1, .flex-row-end > h2, .flex-row-end > h3, .flex-row-end > h4, .flex-row-end > h5, .flex-row-end > h6,
+.flex-row-end > .h1, .flex-row-end > .h2, .flex-row-end > .h3, .flex-row-end > .h4, .flex-row-end > .h5, .flex-row-end > .h6, .flex-row-end > .p,
+.flex-row-end > ul, .flex-row-end > ol, .flex-row-end > button {
+  -webkit-flex-grow: 1;
+  -moz-flex-grow: 1;
+  flex-grow: 1;
+  -ms-flex-positive: 1;
 }
 
 .flex-row-end-ch > div, .flex-row-end-ch > section, .flex-row-end-ch > header, .flex-row-end-ch > footer, .flex-row-end-ch > main, .flex-row-end-ch > aside, .flex-row-end-ch > article,
@@ -7409,23 +7515,6 @@ h6.lead {
 > h1, .flex-row-end-ch > h2, .flex-row-end-ch > h3, .flex-row-end-ch > h4, .flex-row-end-ch > h5, .flex-row-end-ch > h6,
 .flex-row-end-ch > .h1, .flex-row-end-ch > .h2, .flex-row-end-ch > .h3, .flex-row-end-ch > .h4, .flex-row-end-ch > .h5, .flex-row-end-ch > .h6, .flex-row-end-ch > .p,
 .flex-row-end-ch > ul, .flex-row-end-ch > ol, .flex-row-end-ch > button {
-  display: -webkit-box;
-  display: -moz-box;
-  display: box;
-  display: -webkit-flex;
-  display: -moz-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -moz-box-orient: horizontal;
-  box-orient: horizontal;
-  -webkit-box-direction: normal;
-  -moz-box-direction: normal;
-  box-direction: normal;
-  -webkit-flex-direction: row;
-  -moz-flex-direction: row;
-  flex-direction: row;
-  -ms-flex-direction: row;
   -webkit-box-pack: end;
   -moz-box-pack: end;
   box-pack: end;
@@ -7435,16 +7524,24 @@ h6.lead {
   -o-justify-content: flex-end;
   justify-content: flex-end;
   -ms-flex-pack: end;
-}
-
-.flex-row-space-between {
-  display: -webkit-box;
-  display: -moz-box;
-  display: box;
-  display: -webkit-flex;
-  display: -moz-flex;
-  display: -ms-flexbox;
-  display: flex;
+  -webkit-box-align: start;
+  -moz-box-align: start;
+  box-align: start;
+  -webkit-align-items: flex-start;
+  -moz-align-items: flex-start;
+  -ms-align-items: flex-start;
+  -o-align-items: flex-start;
+  align-items: flex-start;
+  -ms-flex-align: start;
+  -webkit-box-align: start;
+  -moz-box-align: start;
+  box-align: start;
+  -webkit-align-items: flex-start;
+  -moz-align-items: flex-start;
+  -ms-align-items: flex-start;
+  -o-align-items: flex-start;
+  align-items: flex-start;
+  -ms-flex-align: start;
   -webkit-box-orient: horizontal;
   -moz-box-orient: horizontal;
   box-orient: horizontal;
@@ -7455,6 +7552,16 @@ h6.lead {
   -moz-flex-direction: row;
   flex-direction: row;
   -ms-flex-direction: row;
+  display: -webkit-box;
+  display: -moz-box;
+  display: box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.flex-row-space-between {
   -webkit-box-pack: justify;
   -moz-box-pack: justify;
   box-pack: justify;
@@ -7464,6 +7571,51 @@ h6.lead {
   -o-justify-content: space-between;
   justify-content: space-between;
   -ms-flex-pack: justify;
+  -webkit-box-align: start;
+  -moz-box-align: start;
+  box-align: start;
+  -webkit-align-items: flex-start;
+  -moz-align-items: flex-start;
+  -ms-align-items: flex-start;
+  -o-align-items: flex-start;
+  align-items: flex-start;
+  -ms-flex-align: start;
+  -webkit-box-align: start;
+  -moz-box-align: start;
+  box-align: start;
+  -webkit-align-items: flex-start;
+  -moz-align-items: flex-start;
+  -ms-align-items: flex-start;
+  -o-align-items: flex-start;
+  align-items: flex-start;
+  -ms-flex-align: start;
+  -webkit-box-orient: horizontal;
+  -moz-box-orient: horizontal;
+  box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -moz-box-direction: normal;
+  box-direction: normal;
+  -webkit-flex-direction: row;
+  -moz-flex-direction: row;
+  flex-direction: row;
+  -ms-flex-direction: row;
+  display: -webkit-box;
+  display: -moz-box;
+  display: box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+.flex-row-space-between > div, .flex-row-space-between > section, .flex-row-space-between > header, .flex-row-space-between > footer, .flex-row-space-between > main, .flex-row-space-between > aside, .flex-row-space-between > article,
+.flex-row-space-between > a, .flex-row-space-between > span, .flex-row-space-between > li, .flex-row-space-between > p, .flex-row-space-between > i, .flex-row-space-between > em, .flex-row-space-between > small, .flex-row-space-between > blockquote, .flex-row-space-between > pre, .flex-row-space-between > code
+> h1, .flex-row-space-between > h2, .flex-row-space-between > h3, .flex-row-space-between > h4, .flex-row-space-between > h5, .flex-row-space-between > h6,
+.flex-row-space-between > .h1, .flex-row-space-between > .h2, .flex-row-space-between > .h3, .flex-row-space-between > .h4, .flex-row-space-between > .h5, .flex-row-space-between > .h6, .flex-row-space-between > .p,
+.flex-row-space-between > ul, .flex-row-space-between > ol, .flex-row-space-between > button {
+  -webkit-flex-grow: 1;
+  -moz-flex-grow: 1;
+  flex-grow: 1;
+  -ms-flex-positive: 1;
 }
 
 .flex-row-space-between-ch > div, .flex-row-space-between-ch > section, .flex-row-space-between-ch > header, .flex-row-space-between-ch > footer, .flex-row-space-between-ch > main, .flex-row-space-between-ch > aside, .flex-row-space-between-ch > article,
@@ -7471,23 +7623,6 @@ h6.lead {
 > h1, .flex-row-space-between-ch > h2, .flex-row-space-between-ch > h3, .flex-row-space-between-ch > h4, .flex-row-space-between-ch > h5, .flex-row-space-between-ch > h6,
 .flex-row-space-between-ch > .h1, .flex-row-space-between-ch > .h2, .flex-row-space-between-ch > .h3, .flex-row-space-between-ch > .h4, .flex-row-space-between-ch > .h5, .flex-row-space-between-ch > .h6, .flex-row-space-between-ch > .p,
 .flex-row-space-between-ch > ul, .flex-row-space-between-ch > ol, .flex-row-space-between-ch > button {
-  display: -webkit-box;
-  display: -moz-box;
-  display: box;
-  display: -webkit-flex;
-  display: -moz-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -moz-box-orient: horizontal;
-  box-orient: horizontal;
-  -webkit-box-direction: normal;
-  -moz-box-direction: normal;
-  box-direction: normal;
-  -webkit-flex-direction: row;
-  -moz-flex-direction: row;
-  flex-direction: row;
-  -ms-flex-direction: row;
   -webkit-box-pack: justify;
   -moz-box-pack: justify;
   box-pack: justify;
@@ -7497,16 +7632,24 @@ h6.lead {
   -o-justify-content: space-between;
   justify-content: space-between;
   -ms-flex-pack: justify;
-}
-
-.flex-row-space-around {
-  display: -webkit-box;
-  display: -moz-box;
-  display: box;
-  display: -webkit-flex;
-  display: -moz-flex;
-  display: -ms-flexbox;
-  display: flex;
+  -webkit-box-align: start;
+  -moz-box-align: start;
+  box-align: start;
+  -webkit-align-items: flex-start;
+  -moz-align-items: flex-start;
+  -ms-align-items: flex-start;
+  -o-align-items: flex-start;
+  align-items: flex-start;
+  -ms-flex-align: start;
+  -webkit-box-align: start;
+  -moz-box-align: start;
+  box-align: start;
+  -webkit-align-items: flex-start;
+  -moz-align-items: flex-start;
+  -ms-align-items: flex-start;
+  -o-align-items: flex-start;
+  align-items: flex-start;
+  -ms-flex-align: start;
   -webkit-box-orient: horizontal;
   -moz-box-orient: horizontal;
   box-orient: horizontal;
@@ -7517,6 +7660,16 @@ h6.lead {
   -moz-flex-direction: row;
   flex-direction: row;
   -ms-flex-direction: row;
+  display: -webkit-box;
+  display: -moz-box;
+  display: box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.flex-row-space-around {
   -webkit-box-pack: distribute;
   -moz-box-pack: distribute;
   box-pack: distribute;
@@ -7526,6 +7679,51 @@ h6.lead {
   -o-justify-content: space-around;
   justify-content: space-around;
   -ms-flex-pack: distribute;
+  -webkit-box-align: start;
+  -moz-box-align: start;
+  box-align: start;
+  -webkit-align-items: flex-start;
+  -moz-align-items: flex-start;
+  -ms-align-items: flex-start;
+  -o-align-items: flex-start;
+  align-items: flex-start;
+  -ms-flex-align: start;
+  -webkit-box-align: start;
+  -moz-box-align: start;
+  box-align: start;
+  -webkit-align-items: flex-start;
+  -moz-align-items: flex-start;
+  -ms-align-items: flex-start;
+  -o-align-items: flex-start;
+  align-items: flex-start;
+  -ms-flex-align: start;
+  -webkit-box-orient: horizontal;
+  -moz-box-orient: horizontal;
+  box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -moz-box-direction: normal;
+  box-direction: normal;
+  -webkit-flex-direction: row;
+  -moz-flex-direction: row;
+  flex-direction: row;
+  -ms-flex-direction: row;
+  display: -webkit-box;
+  display: -moz-box;
+  display: box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+.flex-row-space-around > div, .flex-row-space-around > section, .flex-row-space-around > header, .flex-row-space-around > footer, .flex-row-space-around > main, .flex-row-space-around > aside, .flex-row-space-around > article,
+.flex-row-space-around > a, .flex-row-space-around > span, .flex-row-space-around > li, .flex-row-space-around > p, .flex-row-space-around > i, .flex-row-space-around > em, .flex-row-space-around > small, .flex-row-space-around > blockquote, .flex-row-space-around > pre, .flex-row-space-around > code
+> h1, .flex-row-space-around > h2, .flex-row-space-around > h3, .flex-row-space-around > h4, .flex-row-space-around > h5, .flex-row-space-around > h6,
+.flex-row-space-around > .h1, .flex-row-space-around > .h2, .flex-row-space-around > .h3, .flex-row-space-around > .h4, .flex-row-space-around > .h5, .flex-row-space-around > .h6, .flex-row-space-around > .p,
+.flex-row-space-around > ul, .flex-row-space-around > ol, .flex-row-space-around > button {
+  -webkit-flex-grow: 1;
+  -moz-flex-grow: 1;
+  flex-grow: 1;
+  -ms-flex-positive: 1;
 }
 
 .flex-row-space-around-ch > div, .flex-row-space-around-ch > section, .flex-row-space-around-ch > header, .flex-row-space-around-ch > footer, .flex-row-space-around-ch > main, .flex-row-space-around-ch > aside, .flex-row-space-around-ch > article,
@@ -7533,13 +7731,33 @@ h6.lead {
 > h1, .flex-row-space-around-ch > h2, .flex-row-space-around-ch > h3, .flex-row-space-around-ch > h4, .flex-row-space-around-ch > h5, .flex-row-space-around-ch > h6,
 .flex-row-space-around-ch > .h1, .flex-row-space-around-ch > .h2, .flex-row-space-around-ch > .h3, .flex-row-space-around-ch > .h4, .flex-row-space-around-ch > .h5, .flex-row-space-around-ch > .h6, .flex-row-space-around-ch > .p,
 .flex-row-space-around-ch > ul, .flex-row-space-around-ch > ol, .flex-row-space-around-ch > button {
-  display: -webkit-box;
-  display: -moz-box;
-  display: box;
-  display: -webkit-flex;
-  display: -moz-flex;
-  display: -ms-flexbox;
-  display: flex;
+  -webkit-box-pack: distribute;
+  -moz-box-pack: distribute;
+  box-pack: distribute;
+  -webkit-justify-content: space-around;
+  -moz-justify-content: space-around;
+  -ms-justify-content: space-around;
+  -o-justify-content: space-around;
+  justify-content: space-around;
+  -ms-flex-pack: distribute;
+  -webkit-box-align: start;
+  -moz-box-align: start;
+  box-align: start;
+  -webkit-align-items: flex-start;
+  -moz-align-items: flex-start;
+  -ms-align-items: flex-start;
+  -o-align-items: flex-start;
+  align-items: flex-start;
+  -ms-flex-align: start;
+  -webkit-box-align: start;
+  -moz-box-align: start;
+  box-align: start;
+  -webkit-align-items: flex-start;
+  -moz-align-items: flex-start;
+  -ms-align-items: flex-start;
+  -o-align-items: flex-start;
+  align-items: flex-start;
+  -ms-flex-align: start;
   -webkit-box-orient: horizontal;
   -moz-box-orient: horizontal;
   box-orient: horizontal;
@@ -7550,18 +7768,6 @@ h6.lead {
   -moz-flex-direction: row;
   flex-direction: row;
   -ms-flex-direction: row;
-  -webkit-box-pack: distribute;
-  -moz-box-pack: distribute;
-  box-pack: distribute;
-  -webkit-justify-content: space-around;
-  -moz-justify-content: space-around;
-  -ms-justify-content: space-around;
-  -o-justify-content: space-around;
-  justify-content: space-around;
-  -ms-flex-pack: distribute;
-}
-
-.flex-column {
   display: -webkit-box;
   display: -moz-box;
   display: box;
@@ -7569,6 +7775,9 @@ h6.lead {
   display: -moz-flex;
   display: -ms-flexbox;
   display: flex;
+}
+
+.flex-column {
   -webkit-box-orient: vertical;
   -moz-box-orient: vertical;
   box-orient: vertical;
@@ -7579,6 +7788,32 @@ h6.lead {
   -moz-flex-direction: column;
   flex-direction: column;
   -ms-flex-direction: column;
+  -webkit-box-align: start;
+  -moz-box-align: start;
+  box-align: start;
+  -webkit-align-items: flex-start;
+  -moz-align-items: flex-start;
+  -ms-align-items: flex-start;
+  -o-align-items: flex-start;
+  align-items: flex-start;
+  -ms-flex-align: start;
+  display: -webkit-box;
+  display: -moz-box;
+  display: box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+.flex-column > div, .flex-column > section, .flex-column > header, .flex-column > footer, .flex-column > main, .flex-column > aside, .flex-column > article,
+.flex-column > a, .flex-column > span, .flex-column > li, .flex-column > p, .flex-column > i, .flex-column > em, .flex-column > small, .flex-column > blockquote, .flex-column > pre, .flex-column > code
+> h1, .flex-column > h2, .flex-column > h3, .flex-column > h4, .flex-column > h5, .flex-column > h6,
+.flex-column > .h1, .flex-column > .h2, .flex-column > .h3, .flex-column > .h4, .flex-column > .h5, .flex-column > .h6, .flex-column > .p,
+.flex-column > ul, .flex-column > ol, .flex-column > button {
+  -webkit-flex-grow: 1;
+  -moz-flex-grow: 1;
+  flex-grow: 1;
+  -ms-flex-positive: 1;
 }
 
 .flex-column-ch > div, .flex-column-ch > section, .flex-column-ch > header, .flex-column-ch > footer, .flex-column-ch > main, .flex-column-ch > aside, .flex-column-ch > article,
@@ -7586,13 +7821,6 @@ h6.lead {
 > h1, .flex-column-ch > h2, .flex-column-ch > h3, .flex-column-ch > h4, .flex-column-ch > h5, .flex-column-ch > h6,
 .flex-column-ch > .h1, .flex-column-ch > .h2, .flex-column-ch > .h3, .flex-column-ch > .h4, .flex-column-ch > .h5, .flex-column-ch > .h6, .flex-column-ch > .p,
 .flex-column-ch > ul, .flex-column-ch > ol, .flex-column-ch > button {
-  display: -webkit-box;
-  display: -moz-box;
-  display: box;
-  display: -webkit-flex;
-  display: -moz-flex;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-box-orient: vertical;
   -moz-box-orient: vertical;
   box-orient: vertical;
@@ -7603,26 +7831,25 @@ h6.lead {
   -moz-flex-direction: column;
   flex-direction: column;
   -ms-flex-direction: column;
+  -webkit-box-align: start;
+  -moz-box-align: start;
+  box-align: start;
+  -webkit-align-items: flex-start;
+  -moz-align-items: flex-start;
+  -ms-align-items: flex-start;
+  -o-align-items: flex-start;
+  align-items: flex-start;
+  -ms-flex-align: start;
+  display: -webkit-box;
+  display: -moz-box;
+  display: box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .flex-column-center {
-  display: -webkit-box;
-  display: -moz-box;
-  display: box;
-  display: -webkit-flex;
-  display: -moz-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -moz-box-orient: vertical;
-  box-orient: vertical;
-  -webkit-box-direction: normal;
-  -moz-box-direction: normal;
-  box-direction: normal;
-  -webkit-flex-direction: column;
-  -moz-flex-direction: column;
-  flex-direction: column;
-  -ms-flex-direction: column;
   -webkit-box-pack: center;
   -moz-box-pack: center;
   box-pack: center;
@@ -7632,6 +7859,51 @@ h6.lead {
   -o-justify-content: center;
   justify-content: center;
   -ms-flex-pack: center;
+  -webkit-box-align: start;
+  -moz-box-align: start;
+  box-align: start;
+  -webkit-align-items: flex-start;
+  -moz-align-items: flex-start;
+  -ms-align-items: flex-start;
+  -o-align-items: flex-start;
+  align-items: flex-start;
+  -ms-flex-align: start;
+  -webkit-box-orient: vertical;
+  -moz-box-orient: vertical;
+  box-orient: vertical;
+  -webkit-box-direction: normal;
+  -moz-box-direction: normal;
+  box-direction: normal;
+  -webkit-flex-direction: column;
+  -moz-flex-direction: column;
+  flex-direction: column;
+  -ms-flex-direction: column;
+  -webkit-box-align: start;
+  -moz-box-align: start;
+  box-align: start;
+  -webkit-align-items: flex-start;
+  -moz-align-items: flex-start;
+  -ms-align-items: flex-start;
+  -o-align-items: flex-start;
+  align-items: flex-start;
+  -ms-flex-align: start;
+  display: -webkit-box;
+  display: -moz-box;
+  display: box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+.flex-column-center > div, .flex-column-center > section, .flex-column-center > header, .flex-column-center > footer, .flex-column-center > main, .flex-column-center > aside, .flex-column-center > article,
+.flex-column-center > a, .flex-column-center > span, .flex-column-center > li, .flex-column-center > p, .flex-column-center > i, .flex-column-center > em, .flex-column-center > small, .flex-column-center > blockquote, .flex-column-center > pre, .flex-column-center > code
+> h1, .flex-column-center > h2, .flex-column-center > h3, .flex-column-center > h4, .flex-column-center > h5, .flex-column-center > h6,
+.flex-column-center > .h1, .flex-column-center > .h2, .flex-column-center > .h3, .flex-column-center > .h4, .flex-column-center > .h5, .flex-column-center > .h6, .flex-column-center > .p,
+.flex-column-center > ul, .flex-column-center > ol, .flex-column-center > button {
+  -webkit-flex-grow: 1;
+  -moz-flex-grow: 1;
+  flex-grow: 1;
+  -ms-flex-positive: 1;
 }
 
 .flex-column-center-ch > div, .flex-column-center-ch > section, .flex-column-center-ch > header, .flex-column-center-ch > footer, .flex-column-center-ch > main, .flex-column-center-ch > aside, .flex-column-center-ch > article,
@@ -7639,23 +7911,6 @@ h6.lead {
 > h1, .flex-column-center-ch > h2, .flex-column-center-ch > h3, .flex-column-center-ch > h4, .flex-column-center-ch > h5, .flex-column-center-ch > h6,
 .flex-column-center-ch > .h1, .flex-column-center-ch > .h2, .flex-column-center-ch > .h3, .flex-column-center-ch > .h4, .flex-column-center-ch > .h5, .flex-column-center-ch > .h6, .flex-column-center-ch > .p,
 .flex-column-center-ch > ul, .flex-column-center-ch > ol, .flex-column-center-ch > button {
-  display: -webkit-box;
-  display: -moz-box;
-  display: box;
-  display: -webkit-flex;
-  display: -moz-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -moz-box-orient: vertical;
-  box-orient: vertical;
-  -webkit-box-direction: normal;
-  -moz-box-direction: normal;
-  box-direction: normal;
-  -webkit-flex-direction: column;
-  -moz-flex-direction: column;
-  flex-direction: column;
-  -ms-flex-direction: column;
   -webkit-box-pack: center;
   -moz-box-pack: center;
   box-pack: center;
@@ -7665,16 +7920,15 @@ h6.lead {
   -o-justify-content: center;
   justify-content: center;
   -ms-flex-pack: center;
-}
-
-.flex-column-end {
-  display: -webkit-box;
-  display: -moz-box;
-  display: box;
-  display: -webkit-flex;
-  display: -moz-flex;
-  display: -ms-flexbox;
-  display: flex;
+  -webkit-box-align: start;
+  -moz-box-align: start;
+  box-align: start;
+  -webkit-align-items: flex-start;
+  -moz-align-items: flex-start;
+  -ms-align-items: flex-start;
+  -o-align-items: flex-start;
+  align-items: flex-start;
+  -ms-flex-align: start;
   -webkit-box-orient: vertical;
   -moz-box-orient: vertical;
   box-orient: vertical;
@@ -7685,6 +7939,25 @@ h6.lead {
   -moz-flex-direction: column;
   flex-direction: column;
   -ms-flex-direction: column;
+  -webkit-box-align: start;
+  -moz-box-align: start;
+  box-align: start;
+  -webkit-align-items: flex-start;
+  -moz-align-items: flex-start;
+  -ms-align-items: flex-start;
+  -o-align-items: flex-start;
+  align-items: flex-start;
+  -ms-flex-align: start;
+  display: -webkit-box;
+  display: -moz-box;
+  display: box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.flex-column-end {
   -webkit-box-pack: end;
   -moz-box-pack: end;
   box-pack: end;
@@ -7694,6 +7967,51 @@ h6.lead {
   -o-justify-content: flex-end;
   justify-content: flex-end;
   -ms-flex-pack: end;
+  -webkit-box-align: start;
+  -moz-box-align: start;
+  box-align: start;
+  -webkit-align-items: flex-start;
+  -moz-align-items: flex-start;
+  -ms-align-items: flex-start;
+  -o-align-items: flex-start;
+  align-items: flex-start;
+  -ms-flex-align: start;
+  -webkit-box-orient: vertical;
+  -moz-box-orient: vertical;
+  box-orient: vertical;
+  -webkit-box-direction: normal;
+  -moz-box-direction: normal;
+  box-direction: normal;
+  -webkit-flex-direction: column;
+  -moz-flex-direction: column;
+  flex-direction: column;
+  -ms-flex-direction: column;
+  -webkit-box-align: start;
+  -moz-box-align: start;
+  box-align: start;
+  -webkit-align-items: flex-start;
+  -moz-align-items: flex-start;
+  -ms-align-items: flex-start;
+  -o-align-items: flex-start;
+  align-items: flex-start;
+  -ms-flex-align: start;
+  display: -webkit-box;
+  display: -moz-box;
+  display: box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+.flex-column-end > div, .flex-column-end > section, .flex-column-end > header, .flex-column-end > footer, .flex-column-end > main, .flex-column-end > aside, .flex-column-end > article,
+.flex-column-end > a, .flex-column-end > span, .flex-column-end > li, .flex-column-end > p, .flex-column-end > i, .flex-column-end > em, .flex-column-end > small, .flex-column-end > blockquote, .flex-column-end > pre, .flex-column-end > code
+> h1, .flex-column-end > h2, .flex-column-end > h3, .flex-column-end > h4, .flex-column-end > h5, .flex-column-end > h6,
+.flex-column-end > .h1, .flex-column-end > .h2, .flex-column-end > .h3, .flex-column-end > .h4, .flex-column-end > .h5, .flex-column-end > .h6, .flex-column-end > .p,
+.flex-column-end > ul, .flex-column-end > ol, .flex-column-end > button {
+  -webkit-flex-grow: 1;
+  -moz-flex-grow: 1;
+  flex-grow: 1;
+  -ms-flex-positive: 1;
 }
 
 .flex-column-end-ch > div, .flex-column-end-ch > section, .flex-column-end-ch > header, .flex-column-end-ch > footer, .flex-column-end-ch > main, .flex-column-end-ch > aside, .flex-column-end-ch > article,
@@ -7701,23 +8019,6 @@ h6.lead {
 > h1, .flex-column-end-ch > h2, .flex-column-end-ch > h3, .flex-column-end-ch > h4, .flex-column-end-ch > h5, .flex-column-end-ch > h6,
 .flex-column-end-ch > .h1, .flex-column-end-ch > .h2, .flex-column-end-ch > .h3, .flex-column-end-ch > .h4, .flex-column-end-ch > .h5, .flex-column-end-ch > .h6, .flex-column-end-ch > .p,
 .flex-column-end-ch > ul, .flex-column-end-ch > ol, .flex-column-end-ch > button {
-  display: -webkit-box;
-  display: -moz-box;
-  display: box;
-  display: -webkit-flex;
-  display: -moz-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -moz-box-orient: vertical;
-  box-orient: vertical;
-  -webkit-box-direction: normal;
-  -moz-box-direction: normal;
-  box-direction: normal;
-  -webkit-flex-direction: column;
-  -moz-flex-direction: column;
-  flex-direction: column;
-  -ms-flex-direction: column;
   -webkit-box-pack: end;
   -moz-box-pack: end;
   box-pack: end;
@@ -7727,16 +8028,15 @@ h6.lead {
   -o-justify-content: flex-end;
   justify-content: flex-end;
   -ms-flex-pack: end;
-}
-
-.flex-column-space-between {
-  display: -webkit-box;
-  display: -moz-box;
-  display: box;
-  display: -webkit-flex;
-  display: -moz-flex;
-  display: -ms-flexbox;
-  display: flex;
+  -webkit-box-align: start;
+  -moz-box-align: start;
+  box-align: start;
+  -webkit-align-items: flex-start;
+  -moz-align-items: flex-start;
+  -ms-align-items: flex-start;
+  -o-align-items: flex-start;
+  align-items: flex-start;
+  -ms-flex-align: start;
   -webkit-box-orient: vertical;
   -moz-box-orient: vertical;
   box-orient: vertical;
@@ -7747,6 +8047,25 @@ h6.lead {
   -moz-flex-direction: column;
   flex-direction: column;
   -ms-flex-direction: column;
+  -webkit-box-align: start;
+  -moz-box-align: start;
+  box-align: start;
+  -webkit-align-items: flex-start;
+  -moz-align-items: flex-start;
+  -ms-align-items: flex-start;
+  -o-align-items: flex-start;
+  align-items: flex-start;
+  -ms-flex-align: start;
+  display: -webkit-box;
+  display: -moz-box;
+  display: box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.flex-column-space-between {
   -webkit-box-pack: justify;
   -moz-box-pack: justify;
   box-pack: justify;
@@ -7756,6 +8075,51 @@ h6.lead {
   -o-justify-content: space-between;
   justify-content: space-between;
   -ms-flex-pack: justify;
+  -webkit-box-align: start;
+  -moz-box-align: start;
+  box-align: start;
+  -webkit-align-items: flex-start;
+  -moz-align-items: flex-start;
+  -ms-align-items: flex-start;
+  -o-align-items: flex-start;
+  align-items: flex-start;
+  -ms-flex-align: start;
+  -webkit-box-orient: vertical;
+  -moz-box-orient: vertical;
+  box-orient: vertical;
+  -webkit-box-direction: normal;
+  -moz-box-direction: normal;
+  box-direction: normal;
+  -webkit-flex-direction: column;
+  -moz-flex-direction: column;
+  flex-direction: column;
+  -ms-flex-direction: column;
+  -webkit-box-align: start;
+  -moz-box-align: start;
+  box-align: start;
+  -webkit-align-items: flex-start;
+  -moz-align-items: flex-start;
+  -ms-align-items: flex-start;
+  -o-align-items: flex-start;
+  align-items: flex-start;
+  -ms-flex-align: start;
+  display: -webkit-box;
+  display: -moz-box;
+  display: box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+.flex-column-space-between > div, .flex-column-space-between > section, .flex-column-space-between > header, .flex-column-space-between > footer, .flex-column-space-between > main, .flex-column-space-between > aside, .flex-column-space-between > article,
+.flex-column-space-between > a, .flex-column-space-between > span, .flex-column-space-between > li, .flex-column-space-between > p, .flex-column-space-between > i, .flex-column-space-between > em, .flex-column-space-between > small, .flex-column-space-between > blockquote, .flex-column-space-between > pre, .flex-column-space-between > code
+> h1, .flex-column-space-between > h2, .flex-column-space-between > h3, .flex-column-space-between > h4, .flex-column-space-between > h5, .flex-column-space-between > h6,
+.flex-column-space-between > .h1, .flex-column-space-between > .h2, .flex-column-space-between > .h3, .flex-column-space-between > .h4, .flex-column-space-between > .h5, .flex-column-space-between > .h6, .flex-column-space-between > .p,
+.flex-column-space-between > ul, .flex-column-space-between > ol, .flex-column-space-between > button {
+  -webkit-flex-grow: 1;
+  -moz-flex-grow: 1;
+  flex-grow: 1;
+  -ms-flex-positive: 1;
 }
 
 .flex-column-space-between-ch > div, .flex-column-space-between-ch > section, .flex-column-space-between-ch > header, .flex-column-space-between-ch > footer, .flex-column-space-between-ch > main, .flex-column-space-between-ch > aside, .flex-column-space-between-ch > article,
@@ -7763,23 +8127,6 @@ h6.lead {
 > h1, .flex-column-space-between-ch > h2, .flex-column-space-between-ch > h3, .flex-column-space-between-ch > h4, .flex-column-space-between-ch > h5, .flex-column-space-between-ch > h6,
 .flex-column-space-between-ch > .h1, .flex-column-space-between-ch > .h2, .flex-column-space-between-ch > .h3, .flex-column-space-between-ch > .h4, .flex-column-space-between-ch > .h5, .flex-column-space-between-ch > .h6, .flex-column-space-between-ch > .p,
 .flex-column-space-between-ch > ul, .flex-column-space-between-ch > ol, .flex-column-space-between-ch > button {
-  display: -webkit-box;
-  display: -moz-box;
-  display: box;
-  display: -webkit-flex;
-  display: -moz-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -moz-box-orient: vertical;
-  box-orient: vertical;
-  -webkit-box-direction: normal;
-  -moz-box-direction: normal;
-  box-direction: normal;
-  -webkit-flex-direction: column;
-  -moz-flex-direction: column;
-  flex-direction: column;
-  -ms-flex-direction: column;
   -webkit-box-pack: justify;
   -moz-box-pack: justify;
   box-pack: justify;
@@ -7789,16 +8136,15 @@ h6.lead {
   -o-justify-content: space-between;
   justify-content: space-between;
   -ms-flex-pack: justify;
-}
-
-.flex-column-space-around {
-  display: -webkit-box;
-  display: -moz-box;
-  display: box;
-  display: -webkit-flex;
-  display: -moz-flex;
-  display: -ms-flexbox;
-  display: flex;
+  -webkit-box-align: start;
+  -moz-box-align: start;
+  box-align: start;
+  -webkit-align-items: flex-start;
+  -moz-align-items: flex-start;
+  -ms-align-items: flex-start;
+  -o-align-items: flex-start;
+  align-items: flex-start;
+  -ms-flex-align: start;
   -webkit-box-orient: vertical;
   -moz-box-orient: vertical;
   box-orient: vertical;
@@ -7809,6 +8155,25 @@ h6.lead {
   -moz-flex-direction: column;
   flex-direction: column;
   -ms-flex-direction: column;
+  -webkit-box-align: start;
+  -moz-box-align: start;
+  box-align: start;
+  -webkit-align-items: flex-start;
+  -moz-align-items: flex-start;
+  -ms-align-items: flex-start;
+  -o-align-items: flex-start;
+  align-items: flex-start;
+  -ms-flex-align: start;
+  display: -webkit-box;
+  display: -moz-box;
+  display: box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.flex-column-space-around {
   -webkit-box-pack: distribute;
   -moz-box-pack: distribute;
   box-pack: distribute;
@@ -7818,6 +8183,51 @@ h6.lead {
   -o-justify-content: space-around;
   justify-content: space-around;
   -ms-flex-pack: distribute;
+  -webkit-box-align: start;
+  -moz-box-align: start;
+  box-align: start;
+  -webkit-align-items: flex-start;
+  -moz-align-items: flex-start;
+  -ms-align-items: flex-start;
+  -o-align-items: flex-start;
+  align-items: flex-start;
+  -ms-flex-align: start;
+  -webkit-box-orient: vertical;
+  -moz-box-orient: vertical;
+  box-orient: vertical;
+  -webkit-box-direction: normal;
+  -moz-box-direction: normal;
+  box-direction: normal;
+  -webkit-flex-direction: column;
+  -moz-flex-direction: column;
+  flex-direction: column;
+  -ms-flex-direction: column;
+  -webkit-box-align: start;
+  -moz-box-align: start;
+  box-align: start;
+  -webkit-align-items: flex-start;
+  -moz-align-items: flex-start;
+  -ms-align-items: flex-start;
+  -o-align-items: flex-start;
+  align-items: flex-start;
+  -ms-flex-align: start;
+  display: -webkit-box;
+  display: -moz-box;
+  display: box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+.flex-column-space-around > div, .flex-column-space-around > section, .flex-column-space-around > header, .flex-column-space-around > footer, .flex-column-space-around > main, .flex-column-space-around > aside, .flex-column-space-around > article,
+.flex-column-space-around > a, .flex-column-space-around > span, .flex-column-space-around > li, .flex-column-space-around > p, .flex-column-space-around > i, .flex-column-space-around > em, .flex-column-space-around > small, .flex-column-space-around > blockquote, .flex-column-space-around > pre, .flex-column-space-around > code
+> h1, .flex-column-space-around > h2, .flex-column-space-around > h3, .flex-column-space-around > h4, .flex-column-space-around > h5, .flex-column-space-around > h6,
+.flex-column-space-around > .h1, .flex-column-space-around > .h2, .flex-column-space-around > .h3, .flex-column-space-around > .h4, .flex-column-space-around > .h5, .flex-column-space-around > .h6, .flex-column-space-around > .p,
+.flex-column-space-around > ul, .flex-column-space-around > ol, .flex-column-space-around > button {
+  -webkit-flex-grow: 1;
+  -moz-flex-grow: 1;
+  flex-grow: 1;
+  -ms-flex-positive: 1;
 }
 
 .flex-column-space-around-ch > div, .flex-column-space-around-ch > section, .flex-column-space-around-ch > header, .flex-column-space-around-ch > footer, .flex-column-space-around-ch > main, .flex-column-space-around-ch > aside, .flex-column-space-around-ch > article,
@@ -7825,13 +8235,24 @@ h6.lead {
 > h1, .flex-column-space-around-ch > h2, .flex-column-space-around-ch > h3, .flex-column-space-around-ch > h4, .flex-column-space-around-ch > h5, .flex-column-space-around-ch > h6,
 .flex-column-space-around-ch > .h1, .flex-column-space-around-ch > .h2, .flex-column-space-around-ch > .h3, .flex-column-space-around-ch > .h4, .flex-column-space-around-ch > .h5, .flex-column-space-around-ch > .h6, .flex-column-space-around-ch > .p,
 .flex-column-space-around-ch > ul, .flex-column-space-around-ch > ol, .flex-column-space-around-ch > button {
-  display: -webkit-box;
-  display: -moz-box;
-  display: box;
-  display: -webkit-flex;
-  display: -moz-flex;
-  display: -ms-flexbox;
-  display: flex;
+  -webkit-box-pack: distribute;
+  -moz-box-pack: distribute;
+  box-pack: distribute;
+  -webkit-justify-content: space-around;
+  -moz-justify-content: space-around;
+  -ms-justify-content: space-around;
+  -o-justify-content: space-around;
+  justify-content: space-around;
+  -ms-flex-pack: distribute;
+  -webkit-box-align: start;
+  -moz-box-align: start;
+  box-align: start;
+  -webkit-align-items: flex-start;
+  -moz-align-items: flex-start;
+  -ms-align-items: flex-start;
+  -o-align-items: flex-start;
+  align-items: flex-start;
+  -ms-flex-align: start;
   -webkit-box-orient: vertical;
   -moz-box-orient: vertical;
   box-orient: vertical;
@@ -7842,15 +8263,22 @@ h6.lead {
   -moz-flex-direction: column;
   flex-direction: column;
   -ms-flex-direction: column;
-  -webkit-box-pack: distribute;
-  -moz-box-pack: distribute;
-  box-pack: distribute;
-  -webkit-justify-content: space-around;
-  -moz-justify-content: space-around;
-  -ms-justify-content: space-around;
-  -o-justify-content: space-around;
-  justify-content: space-around;
-  -ms-flex-pack: distribute;
+  -webkit-box-align: start;
+  -moz-box-align: start;
+  box-align: start;
+  -webkit-align-items: flex-start;
+  -moz-align-items: flex-start;
+  -ms-align-items: flex-start;
+  -o-align-items: flex-start;
+  align-items: flex-start;
+  -ms-flex-align: start;
+  display: -webkit-box;
+  display: -moz-box;
+  display: box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .flex-align-center {
@@ -7939,13 +8367,6 @@ h6.lead {
 
 @media only screen and (max-width: 480px) {
   .flex-break-xs {
-    display: -webkit-box;
-    display: -moz-box;
-    display: box;
-    display: -webkit-flex;
-    display: -moz-flex;
-    display: -ms-flexbox;
-    display: flex;
     -webkit-box-orient: vertical;
     -moz-box-orient: vertical;
     box-orient: vertical;
@@ -7956,6 +8377,22 @@ h6.lead {
     -moz-flex-direction: column;
     flex-direction: column;
     -ms-flex-direction: column;
+    -webkit-box-align: start;
+    -moz-box-align: start;
+    box-align: start;
+    -webkit-align-items: flex-start;
+    -moz-align-items: flex-start;
+    -ms-align-items: flex-start;
+    -o-align-items: flex-start;
+    align-items: flex-start;
+    -ms-flex-align: start;
+    display: -webkit-box;
+    display: -moz-box;
+    display: box;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flexbox;
+    display: flex;
   }
 
   .flex-break-xs-ch > div, .flex-break-xs-ch > section, .flex-break-xs-ch > header, .flex-break-xs-ch > footer, .flex-break-xs-ch > main, .flex-break-xs-ch > aside, .flex-break-xs-ch > article,
@@ -7963,13 +8400,6 @@ h6.lead {
   > h1, .flex-break-xs-ch > h2, .flex-break-xs-ch > h3, .flex-break-xs-ch > h4, .flex-break-xs-ch > h5, .flex-break-xs-ch > h6,
   .flex-break-xs-ch > .h1, .flex-break-xs-ch > .h2, .flex-break-xs-ch > .h3, .flex-break-xs-ch > .h4, .flex-break-xs-ch > .h5, .flex-break-xs-ch > .h6, .flex-break-xs-ch > .p,
   .flex-break-xs-ch > ul, .flex-break-xs-ch > ol, .flex-break-xs-ch > button {
-    display: -webkit-box;
-    display: -moz-box;
-    display: box;
-    display: -webkit-flex;
-    display: -moz-flex;
-    display: -ms-flexbox;
-    display: flex;
     -webkit-box-orient: vertical;
     -moz-box-orient: vertical;
     box-orient: vertical;
@@ -7980,17 +8410,26 @@ h6.lead {
     -moz-flex-direction: column;
     flex-direction: column;
     -ms-flex-direction: column;
+    -webkit-box-align: start;
+    -moz-box-align: start;
+    box-align: start;
+    -webkit-align-items: flex-start;
+    -moz-align-items: flex-start;
+    -ms-align-items: flex-start;
+    -o-align-items: flex-start;
+    align-items: flex-start;
+    -ms-flex-align: start;
+    display: -webkit-box;
+    display: -moz-box;
+    display: box;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flexbox;
+    display: flex;
   }
 }
 @media only screen and (min-width: 768px) {
   .flex-break-sm {
-    display: -webkit-box;
-    display: -moz-box;
-    display: box;
-    display: -webkit-flex;
-    display: -moz-flex;
-    display: -ms-flexbox;
-    display: flex;
     -webkit-box-orient: vertical;
     -moz-box-orient: vertical;
     box-orient: vertical;
@@ -8001,6 +8440,22 @@ h6.lead {
     -moz-flex-direction: column;
     flex-direction: column;
     -ms-flex-direction: column;
+    -webkit-box-align: start;
+    -moz-box-align: start;
+    box-align: start;
+    -webkit-align-items: flex-start;
+    -moz-align-items: flex-start;
+    -ms-align-items: flex-start;
+    -o-align-items: flex-start;
+    align-items: flex-start;
+    -ms-flex-align: start;
+    display: -webkit-box;
+    display: -moz-box;
+    display: box;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flexbox;
+    display: flex;
   }
 
   .flex-break-sm-ch > div, .flex-break-sm-ch > section, .flex-break-sm-ch > header, .flex-break-sm-ch > footer, .flex-break-sm-ch > main, .flex-break-sm-ch > aside, .flex-break-sm-ch > article,
@@ -8008,13 +8463,6 @@ h6.lead {
   > h1, .flex-break-sm-ch > h2, .flex-break-sm-ch > h3, .flex-break-sm-ch > h4, .flex-break-sm-ch > h5, .flex-break-sm-ch > h6,
   .flex-break-sm-ch > .h1, .flex-break-sm-ch > .h2, .flex-break-sm-ch > .h3, .flex-break-sm-ch > .h4, .flex-break-sm-ch > .h5, .flex-break-sm-ch > .h6, .flex-break-sm-ch > .p,
   .flex-break-sm-ch > ul, .flex-break-sm-ch > ol, .flex-break-sm-ch > button {
-    display: -webkit-box;
-    display: -moz-box;
-    display: box;
-    display: -webkit-flex;
-    display: -moz-flex;
-    display: -ms-flexbox;
-    display: flex;
     -webkit-box-orient: vertical;
     -moz-box-orient: vertical;
     box-orient: vertical;
@@ -8025,17 +8473,26 @@ h6.lead {
     -moz-flex-direction: column;
     flex-direction: column;
     -ms-flex-direction: column;
+    -webkit-box-align: start;
+    -moz-box-align: start;
+    box-align: start;
+    -webkit-align-items: flex-start;
+    -moz-align-items: flex-start;
+    -ms-align-items: flex-start;
+    -o-align-items: flex-start;
+    align-items: flex-start;
+    -ms-flex-align: start;
+    display: -webkit-box;
+    display: -moz-box;
+    display: box;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flexbox;
+    display: flex;
   }
 }
 @media only screen and (min-width: 992px) {
   .flex-break-md {
-    display: -webkit-box;
-    display: -moz-box;
-    display: box;
-    display: -webkit-flex;
-    display: -moz-flex;
-    display: -ms-flexbox;
-    display: flex;
     -webkit-box-orient: vertical;
     -moz-box-orient: vertical;
     box-orient: vertical;
@@ -8046,6 +8503,22 @@ h6.lead {
     -moz-flex-direction: column;
     flex-direction: column;
     -ms-flex-direction: column;
+    -webkit-box-align: start;
+    -moz-box-align: start;
+    box-align: start;
+    -webkit-align-items: flex-start;
+    -moz-align-items: flex-start;
+    -ms-align-items: flex-start;
+    -o-align-items: flex-start;
+    align-items: flex-start;
+    -ms-flex-align: start;
+    display: -webkit-box;
+    display: -moz-box;
+    display: box;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flexbox;
+    display: flex;
   }
 
   .flex-break-md-ch > div, .flex-break-md-ch > section, .flex-break-md-ch > header, .flex-break-md-ch > footer, .flex-break-md-ch > main, .flex-break-md-ch > aside, .flex-break-md-ch > article,
@@ -8053,13 +8526,6 @@ h6.lead {
   > h1, .flex-break-md-ch > h2, .flex-break-md-ch > h3, .flex-break-md-ch > h4, .flex-break-md-ch > h5, .flex-break-md-ch > h6,
   .flex-break-md-ch > .h1, .flex-break-md-ch > .h2, .flex-break-md-ch > .h3, .flex-break-md-ch > .h4, .flex-break-md-ch > .h5, .flex-break-md-ch > .h6, .flex-break-md-ch > .p,
   .flex-break-md-ch > ul, .flex-break-md-ch > ol, .flex-break-md-ch > button {
-    display: -webkit-box;
-    display: -moz-box;
-    display: box;
-    display: -webkit-flex;
-    display: -moz-flex;
-    display: -ms-flexbox;
-    display: flex;
     -webkit-box-orient: vertical;
     -moz-box-orient: vertical;
     box-orient: vertical;
@@ -8070,17 +8536,26 @@ h6.lead {
     -moz-flex-direction: column;
     flex-direction: column;
     -ms-flex-direction: column;
+    -webkit-box-align: start;
+    -moz-box-align: start;
+    box-align: start;
+    -webkit-align-items: flex-start;
+    -moz-align-items: flex-start;
+    -ms-align-items: flex-start;
+    -o-align-items: flex-start;
+    align-items: flex-start;
+    -ms-flex-align: start;
+    display: -webkit-box;
+    display: -moz-box;
+    display: box;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flexbox;
+    display: flex;
   }
 }
 @media only screen and (min-width: 1200px) {
   .flex-break-lg {
-    display: -webkit-box;
-    display: -moz-box;
-    display: box;
-    display: -webkit-flex;
-    display: -moz-flex;
-    display: -ms-flexbox;
-    display: flex;
     -webkit-box-orient: vertical;
     -moz-box-orient: vertical;
     box-orient: vertical;
@@ -8091,6 +8566,22 @@ h6.lead {
     -moz-flex-direction: column;
     flex-direction: column;
     -ms-flex-direction: column;
+    -webkit-box-align: start;
+    -moz-box-align: start;
+    box-align: start;
+    -webkit-align-items: flex-start;
+    -moz-align-items: flex-start;
+    -ms-align-items: flex-start;
+    -o-align-items: flex-start;
+    align-items: flex-start;
+    -ms-flex-align: start;
+    display: -webkit-box;
+    display: -moz-box;
+    display: box;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flexbox;
+    display: flex;
   }
 
   .flex-break-lg-ch > div, .flex-break-lg-ch > section, .flex-break-lg-ch > header, .flex-break-lg-ch > footer, .flex-break-lg-ch > main, .flex-break-lg-ch > aside, .flex-break-lg-ch > article,
@@ -8098,13 +8589,6 @@ h6.lead {
   > h1, .flex-break-lg-ch > h2, .flex-break-lg-ch > h3, .flex-break-lg-ch > h4, .flex-break-lg-ch > h5, .flex-break-lg-ch > h6,
   .flex-break-lg-ch > .h1, .flex-break-lg-ch > .h2, .flex-break-lg-ch > .h3, .flex-break-lg-ch > .h4, .flex-break-lg-ch > .h5, .flex-break-lg-ch > .h6, .flex-break-lg-ch > .p,
   .flex-break-lg-ch > ul, .flex-break-lg-ch > ol, .flex-break-lg-ch > button {
-    display: -webkit-box;
-    display: -moz-box;
-    display: box;
-    display: -webkit-flex;
-    display: -moz-flex;
-    display: -ms-flexbox;
-    display: flex;
     -webkit-box-orient: vertical;
     -moz-box-orient: vertical;
     box-orient: vertical;
@@ -8115,9 +8599,52 @@ h6.lead {
     -moz-flex-direction: column;
     flex-direction: column;
     -ms-flex-direction: column;
+    -webkit-box-align: start;
+    -moz-box-align: start;
+    box-align: start;
+    -webkit-align-items: flex-start;
+    -moz-align-items: flex-start;
+    -ms-align-items: flex-start;
+    -o-align-items: flex-start;
+    align-items: flex-start;
+    -ms-flex-align: start;
+    display: -webkit-box;
+    display: -moz-box;
+    display: box;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flexbox;
+    display: flex;
   }
 }
+.flex-grow-0 {
+  -webkit-flex-grow: 0;
+  -moz-flex-grow: 0;
+  flex-grow: 0;
+  -ms-flex-positive: 0;
+}
+.flex-grow-0 > div, .flex-grow-0 > section, .flex-grow-0 > header, .flex-grow-0 > footer, .flex-grow-0 > main, .flex-grow-0 > aside, .flex-grow-0 > article,
+.flex-grow-0 > a, .flex-grow-0 > span, .flex-grow-0 > li, .flex-grow-0 > p, .flex-grow-0 > i, .flex-grow-0 > em, .flex-grow-0 > small, .flex-grow-0 > blockquote, .flex-grow-0 > pre, .flex-grow-0 > code
+> h1, .flex-grow-0 > h2, .flex-grow-0 > h3, .flex-grow-0 > h4, .flex-grow-0 > h5, .flex-grow-0 > h6,
+.flex-grow-0 > .h1, .flex-grow-0 > .h2, .flex-grow-0 > .h3, .flex-grow-0 > .h4, .flex-grow-0 > .h5, .flex-grow-0 > .h6, .flex-grow-0 > .p,
+.flex-grow-0 > ul, .flex-grow-0 > ol, .flex-grow-0 > button {
+  -webkit-flex-grow: 0;
+  -moz-flex-grow: 0;
+  flex-grow: 0;
+  -ms-flex-positive: 0;
+}
+
 .flex-grow-1 {
+  -webkit-flex-grow: 1;
+  -moz-flex-grow: 1;
+  flex-grow: 1;
+  -ms-flex-positive: 1;
+}
+.flex-grow-1 > div, .flex-grow-1 > section, .flex-grow-1 > header, .flex-grow-1 > footer, .flex-grow-1 > main, .flex-grow-1 > aside, .flex-grow-1 > article,
+.flex-grow-1 > a, .flex-grow-1 > span, .flex-grow-1 > li, .flex-grow-1 > p, .flex-grow-1 > i, .flex-grow-1 > em, .flex-grow-1 > small, .flex-grow-1 > blockquote, .flex-grow-1 > pre, .flex-grow-1 > code
+> h1, .flex-grow-1 > h2, .flex-grow-1 > h3, .flex-grow-1 > h4, .flex-grow-1 > h5, .flex-grow-1 > h6,
+.flex-grow-1 > .h1, .flex-grow-1 > .h2, .flex-grow-1 > .h3, .flex-grow-1 > .h4, .flex-grow-1 > .h5, .flex-grow-1 > .h6, .flex-grow-1 > .p,
+.flex-grow-1 > ul, .flex-grow-1 > ol, .flex-grow-1 > button {
   -webkit-flex-grow: 1;
   -moz-flex-grow: 1;
   flex-grow: 1;
@@ -8130,8 +8657,28 @@ h6.lead {
   flex-grow: 2;
   -ms-flex-positive: 2;
 }
+.flex-grow-2 > div, .flex-grow-2 > section, .flex-grow-2 > header, .flex-grow-2 > footer, .flex-grow-2 > main, .flex-grow-2 > aside, .flex-grow-2 > article,
+.flex-grow-2 > a, .flex-grow-2 > span, .flex-grow-2 > li, .flex-grow-2 > p, .flex-grow-2 > i, .flex-grow-2 > em, .flex-grow-2 > small, .flex-grow-2 > blockquote, .flex-grow-2 > pre, .flex-grow-2 > code
+> h1, .flex-grow-2 > h2, .flex-grow-2 > h3, .flex-grow-2 > h4, .flex-grow-2 > h5, .flex-grow-2 > h6,
+.flex-grow-2 > .h1, .flex-grow-2 > .h2, .flex-grow-2 > .h3, .flex-grow-2 > .h4, .flex-grow-2 > .h5, .flex-grow-2 > .h6, .flex-grow-2 > .p,
+.flex-grow-2 > ul, .flex-grow-2 > ol, .flex-grow-2 > button {
+  -webkit-flex-grow: 2;
+  -moz-flex-grow: 2;
+  flex-grow: 2;
+  -ms-flex-positive: 2;
+}
 
 .flex-grow-3 {
+  -webkit-flex-grow: 3;
+  -moz-flex-grow: 3;
+  flex-grow: 3;
+  -ms-flex-positive: 3;
+}
+.flex-grow-3 > div, .flex-grow-3 > section, .flex-grow-3 > header, .flex-grow-3 > footer, .flex-grow-3 > main, .flex-grow-3 > aside, .flex-grow-3 > article,
+.flex-grow-3 > a, .flex-grow-3 > span, .flex-grow-3 > li, .flex-grow-3 > p, .flex-grow-3 > i, .flex-grow-3 > em, .flex-grow-3 > small, .flex-grow-3 > blockquote, .flex-grow-3 > pre, .flex-grow-3 > code
+> h1, .flex-grow-3 > h2, .flex-grow-3 > h3, .flex-grow-3 > h4, .flex-grow-3 > h5, .flex-grow-3 > h6,
+.flex-grow-3 > .h1, .flex-grow-3 > .h2, .flex-grow-3 > .h3, .flex-grow-3 > .h4, .flex-grow-3 > .h5, .flex-grow-3 > .h6, .flex-grow-3 > .p,
+.flex-grow-3 > ul, .flex-grow-3 > ol, .flex-grow-3 > button {
   -webkit-flex-grow: 3;
   -moz-flex-grow: 3;
   flex-grow: 3;
@@ -8144,8 +8691,28 @@ h6.lead {
   flex-grow: 4;
   -ms-flex-positive: 4;
 }
+.flex-grow-4 > div, .flex-grow-4 > section, .flex-grow-4 > header, .flex-grow-4 > footer, .flex-grow-4 > main, .flex-grow-4 > aside, .flex-grow-4 > article,
+.flex-grow-4 > a, .flex-grow-4 > span, .flex-grow-4 > li, .flex-grow-4 > p, .flex-grow-4 > i, .flex-grow-4 > em, .flex-grow-4 > small, .flex-grow-4 > blockquote, .flex-grow-4 > pre, .flex-grow-4 > code
+> h1, .flex-grow-4 > h2, .flex-grow-4 > h3, .flex-grow-4 > h4, .flex-grow-4 > h5, .flex-grow-4 > h6,
+.flex-grow-4 > .h1, .flex-grow-4 > .h2, .flex-grow-4 > .h3, .flex-grow-4 > .h4, .flex-grow-4 > .h5, .flex-grow-4 > .h6, .flex-grow-4 > .p,
+.flex-grow-4 > ul, .flex-grow-4 > ol, .flex-grow-4 > button {
+  -webkit-flex-grow: 4;
+  -moz-flex-grow: 4;
+  flex-grow: 4;
+  -ms-flex-positive: 4;
+}
 
 .flex-grow-5 {
+  -webkit-flex-grow: 5;
+  -moz-flex-grow: 5;
+  flex-grow: 5;
+  -ms-flex-positive: 5;
+}
+.flex-grow-5 > div, .flex-grow-5 > section, .flex-grow-5 > header, .flex-grow-5 > footer, .flex-grow-5 > main, .flex-grow-5 > aside, .flex-grow-5 > article,
+.flex-grow-5 > a, .flex-grow-5 > span, .flex-grow-5 > li, .flex-grow-5 > p, .flex-grow-5 > i, .flex-grow-5 > em, .flex-grow-5 > small, .flex-grow-5 > blockquote, .flex-grow-5 > pre, .flex-grow-5 > code
+> h1, .flex-grow-5 > h2, .flex-grow-5 > h3, .flex-grow-5 > h4, .flex-grow-5 > h5, .flex-grow-5 > h6,
+.flex-grow-5 > .h1, .flex-grow-5 > .h2, .flex-grow-5 > .h3, .flex-grow-5 > .h4, .flex-grow-5 > .h5, .flex-grow-5 > .h6, .flex-grow-5 > .p,
+.flex-grow-5 > ul, .flex-grow-5 > ol, .flex-grow-5 > button {
   -webkit-flex-grow: 5;
   -moz-flex-grow: 5;
   flex-grow: 5;
@@ -8158,8 +8725,28 @@ h6.lead {
   flex-grow: 6;
   -ms-flex-positive: 6;
 }
+.flex-grow-6 > div, .flex-grow-6 > section, .flex-grow-6 > header, .flex-grow-6 > footer, .flex-grow-6 > main, .flex-grow-6 > aside, .flex-grow-6 > article,
+.flex-grow-6 > a, .flex-grow-6 > span, .flex-grow-6 > li, .flex-grow-6 > p, .flex-grow-6 > i, .flex-grow-6 > em, .flex-grow-6 > small, .flex-grow-6 > blockquote, .flex-grow-6 > pre, .flex-grow-6 > code
+> h1, .flex-grow-6 > h2, .flex-grow-6 > h3, .flex-grow-6 > h4, .flex-grow-6 > h5, .flex-grow-6 > h6,
+.flex-grow-6 > .h1, .flex-grow-6 > .h2, .flex-grow-6 > .h3, .flex-grow-6 > .h4, .flex-grow-6 > .h5, .flex-grow-6 > .h6, .flex-grow-6 > .p,
+.flex-grow-6 > ul, .flex-grow-6 > ol, .flex-grow-6 > button {
+  -webkit-flex-grow: 6;
+  -moz-flex-grow: 6;
+  flex-grow: 6;
+  -ms-flex-positive: 6;
+}
 
 .flex-grow-7 {
+  -webkit-flex-grow: 7;
+  -moz-flex-grow: 7;
+  flex-grow: 7;
+  -ms-flex-positive: 7;
+}
+.flex-grow-7 > div, .flex-grow-7 > section, .flex-grow-7 > header, .flex-grow-7 > footer, .flex-grow-7 > main, .flex-grow-7 > aside, .flex-grow-7 > article,
+.flex-grow-7 > a, .flex-grow-7 > span, .flex-grow-7 > li, .flex-grow-7 > p, .flex-grow-7 > i, .flex-grow-7 > em, .flex-grow-7 > small, .flex-grow-7 > blockquote, .flex-grow-7 > pre, .flex-grow-7 > code
+> h1, .flex-grow-7 > h2, .flex-grow-7 > h3, .flex-grow-7 > h4, .flex-grow-7 > h5, .flex-grow-7 > h6,
+.flex-grow-7 > .h1, .flex-grow-7 > .h2, .flex-grow-7 > .h3, .flex-grow-7 > .h4, .flex-grow-7 > .h5, .flex-grow-7 > .h6, .flex-grow-7 > .p,
+.flex-grow-7 > ul, .flex-grow-7 > ol, .flex-grow-7 > button {
   -webkit-flex-grow: 7;
   -moz-flex-grow: 7;
   flex-grow: 7;
