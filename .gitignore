@@ -39,10 +39,10 @@ app/assets/img/*.tiff
 # src/img/*.tiff
 
 ## Icons
-app/assets/button-icons/*.svg
-app/assets/button-icons/*.eot
-app/assets/button-icons/*.ttf
-app/assets/button-icons/*.woff
+app/assets/icons/*.svg
+app/assets/icons/*.eot
+app/assets/icons/*.ttf
+app/assets/icons/*.woff
 
 ## Sass
 .sass-cache
