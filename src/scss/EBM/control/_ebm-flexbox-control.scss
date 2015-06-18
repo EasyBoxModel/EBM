@@ -6,7 +6,7 @@
 .flex-row {
 	@include flex-row;
 	@include children-elements {
-		@include flex(1);
+		@include flex-grow(1);
 	}
 }
 .flex-row-ch {
@@ -17,7 +17,7 @@
 .flex-row-center {
 	@include flex-row-center;
 	@include children-elements {
-		@include flex(1);
+		@include flex-grow(1);
 	}
 }
 .flex-row-center-ch {
@@ -28,7 +28,7 @@
 .flex-row-end {
 	@include flex-row-end;
 	@include children-elements {
-		@include flex(1);
+		@include flex-grow(1);
 	}
 }
 .flex-row-end-ch {
@@ -39,7 +39,7 @@
 .flex-row-space-between {
 	@include flex-row-space-between;
 	@include children-elements {
-		@include flex(1);
+		@include flex-grow(1);
 	}
 }
 .flex-row-space-between-ch {
@@ -50,7 +50,7 @@
 .flex-row-space-around {
 	@include flex-row-space-around;
 	@include children-elements {
-		@include flex(1);
+		@include flex-grow(1);
 	}
 }
 .flex-row-space-around-ch {
@@ -61,7 +61,7 @@
 .flex-column {
 	@include flex-column;
 	@include children-elements {
-		@include flex(1);
+		@include flex-grow(1);
 	}
 }
 .flex-column-ch {
@@ -72,7 +72,7 @@
 .flex-column-center {
 	@include flex-column-center;
 	@include children-elements {
-		@include flex(1);
+		@include flex-grow(1);
 	}
 }
 .flex-column-center-ch {
@@ -83,7 +83,7 @@
 .flex-column-end {
 	@include flex-column-end;
 	@include children-elements {
-		@include flex(1);
+		@include flex-grow(1);
 	}
 }
 .flex-column-end-ch {
@@ -94,7 +94,7 @@
 .flex-column-space-between {
 	@include flex-column-space-between;
 	@include children-elements {
-		@include flex(1);
+		@include flex-grow(1);
 	}
 }
 .flex-column-space-between-ch {
@@ -105,7 +105,7 @@
 .flex-column-space-around {
 	@include flex-column-space-around;
 	@include children-elements {
-		@include flex(1);
+		@include flex-grow(1);
 	}
 }
 .flex-column-space-around-ch {
@@ -153,8 +153,11 @@
 }
 
 // FLEX Children grow
-@for $i from 1 through 7 {
+@for $i from 0 through 7 {
 	.flex-grow-#{$i} {
 		@include flex-grow(#{$i});
+		@include children-elements {
+			@include flex-grow(#{$i});
+		}
 	}
 }
