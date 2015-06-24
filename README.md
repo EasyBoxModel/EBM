@@ -102,6 +102,11 @@ Clone the EBM with the HTML utilities
 
 `git clone -b html-utilities https://github.com/EasyBoxModel/EBM.git name_of_your_project`
 
+### Wordpress theme boilerplate
+Clone the EBM wordpress theme boilerplate which comes with setup files such as `functions.php`, `index.php`, `screenshot.png`, `header.php`, `footer.php` and `style.css` right away
+
+`git clone -b wordpress-boilerplate https://github.com/EasyBoxModel/EBM.git name_of_your_project`
+
 ### Experimental
 Clone the EBM plus experimental Sass partials and HTML5 new tag attributes and other Grunt tasks still on development
 
