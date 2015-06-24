@@ -103,7 +103,9 @@ Clone the EBM with the HTML utilities
 `git clone -b html-utilities https://github.com/EasyBoxModel/EBM.git name_of_your_project`
 
 ### Wordpress theme boilerplate
-Clone the EBM wordpress theme boilerplate which comes with setup files such as `functions.php`, `index.php`, `screenshot.png`, `header.php`, `footer.php` and `style.css` right away
+Clone the EBM wordpress theme boilerplate into your `wp-content/themes/` which comes with setup files such as `functions.php`, `index.php`, `screenshot.png`, `header.php`, `footer.php` and `style.css` right away. 
+
+If your WP project already has a working `.git` folder, read more about `git subtree`
 
 `git clone -b wordpress-boilerplate https://github.com/EasyBoxModel/EBM.git name_of_your_project`
 
