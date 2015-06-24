@@ -14,14 +14,17 @@ EBM is 1.3mb for the `master` branch. However, you can clone any of these other 
 
 #### Sass utilities only
 This branch is where the updates to the `src/scss/` are made:
+
 `git clone -b sass-utilities https://github.com/EasyBoxModel/EBM.git name_of_your_project`
 
 #### HTML utilities + Sass utilities
 Clone the EBM with the HTML utilities 
+
 `git clone -b html-utilities https://github.com/EasyBoxModel/EBM.git name_of_your_project`
 
 #### Experimental
 Clone the EBM plus experimental Sass partials and HTML5 new tag attributes and other Grunt tasks still on development
+
 `git clone -b experimental https://github.com/EasyBoxModel/EBM.git name_of_your_project`
 
 ## Description
