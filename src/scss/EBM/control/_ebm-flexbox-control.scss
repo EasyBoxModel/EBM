@@ -5,9 +5,6 @@
 // FLEXBOX Classes
 .flex-row {
 	@include flex-row;
-	@include children-elements {
-		@include flex-grow(1);
-	}
 }
 .flex-row-ch {
 	@include children-elements {
@@ -16,9 +13,6 @@
 }
 .flex-row-center {
 	@include flex-row-center;
-	@include children-elements {
-		@include flex-grow(1);
-	}
 }
 .flex-row-center-ch {
 	@include children-elements {
@@ -27,9 +21,6 @@
 }
 .flex-row-end {
 	@include flex-row-end;
-	@include children-elements {
-		@include flex-grow(1);
-	}
 }
 .flex-row-end-ch {
 	@include children-elements {
@@ -38,9 +29,6 @@
 }
 .flex-row-space-between {
 	@include flex-row-space-between;
-	@include children-elements {
-		@include flex-grow(1);
-	}
 }
 .flex-row-space-between-ch {
 	@include children-elements {
@@ -49,9 +37,6 @@
 }
 .flex-row-space-around {
 	@include flex-row-space-around;
-	@include children-elements {
-		@include flex-grow(1);
-	}
 }
 .flex-row-space-around-ch {
 	@include children-elements {
@@ -60,9 +45,6 @@
 }
 .flex-column {
 	@include flex-column;
-	@include children-elements {
-		@include flex-grow(1);
-	}
 }
 .flex-column-ch {
 	@include children-elements {
@@ -71,9 +53,6 @@
 }
 .flex-column-center {
 	@include flex-column-center;
-	@include children-elements {
-		@include flex-grow(1);
-	}
 }
 .flex-column-center-ch {
 	@include children-elements {
@@ -82,9 +61,6 @@
 }
 .flex-column-end {
 	@include flex-column-end;
-	@include children-elements {
-		@include flex-grow(1);
-	}
 }
 .flex-column-end-ch {
 	@include children-elements {
@@ -93,9 +69,6 @@
 }
 .flex-column-space-between {
 	@include flex-column-space-between;
-	@include children-elements {
-		@include flex-grow(1);
-	}
 }
 .flex-column-space-between-ch {
 	@include children-elements {
@@ -104,9 +77,6 @@
 }
 .flex-column-space-around {
 	@include flex-column-space-around;
-	@include children-elements {
-		@include flex-grow(1);
-	}
 }
 .flex-column-space-around-ch {
 	@include children-elements {

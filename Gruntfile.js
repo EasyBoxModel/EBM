@@ -307,8 +307,7 @@ module.exports = function (grunt) {
         files: [
           '<%= project.src %>/scss/{,*/}*/{,*/}*.{scss,sass}', 
           '!<%= project.src %>/scss/style.scss',
-          '!<%= project.src %>/scss/EBM/_ebm-global.scss',
-          '!<%= project.src %>/scss/EBM/_ebm-imports.scss'],
+          '!<%= project.src %>/scss/EBM/_ebm-global.scss'],
         tasks: 'sass:ebm'
       },
       coffee: {
@@ -345,6 +344,12 @@ module.exports = function (grunt) {
     'connect:livereload',
     'uglify',
     'open',
+    'watch'
+  ]);
+
+  // Watch only task
+  grunt.registerTask('watch-only', [
+    'connect:livereload',
     'watch'
   ]);
 
