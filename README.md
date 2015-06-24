@@ -8,7 +8,7 @@
 
 That's it. Start coding in the `app/index.html` file and style it on the `src/scss/EBM/_ebm-global.scss` file. Grunt will live-reload any changes on a localhost:9000 server. 
 
-See (available branches)[https://github.com/EasyBoxModel/EBM/tree/master#available-branches] for more info about how the EBM is updated.
+See [available branches](https://github.com/EasyBoxModel/EBM/tree/master#available-branches) for more info about how the EBM is updated.
 
 ## Description
 
