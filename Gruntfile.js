@@ -293,7 +293,7 @@ module.exports = function (grunt) {
      */
     watch: {
       uglify: {
-        files: '<%= project.src %>/js/lib/*.js',
+        files: '<%= project.src %>/js/*.js',
         tasks: 'uglify'
       },
       style: {
