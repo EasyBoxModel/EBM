@@ -1,4 +1,4 @@
-'use-strict'
+'use strict'
 $(document).ready ->
 	
 	# QUICK LAYOUT CONTROL

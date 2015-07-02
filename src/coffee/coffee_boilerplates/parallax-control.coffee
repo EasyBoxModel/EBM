@@ -1,4 +1,4 @@
-'use-strict'
+'use strict'
 $(document).ready ->
 	scrollToController = new ScrollMagic()
 	parallaxController = new ScrollMagic()
