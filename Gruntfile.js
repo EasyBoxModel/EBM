@@ -350,6 +350,7 @@ module.exports = function (grunt) {
   // Watch only task
   grunt.registerTask('watch-only', [
     'connect:livereload',
+    'open',
     'watch'
   ]);
 
