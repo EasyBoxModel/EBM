@@ -1,5 +1,17 @@
 <?php 
 
+	// add_theme_support('menus');
+	// add_theme_support('post-thumbnails');
+	// function register_theme_menus(){
+	// 	register_nav_menus(
+	// 		array( 
+	// 			'main-menu' => __('Main Menu'),
+	// 			'post-categories' => __('Post categories')
+	// 		)
+	// 	);
+	// }
+	// add_action('init', 'register_theme_menus');
+
 	function wordpress_theme_styles(){
 		// wp_enqueue_style( 'style', get_template_directory_uri() . '/app/assets/css/style.pkgd.min.css', false, '1.0');
 		// wp_enqueue_style( 'style', get_template_directory_uri() . '/app/assets/css/style.css', false, '1.0');
