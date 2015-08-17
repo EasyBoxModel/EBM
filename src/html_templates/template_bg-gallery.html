@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+  <meta charset="utf-8">
+  <title></title>
+  <meta name="description" content="">
+  <meta name="keywords" content=""/> 
+  <meta name="author" content="@MadeByGus"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <link rel="shortcut icon" href="assets/img/favicon.png">
+  <link href="assets/css/style.css" rel="stylesheet"> <!-- App styles -->
+  <link href="assets/css/ebm.css" rel="stylesheet">
+
+	<div class="site-wrapper"> <!-- Body -->
+    <div class="site-menu"></div>
+    <!-- 
+			The EBM bg gallery module works with:
+			Flickity.pgd.js
+			_bg-gallery.scss
+			responsive-bg-images.coffee
+			Grunt: responsive_images:dev
+     -->
+    <section class="hero-unit">
+      <div class="bg-gallery-wrapper">
+      	<div class="gallery js-flickity" data-flickity-options='{ "cellAlign": "left", "contain": true, "pageDots": false, "prevNextButtons": false, "autoPlay": 7000, "wrapAround": true }'>
+            <div class="gallery-cell" 
+                data-responsive-bg-img='{ 
+                  "vw-phone": "assets/img/img-480.png",
+                  "vw-tablet": "assets/img/img-720.png",
+                  "vw-desktop": "assets/img/img-960.png",
+                  "vw-lg-desktop": "assets/img/img-1140.png"
+                }'>
+              <div class="gallery-cell-wrapper">
+                <div class="gallery-cell-content flex-middle-center">
+                  <div class="container-sm text-white lead-ch text-shadow text-center">
+                    <h3>Understanding The New Peruvian Middle-Class</h3>
+                    <div class="separator separator-white separator-centered"></div>
+                    <p class="custom-quotes">How might we understand the desires and aspirations of middle-class families to develop better products and services?</p>
+                    <a href="#" class="btn btn-icon-outline btn-white unlead">
+                      <span>Learn more</span>
+                      <i class="icon-chevron-right"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+      </div>
+    </section>
+    <div class="site-content"></div>
+  </div>
+  <script src="assets/js/jquery.min.js"></script> <!-- App scripts -->
+  <script src="assets/js/scripts.min.js"></script>
+</html>
