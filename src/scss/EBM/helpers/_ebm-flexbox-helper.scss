@@ -4,54 +4,44 @@
 */
 // HORIZONTAL DISTRIBUTION SHORTHANDS
 @mixin flex-row {
-	@include align-items(flex-start);
 	@include flex-direction(row);
 	@include display(flex);
 }
 @mixin flex-row-center {
 	@include justify-content(center);
-	@include align-items(flex-start);
 	@include flex-row;
 }
 @mixin flex-row-end {
 	@include justify-content(flex-end);
-	@include align-items(flex-start);
 	@include flex-row;
 }
 @mixin flex-row-space-between {
 	@include justify-content(space-between);
-	@include align-items(flex-start);
 	@include flex-row;
 }
 @mixin flex-row-space-around {
 	@include justify-content(space-around);
-	@include align-items(flex-start);
 	@include flex-row;
 }
 // VERTICAL DISTRIBUTION SHORTHANDS
 @mixin flex-column {
 	@include flex-direction(column);
-	@include align-items(flex-start);
 	@include display(flex);
 }
 @mixin flex-column-center {
 	@include justify-content(center);
-	@include align-items(flex-start);
 	@include flex-column;
 }
 @mixin flex-column-end {
 	@include justify-content(flex-end);
-	@include align-items(flex-start);
 	@include flex-column;
 }
 @mixin flex-column-space-between {
 	@include justify-content(space-between);
-	@include align-items(flex-start);
 	@include flex-column;
 }
 @mixin flex-column-space-around {
 	@include justify-content(space-around);
-	@include align-items(flex-start);
 	@include flex-column;
 }
 

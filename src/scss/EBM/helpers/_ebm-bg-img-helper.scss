@@ -1,6 +1,7 @@
 // CONTROL FULL WIDTH BG IMAGES
 @mixin bg-img-block {
 	background-repeat: no-repeat;
+	background-size: 100%;
 	background-size: cover;
 }
 @mixin bg-img-block-center {
@@ -31,6 +32,7 @@
 	@include bg-img-block;
 	background-position-x: right;
 }
-@mixin bg-img-block-size-100 {
-	background-size: 100%;
+@mixin bg-img-block-contain {
+	@include bg-img-block;
+	background-size: contain;
 }

@@ -1,4 +1,4 @@
-'use-strict'
+'use strict'
 $(document).ready ->
 	videocover = document.getElementById 'videocover'
 	playBtn = $('.play-video')
