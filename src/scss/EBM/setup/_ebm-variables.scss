@@ -153,6 +153,18 @@ $text-responsive-elements-list:
   "ol",
   "li";
 
+$children-text-responsive-elements-list: 
+  "> p", "> .p",
+  "> span",
+  "> em",
+  "> strong",
+  "> label",
+  "> a",
+  "> i",
+  "> ul",
+  "> ol",
+  "> li";
+
 // Box Model abbreviations list
 $box-model-abbr: 
   'p', 

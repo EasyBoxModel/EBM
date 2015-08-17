@@ -12,7 +12,7 @@ $banner-height: 350px; // Banners
 	}
 	#{$global-sufix}banner-pic,
 	.banner-pic {
-		@include bg-img-control;
+		@include bg-img-block;
 		height: $banner-height;
 		overflow: hidden;
 		@media #{$sm-up} {

@@ -1,0 +1,216 @@
+/*
+	Extend grid-lists grid-items
+	With a masonry grid layout
+	Isotope JS plugin needed
+*/
+$mgrid-item-height-control: 180px;
+$grid-item-sides-list:
+'grid-item-hor-right',
+'grid-item-hor-left',
+'grid-item-ver-bottom',
+'grid-item-ver-top';
+.grid-sizer {
+	width: 7px;
+}
+.grid-masonry { // With grid items distribution
+	position: relative;
+	padding: $container-fluid 0;
+	.grid-item {
+		padding: ($container-fluid / 2);
+		margin-bottom: $container-fluid / 2;
+		overflow: hidden;
+		float: left;
+		width: 100%;
+		> div {
+			@include bg-img-block;
+			position: relative;
+		}
+		@for $i from 1 through length($grid-item-sides-list) {
+			$width: null;
+			$height: null;
+			$overlay-width: null;
+			$overlay-height: null;
+			$top: null;
+			$bottom: null;
+			$left: null;
+			$right: null;
+			$translateX: null;
+			$translateY: null;
+			@if $i == 1 { // grid-item-hor-right
+				$width: 49.7%;
+				$height: $mgrid-item-height-control;
+				$top: 0;
+				$bottom: 0;
+				$left: null;
+				$right: 0;
+				$overlay-width: 50%;
+				$overlay-height: 100%;
+				$translateX: 105%;
+				$translateY: 0;
+			} @else if $i == 2 { // grid-item-hor-right
+				$width: 49.7%;
+				$height: $mgrid-item-height-control;
+				$top: 0;
+				$bottom: 0;
+				$left: 0;
+				$right: null;
+				$overlay-width: 50%;
+				$overlay-height: 100%;
+				$translateX: -105%;
+				$translateY: 0;
+			} @else if $i == 3 { // grid-item-verttical-bottom
+				$width: 24.7%;
+				$height: ($mgrid-item-height-control * 2) + 7;
+				$bottom: 0;
+				$top: null;
+				$bottom: 0;
+				$left: 0;
+				$right: 0;
+				$overlay-width: 100%;
+				$overlay-height: 50%;
+				$translateX: 0;
+				$translateY: 105%;
+			} @else if $i == 4 { // grid-item-vertical-top
+				$width: 24.7%;
+				$height: ($mgrid-item-height-control * 2) + 7;
+				$bottom: 0;
+				$top: 0;
+				$bottom: null;
+				$left: 0;
+				$right: 0;
+				$overlay-width: 100%;
+				$overlay-height: 50%;
+				$translateX: 0;
+				$translateY: -105%;
+			}
+			&.#{nth($grid-item-sides-list, $i)} {
+				height: $height;
+				width: $width;
+				> div {
+					height: $height;
+				}
+				.overlay {
+					@include position(absolute, $top $right $bottom $left);
+					width: $overlay-width;
+					height: $overlay-height;
+				}
+				.description-overlay {
+					@include transform(translate($translateX, $translateY));
+				}
+				&:hover {
+					.description-overlay {
+						@include transform(translate(0,0));
+					}
+					.overlay {
+						@include transform(translate($translateX, $translateY));
+					}
+				}
+			}
+		}
+		&.grid-item-square-pic {
+			> div {
+				background-size: 50%;
+			}
+		}
+	}
+	.overlay {
+		@include flex-column-end;
+		@include transition(0.2s ease-in-out);
+		background-color: rgba($brand-primary, 0.7);
+		padding: $container-fluid;
+		position: absolute;
+		ul {
+			@include list-unstyled; 
+			line-height: 19px;
+			li {
+				text-transform: lowercase;
+				&:first-child {
+					text-transform: uppercase;
+					@include bold;
+				}
+			}
+		}
+	}
+	.description-overlay {
+		@include position(absolute, 0 0 0 0);
+		@include transition(0.2s ease-in-out);
+		@include flex-column-center;
+		background-color: rgba($gray-darker, 0.7);
+		padding: $container-fluid;
+		color: $brand-primary;
+		font-size: 12px;
+	}
+}
+
+// .grid-masonry { // Random distribution
+// 	.grid-item {
+// 		@for $i from 1 through 30 {
+// 			$rand: random(3)-1;
+// 			$width: null;
+// 			$height: null;
+// 			$overlay-width: null;
+// 			$overlay-height: null;
+// 			$top: null;
+// 			$bottom: null;
+// 			$left: null;
+// 			$right: null;
+// 			$translateX: null;
+// 			$translateY: null;
+// 			@if $rand == 0 {
+// 				$width: 49.5%;
+// 				$height: $mgrid-item-height-control;
+// 				$top: 0;
+// 				$bottom: 0;
+// 				$left: null;
+// 				$right: 0;
+// 				$overlay-width: 50%;
+// 				$overlay-height: 100%;
+// 				$translateX: 105%;
+// 				$translateY: 0;
+// 			} @else if $rand == 1 {
+// 				$width: 24.5%;
+// 				$height: $mgrid-item-height-control * 2;
+// 				$bottom: 0;
+// 				$top: null;
+// 				$bottom: 0;
+// 				$left: 0;
+// 				$right: 0;
+// 				$overlay-width: 100%;
+// 				$overlay-height: 50%;
+// 				$translateX: 0;
+// 				$translateY: -105%;
+// 			} @else {
+// 				$width: 49.5%;
+// 				$height: $mgrid-item-height-control;
+// 				$top: 0;
+// 				$bottom: 0;
+// 				$left: 0;
+// 				$right: null;
+// 				$overlay-width: 50%;
+// 				$overlay-height: 100%;
+// 				$translateX: -105%;
+// 				$translateY: 0;
+// 			}
+// 			&:nth-child(#{$i}) {
+// 				height: $height;
+// 				width: $width;
+// 				> div {
+// 					height: $height;
+// 				}
+// 				.overlay {
+// 					@include position(absolute, $top $right $bottom $left);
+// 					width: $overlay-width;
+// 					height: $overlay-height;
+// 				}
+// 				.description-overlay {
+// 					@include transform(translate($translateX, $translateY));
+// 				}
+// 				&:hover {
+// 					.description-overlay {
+// 						@include transform(translate(0, 0));
+// 					}
+// 				}
+// 			}
+// 		}
+// 	}
+// }

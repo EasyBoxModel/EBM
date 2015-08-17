@@ -1,4 +1,4 @@
-'use-strict'
+'use strict'
 $(document).ready ->
 
 	# SCROLL TO AUTOMATIC ANCHORS

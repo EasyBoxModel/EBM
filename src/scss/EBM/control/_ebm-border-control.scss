@@ -27,6 +27,27 @@ $border-sides-list:
 $border-width: 1px;
 $border-style: solid;
 
+// All borders
+@for $i from 1 to length($brand-colors-sufix-list) {
+	.border-#{nth($brand-colors-sufix-list, $i)} {
+		border: $border-width $border-style #{nth($brand-colors-list, $i)};
+	}
+}
+
+@for $i from 1 to length($grayscale-sufix-list) {
+	.border-#{nth($grayscale-sufix-list, $i)} {
+		border: $border-width $border-style #{nth($grayscale-list, $i)};
+	}
+}
+
+@for $i from 1 to length($bluescale-sufix-list) {
+	.border-#{nth($bluescale-sufix-list, $i)} {
+		border: $border-width $border-style #{nth($bluescale-list, $i)};
+	}
+}
+
+// Side borders
+
 @for $z from 1 through length($border-sides-list) {
 	@for $i from 1 to length($brand-colors-sufix-list) {
 		.border-#{nth($border-sides-list, $z)}-#{nth($brand-colors-sufix-list, $i)} {

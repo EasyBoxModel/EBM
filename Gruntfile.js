@@ -293,7 +293,7 @@ module.exports = function (grunt) {
      */
     watch: {
       uglify: {
-        files: '<%= project.src %>/js/lib/*.js',
+        files: '<%= project.src %>/js/*.js',
         tasks: 'uglify'
       },
       style: {
@@ -307,8 +307,7 @@ module.exports = function (grunt) {
         files: [
           '<%= project.src %>/scss/{,*/}*/{,*/}*.{scss,sass}', 
           '!<%= project.src %>/scss/style.scss',
-          '!<%= project.src %>/scss/EBM/_ebm-global.scss',
-          '!<%= project.src %>/scss/EBM/_ebm-imports.scss'],
+          '!<%= project.src %>/scss/EBM/_ebm-global.scss'],
         tasks: 'sass:ebm'
       },
       coffee: {
@@ -344,6 +343,13 @@ module.exports = function (grunt) {
     'bower:dev',
     'connect:livereload',
     'uglify',
+    'open',
+    'watch'
+  ]);
+
+  // Watch only task
+  grunt.registerTask('watch-only', [
+    'connect:livereload',
     'open',
     'watch'
   ]);

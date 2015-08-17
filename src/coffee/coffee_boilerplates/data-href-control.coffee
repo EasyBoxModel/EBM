@@ -1,4 +1,4 @@
-'use-strict'
+'use strict'
 $(document).ready ->
 
 	# HREFerence for anchor blocks 

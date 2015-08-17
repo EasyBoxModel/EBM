@@ -1,5 +1,15 @@
 # Easy Box Model (EBM)
 
+## Getting started
+
+- `git clone https://github.com/EasyBoxModel/EBM.git name_of_your_project`
+- Mac users: `sudo npm install` - Windows users: `npm install`
+- `grunt`
+
+That's it. Start coding in the `app/index.html` file and style it on the `src/scss/EBM/_ebm-global.scss` file. Grunt will live-reload any changes on a localhost:9000 server. 
+
+See [available branches](https://github.com/EasyBoxModel/EBM/tree/master#available-branches) for more info about how the EBM is updated.
+
 ## Description
 
 The EBM is a structured set of frontend libraries and tools and a workflow proposal on how to use them to drastically increase web development productivity.
@@ -77,6 +87,32 @@ What does quality mean?
 - HTML utilities - docs in progress
 - JavaScript utilities - docs in progress
 - Productivity resources - docs in progress
+
+## Available branches
+
+EBM is 1.3mb for the `master` branch. However, you can clone any of these other branches: 
+
+### Sass utilities only
+This branch is where the updates to the `src/scss/` are made:
+
+`git clone -b sass-utilities https://github.com/EasyBoxModel/EBM.git name_of_your_project`
+
+### HTML utilities + Sass utilities
+Clone the EBM with the HTML utilities 
+
+`git clone -b html-utilities https://github.com/EasyBoxModel/EBM.git name_of_your_project`
+
+### Wordpress theme boilerplate
+Clone the EBM wordpress theme boilerplate into your `wp-content/themes/` which comes with setup files such as `functions.php`, `index.php`, `screenshot.png`, `header.php`, `footer.php` and `style.css` right away. 
+
+If your WP project already has a working `.git` folder, read more about `git subtree`
+
+`git clone -b wordpress-boilerplate https://github.com/EasyBoxModel/EBM.git name_of_your_project`
+
+### Experimental
+Clone the EBM plus experimental Sass partials and HTML5 new tag attributes and other Grunt tasks still on development
+
+`git clone -b experimental https://github.com/EasyBoxModel/EBM.git name_of_your_project`
 
 ## How to contribute
 

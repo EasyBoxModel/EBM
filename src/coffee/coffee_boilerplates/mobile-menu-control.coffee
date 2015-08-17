@@ -1,4 +1,4 @@
-'use-strict'
+'use strict'
 $(document).ready ->
 # MOBILE NAV DISPLAY CONTROL
 	$siteWrapper = $('.site-wrapper')
