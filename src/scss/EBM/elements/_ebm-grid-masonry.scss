@@ -1,0 +1,77 @@
+/*
+	Extend grid-lists grid-items
+	With a masonry grid layout
+	Isotope JS plugin needed
+*/
+.grid-masonry {
+	.grid-item {
+		@for $i from 1 through 30 {
+			$rand: random(3)-1;
+			$width: null;
+			$height: null;
+			$overlay-width: null;
+			$overlay-height: null;
+			$top: null;
+			$bottom: null;
+			$left: null;
+			$right: null;
+			$translateX: null;
+			$translateY: null;
+			@if $rand == 0 {
+				$width: 49.5%;
+				$height: $mgrid-item-height-control;
+				$top: 0;
+				$bottom: 0;
+				$left: null;
+				$right: 0;
+				$overlay-width: 50%;
+				$overlay-height: 100%;
+				$translateX: 105%;
+				$translateY: 0;
+			} @else if $rand == 1 {
+				$width: 24.5%;
+				$height: $mgrid-item-height-control * 2;
+				$bottom: 0;
+				$top: null;
+				$bottom: 0;
+				$left: 0;
+				$right: 0;
+				$overlay-width: 100%;
+				$overlay-height: 50%;
+				$translateX: 0;
+				$translateY: -105%;
+			} @else {
+				$width: 49.5%;
+				$height: $mgrid-item-height-control;
+				$top: 0;
+				$bottom: 0;
+				$left: 0;
+				$right: null;
+				$overlay-width: 50%;
+				$overlay-height: 100%;
+				$translateX: -105%;
+				$translateY: 0;
+			}
+			&:nth-child(#{$i}) {
+				height: $height;
+				width: $width;
+				> div {
+					height: $height;
+				}
+				.overlay {
+					@include position(absolute, $top $right $bottom $left);
+					width: $overlay-width;
+					height: $overlay-height;
+				}
+				.description-overlay {
+					@include transform(translate($translateX, $translateY));
+				}
+				&:hover {
+					.description-overlay {
+						@include transform(translate(0, 0));
+					}
+				}
+			}
+		}
+	}
+}
