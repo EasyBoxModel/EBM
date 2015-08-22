@@ -7,8 +7,15 @@
 	sass --watch ebm.scss:ebm.css
   sass --watch ebm.scss:ebm.css -t compressed
 */
-@import "b3/b3";
+@import "B4/variables";
+@import "B4/B4";
 @import "bourbon/bourbon";
+
+// EBM variables
+@import "EBM/setup/ebm-variables";
+
+// EBM Helpers
+@import "EBM/helpers/ebm-helpers";
 
 // EBM @import
 @import "EBM/ebm-imports";

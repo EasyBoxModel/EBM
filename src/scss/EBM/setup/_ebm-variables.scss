@@ -28,12 +28,12 @@ $color-instagram: 	#4187FB !default;
 
 // COLOR LISTS
 // EBM:REF
-$grayscale-list: 
-	$gray-darker, 
-	$gray-dark, 
-	$gray, 
-	$gray-light, 
-	$gray-lighter, 
+$grayscale-list:
+  $gray-dark,
+  $gray,
+  $gray-light,
+  $gray-lighter,
+  $gray-lightest,
 	#fff;
 
 $brand-colors-list: 
@@ -62,11 +62,11 @@ $social-colors-list:
 // COLOR SUFIX's
 // EBM:REF
 $grayscale-sufix-list: 
-	'gray-darker', 
-	'gray-dark', 
-	'gray', 
-	'gray-light', 
-	'gray-lighter', 
+	'gray-dark',
+	'gray',
+	'gray-light',
+	'gray-lighter',
+	'gray-lightest',
 	'white';
 
 $brand-colors-sufix-list: 
@@ -223,6 +223,21 @@ $font-size-list:
   $font-size-h5,
   $font-size-h6;
 
+// B4 grid config
+$screen-phone: map-get($grid-breakpoints, xs);
+$screen-tablet: map-get($grid-breakpoints, sm);
+$screen-desktop: map-get($grid-breakpoints, md);
+$screen-lg-desktop: map-get($grid-breakpoints, lg);
+$screen-xl-desktop: map-get($grid-breakpoints, xl);
+
+// CUSTOM CONTAINER VARIABLES
+$container-xs: rem(480px) + $grid-gutter-width;
+$container-sm: map-get($container-max-widths, sm);
+$container-md: map-get($container-max-widths, md);
+$container-lg: map-get($container-max-widths, lg);
+$container-xl: map-get($container-max-widths, xl);
+$container-fluid: $grid-gutter-width / 2;
+
 /* 
   Text in rem units
   Used in text-control partials
@@ -276,6 +291,5 @@ $importantize: 							"!important" 		!default;
 // ALT FONT for FONTS_CUSTOM
 $font-family-alt:         "alt-name", $font-family-sans-serif;
 
-// CUSTOM CONTAINER VARIABLE
-$container-xs: 								((480px + $grid-gutter-width)) !default;
-$container-fluid: 						 $grid-gutter-width / 2;
+
+

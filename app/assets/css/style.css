@@ -7,10 +7,6 @@
   sass --watch src/scss/style.scss:app/assets/css/style.css
 */
 /*
-	EBM:Ref
-	Flexbox
-*/
-/*
 	EBM Variables
 */
 /* 
@@ -18,6 +14,10 @@
   Used in text-control partials
 */
 /* PROJECT ESPECIFIC FONTS */
+/*
+	EBM:Ref
+	Flexbox
+*/
 /*
 	EBM Global styles
 */
