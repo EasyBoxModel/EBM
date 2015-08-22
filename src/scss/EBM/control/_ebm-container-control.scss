@@ -26,7 +26,8 @@
 @media #{$xs-only} {
 	.container-xs,
 	.container-sm,
-	.container-md {
+	.container-md,
+	.container {
 		width: 100%;
 		padding-left: $container-fluid;
 		padding-right: $container-fluid;

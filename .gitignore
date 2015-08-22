@@ -62,10 +62,55 @@ ehthumbs.db
 Desktop.ini
 $RECYCLE.BIN/
 
-## WORDPRESS
-wp-content/uploads/**
-
-## OLDREADME
+# READMES
 HISTORY.md
 OLDREADME.md
+
+## WORDPRESS
+wp-content/uploads/**
+## EBM
+wp-content/themes/THEMENAME/style.min.css
+wp-content/themes/THEMENAME/style.unprefixed.css
+wp-content/themes/THEMENAME/style.prefixed.css
+
+## Node.js
+wp-content/themes/THEMENAME/lib-cov
+wp-content/themes/THEMENAME/*.seed
+wp-content/themes/THEMENAME/*.log
+wp-content/themes/THEMENAME/*.csv
+wp-content/themes/THEMENAME/*.dat
+wp-content/themes/THEMENAME/*.out
+wp-content/themes/THEMENAME/*.pid
+wp-content/themes/THEMENAME/*.gz
+wp-content/themes/THEMENAME/pids
+wp-content/themes/THEMENAME/logs
+wp-content/themes/THEMENAME/results
+wp-content/themes/THEMENAME/npm-debug.log
+wp-content/themes/THEMENAME/node_modules
+
+## Bower
+wp-content/themes/THEMENAME/src/components
+wp-content/themes/THEMENAME/lib
+
+## Images
+wp-content/themes/THEMENAME/app/assets/img/*.jpg
+wp-content/themes/THEMENAME/app/assets/img/*.png
+wp-content/themes/THEMENAME/app/assets/img/*.JPEG
+wp-content/themes/THEMENAME/app/assets/img/*.gif
+wp-content/themes/THEMENAME/app/assets/img/*.tiff
+# wp-content/themes/THEMENAME/src/img/*.jpg
+# wp-content/themes/THEMENAME/src/img/*.png
+# wp-content/themes/THEMENAME/src/img/*.gif
+# wp-content/themes/THEMENAME/src/img/*.JPEG
+# wp-content/themes/THEMENAME/src/img/*.tiff
+
+## Icons
+wp-content/themes/THEMENAME/app/assets/icons/*.svg
+wp-content/themes/THEMENAME/app/assets/icons/*.eot
+wp-content/themes/THEMENAME/app/assets/icons/*.ttf
+wp-content/themes/THEMENAME/app/assets/icons/*.woff
+
+## OLDREADME
+wp-content/themes/THEMENAME/HISTORY.md
+wp-content/themes/THEMENAME/OLDREADME.md
 

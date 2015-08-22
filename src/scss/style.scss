@@ -7,16 +7,16 @@
 	Optional without Grunt:
   sass --watch src/scss/style.scss:app/assets/css/style.css
 */
-@import "b3/variables";
-@import "b3/mixins";
+@import "B4/variables";
+@import "B4/mixins";
 @import "bourbon/bourbon";
-
-// EBM Helpers
-@import "EBM/helpers/ebm-helpers";
 
 // EBM Setup
 @import "EBM/setup/ebm-variables";
 @import "EBM/setup/ebm-fonts-setup"; 
+
+// EBM Helpers
+@import "EBM/helpers/ebm-helpers";
 
 // The global custom styles file
 @import "EBM/ebm-global";
