@@ -262,7 +262,7 @@ $loop-limit: 10;
 
 // Define the em-base for rems to px conversion
 $px-to-rems: true;    // True if you want them on rems 
-$em-base: $font-size-base;
+$em-base: $font-size-root;
 
 // Include and determine border radius:
 $rounded-borders: true;  // If no bootstrap
