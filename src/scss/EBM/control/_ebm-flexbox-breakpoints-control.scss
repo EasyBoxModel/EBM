@@ -1,0 +1,11 @@
+/*
+	EBM: Flexbox breakpoints control
+*/
+
+@for $i from 1 through length($breakpoints-sufix-list) {
+  .flex-row-break-#{nth($breakpoints-sufix-list, $i)} {
+    @media #{nth($media-only-list, $i)} {
+      @include flex-column;
+    }
+  }
+}
