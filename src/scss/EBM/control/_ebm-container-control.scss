@@ -36,3 +36,12 @@
 	.container-sm {}	
 	.container-md {}		
 }
+
+.ebm-row {
+	@extend .row;
+	width: 100%;
+}
+.ebm-clearfix {
+	@extend .clearfix;
+	width: 100%;
+}

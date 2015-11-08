@@ -7,8 +7,7 @@ $grid-list-item-height: 350px;
 	> li {
 		position: relative;
 		float: left;
-		padding: $grid-gutter-width / 2;
-		padding: rem($grid-gutter-width / 2);
+		padding: $container-fluid;
 	}
 	&.grid-list-item-height {
 		.grid-list-item,

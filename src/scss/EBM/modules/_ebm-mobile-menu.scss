@@ -5,13 +5,19 @@
 
 */
 $mobile-navbar-height: 56px; // Mobile header
+$mobile-navbar-bg-color: $gray-dark;
+$mobile-menu-bg-color: $gray-dark;
+$mobile-nav-display-triggers-bg-color: $gray;
+$mobile-nav-display-bg-color: $gray-dark;
+$mobile-nav-text-color: white;
+$menu-trigger-bg-color: transparent;
 .mobile-navbar {
 	@include position(fixed, 0 0 null 0);
 	@include flex-row-space-between;
-	border-bottom: 1px solid $gray-lighter;
+	border-bottom: 1px solid $gray;
 	height: $mobile-navbar-height;
 	padding: 0 $container-fluid;
-	background: white;
+	background-color: $mobile-navbar-bg-color;
 	z-index: 1000;
 	width: 100%;
 	.left,
@@ -23,11 +29,14 @@ $mobile-navbar-height: 56px; // Mobile header
 	.right {}
 	.logo {
 		@include bg-img-block;
-		height: $mobile-navbar-height - 7;
-		width: $mobile-navbar-height - 7;
+		display: block;
+		img {
+			width: $mobile-navbar-height - 7;
+			height: auto;
+		}
 	}
 	.menu-trigger {
-		background-color: $brand-primary;
+		background-color: $menu-trigger-bg-color;
 		height: $mobile-navbar-height - 14;
 		width: $mobile-navbar-height - 14;
 		font-size: $font-size-h1;
@@ -41,11 +50,11 @@ $mobile-navbar-height: 56px; // Mobile header
 	@include transform(translateX(100%));
 	@include position(fixed, 0 0 0 null);
 	padding-top: $mobile-navbar-height;
-	background: $gray-lighter;
+	background-color: $mobile-menu-bg-color;
 	min-height: 100%;
 	z-index: 900;
 	height: 100%;
-	width: 100%;
+	width: 100%;	
 	.mobile-nav-display-triggers {
 		> ul {
 			@include list-unstyled;
@@ -53,15 +62,15 @@ $mobile-navbar-height: 56px; // Mobile header
 				a {
 					text-transform: uppercase;
 					padding: $container-fluid;
-					color: $gray-dark;
+					color: $mobile-nav-text-color;
 					font-size: 21px;
 					display: block;
 				}
 				&:nth-child(odd) {
-					background-color: $gray-light;
+					background-color: $mobile-nav-display-triggers-bg-color;
 				}
 				&:nth-child(even) {
-					background-color: $gray-lighter;
+					background-color: lighten($mobile-nav-display-triggers-bg-color, 7%);
 				}
 			}
 		}
@@ -71,7 +80,7 @@ $mobile-navbar-height: 56px; // Mobile header
 		@include transform(translateX(100%));
 		@include position(fixed, 0 0 0 null);
 		padding-top: $mobile-navbar-height;
-		background: $gray-lighter;
+		background-color: $mobile-nav-display-bg-color;
 		overflow-y: scroll;
 		min-height: 100%;
 		z-index: 901;
@@ -88,15 +97,15 @@ $mobile-navbar-height: 56px; // Mobile header
 						padding: ($container-fluid - 2) $container-fluid;
 						font-size: $font-size-base;
 						text-transform: uppercase;
-						color: $gray-darker;
+						color: $mobile-nav-text-color;
 						display: block;
 						span {}
 					}
 					&:nth-child(odd) {
-						background-color: $gray-lighter;
+						background-color: $mobile-nav-display-triggers-bg-color;
 					}
 					&:nth-child(even) {
-						background-color: $gray-light;
+						background-color: lighten($mobile-nav-display-triggers-bg-color, 7%);
 					}
 				}
 			}
