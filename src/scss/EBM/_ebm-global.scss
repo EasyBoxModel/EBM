@@ -16,10 +16,8 @@ body {}
 
 $header-height-control: 70px;
 .header {
+	@include normalize-text;
 	border-bottom: 1px solid $gray-lightest;
-	.container {
-		@include flex-row-space-between;
-	}
 	.header-left,
 	.header-center,
 	.header-right {
@@ -28,7 +26,6 @@ $header-height-control: 70px;
 	}
 	.header-left,
 	.header-right {
-		width: 30%;
 	}
 	.header-left {
 		
