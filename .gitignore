@@ -67,6 +67,7 @@ HISTORY.md
 OLDREADME.md
 
 ## WORDPRESS
+wp-config.php
 wp-content/uploads/**
 ## EBM
 wp-content/themes/THEMENAME/style.min.css
