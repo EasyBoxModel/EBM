@@ -4,11 +4,28 @@
 .container-fluid {
 	width: 100%;
 }
+.container-xs {
+	min-width: $container-xs;
+}
+.container-sm {
+	min-width: $container-sm;
+}	
+.container-md {
+	min-width: $container-md;
+}
+.container-lg {
+	min-width: $container-lg;
+}
+.container {
+	min-width: $container-xl;
+}
 
 @media #{$sm-up} {
 	.container-xs,
 	.container-sm,
-	.container-md {
+	.container-md,
+	.container-lg,
+	.container {
 		padding-left: $container-fluid;
 		padding-right: $container-fluid;
 		margin: 0 auto;
@@ -21,14 +38,20 @@
 	}	
 	.container-md {
 		width: $container-md;
-	}	
+	}
+	.container-lg {
+		min-width: $container-lg;
+	}
+	.container {
+		min-width: $container-xl;
+	}
 }
 @media #{$xs-only} {
 	.container-xs,
 	.container-sm,
 	.container-md,
+	.container-lg,
 	.container {
-		width: 100%;
 		padding-left: $container-fluid;
 		padding-right: $container-fluid;
 		margin: 0 auto;
