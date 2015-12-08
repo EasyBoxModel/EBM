@@ -2,82 +2,19 @@
 html {
   font-size: $font-size-root;
   #{$headings-list},
-  #{$headings-class-list} {
-  }
+  #{$headings-class-list} {}
   @media #{$sm-only} {
     font-size: $font-size-root - 2;
     #{$headings-list},
     #{$headings-class-list} {
-      line-height: $headings-line-height - 0.1;
+      // line-height: $headings-line-height - 0.1;
     }
   }
   @media #{$xs-only} {
     font-size: $font-size-root - 3;
     #{$headings-list},
     #{$headings-class-list} {
-      line-height: $headings-line-height - 0.2;
-    }
-  }
-}
-
-// LEAD TEXT ELEMENTS 
-#{$text-responsive-elements-list} {
-  &.lead {
-    font-size: $font-size-base + $text-in-rems-md-up ;
-    line-height: $line-height-md-up;
-  }
-  @media #{$xs-only} {
-    &.lead {
-      font-size: $font-size-base + $text-in-rems-xs-only ;
-      line-height: $line-height-xs-only;
-    }
-  }
-  @media #{$sm-only} {
-    &.lead {
-      font-size: $font-size-base + $text-in-rems-sm-only ;
-      line-height: $line-height-sm-only;
-    }
-  }
-}
-
-// LEAD HEADINGS
-@for $i from 1 through length($headings-list) {
-  #{nth($headings-list, $i)} {
-    &.lead {
-      font-size: #{nth($font-size-list, $i) + $text-in-rems-md-up} ;
-      line-height: $line-height-md-up;
-    }
-    @media #{$xs-only} {
-      &.lead {
-        font-size: #{nth($font-size-list, $i) + $text-in-rems-xs-only} ;
-        line-height: $line-height-xs-only;
-      }
-    }
-    @media #{$sm-only} {
-      &.lead {
-        font-size: #{nth($font-size-list, $i) + $text-in-rems-sm-only} ;
-        line-height: $line-height-sm-only;
-      }
-    }
-  }
-}
-@for $i from 1 through length($headings-class-list) {
-  #{nth($headings-class-list, $i)} {
-    &.lead {
-      font-size: #{nth($font-size-list, $i) + $text-in-rems-md-up} ;
-      line-height: $line-height-md-up;
-    }
-    @media #{$xs-only} {
-      &.lead {
-        font-size: #{nth($font-size-list, $i) + $text-in-rems-xs-only} ;
-        line-height: $line-height-xs-only;
-      }
-    }
-    @media #{$sm-only} {
-      &.lead {
-        font-size: #{nth($font-size-list, $i) + $text-in-rems-sm-only} ;
-        line-height: $line-height-sm-only;
-      }
+      // line-height: $headings-line-height - 0.2;
     }
   }
 }
