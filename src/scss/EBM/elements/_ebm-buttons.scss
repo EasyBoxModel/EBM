@@ -44,12 +44,12 @@ input[type="submit"].btn,
 	// Grayscale Buttons Extension
 	@for $i from 1 through length($grayscale-sufix-list) {
 		&.btn-#{nth($grayscale-sufix-list, $i)} { 
-			color: white;
+			color: $gray;
 			border-color: #{nth($grayscale-list, $i)};
 		  background-color: #{nth($grayscale-list, $i)}; 
 			&:hover {
 				background-color: #{darken(nth($grayscale-list, $i), $buttons-custom-color-control)};
-				color: darken(white, 3%);
+				color: darken($gray, 3%);
 				border-color: #{darken(nth($grayscale-list, $i), 3%)};
 			}
 		}

@@ -16,6 +16,31 @@ a {
   @include normalize-text;
 }
 
+@for $i from 1 through length($headings-list) {
+	#{nth($headings-list, $i)},
+	#{nth($headings-class-list, $i)} {
+		&.normalize-text {
+			@include normalize-text;			
+		}
+	}
+}
+
+// From h1 to h3
+// @for $i from 1 through 3 {
+// 	#{nth($headings-list, $i)},
+// 	#{nth($headings-class-list, $i)} {
+// 		@include book;
+// 	}
+// }
+
+// from h4 to h6
+// @for $i from 4 through length($headings-list) {
+// 	#{nth($headings-list, $i)},
+// 	#{nth($headings-class-list, $i)} {
+// 		@include book;
+// 	}
+// }
+
 /* 
   DISABLE ANCHOR UNDERLINE ON HOVER
 */

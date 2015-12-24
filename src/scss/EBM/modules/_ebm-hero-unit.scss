@@ -3,7 +3,7 @@
 */
 $hero-unit-height-control: 490px;
 .hero-unit {
-	@include bg-img-control;
+	@include bg-img-block;
 	height: $hero-unit-height-control;
 	position: relative;
 	overflow: hidden;
