@@ -26,8 +26,8 @@
 	.container-md,
 	.container-lg,
 	.container {
-		padding-left: $container-fluid;
 		padding-right: $container-fluid;
+		padding-left: $container-fluid;
 		margin: 0 auto;
 	}
 	.container-xs {
@@ -52,8 +52,9 @@
 	.container-md,
 	.container-lg,
 	.container {
-		padding-left: $container-fluid;
 		padding-right: $container-fluid;
+		padding-left: $container-fluid;
+		min-width: 100%;
 		margin: 0 auto;
 	}
 	.container-sm {}	
