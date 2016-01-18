@@ -1,15 +1,15 @@
 /* EBM Borders */
 // Border Radius
 .border-radius {
-  border-radius: $border-radius-base;
+  border-radius: $border-radius;
 }
 
 .border-radius-sm {
-	border-radius: $border-radius-small;
+	border-radius: $border-radius-sm;
 }
 
 .border-radius-lg {
-	border-radius: $border-radius-large;
+	border-radius: $border-radius-lg;
 }
 
 // No border colors

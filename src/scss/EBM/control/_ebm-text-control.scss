@@ -41,6 +41,16 @@ a {
 // 	}
 // }
 
+.underline {
+	text-decoration: underline !important;
+}
+.uppercase {
+	text-transform: uppercase !important;
+}
+.capitalize {
+	text-transform: capitalize !important;
+}
+
 /* 
   DISABLE ANCHOR UNDERLINE ON HOVER
 */
