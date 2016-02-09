@@ -4,61 +4,23 @@
 .container-fluid {
 	width: 100%;
 }
+.container-xs, 
+.container-sm {
+	@include make-container();
+}
 .container-xs {
-	min-width: $container-xs;
+	max-width: $container-xs;
 }
 .container-sm {
-	min-width: $container-sm;
+	max-width: $container-sm;
 }	
-.container-md {
-	min-width: $container-md;
-}
-.container-lg {
-	min-width: $container-lg;
-}
-.container {
-	min-width: $container-xl;
-}
 
-@media #{$sm-up} {
+@media #{$md-down} {
 	.container-xs,
-	.container-sm,
-	.container-md,
-	.container-lg,
-	.container {
-		padding-right: $container-fluid;
-		padding-left: $container-fluid;
-		margin: 0 auto;
-	}
-	.container-xs {
-		width: $container-xs;
-	}
 	.container-sm {
-		width: $container-sm;
-	}	
-	.container-md {
-		width: $container-md;
-	}
-	.container-lg {
-		min-width: $container-lg;
-	}
-	.container {
-		min-width: $container-xl;
-	}
-}
-@media #{$xs-only} {
-	.container-xs,
-	.container-sm,
-	.container-md,
-	.container-lg,
-	.container {
-		padding-right: $container-fluid;
-		padding-left: $container-fluid;
+		max-width: 100%;
 		min-width: 100%;
-		margin: 0 auto;
 	}
-	.container-sm {}	
-	.container-md {}		
 }
 
 .ebm-row {

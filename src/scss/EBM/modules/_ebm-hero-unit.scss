@@ -4,17 +4,18 @@
 $hero-unit-height-control: 490px;
 .hero-unit {
 	@include bg-img-block;
-	height: $hero-unit-height-control;
+	min-height: $hero-unit-height-control;
+	background-color: $brand-primary;
 	position: relative;
 	overflow: hidden;
 	&.video-bg {
 		overflow: hidden;
-		height: $hero-unit-height-control;
+		min-height: $hero-unit-height-control;
 	}
 	.overlay,
 	.hero-unit-pic {
 		@include position(absolute, 0 0 0 0);
-		height: $hero-unit-height-control;
+		min-height: $hero-unit-height-control;
 	}
 	.hero-unit-pic {
 		img {

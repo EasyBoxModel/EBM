@@ -99,6 +99,23 @@ $breakpoints-sufix-list:
   'md', 
   'lg';
 
+$breakpoints-only-sufix-list:  
+  'xs-only', 
+  'sm-only', 
+  'md-only', 
+  'lg-only';
+
+$breakpoints-up-sufix-list:  
+  'xs-up', 
+  'sm-up', 
+  'md-up', 
+  'lg-up';
+
+$breakpoints-down-sufix-list:  
+  'sm-down', 
+  'md-down', 
+  'lg-down';
+
 // EBM:REF
 $sizes-list:
   "xs",
@@ -280,7 +297,7 @@ $alpha: 0.15;
 $rgba-ammount: 0.3;
 
 // Buttons control variables
-$buttons-custom-border-size: 1px;
+$buttons-custom-border-size: 3px;
 $buttons-custom-border-style: solid;
 $buttons-custom-color-control: 18%;
 $button-icon-height-control: 36px;
