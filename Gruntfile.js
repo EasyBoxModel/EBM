@@ -93,7 +93,7 @@ module.exports = function (grunt) {
     coffee: {
       dev: {
         files: {
-          '<%= project.src %>/js/coffeeCompile.js': '<%= project.coffee %>'
+          '<%= project.src %>/js/coffee-compile.js': '<%= project.coffee %>'
         }
       }
     },
@@ -134,7 +134,7 @@ module.exports = function (grunt) {
             // '<%= project.src %>/js/isotope.pkgd.min.js',
             // '<%= project.src %>/js/lickity.pkgd.min.js',
             // '<%= project.src %>/js/transformicons.js',
-            '<%= project.src %>/js/coffeeCompile.js'
+            '<%= project.src %>/js/coffee-compile.js'
           ]
         }
       }

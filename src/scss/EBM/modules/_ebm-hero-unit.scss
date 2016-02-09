@@ -1,7 +1,6 @@
 /* 
 	Hero unit
 */
-$hero-unit-height-control: 490px;
 .hero-unit {
 	@include bg-img-block;
 	min-height: $hero-unit-height-control;
@@ -18,6 +17,7 @@ $hero-unit-height-control: 490px;
 		min-height: $hero-unit-height-control;
 	}
 	.hero-unit-pic {
+		@include bg-img-block-center;
 		img {
 			width: 100%;
 			height: auto;
