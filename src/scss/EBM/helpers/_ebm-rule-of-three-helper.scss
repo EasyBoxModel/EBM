@@ -1,3 +1,0 @@
-@function rule-of-three($total, $diff) {
-	@return percentage(strip-units($diff) / strip-units($total));
-}

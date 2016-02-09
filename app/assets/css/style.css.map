@@ -1,7 +1,0 @@
-{
-"version": 3,
-"mappings": ";;;;;;;;;;;;;;;;;;;;;;;AAIC,uBAAqB;EAClB,OAAO,EAAE,IAAI;;;AAMjB;aACc;EACb,QAAQ,EAAE,QAAQ",
-"sources": ["../../../src/scss/EBM/_ebm-global.scss"],
-"names": [],
-"file": "style.css"
-}
