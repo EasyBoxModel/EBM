@@ -1,3 +1,6 @@
+$header-height-control: 70px;
+$logo-width-control: 132px;
+
 /*
 	EBM Global styles
 */
@@ -11,38 +14,66 @@ body {}
 
 .site-wrapper,
 .site-content {
+	overflow-x: hidden;
 	position: relative;
 }
 
-$header-height-control: 70px;
 .header {
+	@include position-fixed-top(1000);
 	@include normalize-text;
 	border-bottom: 1px solid $gray-lightest;
-	.header-left,
-	.header-center,
-	.header-right {
+	background-color: white;
+	.header-left, .header-center, .header-right {
 		@include flex-column-center;
 		height: $header-height-control;
 	}
-	.header-left,
-	.header-right {
-	}
-	.header-left {
-		
-	}
+	.header-left, .header-right {}
+	.header-left {}
 	.header-center {
 		text-align: center;
 	}
 	.header-right {
 		text-align: right;
 	}
-	.logo {
+	.logo { 
 		img {
-			width: 132px;
+			width: $logo-width-control;
 			height: auto;
 		}
 	}
 }
+
+.footer {
+	@include normalize-text;
+	background-color: $gray-dark;
+	.row {
+		> div {
+			@include flex-column-center;
+			min-height: $header-height-control;
+		}
+	}
+}
+
+
+// Wordpress boilerplate menus
+// [id*="menu-main-menu"] {
+// 	@include list-unstyled;
+// 	li {
+// 		margin-left: $container-fluid;
+// 		display: inline-block;
+// 		&:hover,
+// 		&.current-menu-item {
+// 			cursor: pointer;
+// 			a {
+// 				text-decoration: underline;
+// 			}
+// 		}
+// 		a {
+// 			@include medium;
+// 			font-size: $font-size-h5;
+// 		}
+// 	}
+// }
 
 /*
 	Media queries
