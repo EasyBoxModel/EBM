@@ -1,0 +1,19 @@
+// Wordpress boilerplate menus
+.nav-main {
+	@include list-unstyled;
+	li {
+		margin-left: $container-fluid;
+		display: inline-block;
+		&:hover,
+		&.current-menu-item {
+			cursor: pointer;
+			a {
+				text-decoration: underline;
+			}
+		}
+		a {
+			@include medium;
+			font-size: $font-size-h5;
+		}
+	}
+}

@@ -5,19 +5,30 @@
 	width: 100%;
 }
 .container-xs, 
-.container-sm {
+.container-sm,
+.container-md {
 	@include make-container();
 }
+.container {
+	min-width: $container-xl;
+}
 .container-xs {
-	max-width: $container-xs;
+	max-width: $container-xs; 
+	min-width: $container-xs;
 }
 .container-sm {
 	max-width: $container-sm;
-}	
+	min-width: $container-sm;
+}
+.container-md {
+	max-width: $container-md;
+	min-width: $container-md;
+}
 
 @media #{$md-down} {
 	.container-xs,
-	.container-sm {
+	.container-sm,
+	.container {
 		max-width: 100%;
 		min-width: 100%;
 	}

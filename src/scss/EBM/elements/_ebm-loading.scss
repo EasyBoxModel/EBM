@@ -1,0 +1,12 @@
+.loading {
+	&:before {
+		@include animation-iteration-count(infinite);
+	  @include animation-timing-function(linear);
+	  @include animation-duration(0.5s);
+		@include animation-name(rotate); 
+		font-family: 'icomoon';
+		display: inline-block;
+		margin-right: 14px;
+		content: '\e8d0';
+	}
+}
