@@ -1,0 +1,22 @@
+/* EBM:RESPONSIVE FONT RESIZE 
+  DEPRECATED
+*/
+html {
+  font-size: $font-size-root;
+  #{$headings-list},
+  #{$headings-class-list} {}
+  @media #{$sm-only} {
+    font-size: $font-size-root - 2;
+    #{$headings-list},
+    #{$headings-class-list} {
+      // line-height: $headings-line-height - 0.1;
+    }
+  }
+  @media #{$xs-only} {
+    font-size: $font-size-root - 3;
+    #{$headings-list},
+    #{$headings-class-list} {
+      // line-height: $headings-line-height - 0.2;
+    }
+  }
+}
