@@ -11,17 +11,14 @@
     "url": "http://github.com/netpoe/EasyBoxModel.git"
   },
   "devDependencies": {
-    "bower": "latest",
-    "connect-livereload": "~0.2.0",
+    "connect-livereload": "latest",
     "grunt": "latest",
-    "grunt-autoprefixer": "latest",
     "grunt-bower-task": "latest",
     "grunt-contrib-clean": "latest",
     "grunt-contrib-coffee": "latest",
     "grunt-contrib-concat": "latest",
     "grunt-contrib-connect": "~0.3.0",
     "grunt-contrib-cssmin": "latest",
-    "grunt-contrib-jshint": "latest",
     "grunt-contrib-sass": "latest",
     "grunt-contrib-uglify": "latest",
     "grunt-contrib-watch": "latest",
@@ -29,8 +26,5 @@
     "matchdep": "latest",    
     "pgwbrowser": "latest",
     "logdown": "latest"
-  },
-  "scripts": {
-    "postinstall": "node_modules/.bin/bower install"
   }
 }

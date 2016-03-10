@@ -99,21 +99,6 @@ module.exports = function (grunt) {
     },
 
     /**
-     * JSHint
-     * https://github.com/gruntjs/grunt-contrib-jshint
-     * Manage the options inside .jshintrc file
-     */
-    jshint: {
-      files: [
-        'src/js/{,*/}*/{,*/}*.js',
-        'Gruntfile.js'
-      ],
-      options: {
-        jshintrc: '.jshintrc'
-      }
-    },
-
-    /**
      * Uglify (minify) JavaScript files
      * https://github.com/gruntjs/grunt-contrib-uglify
      * Compresses and minifies all JavaScript files into one
@@ -168,31 +153,6 @@ module.exports = function (grunt) {
         },
         files: {
           '<%= project.assets %>/css/style.min.css': '<%= project.src %>/scss/style.min.scss'
-        }
-      }
-    },
-
-    /**
-     * Build bower components
-     * https://github.com/yatskevich/grunt-bower-task
-     */
-    bower: {
-      dev: {
-        install: {
-          options: {
-            targetDir: '<%= project.assets %>/components/',
-            cleanTargetDir: true,
-            cleanBowerDir: true
-          }
-        }
-      },
-      dist: {
-        install: {
-          options: {
-            targetDir: '<%= project.assets %>/components/',
-            cleanTargetDir: true,
-            cleanBowerDir: true
-          }
         }
       }
     },
@@ -254,7 +214,6 @@ module.exports = function (grunt) {
   grunt.registerTask('default', [
     'sass:ebm',
     'sass:dev',
-    'bower:dev',
     'connect:livereload',
     'uglify',
     'open',
