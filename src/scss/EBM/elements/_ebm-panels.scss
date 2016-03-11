@@ -1,55 +1,27 @@
-.panel {
-	min-height: 140px;
-	border-radius: $border-radius-base;
-	position: relative;
-	overflow: hidden;
-	.panel-head {
-		border-top-left-radius: $border-radius-base;
-		border-top-right-radius: $border-radius-base;
-		@include clearfix;
+/*
+	EBM Panels
+*/
+.ebm-panel {
+	@include box-shadow-default;
+	border-radius: $border-radius-sm;
+	margin-bottom: rem(42px);
+	background-color: white;
+	> .top, > .center, > .bottom {
+		position: relative;		
+	}
+	> .top {
+		@include normalize-text;
+		background-color: $gray-lighter;
+		padding: $container-fluid / 2;
+		[class*="col-"] {
+			@include flex-column-center;
+			min-height: 24px;
+		}
+	}
+	> .center, > .bottom {
 		padding: $container-fluid;
-		border-bottom: 1px solid $gray-lighter;
-		.title {
-			float: left;
-			// @include light;
-			text-transform: uppercase;
-			color: $gray-dark;
-		}
-		.actions {
-			float: right;
-		}
 	}
-	.panel-body {
-		border-bottom-left-radius: $border-radius-base;
-		border-bottom-right-radius: $border-radius-base;
-		@include clearfix;
-		min-height: 140px;
-		.top {
-
-		}
-		.center {
-
-		}
-		.bottom {
-
-		}
+	> .bottom {
+		border-top: 1px solid $gray-lightest;
 	}
-	.panel-footer {
-		// position: absolute;
-		// bottom: 0;
-		// width: 100%;
-		border-bottom-left-radius: $border-radius-base;
-		border-bottom-right-radius: $border-radius-base;
-		min-height: 28px;
-		border-top: 1px solid $gray-lighter;
-		@include clearfix;
-	}
-	// Panel Tables
-	table.panel-table {
-		
-	}
-	// Utilities
-	&.panel-shadow {
-		@include box-shadow-default;
-	}	
 }

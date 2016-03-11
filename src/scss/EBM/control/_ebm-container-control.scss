@@ -24,11 +24,23 @@
 	max-width: $container-md;
 	min-width: $container-md;
 }
+.container-xxl {
+	@include make-container();
+	max-width: $container-xxl;
+	min-width: $container-xxl;
+}
 
 @media #{$md-down} {
 	.container-xs,
 	.container-sm,
 	.container {
+		max-width: 100%;
+		min-width: 100%;
+	}
+}
+
+@media #{$md-down} {
+	.container-xxl {
 		max-width: 100%;
 		min-width: 100%;
 	}

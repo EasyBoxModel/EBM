@@ -253,6 +253,7 @@ $container-sm: map-get($container-max-widths, sm);
 $container-md: map-get($container-max-widths, md);
 $container-lg: map-get($container-max-widths, lg);
 $container-xl: map-get($container-max-widths, xl);
+$container-xxl: 84rem;
 $container-fluid: $grid-gutter-width / 2;
 
 /* 
