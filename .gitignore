@@ -115,3 +115,10 @@ wp-content/themes/THEMENAME/app/assets/icons/*.woff
 wp-content/themes/THEMENAME/HISTORY.md
 wp-content/themes/THEMENAME/OLDREADME.md
 
+## Build
+wp-content/themes/twentysixteen
+wp-content/themes/THEMENAME/src/
+wp-content/themes/THEMENAME/Gruntfile.js
+wp-content/themes/THEMENAME/bower.json
+wp-content/themes/THEMENAME/.bowerrc
+wp-content/themes/THEMENAME/package.json
