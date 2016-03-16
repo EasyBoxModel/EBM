@@ -168,6 +168,19 @@ module.exports = function (grunt) {
     },
 
     /**
+      * Generate static HTML includes
+      * https://github.com/alanshaw/grunt-include-replace
+      */
+    includereplace: {
+      dev: {
+        options: {
+          includesDir: '<%= project.src %>/includes/'
+        },
+        files: [{src: '<%= project.src %>/*.html', dest: '<%= project.app %>/', expand: true, cwd: './'}],
+      }
+    },
+
+    /**
      * Runs tasks against changed watched files
      * https://github.com/gruntjs/grunt-contrib-watch
      * Livereload the browser once complete
@@ -204,9 +217,18 @@ module.exports = function (grunt) {
           '<%= project.app %>/{,*/}*.html',
           '<%= project.assets %>/css/*.css',
           '<%= project.assets %>/js/{,*/}*.js',
-          '<%= project.assets %>/{,*/}*.{png,jpg,jpeg,gif,webp,svg}'
+          '<%= project.assets %>/{,*/}*.{png,jpg,jpeg,gif,webp,svg}',
+          '<%= project.src %>/*.html',
+          '<%= project.src %>/includes/*.html',
         ]
-      }
+      },
+      includereplace: {
+        files: [
+          '<%= project.src %>/*.html',
+          '<%= project.src %>/includes/*.html',
+        ],
+        tasks: 'includereplace:dev'
+      },
     }
   });
 

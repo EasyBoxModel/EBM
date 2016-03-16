@@ -22,9 +22,10 @@
     "grunt-contrib-sass": "latest",
     "grunt-contrib-uglify": "latest",
     "grunt-contrib-watch": "latest",
+    "grunt-include-replace": "^3.2.0",
     "grunt-open": "latest",
-    "matchdep": "latest",    
-    "pgwbrowser": "latest",
-    "logdown": "latest"
+    "logdown": "latest",
+    "matchdep": "latest",
+    "pgwbrowser": "latest"
   }
 }
