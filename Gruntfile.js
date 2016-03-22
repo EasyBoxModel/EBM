@@ -18,6 +18,11 @@ var mountFolder = function (connect, dir) {
 };
 
 /**
+  * JS Files array for uglify and Babel
+  */
+var jsFiles = 
+
+/**
  * Grunt module
  */
 module.exports = function (grunt) {
@@ -34,9 +39,15 @@ module.exports = function (grunt) {
       assets: '<%= project.app %>/assets',
       css: [ '<%= project.src %>/scss/style.scss' ],
       ebm: [ '<%= project.src %>/scss/ebm.scss' ],
-      js: [ '<%= project.src %>/js/*.js' ],
+      js: [ '<%= project.src %>/js_src/*.js' ],
       coffee: [ '<%= project.src %>/coffee/*.coffee' ]
     },
+    jsFiles: [
+      '<%= project.src %>/js_src/trigger-notifications-control.js',
+      '<%= project.src %>/js_src/transition.js',
+      '<%= project.src %>/js_src/modal.js',
+      '<%= project.src %>/js_src/coffee-compile.js',
+    ],
 
     /**
      * Project banner
@@ -63,7 +74,7 @@ module.exports = function (grunt) {
     connect: {
       options: {
         port: 9000,
-        hostname: '*'
+        hostname: '*',
       },
       livereload: {
         options: {
@@ -93,7 +104,7 @@ module.exports = function (grunt) {
     coffee: {
       dev: {
         files: {
-          '<%= project.src %>/js/coffee-compile.js': '<%= project.coffee %>'
+          '<%= project.src %>/js_src/coffee-compile.js': '<%= project.coffee %>'
         }
       }
     },
@@ -110,17 +121,7 @@ module.exports = function (grunt) {
       },
       dist: {
         files: {
-          '<%= project.assets %>/js/scripts.min.js': [
-            // '<%= project.src %>/js/TweenMax.min.js',
-            // '<%= project.src %>/js/ScrollToPlugin.js',
-            // '<%= project.src %>/js/ScrollMagic.js',
-            // '<%= project.src %>/js/jquery.scrollmagic.debug.js',
-            // '<%= project.src %>/js/imagesloaded.pkgd.min.js',
-            // '<%= project.src %>/js/isotope.pkgd.min.js',
-            // '<%= project.src %>/js/lickity.pkgd.min.js',
-            // '<%= project.src %>/js/transformicons.js',
-            '<%= project.src %>/js/coffee-compile.js'
-          ]
+          '<%= project.assets %>/js/scripts.min.js': ['<%= project.src %>/js_ES2015/babel.js',]
         }
       }
     },
@@ -163,7 +164,7 @@ module.exports = function (grunt) {
      */
     open: {
       server: {
-        path: 'http://localhost:<%= connect.options.port %>'
+        path: 'http://localhost:<%= connect.options.port %>/src'
       }
     },
 
@@ -181,20 +182,56 @@ module.exports = function (grunt) {
     },
 
     /**
+      * Concat files so babel can parse them
+      */
+    concat: {
+      options: {
+        sourceMap: true
+      },
+      js: {
+        src: '<%= jsFiles %>',
+        dest: '<%= project.src %>/js_dest/js-to-babel.js'
+      }
+    },
+
+    /**
+      * Babel
+      */
+    babel: {
+      options: {
+        sourceMap: true,
+        presets: ['es2015']
+      },
+      dist: {
+        src: '<%= project.src %>/js_dest/js-to-babel.js',
+        dest: '<%= project.src %>/js_ES2015/babel.js',
+      }
+    },
+
+    /**
      * Runs tasks against changed watched files
      * https://github.com/gruntjs/grunt-contrib-watch
      * Livereload the browser once complete
      */
     watch: {
+      babel: {
+        files: '<%= project.src %>/js_dest/*.js',
+        tasks: 'babel'
+      },
       uglify: {
-        files: '<%= project.src %>/js/*.js',
+        files: '<%= project.src %>/js_ES2015/*.js',
         tasks: 'uglify'
+      },
+      concat: {
+        files: '<%= project.src %>/js_src/*.js',
+        tasks: 'concat'
       },
       style: {
         files: [
           '<%= project.src %>/scss/style.scss',
           '<%= project.src %>/scss/b3/_variables.scss',
-          '<%= project.src %>/scss/EBM/_ebm-global.scss'],
+          '<%= project.src %>/scss/EBM/_ebm-global.scss',
+          '<%= project.src %>/scss/EBM/_konfio-custom-overrides.scss'],
         tasks: 'sass:dev'
       },
       ebm: {
@@ -237,6 +274,7 @@ module.exports = function (grunt) {
     'sass:ebm',
     'sass:dev',
     'connect:livereload',
+    'babel',
     'uglify',
     'open',
     'watch'
