@@ -33,14 +33,9 @@
 @media #{$md-down} {
 	.container-xs,
 	.container-sm,
+	.container-md,
+	.container-xxl,
 	.container {
-		max-width: 100%;
-		min-width: 100%;
-	}
-}
-
-@media #{$md-down} {
-	.container-xxl {
 		max-width: 100%;
 		min-width: 100%;
 	}

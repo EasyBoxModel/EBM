@@ -43,9 +43,17 @@ module.exports = function (grunt) {
       coffee: [ '<%= project.src %>/coffee/*.coffee' ]
     },
     jsFiles: [
-      '<%= project.src %>/js_src/trigger-notifications-control.js',
+      '<%= project.src %>/js_src/trigger-alerts-control.js',
+      '<%= project.src %>/js_src/trigger-detail-row-control.js',
       '<%= project.src %>/js_src/transition.js',
+      '<%= project.src %>/js_src/collapse.js',
       '<%= project.src %>/js_src/modal.js',
+      '<%= project.src %>/js_src/tab.js',
+      '<%= project.src %>/js_src/tabs-control.js',
+      '<%= project.src %>/js_src/moment.js',
+      '<%= project.src %>/js_src/moment-es.js',
+      '<%= project.src %>/js_src/bootstrap-datetimepicker.js',
+      '<%= project.src %>/js_src/datetimepicker-control.js',
       '<%= project.src %>/js_src/coffee-compile.js',
     ],
 
@@ -200,7 +208,8 @@ module.exports = function (grunt) {
     babel: {
       options: {
         sourceMap: true,
-        presets: ['es2015']
+        presets: ['es2015'],
+        compact: false,
       },
       dist: {
         src: '<%= project.src %>/js_dest/js-to-babel.js',
