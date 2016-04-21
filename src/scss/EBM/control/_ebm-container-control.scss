@@ -6,7 +6,9 @@
 }
 .container-xs, 
 .container-sm,
-.container-md {
+.container-md,
+.container-lg,
+.container-xxl, {
 	@include make-container();
 }
 .container {
@@ -24,8 +26,11 @@
 	max-width: $container-md;
 	min-width: $container-md;
 }
+.container-lg {
+	max-width: $container-lg;
+	min-width: $container-lg;
+}
 .container-xxl {
-	@include make-container();
 	max-width: $container-xxl;
 	min-width: $container-xxl;
 }
@@ -34,6 +39,7 @@
 	.container-xs,
 	.container-sm,
 	.container-md,
+	.container-lg,
 	.container-xxl,
 	.container {
 		max-width: 100%;

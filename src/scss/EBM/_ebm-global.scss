@@ -19,7 +19,7 @@ body {}
 }
 
 .header {
-	@include position-fixed-top(1000);
+	// @include position-fixed-top(1000);
 	@include normalize-text;
 	border-bottom: 1px solid $gray-lightest;
 	background-color: white;
