@@ -122,3 +122,12 @@ wp-content/themes/THEMENAME/OLDREADME.md
 #build wp-content/themes/THEMENAME/bower.json
 #build wp-content/themes/THEMENAME/.bowerrc
 #build wp-content/themes/THEMENAME/package.json
+
+# Laravel
+/vendor
+/node_modules
+/public/storage
+Homestead.yaml
+Homestead.json
+.env
+config/database.php
