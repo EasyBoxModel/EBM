@@ -55,6 +55,13 @@ body {}
 }
 
 /*
+	Bootstrap overrides
+*/
+.img-responsive {
+	width: 100%;
+}
+
+/*
 	Media queries
 */
 $xl-desktop: 1500px;

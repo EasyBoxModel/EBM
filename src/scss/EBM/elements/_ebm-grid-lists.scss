@@ -1,13 +1,15 @@
 // GRID LISTS
 $grid-list-item-height: 350px;
 .grid-list {
-	@include clearfix;
+	@include flex-wrap(wrap);
+	@include make-row();
+	@include flex-row;
 	padding: 0;
 	.grid-list-item,
 	> li {
+		padding: $container-fluid;
 		position: relative;
 		float: left;
-		padding: $container-fluid;
 	}
 	&.grid-list-item-height {
 		.grid-list-item,
@@ -19,7 +21,8 @@ $grid-list-item-height: 350px;
 		&.grid-list-#{$i} {
 			.grid-list-item,
 			> li {
-				width: percentage(1/$i) - 0.30;
+				@include flex-basis(percentage(1/$i));
+				width: percentage(1/$i);
 			}
 		}
 	}
@@ -37,11 +40,12 @@ $grid-list-item-height: 350px;
 	  }
 	}
 	&.grid-list-centered {
-		text-align: center;
+		@include flex-row-space-around;
+		// text-align: center;
 		.grid-list-item,
 		> li {
-			float: none;
 			display: inline-block;
+			// float: none;
 		}
 	}
 	&.grid-list-right {

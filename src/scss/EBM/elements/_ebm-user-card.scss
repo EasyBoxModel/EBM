@@ -3,36 +3,33 @@
 	User cards
 */
 $user-card-height: 42px; // User cards
-$user-card-width: 70px;
+$user-card-width: 56px;
 .user-card {
 	@include normalize-text;
 	@include flex-row;
 	@include clearfix;
-	position: relative;
 	margin-bottom: $container-fluid / 2;
+	position: relative;
 	width: 100%;
 	.user-pic,
 	.user-info {
-		// float: left;
+		min-height: $user-card-width;
 	}
 	.user-pic {
 		width: $user-card-width;
 		img {
-			width: 100%;
+			border-radius: $border-radius;
 			height: auto;
-			border-radius: $border-radius-base;
+			width: 100%;
 		}
 	}
 	.user-info {
 		@include flex-column-center;
-		min-height: $user-card-height * 2;
-		padding-left: $container-fluid;
 		@include children-elements {
 			display: block;
 		}
-		span {
-			color: $gray;
-		}
+		padding-left: $container-fluid;
+		span {}
 	}
 	&.user-card-round {
 		.user-pic {
