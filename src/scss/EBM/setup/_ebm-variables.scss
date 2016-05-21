@@ -231,6 +231,24 @@ $box-model-ch-abbr-percentage:
   'mbp-ch', 
   'mlp-ch';
 
+$input-type-list: 
+// select,
+// textarea,
+"text",
+"password",
+// "datetime",
+// "datetime-local",
+// "date",
+// "month",
+// "time",
+// "week",
+// "number",
+"email";
+// "url",
+// "search",
+// "tel",
+// "color";
+
 // Fontsize list
 $font-size-list: 
   $font-size-h1,

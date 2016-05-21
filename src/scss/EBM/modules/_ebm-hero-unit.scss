@@ -4,7 +4,7 @@
 .hero-unit {
 	@include bg-img-block;
 	min-height: $hero-unit-height-control;
-	background-color: $brand-primary;
+	background-color: $body-bg;
 	position: relative;
 	overflow: hidden;
 	&.video-bg {

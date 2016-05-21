@@ -17,24 +17,6 @@
 // input[type="tel"]
 // input[type="color"]
 
-$input-type-list: 
-// select,
-// textarea,
-"text",
-"password",
-// "datetime",
-// "datetime-local",
-// "date",
-// "month",
-// "time",
-// "week",
-// "number",
-"email";
-// "url",
-// "search",
-// "tel",
-// "color";
-
 // Form overrides 
 .select-override {
   @include user-select(none);
@@ -44,4 +26,40 @@ $input-type-list:
   &.input-lg {
     line-height: 28px;
   }
+}
+
+select {
+	// Convert c-select to form-control by default
+	&.form-control {
+	  background: #fff url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAUCAMAAACzvE1FAAAADFBMVEUzMzMzMzMzMzMzMzMKAG/3AAAAA3RSTlMAf4C/aSLHAAAAPElEQVR42q3NMQ4AIAgEQTn//2cLdRKppSGzBYwzVXvznNWs8C58CiussPJj8h6NwgorrKRdTvuV9v16Afn0AYFOB7aYAAAAAElFTkSuQmCC) no-repeat right .75rem center;
+	  border: 1px solid $input-border;
+	  vertical-align: middle;
+		display: inline-block;
+  	background-size: 8px 10px;
+	  max-width: 100%;
+
+	  // Have to include vendor prefixes as the `appearance` property isn't part of the CSS spec.
+	  -webkit-appearance: none;
+	  -moz-appearance: none;
+	  appearance: none;
+
+	  // IE9 hacks to hide the background-image and reduce padding
+	  background-image: none \9;
+	  padding-right: .75rem \9;
+
+	  &:focus {
+	    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.075), 0 0 5px rgba(81, 167, 232, 0.5);
+	    border-color: #51a7e8;
+	    outline: none;
+	  }
+
+	  // Hides the default caret in IE11
+	  &::-ms-expand {
+	    opacity: 0;
+	  }
+	}
+}
+
+.form-control-sm {
+	padding: $input-padding-y-sm 1.75rem $input-padding-y-sm .75rem;
 }
