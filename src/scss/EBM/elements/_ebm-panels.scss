@@ -11,17 +11,47 @@
 	}
 	> .top {
 		@include normalize-text;
-		background-color: $gray-lighter;
-		padding: $container-fluid / 2;
+		// padding: $container-fluid / 2;
+		border-bottom: 1px solid $gray-lightest;
+		background-color: white;
 		[class*="col-"] {
 			@include flex-column-center;
 			min-height: 24px;
 		}
 	}
-	> .center, > .bottom {
+	> .top, > .center, > .bottom {
 		padding: $container-fluid;
 	}
 	> .bottom {
 		border-top: 1px solid $gray-lightest;
+	}
+	.actions {
+		text-align: right;
+		nav {
+			@include children-elements {
+				margin-left: $container-fluid; 
+			}
+		}
+	}
+	.panel-title {
+		h2 {
+			font-size: $font-size-h4;
+		}
+	}
+
+	.ebm-panel {
+		@include box-shadow(none);
+		> .center, > .middle {
+			padding: 0;
+		}	
+		&:first-child {
+			// margin-top: 28px;
+		}
+	}
+
+	&.panel-table {
+		table {
+			margin-top: 0px;
+		}
 	}
 }
