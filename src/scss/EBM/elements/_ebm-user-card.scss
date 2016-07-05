@@ -25,6 +25,7 @@ $user-card-width: 56px;
 	}
 	.user-info {
 		@include flex-column-center;
+		width: 100%;
 		@include children-elements {
 			display: block;
 		}

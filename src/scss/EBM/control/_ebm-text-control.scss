@@ -41,6 +41,17 @@ a {
 // 	}
 // }
 
+// Override headings sizes
+@for $i from 1 through length($headings-list) {
+  #{nth($headings-list, $i)} {
+    @for $j from 1 through length($headings-list) {
+      &.#{nth($headings-list, $j)} {
+        font-size: #{nth($font-size-list, $j)} !important;
+      }
+    }
+  }
+}
+
 .underline {
 	text-decoration: underline !important;
 }
