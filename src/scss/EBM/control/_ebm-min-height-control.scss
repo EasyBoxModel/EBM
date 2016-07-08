@@ -38,13 +38,13 @@
 
 // Min-Heights Percentage
 @for $i from 1 through 10 {
-  .minhp-#{$i*10} {
+  .minh-#{$i*10}-vh {
     min-height: percentage($i*0.1) !important;
     min-height: #{$i*10}vh !important;
   }
   @for $k from 1 through length($breakpoints-sufix-list) {
     @media #{nth($media-control-list, $k)} {
-      .minhp-#{$i*10}-#{nth($breakpoints-sufix-list, $k)} {          
+      .minh-#{$i*10}-#{nth($breakpoints-sufix-list, $k)}-vh {          
         // For <IE8
         min-height: percentage($i*0.1) !important;
         min-height: #{$i*10}vh !important;
@@ -53,7 +53,7 @@
           min-height: #{$i*10}vh !important;
         }
       }
-      .minhp-ch-#{$i*10}-#{nth($breakpoints-sufix-list, $k)} {
+      .minh-ch-#{$i*10}-#{nth($breakpoints-sufix-list, $k)}-vh {
         @include children-elements {
           min-height: percentage($i*0.1) !important;
           min-height: #{$i*10}vh !important;
@@ -61,7 +61,7 @@
       }
     }
   }
-  .minhp-ch-#{$i*10} {
+  .minh-ch-#{$i*10}-vh {
     @include children-elements {
       min-height: percentage($i*0.1) !important;
       min-height: #{$i*10}vh !important;

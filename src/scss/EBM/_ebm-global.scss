@@ -51,6 +51,27 @@ body {}
 	}
 }
 
+.section {
+	@include flex-column-space-between;
+	.section-title,
+	.section-footer {
+		padding: rem(70px) 0;
+	}
+	.section-title {
+		padding-top: rem($header-height-control) + ($container-fluid * 2);
+		// text-transform: uppercase;
+	}
+	.section-content {
+		min-height: 50vh;
+	}
+	.section-footer {
+		text-align: center;
+		// a {
+		// 	text-transform: uppercase;
+		// }
+	}
+}
+
 /*
 	Bootstrap overrides
 */
