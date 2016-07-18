@@ -1,0 +1,42 @@
+/*
+  Bootstrap overrides
+*/
+
+// Use this in B4 _forms.scss for adjusting line-heights in special input types
+// @supports (-webkit-text-size-adjust:none) and (not (-ms-accelerator:true)) and (not (-moz-appearance:none)) {}
+
+.img-responsive {
+  width: 100%;
+}
+
+.nav-tabs {
+  padding: $container-fluid $container-fluid 0;
+  background-color: $gray-lightest;
+  &.nav {
+    padding-left: $container-fluid;
+  }
+  .nav-link, .nav-item {}
+  .nav-link {
+    padding: 0 !important;
+  }
+}
+
+.nav-link, .nav-item {
+  &:hover {
+    cursor: pointer;
+    a, span {
+      color: $link-hover-color;
+    }
+  }
+  a, span {
+    padding: $nav-link-padding;
+    color: $gray-light;
+    display: block;
+  }
+  &.active {
+    a, span {
+      @include bold;
+      color: $link-hover-color;
+    }
+  }
+}

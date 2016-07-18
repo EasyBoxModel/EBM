@@ -239,8 +239,7 @@ module.exports = function (grunt) {
         files: [
           '<%= project.src %>/scss/style.scss',
           '<%= project.src %>/scss/b3/_variables.scss',
-          '<%= project.src %>/scss/EBM/_ebm-global.scss',
-          '<%= project.src %>/scss/EBM/_konfio-custom-overrides.scss'],
+          '<%= project.src %>/scss/EBM/_ebm-global.scss'],
         tasks: 'sass:dev'
       },
       ebm: {
