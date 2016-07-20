@@ -1,13 +1,3 @@
-/*
-  Text shadow
-*/
-@mixin text-shadow {
-  text-shadow: 
-    rgba($gray-darker, 0.33) // Color
-    0 // Eje x
-    2px // Eje Y
-    1px; // Blur
-}
 // TEXT SHADOW
 .text-shadow {
   @include text-shadow;

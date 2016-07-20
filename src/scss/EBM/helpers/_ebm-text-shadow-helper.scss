@@ -1,0 +1,10 @@
+/*
+  Text shadow
+*/
+@mixin text-shadow {
+  text-shadow: 
+    rgba($gray-dark, 0.33) // Color
+    0 // Eje x
+    2px // Eje Y
+    1px; // Blur
+}

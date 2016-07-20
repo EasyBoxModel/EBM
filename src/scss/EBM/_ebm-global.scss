@@ -1,3 +1,11 @@
+@mixin header-padding($padding: $header-height-control) {
+	padding: rem($padding) 0;
+}
+
+.header-padding {
+	@include header-padding;
+}
+
 /*
 	EBM Global styles
 */
@@ -53,11 +61,11 @@ body {}
 
 .section {
 	@include flex-column-space-between;
-	.section-title,
+	.section-header,
 	.section-footer {
 		padding: rem(70px) 0;
 	}
-	.section-title {
+	.section-header {
 		padding-top: rem($header-height-control) + ($container-fluid * 2);
 		// text-transform: uppercase;
 	}
@@ -81,7 +89,17 @@ $xxl-desktop: 1980px;
 @media #{$sm-only} {}
 @media #{$md-only} {}
 @media #{$lg-only} {}
-@media #{$sm-down} {}
+@media #{$sm-down} {
+	body {
+		.section-header,
+		.section-footer {
+			@include header-padding($header-height-control / 2);
+		}
+		.section-content {
+			min-height: 40vh;
+		}
+	}
+}
 @media #{$md-down} {}
 @media #{$lg-down} {}
 @media #{$sm-up} {}

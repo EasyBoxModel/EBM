@@ -21,7 +21,8 @@ $grid-list-item-height: 350px;
 		&.grid-list-#{$i} {
 			.grid-list-item,
 			> li {
-				@include flex-basis(percentage(1/$i));
+				$width: percentage(1/$i);
+				@include flex-basis($width);
 				width: percentage(1/$i);
 			}
 		}
@@ -33,6 +34,7 @@ $grid-list-item-height: 350px;
 					.grid-list-item,
 					> li {
 						$mobile-width: percentage(1/$i);
+						@include flex-basis($mobile-width);
 						width: $mobile-width;
 					}
 				}
