@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <!-- Project SEO -->
+    <meta name="description" content="">
+    <meta name="keywords" content="" /> 
+    <meta name="author" content="@MadeByGus" />
+    <!-- Responsiveness -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <!-- FAVICON -->
+    <link rel="shortcut icon" href="assets/icons/favicon.ico">
+    <!-- WebFonts -->
+    <!-- APP STYLES 
+      *Run grunt build when ready
+      <link rel="stylesheet" href="assets/css/style.pkgd.min.css">
+    -->
+    <link href="assets/css/style.css" rel="stylesheet">
+    <link href="assets/css/ebm.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="site-wrapper bg-blue-light">
+      <ul class="colors-banner">
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+      </ul>
+      <div class="site-menu"></div>
+      <div class="site-content pv-56-sm pv-21-xs" id="style-guide">
+        <div class="container-fluid ph-70-sm">
+          <h1 class="pv-35 m-0"><a href="https://github.com/netpoe/EasyBoxModel" target="_blank">EBM</a> Style Guide</h1>
+          <div class="row">
+            <div class="col-sm-7">
+              <div class="control-group" data-section-scroll="Color control">
+                <h5 class="section-title">Color Control</h5>
+                <div class="separator separator-lg bg-gray-lighter"></div>
+                <p>Classes work for background colors, text colors, hover colors, anchor colors, button colors and background colors have a <code>.bg-#{color}-op</code> for <em>rgba channel</em> colors.<br>* They also work as Sass mixins.</p>
+                <div class="row">
+                  <div class="col-sm-3">
+                    <h5 class="uppercase">Primary and accent colors</h5>
+                  </div>
+                  <div class="col-sm-9">
+                    <ul class="grid-list grid-list-5 colors-list">
+                      <li class="grid-list-item">
+                        <div>
+                          <div class="color-block bg-primary"></div>
+                          <div class="color-name"><span>$brand-primary</span></div>
+                        </div>
+                      </li>
+                      <li class="grid-list-item">
+                        <div>
+                          <div class="color-block bg-success"></div>
+                          <div class="color-name"><span>$brand-success</span></div>
+                        </div>
+                      </li>
+                      <li class="grid-list-item">
+                        <div>
+                          <div class="color-block bg-info"></div>
+                          <div class="color-name"><span>$brand-info</span></div>
+                        </div>
+                      </li>
+                      <li class="grid-list-item">
+                        <div>
+                          <div class="color-block bg-warning"></div>
+                          <div class="color-name"><span>$brand-warning</span></div>
+                        </div>
+                      </li>
+                      <li class="grid-list-item">
+                        <div>
+                          <div class="color-block bg-danger"></div>
+                          <div class="color-name"><span>$brand-danger</span></div>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-sm-3">
+                    <h5 class="uppercase">Grayscale</h5>
+                  </div>
+                  <div class="col-sm-9">
+                    <ul class="grid-list grid-list-5 colors-list">
+                      <li class="grid-list-item">
+                        <div>
+                          <div class="color-block bg-gray-darker"></div>
+                          <div class="color-name"><span>$gray-darker</span></div>
+                        </div>
+                      </li>
+                      <li class="grid-list-item">
+                        <div>
+                          <div class="color-block bg-gray-dark"></div>
+                          <div class="color-name"><span>$gray-dark</span></div>
+                        </div>
+                      </li>
+                      <li class="grid-list-item">
+                        <div>
+                          <div class="color-block bg-gray"></div>
+                          <div class="color-name"><span>$gray</span></div>
+                        </div>
+                      </li>
+                      <li class="grid-list-item">
+                        <div>
+                          <div class="color-block bg-gray-light"></div>
+                          <div class="color-name"><span>$gray-light</span></div>
+                        </div>
+                      </li>
+                      <li class="grid-list-item">
+                        <div>
+                          <div class="color-block bg-gray-lighter"></div>
+                          <div class="color-name"><span>$gray-lighter</span></div>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-sm-3">
+                    <h5 class="uppercase">Bluescale</h5>
+                  </div>
+                  <div class="col-sm-9">
+                    <ul class="grid-list grid-list-5 colors-list">
+                      <li class="grid-list-item">
+                        <div>
+                          <div class="color-block bg-blue-darker"></div>
+                          <div class="color-name"><span>$blue-darker</span></div>
+                        </div>
+                      </li>
+                      <li class="grid-list-item">
+                        <div>
+                          <div class="color-block bg-blue-dark"></div>
+                          <div class="color-name"><span>$blue-dark</span></div>
+                        </div>
+                      </li>
+                      <li class="grid-list-item">
+                        <div>
+                          <div class="color-block bg-blue"></div>
+                          <div class="color-name"><span>$blue</span></div>
+                        </div>
+                      </li>
+                      <li class="grid-list-item">
+                        <div>
+                          <div class="color-block bg-blue-light"></div>
+                          <div class="color-name"><span>$blue-light</span></div>
+                        </div>
+                      </li>
+                      <li class="grid-list-item">
+                        <div>
+                          <div class="color-block bg-blue-lighter"></div>
+                          <div class="color-name"><span>$blue-lighter</span></div>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-sm-3">
+                    <h5 class="uppercase">Social colors</h5>
+                  </div>
+                  <div class="col-sm-9">
+                    <ul class="grid-list grid-list-5 colors-list">
+                      <li class="grid-list-item">
+                        <div>
+                          <div class="color-block bg-facebook"></div>
+                          <div class="color-name"><span>$color-facebook</span></div>
+                        </div>
+                      </li>
+                      <li class="grid-list-item">
+                        <div>
+                          <div class="color-block bg-twitter"></div>
+                          <div class="color-name"><span>$color-twitter</span></div>
+                        </div>
+                      </li>
+                      <li class="grid-list-item">
+                        <div>
+                          <div class="color-block bg-pinterest"></div>
+                          <div class="color-name"><span>$color-pinterest</span></div>
+                        </div>
+                      </li>
+                      <li class="grid-list-item">
+                        <div>
+                          <div class="color-block bg-google-plus"></div>
+                          <div class="color-name"><span>$color-google-plus</span></div>
+                        </div>
+                      </li>
+                      <li class="grid-list-item">
+                        <div>
+                          <div class="color-block bg-youtube"></div>
+                          <div class="color-name"><span>$color-youtube</span></div>
+                        </div>
+                      </li>
+                      <li class="grid-list-item">
+                        <div>
+                          <div class="color-block bg-instagram"></div>
+                          <div class="color-name"><span>$color-instagram</span></div>
+                        </div>
+                      </li>
+                      <li class="grid-list-item">
+                        <div>
+                          <div class="color-block bg-linkedin"></div>
+                          <div class="color-name"><span>$color-linkedin</span></div>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <p>
+                  Checkout the <a href="https://github.com/netpoe/EasyBoxModel/blob/master/src/scss/b3/_variables.scss" target="_blank">extended <code>_variables.scss</code></a> file to see a full list of the available color Sass's lists and their usage in <em>EBM color-control loops</em>
+                </p>                
+              </div>
+              <div class="control-group" data-section-scroll="Typography control">
+                <h5 class="section-title">Typography Control</h5>
+                <div class="separator separator-lg bg-gray-lighter"></div>
+                <p>Typography works with a <em>golden ratio</em> scale. Their default bootstrap 3 <code>margin</code> can be overriden with the class or Sass include <code>normalize-text</code> on any parent element.</p>
+                <p>Additionaly, all B3 typography has been <a href="https://github.com/netpoe/EasyBoxModel/blob/master/src/scss/app/elements/_text-responsive.scss" target="_blank">extended to work with <code>rem</code> units</a> which dynamically adapt to screen sizes.</p>
+                <p>To get full control of the text re-sizing on different devices head up to the <code>_text-responsive.scss</code> file and modify the ammount of units that typography needs to be resized relative to the <code>html</code> element <code>$font-size-base</code> variable.</p>
+                <div class="pv-ch-14 normalize-text">
+                  <div>
+                    <h1>This is a <code>h1</code> heading - <small>Resize the screen</small></h1>
+                  </div>
+                  <div>
+                    <h2>This is a <code>h2</code> heading - <small>Resize the screen</small></h2>
+                  </div>
+                  <div>
+                    <h3>This is a <code>h3</code> heading - <small>Resize the screen</small></h3>
+                  </div>
+                  <div>
+                    <h4>This is a <code>h4</code> heading - <small>Resize the screen</small></h4>
+                  </div>
+                  <div>
+                    <h5>This is a <code>h5</code> heading - <small>Resize the screen</small></h5>
+                  </div>
+                  <div>
+                    <h6>This is a <code>h6</code> heading - <small>Resize the screen</small></h6>
+                  </div>
+                </div>
+                <h5 class="section-subtitle">Text emphasis</h5>
+                <div class="separator separator-lg bg-gray-lighter"></div>
+                <p>With the EBM you have complete control of the Bootstrap 3 <code>lead</code> class for any text element.<br>The following headings group is controlled by a <code>.lead-ch</code> (lead children) class that is very useful when working with dynamicylly inserted text elements on CMS's</p>
+                <div class="pv-ch-14 normalize-text lead-ch">
+                  <div>
+                    <h1>This is a lead <code>h1</code> heading - <small>Resize the screen</small></h1>
+                  </div>
+                  <div>
+                    <h2>This is a lead <code>h2</code> heading - <small>Resize the screen</small></h2>
+                  </div>
+                  <div>
+                    <h3>This is a lead <code>h3</code> heading - <small>Resize the screen</small></h3>
+                  </div>
+                  <div>
+                    <h4>This is a lead <code>h4</code> heading - <small>Resize the screen</small></h4>
+                  </div>
+                  <div>
+                    <h5>This is a lead <code>h5</code> heading - <small>Resize the screen</small></h5>
+                  </div>
+                  <div>
+                    <h6>This is a lead <code>h6</code> heading - <small>Resize the screen</small></h6>
+                  </div>
+                </div>
+                <h5 class="section-subtitle">Responsive text alignment</h5>
+                <div class="separator separator-lg bg-gray-lighter"></div>
+                <p>Sometimes you need to control the text position on different screen sizes. EBM makes it easy with its <code>.text-#{position}-#{breakpoint}</code> class.</p>
+                <div class="pv-ch-14 normalize-text">
+                  <div class="text-right-xs">
+                    <h1>This is a <code>h1</code> heading - <small>Resize the screen</small></h1>
+                  </div>
+                  <div class="text-center-sm">
+                    <h2>This is a <code>h2</code> heading - <small>Resize the screen</small></h2>
+                  </div>
+                  <div class="text-right-sm text-center-xs">
+                    <h3>This is a <code>h3</code> heading - <small>Resize the screen</small></h3>
+                  </div>
+                  <div>
+                    <h4>This is a <code>h4</code> heading - <small>Resize the screen</small></h4>
+                  </div>
+                  <div>
+                    <h5>This is a <code>h5</code> heading - <small>Resize the screen</small></h5>
+                  </div>
+                  <div>
+                    <h6>This is a <code>h6</code> heading - <small>Resize the screen</small></h6>
+                  </div>
+                </div>
+                <h5 class="section-subtitle">Webfonts control</h5>
+                <div class="separator separator-lg bg-gray-lighter"></div>
+                <p>EBM comes with a very useful web-font styles definition file based on the <code>$font-size-base</code> B3 variable.</p>
+                <div class="text-center-xs">
+                  <a href="https://github.com/netpoe/EasyBoxModel/blob/master/src/scss/app/elements/_fonts-custom.scss" class="btn btn-outline btn-danger" target="_blank">See the list of custom fonts mixins</a>
+                </div>
+              </div>
+              <div class="control-group" data-section-scroll="Buttons">
+                <h5 class="section-title">Buttons</h5>
+                <div class="separator separator-lg bg-gray-lighter"></div>
+                <p>EBM extends B3 buttons by creating outlined buttons based on the brand, grayscale, blue and social colors' list.<br>Use the class syntax: <code>.btn-outline .btn-#{color-sufix}</code> to use these buttons directly in your html or check out the <a href="https://github.com/netpoe/EasyBoxModel/blob/master/src/scss/app/elements/_buttons-custom.scss" target="_blank"><code>_buttons-custom.scss</code></a> file.</p>
+                <p>One important thing about the EBM <code>.btn</code> extension is that buttons either on anchors or button elements are not affected by parent <code>.text-color</code> classes</p>
+                <ul class="grid-list grid-list-3">
+                  <li class="grid-list-item pv-ch-7">
+                    <p>Primary colors</p>
+                    <div><button class="btn btn-outline btn-primary">btn-outline primary</button></div>
+                    <div><button class="btn btn-outline btn-success">btn-outline success</button></div>
+                    <div><button class="btn btn-outline btn-info">btn-outline info</button></div>
+                    <div><button class="btn btn-outline btn-warning">btn-outline warning</button></div>
+                    <div><button class="btn btn-outline btn-danger">btn-outline danger</button></div>
+                  </li>
+                  <li class="grid-list-item pv-ch-7">
+                    <p>Grayscale</p>
+                    <div><button class="btn btn-outline btn-gray-darker">btn-outline gray-darker</button></div>
+                    <div><button class="btn btn-outline btn-gray-dark">btn-outline gray-dark</button></div>
+                    <div><button class="btn btn-outline btn-gray">btn-outline gray</button></div>
+                    <div><button class="btn btn-outline btn-gray-light">btn-outline gray-light</button></div>
+                    <div><button class="btn btn-outline btn-gray-lighter">btn-outline gray-lighter</button></div>
+                    <div><button class="btn btn-outline btn-white">btn-outline white</button></div>
+                  </li>
+                  <li class="grid-list-item pv-ch-7">
+                    <p>Social</p>
+                    <div><button class="btn btn-facebook">facebook</button></div>
+                    <div><button class="btn btn-twitter">twitter</button></div>
+                    <div><button class="btn btn-pinterest">pinterest</button></div>
+                    <div><button class="btn btn-google-plus">google-plus</button></div>
+                    <div><button class="btn btn-youtube">youtube</button></div>
+                    <div><button class="btn btn-instagram">instagram</button></div>
+                    <div><button class="btn btn-linkedin">linkedin</button></div>
+                  </li>
+                </ul>
+                <ul class="grid-list grid-list-2">
+                  <li class="grid-list-item pv-ch-7">
+                    <p>Icon buttons</p>
+                    <div>
+                      <button class="btn btn-icon-outline btn-primary btn-lg">
+                        <span>btn-icon-outline primary</span>
+                        <i class="icon-arrow-right"></i>
+                      </button>
+                    </div>
+                    <div>
+                      <button class="btn btn-icon-outline btn-success">
+                        <span>btn-icon-outline success</span>
+                        <i class="icon-arrow-right"></i>
+                      </button>
+                    </div>
+                    <div>
+                      <button class="btn btn-icon-outline btn-info btn-sm">
+                        <span>btn-icon-outline info</span>
+                        <i class="icon-arrow-right"></i>
+                      </button>
+                    </div>
+                    <div>
+                      <button class="btn btn-icon-outline btn-warning btn-xs">
+                        <span>btn-icon-outline warning</span>
+                        <i class="icon-arrow-right"></i>
+                      </button>
+                    </div>
+                    <div>
+                      <button class="btn btn-icon-outline btn-danger">
+                        <span>btn-icon-outline danger</span>
+                        <i class="icon-arrow-right"></i>
+                      </button>
+                    </div>
+                  </li>
+                  <li class="grid-list-item pv-ch-7">
+                    <p>Icon buttons left</p>
+                    <div>
+                      <button class="btn btn-icon-outline btn-icon-left btn-gray-darker btn-lg">
+                        <span>btn-icon-outline gray-darker</span>
+                        <i class="icon-fingers-victory"></i>
+                      </button>
+                    </div>
+                    <div>
+                      <button class="btn btn-icon-outline btn-icon-left btn-gray-dark">
+                        <span>btn-icon-outline gray-dark</span>
+                        <i class="icon-fingers-victory"></i>
+                      </button>
+                    </div>
+                    <div>
+                      <button class="btn btn-icon-outline btn-icon-left btn-gray btn-sm">
+                        <span>btn-icon-outline gray</span>
+                        <i class="icon-fingers-victory"></i>
+                      </button>
+                    </div>
+                    <div>
+                      <button class="btn btn-icon-outline btn-icon-left btn-gray-light btn-xs">
+                        <span>btn-icon-outline gray-light</span>
+                        <i class="icon-fingers-victory"></i>
+                      </button>
+                    </div>
+                    <div>
+                      <button class="btn btn-icon-outline btn-icon-left btn-gray-lighter">
+                        <span>btn-icon-outline gray-lighter</span>
+                        <i class="icon-fingers-victory"></i>
+                      </button>
+                    </div>
+                  </li>
+                </ul>
+                <p>Just in case you need it, EBM comes with a <code>.btn-xxl</code> class:</p>
+                <div class="text-center">
+                  <button class="btn btn-outline btn-primary btn-xxl form-control uppercase">XXL Button</button>
+                </div>
+              </div>
+              <div class="control-group" data-section-scroll="Grid Lists">
+                <h5 class="section-title">Grid lists</h5>
+                <div class="separator separator-lg bg-gray-lighter"></div>
+                <p><a href="https://github.com/netpoe/EasyBoxModel/blob/master/src/scss/EBM/_grid-lists.scss" target="_blank">Grid lists</a> are initially taken from zurb foundation's grid-blocks and adapted to B3</p>
+                <p><strong>NOTE:</strong> This image list created with the <code>.grid-list .grid-list-#{num-of-columns}-#{breakpoint}</code> class has also images being dynamically processed by the Grunt responsive_images task which generates images for different screen sizes to increase REST performance.</p>
+                <p>Additionaly, add the <code>isotope-grid</code> class that, if included in the src/coffee, folder, it will extend grid-lists with the metafizzy's isotope jQuery plugin.</p>
+                <ul class="grid-list grid-list-3 grid-list-2-sm grid-list-1-xs isotope-grid">
+                  <li class="grid-list-item">
+                    <img src="assets/img/img.png" alt="Style Guide Gallery 6" class="img-responsive">
+                  </li>
+                  <li class="grid-list-item">
+                    <img src="assets/img/img.png" alt="Style Guide Gallery 2" class="img-responsive">
+                  </li>
+                  <li class="grid-list-item">
+                    <img src="assets/img/img.png" alt="Style Guide Gallery 3" class="img-responsive">
+                  </li>
+                  <li class="grid-list-item">
+                    <img src="assets/img/img.png" alt="Style Guide Gallery 4" class="img-responsive">
+                  </li>
+                  <li class="grid-list-item">
+                    <img src="assets/img/img.png" alt="Style Guide Gallery 5" class="img-responsive">
+                  </li>
+                </ul>
+              </div>
+              <div class="control-group" data-section-scroll="Banners">
+                <h5 class="section-title">Banners</h5>
+                <div class="separator separator-lg bg-gray-lighter"></div>
+                <p><a href="https://github.com/netpoe/EasyBoxModel/blob/master/src/scss/app/elements/_banners-custom.scss" target="_blank">Banners</a> are modular presentational blocks that can be used both vertically or horizontally. They can be used with B3 grid-system to manipulate their sizes and breakpoints.</p>
+                <p>One of the main benefits of using EBM banners is that no matter how big images are inside the <code>banner-pic</code> they are set to fit the available space.</p>
+                <p>Control the <em>ebm-banners</em> sizes as well as other elements or components within the <code>_global.scss</code> file.</p>
+                <div class="banner bg-white">
+                  <div class="banner-pic col-sm-4 bg-img-block-center" style="background-image: url(assets/img/img-480.png)"></div>
+                  <div class="banner-content col-sm-8">
+                    <h3>Banner content</h3>
+                  </div>
+                  <div class="banner-label"></div>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-3">
+              <h5 class="section-title">UI Components</h5>
+              <div class="separator separator-lg bg-gray-lighter"></div>
+            </div>
+            <div class="col-sm-2"></div>
+          </div>
+        </div>
+        <div class="control-group" data-section-scroll="Container sizes">
+          <div class="container">
+            <h5 class="section-title">Container sizes</h5>
+            <div class="separator separator-lg bg-gray-lighter"></div>
+            <p>The B3 <code>$container-large-desktop</code> has been set to <code>$container-desktop</code> to have more control over the perceived width with retina display screens. If resized, these containers will fit the screen accordingly.</p>
+            <p>The text elements that are being centered in the containers are possible with the <code>.flex-middle-center</code> EBM class and mixin in combination with a <code>.minh-#{$ebm-times-unit*10}</code>. Know more about the <a href="https://github.com/netpoe/EasyBoxModel/blob/master/src/scss/EBM/_flexbox.scss" target="_blank">EBM flexbox mixins and classes here</a>.</p>
+            <div class="mv-21 bg-blue-darker flex-middle-center minh-350 border-radius">
+              <p><span class="text-white">This is a 968px</span> <code>container</code></p>
+            </div>
+          </div>
+          <div class="container-sm">
+            <div class="mv-21 bg-blue-darker flex-middle-end minh-350 border-radius">
+              <p class="pv-21"><span class="text-white">This is a </span> <code>$screen-tablet</code> <span class="text-white">container-sm with</span> <code>flex-middle-end</code> <span class="text-white">class</span></p>
+            </div>
+          </div>
+          <div class="container-xs">
+            <div class="mv-21 bg-blue-darker flex-middle minh-350 border-radius">
+              <p><span class="text-white">This is a </span> <code>$screen-phone</code> <span class="text-white">container-xs with</span> <code>flex-middle</code> <span class="text-white">class</span></p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="section-scroll">
+        <ul></ul>
+        <div class="text-right pv-21 btn-apply animated">
+          <a href="https://github.com/netpoe/EasyBoxModel" class="btn btn-primary uppercase">Clone or Fork</a>
+        </div>
+      </div>
+    </div>
+    <!-- APP SCRIPTS -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/style-guide.min.js"></script>
+  </body>
+</html>
