@@ -1,0 +1,56 @@
+.accordion-wrapper {
+  .accordion-item {
+    &:first-child {
+      .top {
+        @include border-top-radius($border-radius);
+      }
+    }
+    &:last-child {
+      .bottom {
+        @include border-bottom-radius($border-radius);  
+      }
+    }
+    &.active {
+      .dropdown-wrapper {
+        background-color: $gray-lightest;
+      }
+      .middle {
+        display: block;
+      }
+    }
+  }
+  .top {
+    @include flex-row-space-between;
+    @include normalize-text;
+    padding-right: $accordion-width-control + 7;
+    border: 1px solid $gray-lightest;
+    position: relative;
+    &:hover {
+      cursor: pointer;
+      .dropdown-wrapper {
+        background-color: $gray-lightest; 
+      }
+    }
+  }
+  .title, .dropdown-wrapper {
+    @include flex-column-center;
+    min-height: $accordion-width-control;
+  }
+  .title {
+    padding-left: $container-fluid;
+  }
+  .dropdown-wrapper {
+    @include position(absolute, 0 0 0 null);
+    border-left: 1px solid $gray-lightest;
+    text-align: center;
+    width: $accordion-width-control;
+    i {
+      font-size: $font-size-h3;
+    }
+  }
+  .middle {
+    border: 1px solid $gray-lightest;
+    padding: $container-fluid;
+    display: none;
+  }
+}
