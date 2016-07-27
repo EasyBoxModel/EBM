@@ -30,6 +30,7 @@
 		} 
 	}
 	> .bottom {
+		@include normalize-text;
 		border-top: 1px solid $gray-lightest;
 	}
 	.actions {
@@ -59,6 +60,26 @@
 	&.panel-table {
 		table {
 			margin-top: 0px;
+		}
+	}
+}
+
+@media #{$sm-down} {
+	body {
+		.ebm-panel {
+			> .top {
+				@include flex-column-center;
+				[class*="col-"], .actions, .panel-title {
+					min-height: auto;
+					min-height: initial;
+				}
+			}
+			.panel-title {
+				margin-bottom: $container-fluid;
+			}
+			.actions {
+				text-align: left;
+			}
 		}
 	}
 }
