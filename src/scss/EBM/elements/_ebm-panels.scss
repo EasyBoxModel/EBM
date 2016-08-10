@@ -37,7 +37,9 @@
 		text-align: right;
 		nav {
 			@include children-elements {
-				margin-left: $container-fluid; 
+				&:not(:first-child) {
+					margin-left: $container-fluid; 
+				}
 			}
 		}
 	}

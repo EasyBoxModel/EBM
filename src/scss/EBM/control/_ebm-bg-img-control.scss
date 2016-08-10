@@ -3,6 +3,12 @@
 	@include bg-img-block;
 	background-position: center center;
 }
+
+.bg-img-block-cover {
+	@include bg-img-block-cover;
+	background-position: center center;
+}
+
 .bg-img-block-center {
 	@include bg-img-block-center;
 }
@@ -26,4 +32,27 @@
 }
 .bg-img-block-contain {
 	@include bg-img-block-contain;
+}
+
+// Cover
+.bg-img-block-center-cover {
+	@include bg-img-block-center-cover;
+}
+.bg-img-block-center-x-cover {
+	@include bg-img-block-center-x-cover;
+}
+.bg-img-block-center-y-cover {
+	@include bg-img-block-center-y-cover;
+}
+.bg-img-block-bottom-cover {
+	@include bg-img-block-bottom-cover;
+}
+.bg-img-block-top-cover {
+	@include bg-img-block-top-cover;
+}
+.bg-img-block-left-cover {
+	@include bg-img-block-left-cover;
+}
+.bg-img-block-right-cover {
+	@include bg-img-block-right-cover;
 }

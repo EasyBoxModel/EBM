@@ -1,4 +1,5 @@
 .accordion-wrapper {
+  margin-bottom: rem(21px);
   .accordion-item {
     &:first-child {
       .top {
@@ -20,9 +21,11 @@
     }
   }
   .top {
-    @include flex-row-space-between;
     @include normalize-text;
     padding-right: $accordion-width-control + 7;
+    padding-bottom: $container-fluid;
+    padding-left: $container-fluid;
+    padding-top: $container-fluid;
     border: 1px solid $gray-lightest;
     position: relative;
     &:hover {
@@ -32,18 +35,13 @@
       }
     }
   }
-  .title, .dropdown-wrapper {
-    @include flex-column-center;
-    min-height: $accordion-width-control;
-  }
-  .title {
-    padding-left: $container-fluid;
-  }
+  .title {}
   .dropdown-wrapper {
     @include position(absolute, 0 0 0 null);
+    @include flex-column-center;
     border-left: 1px solid $gray-lightest;
-    text-align: center;
     width: $accordion-width-control;
+    text-align: center;
     i {
       font-size: $font-size-h3;
     }

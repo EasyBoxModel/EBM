@@ -2,36 +2,84 @@
 @mixin bg-img-block {
 	background-repeat: no-repeat;
 	background-size: 100%;
-	background-size: cover;
 }
+
+@mixin bg-img-block-cover {
+	background-repeat: no-repeat;
+	background-size: 100%;
+}
+
 @mixin bg-img-block-center {
 	@include bg-img-block;
 	background-position: center center;
 }
+
 @mixin bg-img-block-center-x {
 	@include bg-img-block;
 	background-position-x: center;
 }
+
 @mixin bg-img-block-center-y {
 	@include bg-img-block;
 	background-position-y: center;
 }
+
 @mixin bg-img-block-bottom {
 	@include bg-img-block;
 	background-position-y: bottom;
 }
+
 @mixin bg-img-block-top {
 	@include bg-img-block;
 	background-position-y: top;
 }
+
 @mixin bg-img-block-left {
 	@include bg-img-block;
 	background-position-x: left;
 }
+
 @mixin bg-img-block-right {
 	@include bg-img-block;
 	background-position-x: right;
 }
+
+// Cover
+@mixin bg-img-block-center-cover {
+	@include bg-img-block-cover;
+	background-position: center center;
+}
+
+@mixin bg-img-block-center-x-cover {
+	@include bg-img-block-cover;
+	background-position-x: center;
+}
+
+@mixin bg-img-block-center-y-cover {
+	@include bg-img-block-cover;
+	background-position-y: center;
+}
+
+@mixin bg-img-block-bottom-cover {
+	@include bg-img-block-cover;
+	background-position-y: bottom;
+}
+
+@mixin bg-img-block-top-cover {
+	@include bg-img-block-cover;
+	background-position-y: top;
+}
+
+@mixin bg-img-block-left-cover {
+	@include bg-img-block-cover;
+	background-position-x: left;
+}
+
+@mixin bg-img-block-right-cover {
+	@include bg-img-block-cover;
+	background-position-x: right;
+}
+
 @mixin bg-img-block-contain {
 	@include bg-img-block;
 	background-size: contain;
