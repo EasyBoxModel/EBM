@@ -6,9 +6,9 @@
 // Min-Heights
 @for $i from 1 through 10 {
   .minh-#{($i*$ebm-times)*10} {
-    min-height: (($i*$ebm-times)*10) + px !important;
+    min-height: (($i*$ebm-times)*10) + px ;
     @if $px-to-rems == true {
-      min-height: rem(($i*$ebm-times)*10)!important;
+      min-height: rem(($i*$ebm-times)*10);
     }
   }
   @for $k from 1 through length($breakpoints-sufix-list) {
@@ -16,22 +16,22 @@
       .minh-#{($i*$ebm-times)*10}-#{nth($breakpoints-sufix-list, $k)} {          
         min-height: (($i*$ebm-times)*10) + px !important;
         @if $px-to-rems == true {
-          min-height: rem(($i*$ebm-times)*10)!important;
+          min-height: rem(($i*$ebm-times)*10) !important;
         }
       }
 // Children elements min-heights
       .minh-ch-#{($i*$ebm-times)*10}-#{nth($breakpoints-sufix-list, $k)} {
         @include children-elements {
           min-height: (($i*$ebm-times)*10) + px !important;
-          min-height: rem(($i*$ebm-times)*10)!important;
+          min-height: rem(($i*$ebm-times)*10) !important;
         }
       }
     }
   }
   .minh-ch-#{($i*$ebm-times)*10} {
     @include children-elements {
-      min-height: (($i*$ebm-times)*10) + px !important;
-      min-height: rem(($i*$ebm-times)*10)!important;
+      min-height: (($i*$ebm-times)*10) + px ;
+      min-height: rem(($i*$ebm-times)*10);
     }
   }
 }
@@ -39,8 +39,8 @@
 // Min-Heights Percentage
 @for $i from 1 through 10 {
   .minh-#{$i*10}-vh {
-    min-height: percentage($i*0.1) !important;
-    min-height: #{$i*10}vh !important;
+    min-height: percentage($i*0.1) ;
+    min-height: #{$i*10}vh ;
   }
   @for $k from 1 through length($breakpoints-sufix-list) {
     @media #{nth($media-control-list, $k)} {
@@ -63,8 +63,8 @@
   }
   .minh-ch-#{$i*10}-vh {
     @include children-elements {
-      min-height: percentage($i*0.1) !important;
-      min-height: #{$i*10}vh !important;
+      min-height: percentage($i*0.1) ;
+      min-height: #{$i*10}vh ;
     }
   }
 }

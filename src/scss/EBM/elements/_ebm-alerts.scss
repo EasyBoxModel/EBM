@@ -1,0 +1,60 @@
+$ebm-alert-left-width-control: 70px;
+
+.ebm-alert {
+  @include box-shadow-default;
+  border: 2px solid $gray-lightest;
+  background-color: white;
+  margin-bottom: 21px;
+  margin-bottom: rem(21px);
+  position: relative;
+  .alert-left {
+    @include position(absolute, 0 null 0 0);
+    @include flex-column-center;
+    @include flex-align-center;
+    border-right: 1px solid $gray-lightest;
+    height: 100%;
+    width: $ebm-alert-left-width-control;
+    i {
+      font-size: $font-size-h3;
+    }
+  }
+  .alert-right {
+    padding-left: $ebm-alert-left-width-control;
+  }
+  .alert-header {
+    @include normalize-text;
+    border-bottom: 1px solid $gray-lightest;
+  }
+  .alert-content {}
+  .alert-footer {}
+  .alert-header,
+  .alert-content,
+  .alert-footer {
+    padding: $container-fluid;
+  }
+
+  &.ebm-alert-info {
+    border-color: $brand-info;
+    .alert-left {
+      border-color: $brand-info;
+    }
+  }
+  &.ebm-alert-danger {
+    border-color: $brand-danger;
+    .alert-left {
+      border-color: $brand-danger;
+    }
+  }
+  &.ebm-alert-warning {
+    border-color: $brand-warning;
+    .alert-left {
+      border-color: $brand-warning;
+    }
+  }
+  &.ebm-alert-success {
+    border-color: $brand-success;
+    .alert-left {
+      border-color: $brand-success;
+    }
+  }
+}

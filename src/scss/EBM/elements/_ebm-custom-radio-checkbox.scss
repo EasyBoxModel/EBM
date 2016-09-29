@@ -1,0 +1,62 @@
+@mixin custom-radio-label() {
+  background-color: $brand-info;
+  color: white !important;
+  &:before {
+    color: white !important;
+  }
+}
+
+.custom-radio-checkbox {
+  input[type="radio"],
+  input[type="checkbox"] {
+    visibility: hidden;
+    position: absolute;
+    &:checked + label {
+      @include custom-radio-label;
+    }
+  }
+  label {
+    @include normalize-text;
+    padding-right: $btn-padding-x-sm;
+    border: 1px solid $gray-lightest;
+    border-radius: $border-radius;
+    padding: .35rem 0;
+    font-size: $font-size-h5;
+    background-color: white;
+    position: relative;
+    text-align: center;
+    padding-left: 28px;
+    margin-bottom: 0;
+    display: block;
+    &:hover {
+      @include box-shadow-default;
+      cursor: pointer;
+    }
+    &:before {
+      @include position(absolute, 0 null 0 0);
+      @include flex-column-center;
+      font-family: 'icomoon';
+      color: $gray-lightest;
+      text-align: center;
+      content: "\e959";
+      font-size: 16px;
+      min-width: 28px;
+      height: 100%;
+    }
+  }
+  &.checked {
+    label {
+      @include custom-radio-label;
+    }
+  }
+}
+
+@media #{$sm-down} {
+  body {
+    .custom-radio-checkbox {
+      &.grid-list-item {
+        padding-top: 0;
+      }
+    }
+  }
+}

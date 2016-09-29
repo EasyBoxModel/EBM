@@ -1,0 +1,33 @@
+/*
+  EBM Section
+*/
+.section {
+  @include flex-column-space-between;
+}
+.section-header,
+.section-footer {}
+.section-header {
+  @include header-padding;
+  @include normalize-text;
+  padding-top: rem($header-height-control) + ($container-fluid * 2);
+  color: $gray;
+}
+.section-content {
+  min-height: 40vh;
+}
+.section-footer {
+  @include header-padding($header-height-control / 2);
+  text-align: center;
+}
+
+@media #{$sm-down} {
+  body {
+    .section-header,
+    .section-footer {
+      @include header-padding($header-height-control / 2);
+    }
+    .section-content {
+      min-height: 40vh;
+    }
+  }
+}

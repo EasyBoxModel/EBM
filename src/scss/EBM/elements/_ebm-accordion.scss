@@ -8,7 +8,7 @@
     }
     &:last-child {
       .bottom {
-        @include border-bottom-radius($border-radius);  
+        @include border-bottom-radius($border-radius);
       }
     }
     &.active {
@@ -31,7 +31,7 @@
     &:hover {
       cursor: pointer;
       .dropdown-wrapper {
-        background-color: $gray-lightest; 
+        background-color: $gray-lightest;
       }
     }
   }
@@ -50,5 +50,12 @@
     border: 1px solid $gray-lightest;
     padding: $container-fluid;
     display: none;
+  }
+  > a {
+    color: $body-color;
+    display: block;
+    &:hover {
+      color: $link-color;
+    }
   }
 }

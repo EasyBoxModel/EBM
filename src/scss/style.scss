@@ -13,10 +13,12 @@
 
 // EBM Setup
 @import "EBM/setup/ebm-variables";
-@import "EBM/setup/ebm-fonts-setup"; 
 
 // EBM Helpers
 @import "EBM/helpers/ebm-helpers";
+
+// EBM Fonts setup
+@import "EBM/setup/ebm-fonts-setup"; 
 
 // The global custom styles file
 @import "EBM/ebm-global";
