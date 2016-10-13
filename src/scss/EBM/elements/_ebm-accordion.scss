@@ -1,3 +1,6 @@
+$accordion-inactive-state-icon: "\e93a";
+$accordion-active-state-icon: "\e939";
+
 .accordion-wrapper {
   margin-bottom: rem(21px);
   .accordion-item {
@@ -14,6 +17,9 @@
     &.active {
       .dropdown-wrapper {
         background-color: $gray-lightest;
+        &:before {
+          content: $accordion-active-state-icon;
+        }
       }
       .middle {
         display: block;
@@ -42,8 +48,13 @@
     border-left: 1px solid $gray-lightest;
     width: $accordion-width-control;
     text-align: center;
+    height: 100%;
     i {
+    }
+    &:before {
+      content: $accordion-inactive-state-icon;
       font-size: $font-size-h3;
+      font-family: 'icomoon';
     }
   }
   .middle {
