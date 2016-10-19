@@ -20,12 +20,13 @@ let watchTaskList     = [];
 
 // SRC PATH definitions
 let publicFolder = './public';
+let srcFolder = './SRC_FOLDER';
 
-let cssSrcPath = `${publicFolder}/sass/`;
-let cssDest    = `${publicFolder}/css/build/`;
+let cssSrcPath = `${srcFolder}/sass/`;
+let cssDest    = `${publicFolder}/css/`;
 
-let jsSrcPath = `${publicFolder}/js/src`;
-let jsDest    = `${publicFolder}/js/build/`;
+let jsSrcPath = `${srcFolder}/js/src`;
+let jsDest    = `${publicFolder}/js/`;
 
 // Read ./public/sass directory files
 (fs.readdirSync(cssSrcPath) || []).filter(file => {
@@ -70,8 +71,8 @@ let jsDest    = `${publicFolder}/js/build/`;
   jsTaskDictionary = jsTaskDictionary.concat((fs.readdirSync(path.join(jsSrcPath, ctrl)) || [])
     .filter(fileCtrl => {
       return fs.lstatSync(path.join(jsSrcPath, ctrl, fileCtrl)).isDirectory();
-    }).map(actionName => { 
-      return { ctrl: ctrl, action: actionName }; 
+    }).map(actionName => {
+      return { ctrl: ctrl, action: actionName };
     }));
 });
 
