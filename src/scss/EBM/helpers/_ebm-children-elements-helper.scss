@@ -1,6 +1,6 @@
 @mixin children-elements {
   > div, > section, > header, > footer, > main, > aside, > article,
-  > a, > span, > li, > p, > i, > em, > small, > blockquote, > pre, > code
+  > a, > span, > li, > p, > i, > em, > small, > blockquote, > pre, > code,
   > h1, > h2, > h3, > h4, > h5, > h6,
   > .h1, > .h2, > .h3, > .h4, > .h5, > .h6, > .p,
   > ul, > ol, > button, > nav, > fieldset {

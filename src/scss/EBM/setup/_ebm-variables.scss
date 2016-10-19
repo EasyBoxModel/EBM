@@ -36,32 +36,32 @@ $grayscale-list:
   $gray-lightest,
   #fff;
 
-$brand-colors-list: 
-  $brand-primary, 
-  $brand-success, 
-  $brand-info, 
-  $brand-warning, 
+$brand-colors-list:
+  $brand-primary,
+  $brand-success,
+  $brand-info,
+  $brand-warning,
   $brand-danger;
 
 $bluescale-list:
-  $blue-darker, 
-  $blue-dark, 
-  $blue, 
-  $blue-light, 
+  $blue-darker,
+  $blue-dark,
+  $blue,
+  $blue-light,
   $blue-lighter;
 
-$social-colors-list: 
+$social-colors-list:
   $color-facebook,
-  $color-twitter,   
-  $color-pinterest, 
+  $color-twitter,
+  $color-pinterest,
   $color-google-plus,
   $color-youtube,
   $color-instagram,
-  $color-linkedin;  
+  $color-linkedin;
 
 // COLOR SUFIX's
 // EBM:REF
-$grayscale-sufix-list: 
+$grayscale-sufix-list:
   'gray-dark',
   'gray',
   'gray-light',
@@ -69,23 +69,23 @@ $grayscale-sufix-list:
   'gray-lightest',
   'white';
 
-$brand-colors-sufix-list: 
-  'primary', 
-  'success', 
-  'info', 
-  'warning', 
+$brand-colors-sufix-list:
+  'primary',
+  'success',
+  'info',
+  'warning',
   'danger';
 
 $bluescale-sufix-list:
-  'blue-darker', 
-  'blue-dark', 
-  'blue', 
-  'blue-light', 
+  'blue-darker',
+  'blue-dark',
+  'blue',
+  'blue-light',
   'blue-lighter';
 
-$social-colors-sufix-list: 
+$social-colors-sufix-list:
   'facebook',
-  'twitter',  
+  'twitter',
   'pinterest',
   'google-plus',
   'youtube',
@@ -93,27 +93,27 @@ $social-colors-sufix-list:
   'linkedin';
 
 // EBM:REF
-$breakpoints-sufix-list:  
-  'xs', 
-  'sm', 
-  'md', 
+$breakpoints-sufix-list:
+  'xs',
+  'sm',
+  'md',
   'lg';
 
-$breakpoints-only-sufix-list:  
-  'xs-only', 
-  'sm-only', 
-  'md-only', 
+$breakpoints-only-sufix-list:
+  'xs-only',
+  'sm-only',
+  'md-only',
   'lg-only';
 
-$breakpoints-up-sufix-list:  
-  'xs-up', 
-  'sm-up', 
-  'md-up', 
+$breakpoints-up-sufix-list:
+  'xs-up',
+  'sm-up',
+  'md-up',
   'lg-up';
 
-$breakpoints-down-sufix-list:  
-  'sm-down', 
-  'md-down', 
+$breakpoints-down-sufix-list:
+  'sm-down',
+  'md-down',
   'lg-down';
 
 // EBM:REF
@@ -124,7 +124,7 @@ $sizes-list:
   "xl";
 
 // EBM:REF
-$text-elements-list: 
+$text-elements-list:
   "h1",
   "h2",
   "h3",
@@ -140,7 +140,7 @@ $text-elements-list:
   "li";
 
 // EBM:REF
-$headings-list: 
+$headings-list:
   "h1",
   "h2",
   "h3",
@@ -158,7 +158,7 @@ $headings-class-list:
   ".h6";
 
 // EBM:REF
-$text-responsive-elements-list: 
+$text-responsive-elements-list:
   "p", ".p",
   "span",
   "em",
@@ -170,7 +170,7 @@ $text-responsive-elements-list:
   "ol",
   "li";
 
-$children-text-responsive-elements-list: 
+$children-text-responsive-elements-list:
   "> p", "> .p",
   "> span",
   "> em",
@@ -183,55 +183,55 @@ $children-text-responsive-elements-list:
   "> li";
 
 // Box Model abbreviations list
-$box-model-abbr: 
-  'p', 
-  'pt', 
-  'pr', 
-  'pb', 
-  'pl', 
-  'm', 
-  'mt', 
-  'mr', 
-  'mb', 
+$box-model-abbr:
+  'p',
+  'pt',
+  'pr',
+  'pb',
+  'pl',
+  'm',
+  'mt',
+  'mr',
+  'mb',
   'ml';
 
-$box-model-sides: 
-  'padding', 
-  'padding-top', 
-  'padding-right', 
-  'padding-bottom', 
-  'padding-left', 
-  'margin', 
-  'margin-top', 
-  'margin-right', 
-  'margin-bottom', 
+$box-model-sides:
+  'padding',
+  'padding-top',
+  'padding-right',
+  'padding-bottom',
+  'padding-left',
+  'margin',
+  'margin-top',
+  'margin-right',
+  'margin-bottom',
   'margin-left';
 
-$box-model-ch-abbr: 
-  'p-ch', 
-  'pt-ch', 
-  'pr-ch', 
-  'pb-ch', 
-  'pl-ch', 
-  'm-ch', 
-  'mt-ch', 
-  'mr-ch', 
-  'mb-ch', 
+$box-model-ch-abbr:
+  'p-ch',
+  'pt-ch',
+  'pr-ch',
+  'pb-ch',
+  'pl-ch',
+  'm-ch',
+  'mt-ch',
+  'mr-ch',
+  'mb-ch',
   'ml-ch';
 
-$box-model-ch-abbr-percentage: 
-  'pp-ch', 
-  'ptp-ch', 
-  'prp-ch', 
-  'pbp-ch', 
-  'plp-ch', 
-  'mp-ch', 
-  'mtp-ch', 
-  'mrp-ch', 
-  'mbp-ch', 
+$box-model-ch-abbr-percentage:
+  'pp-ch',
+  'ptp-ch',
+  'prp-ch',
+  'pbp-ch',
+  'plp-ch',
+  'mp-ch',
+  'mtp-ch',
+  'mrp-ch',
+  'mbp-ch',
   'mlp-ch';
 
-$input-type-list: 
+$input-type-list:
 // select,
 // textarea,
 "text",
@@ -250,7 +250,7 @@ $input-type-list:
 // "color";
 
 // Fontsize list
-$font-size-list: 
+$font-size-list:
   $font-size-h1,
   $font-size-h2,
   $font-size-h3,
@@ -274,7 +274,7 @@ $container-xl: map-get($container-max-widths, xl);
 $container-xxl: 84rem;
 $container-fluid: $grid-gutter-width / 2;
 
-/* 
+/*
   Text in rem units
   Used in text-control partials
 */
@@ -291,13 +291,13 @@ $line-height-base:        1.71428571; // 24/14
 $line-height-computed:    floor(($font-size-root * $line-height-base)); // ~24px
 
 // Set the global measure (range: 1 - 9)
-$ebm-times: 7; 
+$ebm-times: 7;
 
 // Set the global loop limit number
 $loop-limit: 10;
 
 // Define the em-base for rems to px conversion
-$px-to-rems: true;    // True if you want them on rems 
+$px-to-rems: true;    // True if you want them on rems
 $em-base: $font-size-root;
 
 // Include and determine border radius:
@@ -328,9 +328,18 @@ $global-sufix:              "ebm-" !default;
 $importantize:              "!important"    !default;
 
 // ALT FONT for FONTS_CUSTOM
-$font-family-alt:         "alt-font", $font-family-sans-serif;
+$font-family-alt:         "bariolbold", $font-family-sans-serif;
 
 // Hero unit
-$hero-unit-height-control: 90vh;
+$hero-unit-height-control: 810px;
+$hero-unit-height-control-mobile: 100vh;
 $header-height-control: 70px;
+$logo-width-control-mobile: 112px;
 $logo-width-control: 132px;
+
+// Accordion
+$accordion-width-control: 35px;
+
+// Additional screen sizes
+$xl-desktop: 1500px;
+$xxl-desktop: 1980px;

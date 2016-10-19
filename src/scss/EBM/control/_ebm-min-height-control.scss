@@ -78,3 +78,16 @@
     min-height: $hero-unit-height-control;
   }
 }
+
+@media #{$sm-down} {
+  body {
+    .minh-hero-unit {
+      min-height: $hero-unit-height-control-mobile;
+    }
+    .minh-ch-hero-unit {
+      @include children-elements {
+        min-height: $hero-unit-height-control-mobile;
+      }
+    }
+  }
+}
