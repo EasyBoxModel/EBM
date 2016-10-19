@@ -1,0 +1,136 @@
+/*
+  Bootstrap overrides
+*/
+
+// Use this in B4 _forms.scss for adjusting line-heights in special input types
+// @supports (-webkit-text-size-adjust:none) and (not (-ms-accelerator:true)) and (not (-moz-appearance:none)) {}
+
+.img-responsive {
+  width: 100%;
+}
+
+.nav-tabs {
+  padding: $container-fluid $container-fluid 0;
+  background-color: $gray-lightest;
+  &.nav {
+    padding-left: $container-fluid;
+  }
+  .nav-link, .nav-item {}
+  .nav-link {
+    padding: 0 !important;
+  }
+}
+
+.nav-link, .nav-item {
+  &:hover {
+    cursor: pointer;
+    a, span {
+      color: $link-hover-color;
+    }
+  }
+  a, span {
+    padding: $nav-link-padding;
+    color: $gray-light;
+    display: block;
+  }
+  &.active {
+    a, span {
+      // @include bold;
+      color: $link-hover-color;
+    }
+  }
+}
+
+.help-block {
+  ul {
+    @include list-unstyled;
+    li {}
+  }
+}
+
+.list-group-item {
+  border: 0;
+}
+
+.table {
+  margin-top: 0;
+  tr,
+  th,
+  thead th {
+    vertical-align: middle;
+  }
+  &.table-unbordered {
+    th, td {
+      border-top: none;
+    }
+  }
+  > tbody > tr:not(.detail-row) > td,
+  > tbody > tr:not(.detail-row) > th,
+  > tfoot > tr:not(.detail-row) > td,
+  > tfoot > tr:not(.detail-row) > th,
+  > thead > tr:not(.detail-row) > td,
+  > thead > tr:not(.detail-row) > th {
+    vertical-align: middle;
+  }
+  .row-divider {
+    border-top: 1px solid $gray-lighter;
+    &.bg-gray-lightest {
+      font-size: $font-size-h5;
+    }
+  }
+  label {
+    margin-bottom: 0;
+  }
+}
+
+.hidden {
+  display: none;
+}
+
+
+.form-control {
+  border-bottom: 1px solid $gray-light;
+  &:focus {
+    border-bottom: 1px solid $brand-info;
+  }
+}
+
+select {
+  &.form-control {
+    border-bottom: 1px solid $gray-light;
+    &:focus {
+      border-bottom: 1px solid $brand-info;
+    }
+  }
+}
+
+.has-success,
+.has-warning,
+.has-error {
+  .form-control {
+    border-width: 2px;
+    border-right: 0;
+    border-left: 0;
+    border-top: 0;
+  }
+}
+
+.has-success {
+  .form-control {
+    border-color: $brand-success;
+  }
+}
+.has-error {
+  .form-control {
+    border-color: $brand-danger;
+  }
+}
+.has-warning {
+  .form-control {
+    border-color: $brand-warning;
+  }
+}
+
+label {
+  // @include bold;
+}

@@ -1,0 +1,294 @@
+$wizard-header-height-control-sm-down: 35px;
+$questions-wrapper-height-control: 1450px;
+$wizard-header-height-control: 49px;
+$header-height-control-mobile: 56px;
+
+.header-padding {
+  @include header-padding;
+}
+
+/*
+  EBM Global styles
+*/
+html {
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+body {}
+
+.site-wrapper,
+.site-content {
+  overflow-x: hidden;
+  position: relative;
+}
+
+.site-wrapper {
+  // border-top: 2px solid $brand-primary;
+  &.fix-sub-header {
+    .sub-header {
+      @include position-fixed-top(1000);
+    }
+    .header-left {
+      .left {
+        @include transform(translateX(0%));
+      }
+      .right {
+        @include transform(translateX(18px));
+      }
+    }
+    .header-right {
+      .right-nav-wrapper {
+        > div {
+          @include transform(translateX(0%));
+        }
+      }
+    }
+  }
+}
+
+.header {
+  @include position(absolute, 0 0 null 0);
+  @include normalize-text;
+  border-bottom: 1px solid $gray-lightest;
+  background-color: white;
+  z-index: 1000;
+  width: 100%;
+  .header-left, .header-center, .header-right {
+    @include flex-column-center;
+    height: $header-height-control;
+  }
+  .header-left, .header-right {}
+  .header-left {}
+  .header-center {
+    text-align: center;
+  }
+  .header-right {
+    text-align: right;
+  }
+  .logo {
+    img {
+      width: $logo-width-control;
+      height: auto;
+    }
+  }
+}
+
+.header {
+  .right-nav-wrapper {
+    @include list-unstyled;
+    @include flex-row-end;
+  }
+  li {
+    @include flex-column-center;
+    min-height: $header-height-control;
+    margin-left: $container-fluid;
+  }
+  a:not(.btn) {
+    color: $gray;
+    &:hover {
+      color: $gray-dark;
+    }
+  }
+}
+
+.site-content {
+  > .section:first-of-type {
+    padding-top: $header-height-control;
+    .section-content {
+      min-height: 100vh;
+    }
+  }
+}
+
+.logo {
+  a {
+    display: block;
+  }
+  &.logo-white {
+    #logo-konfio {
+      fill: white;
+    }
+  }
+}
+
+.header {
+  #logo-konfio-wrapper {
+    width: $logo-width-control;
+    height: auto;
+  }
+  #logo-konfio {
+    fill: $brand-info;
+  }
+}
+
+.hero-unit {
+  background-image: url('/img/home/bg_home-hero-unit-desktop.jpg');
+}
+
+.footer {
+  @include normalize-text;
+  background-color: $gray-dark;
+  .footer-left, .footer-center, .footer-right {
+    @include flex-column-center;
+    min-height: $header-height-control;
+  }
+  #logo-konfio-wrapper {
+    width: $logo-width-control - 21;
+    height: auto;
+  }
+  #logo-konfio {
+    fill: white;
+  }
+  .footer-center {
+    ul {
+      @include list-unstyled;
+      @include flex-row;
+    }
+    li {
+      display: block;
+      &:first-child {
+        a {
+          border-left: none;
+          padding-left: 0;
+        }
+      }
+    }
+    a {
+      border-left: 1px solid $gray-light;
+      color: $gray-light;
+      font-size: 12px;
+      padding: 0 7px;
+      &:hover {
+        color: $gray-lightest;
+      }
+    }
+  }
+  .footer-right {
+    text-align: right;
+  }
+}
+
+.text-help {
+  display: block;
+}
+
+@include keyframes(load){
+  100% {
+    @include transform(rotate(360deg));
+  }
+}
+
+.load {
+  @include animation-iteration-count(infinite);
+  @include animation-timing-function(linear);
+  @include animation-duration(1s);
+  @include animation-name(load);
+  display: inline-block;
+  font-weight: bold;
+}
+
+.server-error-text {
+  display: block;
+}
+
+.cross-off {
+  text-decoration: line-through;
+  color: $gray-light;
+}
+
+.clickable {
+  @include bold;
+  color: $link-color;
+  &:hover {
+    color: $link-hover-color;
+    cursor: pointer;
+  }
+}
+
+.mobile-menu-nav {
+  @include list-unstyled;
+  @include flex-row-end;
+  li {
+    @include flex-column-center;
+    min-height: $header-height-control-mobile;
+    text-align: right;
+  }
+  a {
+
+  }
+  i {}
+}
+
+.home {
+  .mobile-menu-nav {
+    a {
+      color: white;
+      &:hover {
+        color: $gray-lightest;
+      }
+    }
+  }
+}
+
+.error-404 {
+  @include text-shadow;
+  @include bold;
+  font-size: 112px;
+  font-size: rem(112px);
+  color: white;
+}
+
+.bg-error {
+  @include bg-img-block-bottom;
+  background-image: url(/img/error/bg_404.png);
+  background-size: 50%;
+}
+
+/*
+  Media queries
+*/
+@media #{$xs-only} {}
+@media #{$sm-only} {}
+@media #{$md-only} {}
+@media #{$lg-only} {}
+@media #{$sm-down} {
+  body {
+    .bg-error {
+      background-image: none;
+    }
+    .header {
+      #logo-konfio-wrapper {
+        width: $logo-width-control-mobile;
+        height: auto;
+      }
+    }
+    .footer {
+      .footer-center {
+        ul {
+          @include flex-wrap(wrap);
+        }
+        li {
+          padding: 7px 0;
+          width: 50%;
+          a {
+            display: block;
+            border: none;
+            padding: 0;
+          }
+        }
+      }
+      .footer-right {
+        text-align: center;
+      }
+    }
+  }
+}
+@media #{$md-down} {}
+@media #{$lg-down} {}
+@media #{$sm-up} {}
+@media #{$md-up} {}
+@media #{$lg-up} {}
+@media only screen and (min-width: $xl-desktop) {}
+@media only screen and (min-width: $xxl-desktop) {}

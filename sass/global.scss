@@ -1,0 +1,57 @@
+@charset "UTF-8";
+
+@import "./public/scss/B4/variables";
+@import "./public/scss/B4/B4";
+@import "./public/scss/bourbon/bourbon";
+
+// EBM variables
+@import "./public/scss/EBM/setup/ebm-variables";
+
+// EBM Helpers
+@import "./public/scss/EBM/helpers/ebm-helpers";
+
+// EBM Fonts setup
+@import "./public/scss/EBM/setup/ebm-fonts-setup";
+
+// Boostrap custom overrides
+@import "./public/scss/EBM/ebm-bootstrap-overrides";
+
+// EBM Global Imports
+// EBM Control
+@import "./public/scss/EBM/control/ebm-box-model-control";
+@import "./public/scss/EBM/control/ebm-box-model-children-control";
+@import "./public/scss/EBM/control/ebm-color-text-control";
+@import "./public/scss/EBM/control/ebm-color-bg-control";
+@import "./public/scss/EBM/control/ebm-container-control";
+@import "./public/scss/EBM/control/ebm-text-control";
+@import "./public/scss/EBM/control/ebm-min-height-control";
+@import "./public/scss/EBM/control/ebm-flexbox-control";
+@import "./public/scss/EBM/control/ebm-text-responsive-control";
+@import "./public/scss/EBM/control/ebm-display-control";
+@import "./public/scss/EBM/control/ebm-box-model-breakpoints-control";
+@import "./public/scss/EBM/control/ebm-box-model-children-breakpoints-control";
+@import "./public/scss/EBM/control/ebm-box-shadow-control";
+@import "./public/scss/EBM/control/ebm-text-shadow-control";
+@import "./public/scss/EBM/control/ebm-bg-img-control";
+
+// EBM Elements
+@import "./public/scss/EBM/elements/ebm-header";
+@import "./public/scss/EBM/elements/ebm-buttons";
+@import "./public/scss/EBM/elements/ebm-buttons-outline";
+@import "./public/scss/EBM/elements/ebm-forms";
+@import "./public/scss/EBM/elements/ebm-icons";
+@import "./public/scss/EBM/elements/ebm-section";
+@import "./public/scss/EBM/elements/ebm-grid-lists";
+@import "./public/scss/EBM/elements/ebm-panels";
+@import "./public/scss/EBM/elements/ebm-accordion";
+@import "./public/scss/EBM/elements/ebm-alerts";
+
+// EBM Modules
+@import "./public/scss/EBM/modules/ebm-mobile-menu";
+
+// Shared styles for all templates
+@import "./public/sass/global/global";
+
+// Third party:
+// @import "./public/sass/common/spinners";
+// @import "./public/scss/animate/animate-init";
