@@ -1,41 +1,43 @@
-/*
-	Main header
-*/
-$header-height-control: 70px; // Header
-.header {
-	// @include position(absolute, 0 0 null 0);
-	// @include position(fixed, 0 0 null 0);
-	// z-index: 1000;
-	// -webkit-backface-visibility: hidden; 
-	// -webkit-transform: translateZ(0);
-	@include normalize-text;
-	min-height: $header-height-control;
-	width: 100%;
-	.container,
-	.container-sm,
-	.container-fluid {
-	}
-	.row {
-		@include flex-row-space-between;
-	}
-	.header-left,
-	.header-right {
-		// width: 50%;
-	}
-	.header-left,
-	.header-center,
-	.header-right {
-		@include flex-align-center;
-		@include flex-row-center;
-		min-height: $header-height-control;
-	}
-	.header-left {
+@mixin header-padding($padding: $header-height-control) {
+  padding: rem($padding) 0;
+}
 
-	}
-	.header-center {
-		text-align: center;
-	}
-	.header-right {
-		text-align: right;
-	}
+.header {
+  // @include position-fixed-top(1000);
+  @include normalize-text;
+  border-bottom: 1px solid $gray-lightest;
+  background-color: white;
+  .header-left, .header-center, .header-right {
+    @include flex-column-center;
+    height: $header-height-control;
+  }
+  .header-left, .header-right {}
+  .header-left {}
+  .header-center {
+    text-align: center;
+  }
+  .header-right {
+    text-align: right;
+  }
+  .logo {
+    img {
+      width: $logo-width-control;
+      height: auto;
+    }
+  }
+}
+
+.header-padding {
+  @include header-padding;
+}
+
+@media #{$sm-down} {
+  body {
+    .header {
+      background-color: transparent;
+      border-bottom: inherit;
+      border-bottom: none;
+      position: absolute;
+    }
+  }
 }
