@@ -1,14 +1,75 @@
-# Easy Box Model (EBM)
+# Easy Box Model (EBM) 3.0.0 - Gulp Optimized
 
 ## Getting started
 
+- Install the framework of your preference, `cd` into the `assets` folder (it may be the `public` in most of the cases)
 - `git clone https://github.com/EasyBoxModel/EBM.git name_of_your_project`
-- Mac users: `sudo npm install` - Windows users: `npm install`
-- `grunt`
+- `npm install`
+- `gulp`
 
-That's it. Start coding in the `app/index.html` file and style it on the `src/scss/EBM/_ebm-global.scss` file. Grunt will live-reload any changes on a localhost:9000 server. 
+## Usage
 
-See [available branches](https://github.com/EasyBoxModel/EBM/tree/master#available-branches) for more info about how the EBM is updated.
+EBM is an MVC-CSS/JS frontend framework. It may sound verbose, but it is designed to follow modern frameworks MVC structure.
+
+### CSS
+
+Let's assume that your FW has a `UserController` and a `profileAction()` that renders a view. For this case, the `sass` folder may have the following structure:
+
+```
+sass
+    user
+        profile
+            _profile.scss
+    profile.scss
+```
+
+The `profile.scss` file may import the `global.scss` which manages the shared styles and may import specific EBM control, elements or modules so only the _profile_ view uses them:
+
+```sass
+@charset "UTF-8";
+
+// Import the global styles and mixins for every template
+@import "./SRC_FOLDER/sass/global";
+
+// Module Controller group specific EBM Imports
+@import "./SRC_FOLDER/scss/EBM/elements/ebm-custom-radio-checkbox";
+
+// Module controller specific styles
+@import "./SRC_FOLDER/sass/user/profile";
+```
+
+In order to have a `css/user.profile.css` file available for your HTML `link` tags, just do a `gulp` or `gulp-styles`. Choose `gulp-watch` instead to watch for changes.
+
+### JS
+
+The same goes for javascript files:
+
+```
+js
+    src
+        user
+            profile
+                main.js
+```
+
+Where `main.js` has the `require()` code that uses `node_modules` packages and your view or component code:
+
+```js
+let Vue = require('vue');
+
+let Component = Vue.extend({
+  template: '#name',
+  data(){
+    return {}
+  },
+  ready(){},
+  methods: {}
+});
+
+Vue.component('name', Component);
+```
+
+The code above will compile into a `js/user.profile.js` file minified in production and development enviroments.
 
 ## Description
 
@@ -25,7 +86,7 @@ So, if time tracking does not objectively measure development productivity: __Ho
 
 ### Taking less time on completing tasks
 
-__Habits__. Development habits are systematic steps that individuals take to complete the given tasks. 
+__Habits__. Development habits are systematic steps that individuals take to complete the given tasks.
 
 Even the simplest tasks, add up to the overall development time of the project
 
@@ -44,9 +105,9 @@ Here is a list of how the EBM proposes to work on these habits:
 
 ### Less time, but without compromising the product quality
 
-Can we get a balance between time and quality? 
+Can we get a balance between time and quality?
 
-Can we accomplish it on large teams? 
+Can we accomplish it on large teams?
 
 What does quality mean?
 
@@ -78,51 +139,3 @@ What does quality mean?
 - __Simplicity__
 - Self-organizing teams
 - At regular intervals, the team reflects on how to become more effective, then tunes and adjusts its behavior accordingly
-
-
-## EBM structure
-
-- [Setup](http://easyboxmodel.com/category/getting-started)
-- [Sass utilities](http://easyboxmodel.com/category/utilities)
-- HTML utilities - docs in progress
-- JavaScript utilities - docs in progress
-- Productivity resources - docs in progress
-
-## Available branches
-
-EBM is 1.3mb for the `master` branch. However, you can clone any of these other branches: 
-
-### Sass utilities only
-This branch is where the updates to the `src/scss/` are made:
-
-`git clone -b sass-utilities https://github.com/EasyBoxModel/EBM.git name_of_your_project`
-
-### HTML utilities + Sass utilities
-Clone the EBM with the HTML utilities 
-
-`git clone -b html-utilities https://github.com/EasyBoxModel/EBM.git name_of_your_project`
-
-### Wordpress theme boilerplate
-Clone the EBM wordpress theme boilerplate into your `wp-content/themes/` which comes with setup files such as `functions.php`, `index.php`, `screenshot.png`, `header.php`, `footer.php` and `style.css` right away. 
-
-If your WP project already has a working `.git` folder, read more about `git subtree`
-
-`git clone -b wordpress-boilerplate https://github.com/EasyBoxModel/EBM.git name_of_your_project`
-
-### Experimental
-Clone the EBM plus experimental Sass partials and HTML5 new tag attributes and other Grunt tasks still on development
-
-`git clone -b experimental https://github.com/EasyBoxModel/EBM.git name_of_your_project`
-
-## How to contribute
-
-As previously stated, the EBM is a proposal on how to use the selected libraries and tools, it was born as an always-evolving structure and methodology so it's on its nature to be like that. 
-
-There are 3 ways to contribute:
-
-1. Extending and optimizing the main files: `src/` and `app/`. Meaning that contributors may create new files for the HTML, Sass and JavaScript utilities or suggest new class, mixins or function names so every benefits from it.
-2. Extending and optimizing the documentation. The docs site is a Wordpress theme for practical, distribution and structural reasons, however, there's a [documentation repo issues](https://github.com/EasyBoxModel/EBM.Docs/issues) where typos, semantic, syntactic, grammatical or extension issues can be submitted.
-3. The EBM focuses on front-end development for now and its proposal has been tested in front-end development teams, however, it is one of the EBM aims to contribute on the collaboration and communication among the entire development team, meaning back-end and front-end. If you feel comfortable with project-management topics and practices that may add-up to the time-efficiency  principles and productivity resources, you are more than welcome as a collaborator. 
-
-
-## Changelog
