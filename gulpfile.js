@@ -19,48 +19,59 @@ let jsTaskList        = [];
 let watchTaskList     = [];
 
 // SRC PATH definitions
-let publicFolder = './public';
+let publicFolder = './PUBLIC';
 let srcFolder = './SRC_FOLDER';
 
-let cssSrcPath = `${srcFolder}/sass/`;
-let cssDest    = `${publicFolder}/css/`;
+let cssSrcPath = `${srcFolder}/sass`;
+let cssDest    = `${publicFolder}/css`;
 
 let jsSrcPath = `${srcFolder}/js/src`;
-let jsDest    = `${publicFolder}/js/`;
+let jsDest    = `${publicFolder}/js/build`;
 
-// Read ./public/sass directory files
-(fs.readdirSync(cssSrcPath) || []).filter(file => {
-  return /^[a-zA-Z]*\.(scss)$/.test(file) && !/global/.test(file);
-}).forEach(fileName => {
-  let ctrl = fileName.replace(/\.scss/, '');
+// Gather Scss src files to watch and compile
+(fs.readdirSync(cssSrcPath) || []).filter(directory => {
+  var isDirectory = fs.lstatSync(path.join(cssSrcPath, directory)).isDirectory();
+  return !/global/.test(directory) && isDirectory;
+}).forEach(module => {
+  (fs.readdirSync(path.join(cssSrcPath, module)) || []).filter(moduleCtrl => {
+    return fs.lstatSync(path.join(cssSrcPath, module, moduleCtrl)).isDirectory();
+  }).forEach(ctrl => {
+    fs.readdirSync(path.join(cssSrcPath, module, ctrl)).forEach(file => {
+      cssTaskDictionary.push({ module: module, ctrl: ctrl, file: file });
+    });
+  });
+});
+
+cssTaskDictionary.forEach(taskDef => {
+
+  var file = taskDef.file.replace(/\.scss/, '');
+  file = file.replace(/_/, '');
+  var taskSuffix = '-' + taskDef.module + '-' + taskDef.ctrl + '-' + file;
+  var taskName = 'css' + taskSuffix;
+  cssTaskList.push(taskName);
 
   // Output compressed styles for prod and dev
-  let outputStyle = {outputStyle: 'expanded'};
+  var outputStyle = {outputStyle: 'expanded'};
   if (process.env.ENV == 'prod' || process.env.ENV == 'dev') {
     outputStyle.outputStyle = 'compressed';
   }
 
-  // Sass will watch for changes in this files
-  let srcPathFile  = path.join(cssSrcPath, fileName);
-  let ctrlPathFile = path.join(cssSrcPath + ctrl, '_' + fileName);
-
-  // Instantiate ctrl specific style tasks
-  let taskName = 'styles-' + ctrl;
-  cssTaskList.push(taskName);
+  // Sass will watch for changes in these files
+  var srcPathFile = path.join(cssSrcPath, taskDef.module, taskDef.ctrl, taskDef.file);
 
   gulp.task(taskName, () => {
-  gulp.src([srcPathFile, ctrlPathFile])
-    .pipe(sass(outputStyle).on('error', sass.logError))
-    .pipe(gulp.dest(cssDest));
+    gulp.src([srcPathFile])
+      .pipe(sass(outputStyle).on('error', sass.logError))
+      .pipe(gulp.dest(path.join(cssDest, taskDef.module, taskDef.ctrl))
+    );
   });
 
   // Instantiate ctrl specific watch tasks
-  let watchTaskName = 'watch-' + ctrl;
+  var watchTaskName = 'watch-' + taskName;
   watchTaskList.push(watchTaskName);
-
   gulp.task(watchTaskName, () => {
-    gulp.watch([srcPathFile, ctrlPathFile], [taskName]);
-  })
+    gulp.watch([srcPathFile], [taskName]);
+  });
 });
 
 // Read ./public/js/src/ files
@@ -97,14 +108,14 @@ jsTaskDictionary.forEach(taskDef => {
       })
       .pipe(source('main.js'))
       .pipe(buffer());
-      if (process.env.ENV == 'prod' || process.env.ENV == 'dev') {
-        $rollup.pipe(uglify());
-      }
-      $rollup.pipe(sourcemaps.init({ loadMaps: true }))
+    if (process.env.ENV == 'prod' || process.env.ENV == 'dev') {
+      $rollup.pipe(uglify());
+    }
+    $rollup.pipe(sourcemaps.init({ loadMaps: true }))
       .pipe(rename(taskDef.ctrl + '.' + taskDef.action + '.js'))
       .on('error', gutil.log)
       .pipe(sourcemaps.write('./'))
-      .pipe(gulp.dest(jsDest));
+      .pipe(gulp.dest(path.join(jsDest, taskDef.ctrl, taskDef.action)));
 
       return $rollup;
   });
@@ -115,10 +126,21 @@ jsTaskDictionary.forEach(taskDef => {
   })
 });
 
+// Watch for js/control files changes
+// It will trigger all js tasks
 gulp.task('control', () => {
   gulp.watch(`${publicFolder}/js/control/*.js`, jsTaskList);
 });
 watchTaskList.push('control');
+
+// Watch for css/global
+// Triggers all css tasks
+gulp.task('global', () => {
+  gulp.watch(`${cssSrcPath}/global/*.scss`, cssTaskList);
+  gulp.watch(`${cssSrcPath}/_ebm-overrides.scss`, cssTaskList);
+  gulp.watch(`${cssSrcPath}/global.scss`, cssTaskList);
+});
+watchTaskList.push('global');
 
 // Build styles task
 gulp.task('styles', cssTaskList);

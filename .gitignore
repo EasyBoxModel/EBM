@@ -2,6 +2,12 @@
 # http://soygus.com
 # @author MadeByGus
 
+## Gulp dest
+./PUBLIC/js/build
+./PUBLIC/css
+./js/build
+./css
+
 ## EBM
 style.min.css
 style.unprefixed.css

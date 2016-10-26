@@ -1,0 +1,11 @@
+@charset "UTF-8";
+
+// Import the global styles and mixins for every template
+@import "./sass/global";
+
+// Module Controller group specific EBM Imports
+@import "./scss/EBM/elements/ebm-custom-radio-checkbox";
+
+.example-class {
+  color: #FFF;
+}
