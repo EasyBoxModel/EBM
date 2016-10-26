@@ -3,9 +3,21 @@
 ## Getting started
 
 - Install the framework of your preference, `cd` into the `assets` folder (it may be the `public` in most of the cases)
-- `git clone https://github.com/EasyBoxModel/EBM.git name_of_your_project`
+- `git clone https://github.com/EasyBoxModel/EBM.git .`
 - `npm install`
 - `gulp` or `gulp watch` to watch for changes
+- Open the `gulpfile.js` and change `PUBLIC` to match the public assets __destination__ folder and `SRC_FOLDER` to match the source folder
+- You may use these handy terminal commands:
+
+```bash
+export dest_path="public"
+export resources_path="resources/assets";
+export resources_esc_path="resources\/assets";
+sed -i '' "s/PUBLIC/$dest_path/g" "gulpfile.js"
+sed -i '' "s/SRC_FOLDER/$resources_esc_path/g" "gulpfile.js"
+sed -i '' "s/SRC_FOLDER/$resources_esc_path/g" "$resources_path/sass/global.scss"
+sed -i '' "s/SRC_FOLDER/$resources_esc_path/g" "$resources_path/sass/_ebm-imports-reference.scss"
+```
 
 ## Usage
 
