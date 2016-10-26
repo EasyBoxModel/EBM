@@ -30,34 +30,34 @@ let jsDest    = `${publicFolder}/js/build`;
 
 // Gather Scss src files to watch and compile
 (fs.readdirSync(cssSrcPath) || []).filter(directory => {
-  var isDirectory = fs.lstatSync(path.join(cssSrcPath, directory)).isDirectory();
+  let isDirectory = fs.lstatSync(path.join(cssSrcPath, directory)).isDirectory();
   return !/global/.test(directory) && isDirectory;
 }).forEach(module => {
   (fs.readdirSync(path.join(cssSrcPath, module)) || []).filter(moduleCtrl => {
     return fs.lstatSync(path.join(cssSrcPath, module, moduleCtrl)).isDirectory();
   }).forEach(ctrl => {
-    fs.readdirSync(path.join(cssSrcPath, module, ctrl)).forEach(file => {
-      cssTaskDictionary.push({ module: module, ctrl: ctrl, file: file });
+    fs.readdirSync(path.join(cssSrcPath, module, ctrl)).forEach(action => {
+      cssTaskDictionary.push({ module: module, ctrl: ctrl, action: action });
     });
   });
 });
 
 cssTaskDictionary.forEach(taskDef => {
 
-  var file = taskDef.file.replace(/\.scss/, '');
-  file = file.replace(/_/, '');
-  var taskSuffix = '-' + taskDef.module + '-' + taskDef.ctrl + '-' + file;
-  var taskName = 'css' + taskSuffix;
+  let action = taskDef.action.replace(/\.scss/, '');
+  action = action.replace(/_/, '');
+  let taskSuffix = '-' + taskDef.module + '-' + taskDef.ctrl + '-' + action;
+  let taskName = 'css' + taskSuffix;
   cssTaskList.push(taskName);
 
   // Output compressed styles for prod and dev
-  var outputStyle = {outputStyle: 'expanded'};
+  let outputStyle = {outputStyle: 'expanded'};
   if (process.env.ENV == 'prod' || process.env.ENV == 'dev') {
     outputStyle.outputStyle = 'compressed';
   }
 
-  // Sass will watch for changes in these files
-  var srcPathFile = path.join(cssSrcPath, taskDef.module, taskDef.ctrl, taskDef.file);
+  // Sass will watch for changes in these actions
+  let srcPathFile = path.join(cssSrcPath, taskDef.module, taskDef.ctrl, taskDef.action);
 
   gulp.task(taskName, () => {
     gulp.src([srcPathFile])
@@ -67,7 +67,7 @@ cssTaskDictionary.forEach(taskDef => {
   });
 
   // Instantiate ctrl specific watch tasks
-  var watchTaskName = 'watch-' + taskName;
+  let watchTaskName = 'watch-' + taskName;
   watchTaskList.push(watchTaskName);
   gulp.task(watchTaskName, () => {
     gulp.watch([srcPathFile], [taskName]);
@@ -75,32 +75,36 @@ cssTaskDictionary.forEach(taskDef => {
 });
 
 // Read ./public/js/src/ files
-(fs.readdirSync(jsSrcPath) || []).filter(file => {
-  return fs.lstatSync(path.join(jsSrcPath, file)).isDirectory();
-}).forEach(ctrl => {
-  // this directory should mirror a controller on zend
-  jsTaskDictionary = jsTaskDictionary.concat((fs.readdirSync(path.join(jsSrcPath, ctrl)) || [])
-    .filter(fileCtrl => {
-      return fs.lstatSync(path.join(jsSrcPath, ctrl, fileCtrl)).isDirectory();
-    }).map(actionName => {
-      return { ctrl: ctrl, action: actionName };
-    }));
+(fs.readdirSync(jsSrcPath) || []).filter(directory => {
+  return fs.lstatSync(path.join(jsSrcPath, directory)).isDirectory();
+}).forEach(module => {
+  (fs.readdirSync(path.join(jsSrcPath, module)) || []).filter(moduleCtrl => {
+    return fs.lstatSync(path.join(jsSrcPath, module, moduleCtrl)).isDirectory();
+  }).forEach(ctrl => {
+    fs.readdirSync(path.join(jsSrcPath, module, ctrl) || []).forEach(action => {
+      jsTaskDictionary.push({ module: module, ctrl: ctrl, action: action });
+    });
+  });
 });
 
 jsTaskDictionary.forEach(taskDef => {
 
-  let taskSuffix = '-' + taskDef.ctrl + '-' + taskDef.action;
-  jsTaskList.push('js' + taskSuffix);
-  watchTaskList.push('watch' + taskSuffix);
+  let module = taskDef.module;
+  let ctrl = taskDef.ctrl;
+  let action = taskDef.action;
+
+  let taskSuffix = module + '-' + ctrl + '-' + action;
+  let taskName = 'js-' + taskSuffix;
+  jsTaskList.push(taskName);
 
   // build prod tasks
-  gulp.task('js' + taskSuffix, () => {
+  gulp.task('js-' + taskSuffix, () => {
 
     let $rollup = rollup({
-        entry: path.join(jsSrcPath, taskDef.ctrl, taskDef.action, 'main.js'),
+        entry: path.join(jsSrcPath, module, ctrl, action, 'main.js'),
         sourceMap: true,
         format: 'iife',
-        moduleName: taskDef.ctrl + '.' + taskDef.action + '.js',
+        moduleName: module + '.' + ctrl + '.' + action + '.js',
         plugins: [
           resolveNode({ jsnext: true, main: true }),
           commons(),
@@ -112,17 +116,19 @@ jsTaskDictionary.forEach(taskDef => {
       $rollup.pipe(uglify());
     }
     $rollup.pipe(sourcemaps.init({ loadMaps: true }))
-      .pipe(rename(taskDef.ctrl + '.' + taskDef.action + '.js'))
+      .pipe(rename(action + '.js'))
       .on('error', gutil.log)
       .pipe(sourcemaps.write('./'))
-      .pipe(gulp.dest(path.join(jsDest, taskDef.ctrl, taskDef.action)));
+      .pipe(gulp.dest(path.join(jsDest, module, ctrl)));
 
-      return $rollup;
+    return $rollup;
   });
 
   // watch tasks
-  gulp.task('watch' + taskSuffix, () => {
-    gulp.watch(path.join(jsSrcPath, taskDef.ctrl, taskDef.action, '*.js'), ['js' + taskSuffix]);
+  let watchTaskName = 'watch-' + taskName;
+  watchTaskList.push(watchTaskName);
+  gulp.task(watchTaskName, () => {
+    gulp.watch(path.join(jsSrcPath, module, ctrl, action, '*.js'), ['js' + taskSuffix]);
   })
 });
 

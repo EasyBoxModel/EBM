@@ -43,17 +43,18 @@ In order to have a `css/users/user/profile.css` file available for your HTML `li
 
 ### JS
 
-The same goes for javascript files:
+The same goes for javascript files except for the `action` folder which has always a `main.js` file:
 
 ```
 js
     src
-        user
-            profile
-                main.js
+        module
+            controller
+                action
+                    main.js
 ```
 
-Where `main.js` has the `require()` code that uses `node_modules` packages and your view or component code:
+The `main.js` has the `require()` code that uses `node_modules` packages and your view or component code:
 
 ```js
 let Vue = require('vue');
@@ -70,7 +71,7 @@ let Component = Vue.extend({
 Vue.component('name', Component);
 ```
 
-The code above will compile into a `js/build/user/profile/user.profile.js` file minified in production and development enviroments.
+The code above will compile into a `js/build/module/controller/action.js` file minified in production and development enviroments.
 
 ## Description
 
