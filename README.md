@@ -5,7 +5,7 @@
 - Install the framework of your preference, `cd` into the `assets` folder (it may be the `public` in most of the cases)
 - `git clone https://github.com/EasyBoxModel/EBM.git name_of_your_project`
 - `npm install`
-- `gulp`
+- `gulp` or `gulp watch` to watch for changes
 
 ## Usage
 
@@ -13,14 +13,13 @@ EBM is an MVC-CSS/JS frontend framework. It may sound verbose, but it is designe
 
 ### CSS
 
-Let's assume that your FW has a `UserController` and a `profileAction()` that renders a view. For this case, the `sass` folder may have the following structure:
+Let's assume that your FW has an `Users` module, a `UserController` and a `profileAction()` that renders a view. For this case, the `sass` folder may have the following structure:
 
 ```
 sass
-    user
-        profile
-            _profile.scss
-    profile.scss
+    users
+        user
+            profile.scss
 ```
 
 The `profile.scss` file may import the `global.scss` which manages the shared styles and may import specific EBM control, elements or modules so only the _profile_ view uses them:
@@ -34,11 +33,13 @@ The `profile.scss` file may import the `global.scss` which manages the shared st
 // Module Controller group specific EBM Imports
 @import "./SRC_FOLDER/scss/EBM/elements/ebm-custom-radio-checkbox";
 
-// Module controller specific styles
-@import "./SRC_FOLDER/sass/user/profile";
+// Additional classes
+.profile-class {
+  // ...
+}
 ```
 
-In order to have a `css/user.profile.css` file available for your HTML `link` tags, just do a `gulp` or `gulp-styles`. Choose `gulp-watch` instead to watch for changes.
+In order to have a `css/users/user/profile.css` file available for your HTML `link` tags, just do a `gulp` or `gulp-styles`. Choose `gulp-watch` instead to watch for changes.
 
 ### JS
 
@@ -69,7 +70,7 @@ let Component = Vue.extend({
 Vue.component('name', Component);
 ```
 
-The code above will compile into a `js/user.profile.js` file minified in production and development enviroments.
+The code above will compile into a `js/build/user/profile/user.profile.js` file minified in production and development enviroments.
 
 ## Description
 
