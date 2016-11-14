@@ -128,7 +128,7 @@ jsTaskDictionary.forEach(taskDef => {
   let watchTaskName = 'watch-' + taskName;
   watchTaskList.push(watchTaskName);
   gulp.task(watchTaskName, () => {
-    gulp.watch(path.join(jsSrcPath, module, ctrl, action, '*.js'), ['js' + taskSuffix]);
+    gulp.watch(path.join(jsSrcPath, module, ctrl, action, '*.js'), ['js-' + taskSuffix]);
   })
 });
 
