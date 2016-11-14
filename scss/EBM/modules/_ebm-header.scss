@@ -2,6 +2,10 @@
   padding: rem($padding) 0;
 }
 
+.header-padding {
+  @include header-padding;
+}
+
 .header {
   // @include position-fixed-top(1000);
   @include normalize-text;
@@ -27,17 +31,8 @@
   }
 }
 
-.header-padding {
-  @include header-padding;
-}
-
 @media #{$sm-down} {
   body {
-    .header {
-      background-color: transparent;
-      border-bottom: inherit;
-      border-bottom: none;
-      position: absolute;
-    }
+    .header {}
   }
 }
