@@ -18,8 +18,10 @@
 
 // EBM Global Imports
 // EBM Control
-@import "./SRC_FOLDER/scss/EBM/control/ebm-box-model-control";
-@import "./SRC_FOLDER/scss/EBM/control/ebm-box-model-children-control";
+@import "./public/EBM/src/scss/EBM/control/ebm-spacing-control";
+@import "./public/EBM/src/scss/EBM/control/ebm-spacing-breakpoints-control";
+@import "./public/EBM/src/scss/EBM/control/ebm-spacing-children-control";
+@import "./public/EBM/src/scss/EBM/control/ebm-spacing-children-breakpoints-control";
 @import "./SRC_FOLDER/scss/EBM/control/ebm-color-text-control";
 @import "./SRC_FOLDER/scss/EBM/control/ebm-color-bg-control";
 @import "./SRC_FOLDER/scss/EBM/control/ebm-container-control";
@@ -28,8 +30,6 @@
 @import "./SRC_FOLDER/scss/EBM/control/ebm-flexbox-control";
 @import "./SRC_FOLDER/scss/EBM/control/ebm-text-responsive-control";
 @import "./SRC_FOLDER/scss/EBM/control/ebm-display-control";
-@import "./SRC_FOLDER/scss/EBM/control/ebm-box-model-breakpoints-control";
-@import "./SRC_FOLDER/scss/EBM/control/ebm-box-model-children-breakpoints-control";
 @import "./SRC_FOLDER/scss/EBM/control/ebm-bg-img-control";
 // @import "./SRC_FOLDER/scss/EBM/control/ebm-box-shadow-control";
 // @import "./SRC_FOLDER/scss/EBM/control/ebm-text-shadow-control";

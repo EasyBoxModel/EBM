@@ -1,0 +1,56 @@
+// -x axis box model spacing
+@for $i from 0 through $spacing-sizes {
+  @for $j from 1 through length($box-model-x-sides) {
+    .#{nth($box-model-x-abbr, $j)}-#{$i} {
+      #{nth($box-model-x-sides, $j)}: ($i * $spacer-x);
+    }
+  }
+}
+
+// -y axis box model spacing
+@for $i from 0 through $spacing-sizes {
+  @for $j from 1 through length($box-model-y-sides) {
+    .#{nth($box-model-y-abbr, $j)}-#{$i} {
+      #{nth($box-model-y-sides, $j)}: ($i * $spacer-y);
+    }
+  }
+}
+
+// -xy axis box model spacing
+@for $i from 0 through $spacing-sizes {
+  @for $j from 1 through length($box-model-xy-sides) {
+    .#{nth($box-model-xy-abbr, $j)}-#{$i} {
+      #{nth($box-model-xy-sides, $j)}: ($i * $spacer);
+    }
+  }
+}
+
+// PADDING VERTICAL & HORIZONTAL
+@for $i from 0 through $spacing-sizes {
+  .pv-#{$i} {
+    padding-bottom: ($i * $spacer);
+    padding-top: ($i * $spacer);
+  }
+}
+
+@for $i from 0 through $spacing-sizes {
+  .ph-#{$i} {
+    padding-right: ($i * $spacer);
+    padding-left: ($i * $spacer);
+  }
+}
+
+// MARGIN VERTICAL & HORIZONTAL
+@for $i from 0 through $spacing-sizes {
+  .mv-#{$i} {
+    margin-bottom: ($i * $spacer);
+    margin-top: ($i * $spacer);
+  }
+}
+
+@for $i from 0 through $spacing-sizes {
+  .mh-#{$i} {
+    margin-right: ($i * $spacer);
+    margin-left: ($i * $spacer);
+  }
+}

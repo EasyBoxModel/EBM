@@ -1,0 +1,71 @@
+// BOX MODEL CHILDREN ELEMENTS
+// -x axis box model spacing
+@for $i from 0 through $spacing-sizes {
+  @for $j from 1 through length($box-model-x-sides) {
+    .#{nth($box-model-ch-x-abbr, $j)}-#{$i} {
+      #{$children-elements} {
+        #{nth($box-model-x-sides, $j)}: ($i*$spacer-x);
+      }
+    }
+  }
+}
+
+// -y axis box model spacing
+@for $i from 0 through $spacing-sizes {
+  @for $j from 1 through length($box-model-y-sides) {
+    .#{nth($box-model-ch-y-abbr, $j)}-#{$i} {
+      #{$children-elements} {
+        #{nth($box-model-y-sides, $j)}: ($i*$spacer-y);
+      }
+    }
+  }
+}
+
+// -xy axis box model spacing
+@for $i from 0 through $spacing-sizes {
+  @for $j from 1 through length($box-model-xy-sides) {
+    .#{nth($box-model-ch-xy-abbr, $j)}-#{$i} {
+      #{$children-elements} {
+        #{nth($box-model-xy-sides, $j)}: ($i*$spacer);
+      }
+    }
+  }
+}
+
+// PADDING VERTICAL & HORIZONTAL
+@for $i from 0 through $spacing-sizes {
+  .pv-ch-#{$i} {
+    #{$children-elements} {
+      padding-bottom: ($i*$spacer-y);
+      padding-top: ($i*$spacer-y);
+    }
+  }
+}
+
+@for $i from 0 through $spacing-sizes {
+  .ph-ch-#{$i} {
+    #{$children-elements} {
+      padding-right: ($i*$spacer-x);
+      padding-left: ($i*$spacer-x);
+    }
+  }
+}
+
+// MARGIN VERTICAL & HORIZONTAL
+@for $i from 0 through $spacing-sizes {
+  .mv-ch-#{$i} {
+    #{$children-elements} {
+      margin-bottom: ($i*$spacer-y);
+      margin-top: ($i*$spacer-y);
+    }
+  }
+}
+
+@for $i from 0 through $spacing-sizes {
+  .mh-ch-#{$i} {
+    #{$children-elements} {
+      margin-right: ($i*$spacer-x);
+      margin-left: ($i*$spacer-x);
+    }
+  }
+}

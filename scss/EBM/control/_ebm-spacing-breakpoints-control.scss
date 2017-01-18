@@ -1,0 +1,84 @@
+// -x axis box model spacing
+@for $i from 0 through $spacing-sizes {
+  @for $j from 1 through length($box-model-x-sides) {
+    @for $k from 1 through length($breakpoints-sufix-list) {
+      @media #{nth($media-control-list, $k)} {
+        .#{nth($box-model-x-abbr, $j)}-#{$i}-#{nth($breakpoints-sufix-list, $k)} {
+          #{nth($box-model-x-sides, $j)}: ($i * $spacer-x);
+        }
+      }
+    }
+  }
+}
+
+// -y axis box model spacing
+@for $i from 0 through $spacing-sizes {
+  @for $j from 1 through length($box-model-y-sides) {
+    @for $k from 1 through length($breakpoints-sufix-list) {
+      @media #{nth($media-control-list, $k)} {
+        .#{nth($box-model-y-abbr, $j)}-#{$i}-#{nth($breakpoints-sufix-list, $k)} {
+          #{nth($box-model-y-sides, $j)}: ($i * $spacer-y);
+        }
+      }
+    }
+  }
+}
+
+// -xy axis box model spacing
+@for $i from 0 through $spacing-sizes {
+  @for $j from 1 through length($box-model-xy-sides) {
+    @for $k from 1 through length($breakpoints-sufix-list) {
+      @media #{nth($media-control-list, $k)} {
+        .#{nth($box-model-xy-abbr, $j)}-#{$i}-#{nth($breakpoints-sufix-list, $k)} {
+          #{nth($box-model-xy-sides, $j)}: ($i * $spacer);
+        }
+      }
+    }
+  }
+}
+
+// PADDING VERTICAL & HORIZONTAL
+@for $i from 0 through $spacing-sizes {
+  @for $k from 1 through length($breakpoints-sufix-list) {
+    @media #{nth($media-control-list, $k)} {
+      .pv-#{$i}-#{nth($breakpoints-sufix-list, $k)} {
+        padding-bottom: $i*$spacer-y;
+        padding-top: $i*$spacer-y;
+      }
+    }
+  }
+}
+
+@for $i from 0 through $spacing-sizes {
+  @for $k from 1 through length($breakpoints-sufix-list) {
+    @media #{nth($media-control-list, $k)} {
+      .ph-#{$i}-#{nth($breakpoints-sufix-list, $k)} {
+        padding-right: $i*$spacer-x;
+        padding-left: $i*$spacer-x;
+      }
+    }
+  }
+}
+
+// MARGIN VERTICAL & HORIZONTAL
+@for $i from 0 through $spacing-sizes {
+  @for $k from 1 through length($breakpoints-sufix-list) {
+    @media #{nth($media-control-list, $k)} {
+      .mv-#{$i}-#{nth($breakpoints-sufix-list, $k)} {
+        margin-bottom: $i*$spacer-y;
+        margin-top: $i*$spacer-y;
+      }
+    }
+  }
+}
+
+@for $i from 0 through $spacing-sizes {
+  @for $k from 1 through length($breakpoints-sufix-list) {
+    @media #{nth($media-control-list, $k)} {
+      .mh-#{$i}-#{nth($breakpoints-sufix-list, $k)} {
+        margin-right: $i*$spacer-x;
+        margin-left: $i*$spacer-x;
+      }
+    }
+  }
+}
