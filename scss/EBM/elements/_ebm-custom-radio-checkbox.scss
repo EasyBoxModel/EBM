@@ -1,8 +1,10 @@
+$custom-radio-label-color: $brand-info;
+
 @mixin custom-radio-label() {
-  background-color: $brand-info;
-  color: white !important;
+  border: 2px solid $custom-radio-label-color;
+  color: $custom-radio-label-color !important;
   &:before {
-    color: white !important;
+    color: $custom-radio-label-color !important;
   }
 }
 
@@ -17,8 +19,8 @@
   }
   label {
     @include normalize-text;
+    border: 1px solid rgba($custom-radio-label-color, 0.2);
     padding-right: $btn-padding-x-sm;
-    border: 1px solid $gray-lightest;
     border-radius: $border-radius;
     padding: .35rem 0;
     font-size: $font-size-h5;
@@ -35,8 +37,8 @@
     &:before {
       @include position(absolute, 0 null 0 0);
       @include flex-column-center;
+      color: rgba($custom-radio-label-color, 0.1);
       font-family: 'icomoon';
-      color: $gray-lightest;
       text-align: center;
       content: "\e959";
       font-size: 16px;
