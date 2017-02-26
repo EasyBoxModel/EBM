@@ -314,13 +314,13 @@ $screen-lg-desktop: map-get($grid-breakpoints, xl);
 // $screen-xl-desktop: map-get($grid-breakpoints, xl);
 
 // CUSTOM CONTAINER VARIABLES
-$container-xs: rem(480px) + $grid-gutter-width;
+$container-xs: 480px + $grid-gutter-width-base;
 $container-sm: map-get($container-max-widths, sm);
 $container-md: map-get($container-max-widths, md);
 $container-lg: map-get($container-max-widths, lg);
 $container-xl: map-get($container-max-widths, xl);
 $container-xxl: 84rem;
-$container-fluid: $grid-gutter-width / 2;
+$container-fluid: $grid-gutter-width-base / 2;
 
 /*
   Text in rem units
@@ -336,7 +336,7 @@ $line-height-xs-only: 1.1;
 //** Unit-less `line-height` for use in components like buttons.
 $line-height-base:        1.71428571; // 24/14
 //** Computed "line-height" (`font-size` * `line-height`) for use with `margin`, `padding`, etc.
-$line-height-computed:    floor(($font-size-root * $line-height-base)); // ~24px
+$line-height-computed:    floor(($font-size-base * $line-height-base)); // ~24px
 
 // Set the global measure (range: 1 - 9)
 $ebm-times: 7;
@@ -346,7 +346,7 @@ $loop-limit: 10;
 
 // Define the em-base for rems to px conversion
 $px-to-rems: true;    // True if you want them on rems
-$em-base: $font-size-root;
+$em-base: $font-size-base;
 
 // Include and determine border radius:
 $rounded-borders: true;  // If no bootstrap

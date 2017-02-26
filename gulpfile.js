@@ -1,14 +1,15 @@
-let gulp        = require('gulp');
-let sass        = require('gulp-sass');
-let rollup      = require('rollup-stream');
-let gutil       = require('gulp-util');
-let buffer      = require('gulp-buffer');
-let rename      = require('gulp-rename');
-let sourcemaps  = require('gulp-sourcemaps');
-let uglify      = require('gulp-uglify');
-let source      = require('vinyl-source-stream');
+let gulp = require('gulp');
+let sass = require('gulp-sass');
+let rollup = require('rollup-stream');
+let gutil = require('gulp-util');
+let buffer = require('gulp-buffer');
+let rename = require('gulp-rename');
+let sourcemaps = require('gulp-sourcemaps');
+let uglify = require('gulp-uglify');
+let autoprefixer = require('gulp-autoprefixer');
+let source = require('vinyl-source-stream');
 let resolveNode = require('rollup-plugin-node-resolve')
-let commons     = require('rollup-plugin-commonjs');
+let commons = require('rollup-plugin-commonjs');
 
 let fs                = require('fs');
 let path              = require('path');
@@ -19,8 +20,8 @@ let jsTaskList        = [];
 let watchTaskList     = [];
 
 // SRC PATH definitions
-let publicFolder = './PUBLIC';
-let srcFolder = './SRC_FOLDER';
+let publicFolder = '.';
+let srcFolder = '.';
 
 let cssSrcPath = `${srcFolder}/sass`;
 let cssDest    = `${publicFolder}/css`;
@@ -62,6 +63,11 @@ cssTaskDictionary.forEach(taskDef => {
   gulp.task(taskName, () => {
     gulp.src([srcPathFile])
       .pipe(sass(outputStyle).on('error', sass.logError))
+      .pipe(autoprefixer({
+        browsers: ['last 2 versions'],
+        cascade: false,
+        flexbox: true,
+        }))
       .pipe(gulp.dest(path.join(cssDest, taskDef.module, taskDef.ctrl))
     );
   });

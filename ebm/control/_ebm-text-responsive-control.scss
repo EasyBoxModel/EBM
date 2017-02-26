@@ -1,16 +1,16 @@
 /* EBM:RESPONSIVE FONT RESIZE */
 html {
-  font-size: $font-size-root;
+  font-size: $font-size-base;
 }
 
 @include media-breakpoint-up(xs) {
   html {
-    font-size: $font-size-root - 3;
+    font-size: $font-size-base - 3;
   }
 }
 
 @include media-breakpoint-up(sm) {
   html {
-    font-size: $font-size-root - 2;
+    font-size: $font-size-base - 2;
   }
 }

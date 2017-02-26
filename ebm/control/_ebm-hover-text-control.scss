@@ -1,24 +1,24 @@
 @mixin attribute-hover {
-	@include position(absolute, 1px null null 152%);
-	font-size: rem(10px);
-	border-radius: 2px;
-	background: black;
-	padding: 2.5px;
-	line-height: 1;
-	color: white;
-	z-index: 900;
-	
-	display: none;
+    @include position(absolute, 1px null null 152%);
+    font-size: px-to-rem(10px);
+    border-radius: 2px;
+    background: black;
+    padding: 2.5px;
+    line-height: 1;
+    color: white;
+    z-index: 900;
+
+    display: none;
 }
 
 [hover-text] {
-	position: relative;
-	&:hover {
-		cursor: pointer;
-		&:after {
-			@include attribute-hover;
-			content: attr(hover-text);
-			display: block;
-		}
-	}
+    position: relative;
+    &:hover {
+        cursor: pointer;
+        &:after {
+            @include attribute-hover;
+            content: attr(hover-text);
+            display: block;
+        }
+    }
 }

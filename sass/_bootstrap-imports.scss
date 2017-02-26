@@ -1,49 +1,59 @@
 // Core variables and mixins
-@import "variables";
-@import "mixins";
+@import "./third-party/bootstrap4/variables";
+@import "./third-party/bootstrap4/mixins";
 
 // // Reset and dependencies
-@import "normalize";
-@import "print";
+@import "./third-party/bootstrap4/normalize";
+@import "./third-party/bootstrap4/print";
 
 // Core CSS
-@import "reboot";
-@import "type";
-@import "images";
-// @import "code";
-@import "grid";
-// @import "tables";
-// @import "forms";
-@import "buttons";
+@import "./third-party/bootstrap4/reboot";
+@import "./third-party/bootstrap4/type";
+@import "./third-party/bootstrap4/images";
+// @import "./third-party/bootstrap4/code";
+@import "./third-party/bootstrap4/grid";
+// @import "./third-party/bootstrap4/tables";
+// @import "./third-party/bootstrap4/forms";
+@import "./third-party/bootstrap4/buttons";
 
 // // Components
-// @import "animation";
-// @import "dropdown";
-// @import "button-group";
-// @import "input-group";
-// @import "custom-forms";
-// @import "nav";
-// @import "navbar";
-// @import "card";
-// @import "breadcrumb";
-// @import "pagination";
-// @import "pager";
-// @import "labels";
-// @import "jumbotron";
-// @import "alert";
-// @import "progress";
-// @import "media";
-// @import "list-group";
-// @import "responsive-embed";
-// @import "close";
+// @import "./third-party/bootstrap4/animation";
+// @import "./third-party/bootstrap4/dropdown";
+// @import "./third-party/bootstrap4/button-group";
+// @import "./third-party/bootstrap4/input-group";
+// @import "./third-party/bootstrap4/custom-forms";
+// @import "./third-party/bootstrap4/nav";
+// @import "./third-party/bootstrap4/navbar";
+// @import "./third-party/bootstrap4/card";
+// @import "./third-party/bootstrap4/breadcrumb";
+// @import "./third-party/bootstrap4/pagination";
+// @import "./third-party/bootstrap4/pager";
+// @import "./third-party/bootstrap4/labels";
+// @import "./third-party/bootstrap4/jumbotron";
+// @import "./third-party/bootstrap4/alert";
+// @import "./third-party/bootstrap4/progress";
+// @import "./third-party/bootstrap4/media";
+// @import "./third-party/bootstrap4/list-group";
+// @import "./third-party/bootstrap4/responsive-embed";
+// @import "./third-party/bootstrap4/close";
 
 // Components w/ JavaScript
-// @import "modal";
-// @import "tooltip";
-// @import "popover";
-// @import "carousel";
+// @import "./third-party/bootstrap4/modal";
+// @import "./third-party/bootstrap4/tooltip";
+// @import "./third-party/bootstrap4/popover";
+// @import "./third-party/bootstrap4/carousel";
 
 // Utility classes
-@import "utilities";
-@import "utilities-spacing";
-@import "utilities-responsive";
+// @import "./third-party/bootstrap4/utilities/align";
+@import "./third-party/bootstrap4/utilities/background";
+// @import "./third-party/bootstrap4/utilities/borders";
+@import "./third-party/bootstrap4/utilities/clearfix";
+@import "./third-party/bootstrap4/utilities/display";
+// @import "./third-party/bootstrap4/utilities/flex";
+@import "./third-party/bootstrap4/utilities/float";
+// @import "./third-party/bootstrap4/utilities/position";
+@import "./third-party/bootstrap4/utilities/screenreaders";
+// @import "./third-party/bootstrap4/utilities/sizing";
+// @import "./third-party/bootstrap4/utilities/spacing";
+@import "./third-party/bootstrap4/utilities/text";
+@import "./third-party/bootstrap4/utilities/visibility";

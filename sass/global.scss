@@ -1,101 +1,101 @@
 @charset "UTF-8";
 
-@import "./SRC_FOLDER/third-party/bootstrap4/variables";
-@import "./SRC_FOLDER/sass/bootstrap-config";
-@import "./SRC_FOLDER/third-party/bourbon/bourbon";
+@import "./third-party/bootstrap4/variables";
+@import "./sass/bootstrap-imports";
+@import "./third-party/bourbon/bourbon";
 
 // EBM variables
-@import "./SRC_FOLDER/sass/ebm-variables";
+@import "./sass/ebm-variables";
 
 // EBM Helpers
-@import "./SRC_FOLDER/ebm/helpers/ebm-helpers";
+@import "./ebm/helpers/ebm-helpers";
 
 // EBM Fonts setup
-@import "./SRC_FOLDER/sass/ebm-fonts-setup";
+@import "./sass/ebm-fonts-setup";
 
 // Boostrap custom overrides
-@import "./SRC_FOLDER/sass/ebm-bootstrap-overrides";
+@import "./sass/ebm-bootstrap-overrides";
 
 // EBM Global Imports
 // EBM Control
-@import "./SRC_FOLDER/ebm/control/ebm-spacing-control";
-@import "./SRC_FOLDER/ebm/control/ebm-spacing-breakpoints-control";
-@import "./SRC_FOLDER/ebm/control/ebm-spacing-children-control";
-@import "./SRC_FOLDER/ebm/control/ebm-spacing-children-breakpoints-control";
-@import "./SRC_FOLDER/ebm/control/ebm-color-text-control";
-@import "./SRC_FOLDER/ebm/control/ebm-color-bg-control";
-@import "./SRC_FOLDER/ebm/control/ebm-container-control";
-@import "./SRC_FOLDER/ebm/control/ebm-text-control";
-@import "./SRC_FOLDER/ebm/control/ebm-min-height-control";
-@import "./SRC_FOLDER/ebm/control/ebm-flexbox-control";
-@import "./SRC_FOLDER/ebm/control/ebm-text-responsive-control";
-@import "./SRC_FOLDER/ebm/control/ebm-display-control";
-@import "./SRC_FOLDER/ebm/control/ebm-bg-img-control";
-// @import "./SRC_FOLDER/ebm/control/ebm-box-shadow-control";
-// @import "./SRC_FOLDER/ebm/control/ebm-text-shadow-control";
-// @import "./SRC_FOLDER/ebm/control/ebm-box-model-percentage-control";
-// @import "./SRC_FOLDER/ebm/control/ebm-box-model-pseudo-control";
-// @import "./SRC_FOLDER/ebm/control/ebm-border-control";
-// @import "./SRC_FOLDER/ebm/control/ebm-color-bg-hover-control";
-// @import "./SRC_FOLDER/ebm/control/ebm-color-bg-rgba-control";
-// @import "./SRC_FOLDER/ebm/control/ebm-color-grid-control";
-// @import "./SRC_FOLDER/ebm/control/ebm-color-random-color-control";
-// @import "./SRC_FOLDER/ebm/control/ebm-color-text-children-control";
-// @import "./SRC_FOLDER/ebm/control/ebm-color-text-hover-control";
-// @import "./SRC_FOLDER/ebm/control/ebm-flexbox-breakpoints-control";
-// @import "./SRC_FOLDER/ebm/control/ebm-hover-text-control";
-// @import "./SRC_FOLDER/ebm/control/ebm-ie-control";
-// @import "./SRC_FOLDER/ebm/control/ebm-text-align-control";
-// @import "./SRC_FOLDER/ebm/control/ebm-text-lead-children-control";
-// @import "./SRC_FOLDER/ebm/control/ebm-text-responsive-headings-control"; // Deprecated as of Bootstrap 4 update
-// @import "./SRC_FOLDER/ebm/control/ebm-text-transforms-control";
-// @import "./SRC_FOLDER/ebm/control/ebm-position-control";
+@import "./ebm/control/ebm-spacing-control";
+@import "./ebm/control/ebm-spacing-breakpoints-control";
+@import "./ebm/control/ebm-spacing-children-control";
+@import "./ebm/control/ebm-spacing-children-breakpoints-control";
+@import "./ebm/control/ebm-color-text-control";
+@import "./ebm/control/ebm-color-bg-control";
+@import "./ebm/control/ebm-container-control";
+@import "./ebm/control/ebm-text-control";
+@import "./ebm/control/ebm-min-height-control";
+@import "./ebm/control/ebm-flexbox-control";
+@import "./ebm/control/ebm-text-responsive-control";
+@import "./ebm/control/ebm-display-control";
+@import "./ebm/control/ebm-bg-img-control";
+// @import "./ebm/control/ebm-box-shadow-control";
+// @import "./ebm/control/ebm-text-shadow-control";
+// @import "./ebm/control/ebm-box-model-percentage-control";
+// @import "./ebm/control/ebm-box-model-pseudo-control";
+// @import "./ebm/control/ebm-border-control";
+// @import "./ebm/control/ebm-color-bg-hover-control";
+// @import "./ebm/control/ebm-color-bg-rgba-control";
+// @import "./ebm/control/ebm-color-grid-control";
+// @import "./ebm/control/ebm-color-random-color-control";
+// @import "./ebm/control/ebm-color-text-children-control";
+// @import "./ebm/control/ebm-color-text-hover-control";
+// @import "./ebm/control/ebm-flexbox-breakpoints-control";
+// @import "./ebm/control/ebm-hover-text-control";
+// @import "./ebm/control/ebm-ie-control";
+// @import "./ebm/control/ebm-text-align-control";
+// @import "./ebm/control/ebm-text-lead-children-control";
+// @import "./ebm/control/ebm-text-responsive-headings-control"; // Deprecated as of Bootstrap 4 update
+// @import "./ebm/control/ebm-text-transforms-control";
+// @import "./ebm/control/ebm-position-control";
 
 // BOX MODEL BREAKPOINTS CONTROL
-// @import "./SRC_FOLDER/ebm/control/ebm-box-model-percentage-breakpoints-control";
-// @import "./SRC_FOLDER/ebm/control/ebm-box-model-pseudo-breakpoints-control";
+// @import "./ebm/control/ebm-box-model-percentage-breakpoints-control";
+// @import "./ebm/control/ebm-box-model-pseudo-breakpoints-control";
 
 // EBM Elements
-@import "./SRC_FOLDER/ebm/elements/ebm-buttons";
-// @import "./SRC_FOLDER/ebm/elements/ebm-buttons-outline";
-// @import "./SRC_FOLDER/ebm/elements/ebm-forms";
-// @import "./SRC_FOLDER/ebm/elements/ebm-icons";
-// @import "./SRC_FOLDER/ebm/elements/ebm-section";
-// @import "./SRC_FOLDER/ebm/elements/ebm-grid-lists";
-// @import "./SRC_FOLDER/ebm/elements/ebm-panels";
-// @import "./SRC_FOLDER/ebm/elements/ebm-accordion";
-// @import "./SRC_FOLDER/ebm/elements/ebm-alerts";
-// @import "./SRC_FOLDER/ebm/elements/ebm-buttons-border-bottom";
-// @import "./SRC_FOLDER/ebm/elements/ebm-buttons-icons-outline";
-// @import "./SRC_FOLDER/ebm/elements/ebm-buttons-icons";
-// @import "./SRC_FOLDER/ebm/elements/ebm-banners";
-// @import "./SRC_FOLDER/ebm/elements/ebm-grid-masonry";
-// @import "./SRC_FOLDER/ebm/elements/ebm-horizontal-rules";
-// @import "./SRC_FOLDER/ebm/elements/ebm-loading";
-// @import "./SRC_FOLDER/ebm/elements/ebm-overlay";
-// @import "./SRC_FOLDER/ebm/elements/ebm-separators";
-// @import "./SRC_FOLDER/ebm/elements/ebm-user-card";
-// @import "./SRC_FOLDER/ebm/elements/ebm-wp-nav-main";
+@import "./ebm/elements/ebm-buttons";
+// @import "./ebm/elements/ebm-buttons-outline";
+// @import "./ebm/elements/ebm-forms";
+// @import "./ebm/elements/ebm-icons";
+// @import "./ebm/elements/ebm-section";
+// @import "./ebm/elements/ebm-grid-lists";
+// @import "./ebm/elements/ebm-panels";
+// @import "./ebm/elements/ebm-accordion";
+// @import "./ebm/elements/ebm-alerts";
+// @import "./ebm/elements/ebm-buttons-border-bottom";
+// @import "./ebm/elements/ebm-buttons-icons-outline";
+// @import "./ebm/elements/ebm-buttons-icons";
+// @import "./ebm/elements/ebm-banners";
+// @import "./ebm/elements/ebm-grid-masonry";
+// @import "./ebm/elements/ebm-horizontal-rules";
+// @import "./ebm/elements/ebm-loading";
+// @import "./ebm/elements/ebm-overlay";
+// @import "./ebm/elements/ebm-separators";
+// @import "./ebm/elements/ebm-user-card";
+// @import "./ebm/elements/ebm-wp-nav-main";
 
 // EBM Modules
-// @import "./SRC_FOLDER/ebm/modules/ebm-mobile-menu";
-// @import "./SRC_FOLDER/ebm/modules/ebm-bg-gallery";
-// @import "./SRC_FOLDER/ebm/modules/ebm-dashboard-wrapper";
-// @import "./SRC_FOLDER/ebm/modules/ebm-experimental";
-// @import "./SRC_FOLDER/ebm/modules/ebm-footer";
-// @import "./SRC_FOLDER/ebm/modules/ebm-header";
-// @import "./SRC_FOLDER/ebm/modules/ebm-header-fixed";
-// @import "./SRC_FOLDER/ebm/modules/ebm-hero-unit";
-// @import "./SRC_FOLDER/ebm/modules/ebm-scrollto-auto-anchors";
-// @import "./SRC_FOLDER/ebm/modules/ebm-section-scroll";
-// @import "./SRC_FOLDER/ebm/modules/ebm-style-guide";
-// @import "./SRC_FOLDER/ebm/modules/ebm-videocover";
+// @import "./ebm/modules/ebm-mobile-menu";
+// @import "./ebm/modules/ebm-bg-gallery";
+// @import "./ebm/modules/ebm-dashboard-wrapper";
+// @import "./ebm/modules/ebm-experimental";
+// @import "./ebm/modules/ebm-footer";
+// @import "./ebm/modules/ebm-header";
+// @import "./ebm/modules/ebm-header-fixed";
+// @import "./ebm/modules/ebm-hero-unit";
+// @import "./ebm/modules/ebm-scrollto-auto-anchors";
+// @import "./ebm/modules/ebm-section-scroll";
+// @import "./ebm/modules/ebm-style-guide";
+// @import "./ebm/modules/ebm-videocover";
 
 // EBM Overrides
-@import "./SRC_FOLDER/sass/ebm-overrides";
+@import "./sass/ebm-overrides";
 
 // Shared styles for all templates
-@import "./SRC_FOLDER/sass/global";
+@import "./sass/ebm-global";
 
 // Third party:
-// @import "./SRC_FOLDER/ebm/animate/animate-init";
+// @import "./ebm/animate/animate-init";

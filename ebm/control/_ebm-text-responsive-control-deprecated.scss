@@ -2,18 +2,18 @@
   DEPRECATED
 */
 html {
-  font-size: $font-size-root;
+  font-size: $font-size-base;
   #{$headings-list},
   #{$headings-class-list} {}
   @media #{$sm-only} {
-    font-size: $font-size-root - 2;
+    font-size: $font-size-base - 2;
     #{$headings-list},
     #{$headings-class-list} {
       // line-height: $headings-line-height - 0.1;
     }
   }
   @media #{$xs-only} {
-    font-size: $font-size-root - 3;
+    font-size: $font-size-base - 3;
     #{$headings-list},
     #{$headings-class-list} {
       // line-height: $headings-line-height - 0.2;

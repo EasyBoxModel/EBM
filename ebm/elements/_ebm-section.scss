@@ -9,7 +9,7 @@
 .section-header {
   @include header-padding;
   @include normalize-text;
-  padding-top: rem($header-height-control) + ($container-fluid * 2);
+  padding-top: px-to-rem($header-height-control) + ($container-fluid * 2);
   color: $gray;
 }
 .section-content {

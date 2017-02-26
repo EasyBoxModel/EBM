@@ -1,87 +1,87 @@
 /*
-	EBM Panels
+    EBM Panels
 */
 .ebm-panel {
-	@include box-shadow-default;
-	border-radius: $border-radius-sm;
-	margin-bottom: rem(42px);
-	background-color: white;
-	> .top, > .center, > .middle, > .bottom {
-		position: relative;		
-	}
-	> .top {
-		@include flex-row-space-between;
-		@include normalize-text;
-		// background-color: $gray-lighter;
-		border-bottom: 1px solid $gray-lightest;
-		border-top: 1px solid $gray-lightest;
-		[class*="col-"], .actions, .panel-title {
-			@include flex-column-center;
-			min-height: 28px;
-		}
-	}
-	> .top, > .bottom {
-		padding: $container-fluid;
-	}
-	> .center, > .middle {
-		// padding: ($container-fluid * 2) 0 0; 
-		&.middle-padding, &.center-padding {
-			padding: $container-fluid;
-		} 
-	}
-	> .bottom {
-		@include normalize-text;
-		border-top: 1px solid $gray-lightest;
-	}
-	.actions {
-		text-align: right;
-		nav {
-			@include children-elements {
-				&:not(:first-child) {
-					margin-left: $container-fluid; 
-				}
-			}
-		}
-	}
-	.panel-title {
-		h2 {
-			font-size: $font-size-h4;
-		}
-	}
+    @include box-shadow-default;
+    border-radius: $border-radius-sm;
+    margin-bottom: px-to-rem(42px);
+    background-color: white;
+    > .top, > .center, > .middle, > .bottom {
+        position: relative;
+    }
+    > .top {
+        @include flex-row-space-between;
+        @include normalize-text;
+        // background-color: $gray-lighter;
+        border-bottom: 1px solid $gray-lightest;
+        border-top: 1px solid $gray-lightest;
+        [class*="col-"], .actions, .panel-title {
+            @include flex-column-center;
+            min-height: 28px;
+        }
+    }
+    > .top, > .bottom {
+        padding: $container-fluid;
+    }
+    > .center, > .middle {
+        // padding: ($container-fluid * 2) 0 0;
+        &.middle-padding, &.center-padding {
+            padding: $container-fluid;
+        }
+    }
+    > .bottom {
+        @include normalize-text;
+        border-top: 1px solid $gray-lightest;
+    }
+    .actions {
+        text-align: right;
+        nav {
+            @include children-elements {
+                &:not(:first-child) {
+                    margin-left: $container-fluid;
+                }
+            }
+        }
+    }
+    .panel-title {
+        h2 {
+            font-size: $font-size-h4;
+        }
+    }
 
-	.ebm-panel {
-		@include box-shadow(none);
-		> .center, > .middle {
-			padding: 0;
-		}	
-		&:first-child {
-			// margin-top: 28px;
-		}
-	}
+    .ebm-panel {
+        @include box-shadow(none);
+        > .center, > .middle {
+            padding: 0;
+        }
+        &:first-child {
+            // margin-top: 28px;
+        }
+    }
 
-	&.panel-table {
-		table {
-			margin-top: 0px;
-		}
-	}
+    &.panel-table {
+        table {
+            margin-top: 0px;
+        }
+    }
 }
 
 @media #{$sm-down} {
-	body {
-		.ebm-panel {
-			> .top {
-				@include flex-column-center;
-				[class*="col-"], .actions, .panel-title {
-					min-height: auto;
-					min-height: initial;
-				}
-			}
-			.panel-title {
-				margin-bottom: $container-fluid;
-			}
-			.actions {
-				text-align: left;
-			}
-		}
-	}
+    body {
+        .ebm-panel {
+            > .top {
+                @include flex-column-center;
+                [class*="col-"], .actions, .panel-title {
+                    min-height: auto;
+                    min-height: initial;
+                }
+            }
+            .panel-title {
+                margin-bottom: $container-fluid;
+            }
+            .actions {
+                text-align: left;
+            }
+        }
+    }
 }

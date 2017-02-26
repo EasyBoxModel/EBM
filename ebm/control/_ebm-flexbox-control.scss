@@ -125,9 +125,9 @@
 // FLEX Children grow
 @for $i from 0 through 7 {
 	.flex-grow-#{$i} {
-		@include flex-grow(#{$i});
+		flex-grow: #{$i};
 		@include children-elements {
-			@include flex-grow(#{$i});
+			flex-grow: #{$i};
 		}
 	}
 }

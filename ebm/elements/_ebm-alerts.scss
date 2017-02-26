@@ -5,7 +5,7 @@ $ebm-alert-left-width-control: 70px;
   border: 2px solid $gray-lightest;
   background-color: white;
   margin-bottom: 21px;
-  margin-bottom: rem(21px);
+  margin-bottom: px-to-rem(21px);
   position: relative;
   .alert-left {
     @include position(absolute, 0 null 0 0);

@@ -1,6 +1,6 @@
 /*
-	EBM:Ref
-	Separators
+    EBM:Ref
+    Separators
 */
 
 $separator-width: 140px;
@@ -10,62 +10,62 @@ $separator-margin-top: $container-fluid / 2;
 $separator-margin-bottom: $container-fluid;
 
 @for $i from 1 through length($brand-colors-sufix-list) {
-	.separator-#{nth($brand-colors-sufix-list, $i)} {
-		background-color: #{nth($brand-colors-list, $i)};
-		margin-bottom: $separator-margin-bottom; 
-		margin-top: $separator-margin-top;
-		width: $separator-width;
-		width: rem($separator-width);
-		height: $separator-height;
-		height: rem($separator-height);
-		@for $z from 1 through length($breakpoints-sufix-list) {
-			&.separator-#{nth($breakpoints-sufix-list, $z)} {
-				width: $separator-width * $z;
-				width: rem($separator-width * $z);
-			}
-		}
-	}
+    .separator-#{nth($brand-colors-sufix-list, $i)} {
+        background-color: #{nth($brand-colors-list, $i)};
+        margin-bottom: $separator-margin-bottom;
+        margin-top: $separator-margin-top;
+        width: $separator-width;
+        width: px-to-rem($separator-width);
+        height: $separator-height;
+        height: px-to-rem($separator-height);
+        @for $z from 1 through length($breakpoints-sufix-list) {
+            &.separator-#{nth($breakpoints-sufix-list, $z)} {
+                width: $separator-width * $z;
+                width: px-to-rem($separator-width * $z);
+            }
+        }
+    }
 }
 @for $i from 1 through length($grayscale-sufix-list) {
-	.separator-#{nth($grayscale-sufix-list, $i)} {
-		background-color: #{nth($grayscale-list, $i)};
-		margin-bottom: $separator-margin-bottom; 
-		margin-top: $separator-margin-top;
-		width: $separator-width;
-		width: rem($separator-width);
-		height: $separator-height;
-		height: rem($separator-height);
-		@for $z from 1 through length($breakpoints-sufix-list) {
-			&.separator-#{nth($breakpoints-sufix-list, $z)} {
-				width: $separator-width * $z;
-				width: rem($separator-width * $z);
-			}
-		}
-	}
+    .separator-#{nth($grayscale-sufix-list, $i)} {
+        background-color: #{nth($grayscale-list, $i)};
+        margin-bottom: $separator-margin-bottom;
+        margin-top: $separator-margin-top;
+        width: $separator-width;
+        width: px-to-rem($separator-width);
+        height: $separator-height;
+        height: px-to-rem($separator-height);
+        @for $z from 1 through length($breakpoints-sufix-list) {
+            &.separator-#{nth($breakpoints-sufix-list, $z)} {
+                width: $separator-width * $z;
+                width: px-to-rem($separator-width * $z);
+            }
+        }
+    }
 }
 @for $i from 1 through length($bluescale-sufix-list) {
-	.separator-#{nth($bluescale-sufix-list, $i)} {
-		background-color: #{nth($bluescale-list, $i)};
-		margin-bottom: $separator-margin-bottom; 
-		margin-top: $separator-margin-top;
-		width: $separator-width;
-		width: rem($separator-width);
-		height: $separator-height;
-		height: rem($separator-height);
-		@for $z from 1 through length($breakpoints-sufix-list) {
-			&.separator-#{nth($breakpoints-sufix-list, $z)} {
-				width: $separator-width * $z;
-				width: rem($separator-width * $z);
-			}
-		}
-	}
+    .separator-#{nth($bluescale-sufix-list, $i)} {
+        background-color: #{nth($bluescale-list, $i)};
+        margin-bottom: $separator-margin-bottom;
+        margin-top: $separator-margin-top;
+        width: $separator-width;
+        width: px-to-rem($separator-width);
+        height: $separator-height;
+        height: px-to-rem($separator-height);
+        @for $z from 1 through length($breakpoints-sufix-list) {
+            &.separator-#{nth($breakpoints-sufix-list, $z)} {
+                width: $separator-width * $z;
+                width: px-to-rem($separator-width * $z);
+            }
+        }
+    }
 }
 
 [class*="separator"] {
-	&.separator-centered {
-		margin: 0 auto;
-	}
-	&.separator-full-width {
-		width: 100%;
-	}
+    &.separator-centered {
+        margin: 0 auto;
+    }
+    &.separator-full-width {
+        width: 100%;
+    }
 }

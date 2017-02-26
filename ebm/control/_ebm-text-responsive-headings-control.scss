@@ -1,4 +1,4 @@
-// LEAD TEXT ELEMENTS 
+// LEAD TEXT ELEMENTS
 #{$text-responsive-elements-list} {
   &.lead {
     font-size: $font-size-base + $text-in-rems-md-up ;
@@ -67,7 +67,7 @@
     @media #{nth($media-control-list, $k)} {
       #{nth($headings-class-list, $i)}-#{nth($breakpoints-sufix-list, $k)} {
         font-size: #{nth($font-size-list, $i)} ;
-        font-size: #{rem(nth($font-size-list, $i))} ;
+        font-size: #{px-to-rem(nth($font-size-list, $i))} ;
       }
     }
   }

@@ -4,54 +4,54 @@
 */
 // HORIZONTAL DISTRIBUTION SHORTHANDS
 @mixin flex-row {
-	@include flex-direction(row);
-	@include display(flex);
+	flex-direction: row;
+	display: flex;
 }
 @mixin flex-row-center {
-	@include justify-content(center);
+	justify-content: center;
 	@include flex-row;
 }
 @mixin flex-row-end {
-	@include justify-content(flex-end);
+	justify-content: flex-end;
 	@include flex-row;
 }
 @mixin flex-row-space-between {
-	@include justify-content(space-between);
+	justify-content: space-between;
 	@include flex-row;
 }
 @mixin flex-row-space-around {
-	@include justify-content(space-around);
+	justify-content: space-around;
 	@include flex-row;
 }
 // VERTICAL DISTRIBUTION SHORTHANDS
 @mixin flex-column {
-	@include flex-direction(column);
-	@include display(flex);
+	flex-direction: column;
+	display: flex;
 }
 @mixin flex-column-center {
-	@include justify-content(center);
+	justify-content: center;
 	@include flex-column;
 }
 @mixin flex-column-end {
-	@include justify-content(flex-end);
+	justify-content: flex-end;
 	@include flex-column;
 }
 @mixin flex-column-space-between {
-	@include justify-content(space-between);
+	justify-content: space-between;
 	@include flex-column;
 }
 @mixin flex-column-space-around {
-	@include justify-content(space-around);
+	justify-content: space-around;
 	@include flex-column;
 }
 
 // FLEX Align
 @mixin flex-align-center {
-	@include align-items(center);
+	align-items: center;
 }
 @mixin flex-align-end {
-	@include align-items(flex-end);
+	align-items: flex-end;
 }
 @mixin flex-align-stretch {
-	@include align-items(stretch);
+	align-items: stretch;
 }

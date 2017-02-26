@@ -2,7 +2,7 @@ $accordion-inactive-state-icon: "\e93a";
 $accordion-active-state-icon: "\e939";
 
 .accordion-wrapper {
-  margin-bottom: rem(21px);
+  margin-bottom: px-to-rem(21px);
   .accordion-item {
     &:first-child {
       .top {

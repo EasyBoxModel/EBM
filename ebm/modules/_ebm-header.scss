@@ -1,5 +1,5 @@
 @mixin header-padding($padding: $header-height-control) {
-  padding: rem($padding) 0;
+  padding: px-to-rem($padding) 0;
 }
 
 .header-padding {
