@@ -195,6 +195,38 @@ $box-model-abbr:
   'mb',
   'ml';
 
+$box-model-xy-abbr:
+  'p',
+  'm';
+
+$box-model-x-abbr:
+  'pr',
+  'pl',
+  'mr',
+  'ml';
+
+$box-model-y-abbr:
+  'pt',
+  'pb',
+  'mt',
+  'mb';
+
+$box-model-xy-sides:
+  'padding',
+  'margin';
+
+$box-model-x-sides:
+  'padding-right',
+  'padding-left',
+  'margin-right',
+  'margin-left';
+
+$box-model-y-sides:
+  'padding-top',
+  'padding-bottom',
+  'margin-top',
+  'margin-bottom';
+
 $box-model-sides:
   'padding',
   'padding-top',
@@ -218,6 +250,22 @@ $box-model-ch-abbr:
   'mr-ch',
   'mb-ch',
   'ml-ch';
+
+$box-model-ch-xy-abbr:
+  'p-ch',
+  'm-ch';
+
+$box-model-ch-x-abbr:
+  'pr-ch',
+  'pl-ch',
+  'mr-ch',
+  'ml-ch';
+
+$box-model-ch-y-abbr:
+  'pt-ch',
+  'pb-ch',
+  'mt-ch',
+  'mb-ch';
 
 $box-model-ch-abbr-percentage:
   'pp-ch',
@@ -328,13 +376,14 @@ $global-sufix:              "ebm-" !default;
 $importantize:              "!important"    !default;
 
 // ALT FONT for FONTS_CUSTOM
-$font-family-alt:         "bariolbold", $font-family-sans-serif;
+$font-family-alt:         "alt-font", $font-family-sans-serif;
 
 // Hero unit
 $hero-unit-height-control: 810px;
 $hero-unit-height-control-mobile: 100vh;
 $header-height-control: 70px;
-$logo-width-control-mobile: 112px;
+$header-height-mobile: $header-height-control - 30;
+$logo-width-control-mobile: 94px;
 $logo-width-control: 132px;
 
 // Accordion
@@ -343,3 +392,6 @@ $accordion-width-control: 35px;
 // Additional screen sizes
 $xl-desktop: 1500px;
 $xxl-desktop: 1980px;
+
+// box model spacing sizes:
+$spacing-sizes: 3;
