@@ -7,6 +7,7 @@ let rename = require('gulp-rename');
 let sourcemaps = require('gulp-sourcemaps');
 let uglify = require('gulp-uglify');
 let autoprefixer = require('gulp-autoprefixer');
+let fileinclude = require('gulp-file-include');
 let source = require('vinyl-source-stream');
 let resolveNode = require('rollup-plugin-node-resolve')
 let commons = require('rollup-plugin-commonjs');
@@ -24,10 +25,13 @@ let publicFolder = '.';
 let srcFolder = '.';
 
 let cssSrcPath = `${srcFolder}/sass`;
-let cssDest    = `${publicFolder}/css`;
+let cssDest    = `${publicFolder}/src/css`;
 
 let jsSrcPath = `${srcFolder}/js/src`;
-let jsDest    = `${publicFolder}/js/build`;
+let jsDest    = `${publicFolder}/src/js`;
+
+let htmlSrcPath = `${srcFolder}/html`;
+let htmlDest    = `${publicFolder}/src`;
 
 // Gather Scss src files to watch and compile
 (fs.readdirSync(cssSrcPath) || []).filter(directory => {
@@ -154,14 +158,26 @@ gulp.task('global', () => {
 });
 watchTaskList.push('global');
 
+// Fileinclude
+gulp.task('fileinclude', function() {
+  gulp.src(['./html/*.html'])
+    .pipe(fileinclude({
+      prefix: '@@',
+      basepath: '@file'
+    }))
+    .pipe(gulp.dest(htmlDest));
+  gulp.watch(`${htmlSrcPath}/*.html`, ['fileinclude']);
+});
+watchTaskList.push('fileinclude');
+
 // Build styles task
 gulp.task('styles', cssTaskList);
 
 // Build js task
 gulp.task('js', jsTaskList);
 
-// Keep watching both CSS and JS changes
+// Keep watching CSS, JS and HTML changes
 gulp.task('watch', watchTaskList);
 
 // Build both CSS and JS tasks in Jenkins build
-gulp.task('default', ['styles', 'js']);
+gulp.task('default', ['styles', 'js', 'fileinclude']);

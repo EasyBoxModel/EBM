@@ -3,10 +3,7 @@
 # @author MadeByGus
 
 ## Gulp dest
-./PUBLIC/js/build
-./PUBLIC/css
-./js/build
-./css
+./src
 
 ## EBM
 style.min.css
