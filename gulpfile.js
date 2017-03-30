@@ -49,8 +49,7 @@ let htmlDest    = `${publicFolder}/src`;
 
 cssTaskDictionary.forEach(taskDef => {
 
-  let action = taskDef.action.replace(/\.scss/, '');
-  action = action.replace(/_/, '');
+  let action = taskDef.action.replace(/\.scss/, '').replace(/_/, '');
   let taskSuffix = '-' + taskDef.module + '-' + taskDef.ctrl + '-' + action;
   let taskName = 'css' + taskSuffix;
   cssTaskList.push(taskName);
