@@ -7,30 +7,36 @@
 // EBM variables
 @import "./sass/ebm-variables";
 
+// EBM Functions
+@import "./ebm/functions/ebm-functions";
+
 // EBM Helpers
 @import "./ebm/helpers/ebm-helpers";
 
 // EBM Fonts setup
 @import "./sass/ebm-fonts-setup";
 
+// EBM Fonts
+@import "./sass/ebm-fonts";
+
 // Boostrap custom overrides
-@import "./sass/ebm-bootstrap-overrides";
+// @import "./sass/ebm-bootstrap-overrides";
 
 // EBM Global Imports
 // EBM Control
-@import "./ebm/control/ebm-spacing-control";
-@import "./ebm/control/ebm-spacing-breakpoints-control";
-@import "./ebm/control/ebm-spacing-children-control";
-@import "./ebm/control/ebm-spacing-children-breakpoints-control";
-@import "./ebm/control/ebm-color-text-control";
-@import "./ebm/control/ebm-color-bg-control";
-@import "./ebm/control/ebm-container-control";
-@import "./ebm/control/ebm-text-control";
-@import "./ebm/control/ebm-min-height-control";
-@import "./ebm/control/ebm-flexbox-control";
+// @import "./ebm/control/ebm-spacing-control";
+// @import "./ebm/control/ebm-spacing-breakpoints-control";
+// @import "./ebm/control/ebm-spacing-children-control";
+// @import "./ebm/control/ebm-spacing-children-breakpoints-control";
+// @import "./ebm/control/ebm-color-text-control";
+// @import "./ebm/control/ebm-color-bg-control";
+// @import "./ebm/control/ebm-container-control";
+// @import "./ebm/control/ebm-text-control";
+// @import "./ebm/control/ebm-min-height-control";
+// @import "./ebm/control/ebm-flexbox-control";
 @import "./ebm/control/ebm-text-responsive-control";
-@import "./ebm/control/ebm-display-control";
-@import "./ebm/control/ebm-bg-img-control";
+// @import "./ebm/control/ebm-display-control";
+// @import "./ebm/control/ebm-bg-img-control";
 // @import "./ebm/control/ebm-box-shadow-control";
 // @import "./ebm/control/ebm-text-shadow-control";
 // @import "./ebm/control/ebm-box-model-percentage-control";
@@ -56,7 +62,7 @@
 // @import "./ebm/control/ebm-box-model-pseudo-breakpoints-control";
 
 // EBM Elements
-@import "./ebm/elements/ebm-buttons";
+// @import "./ebm/elements/ebm-buttons";
 // @import "./ebm/elements/ebm-buttons-outline";
 // @import "./ebm/elements/ebm-forms";
 // @import "./ebm/elements/ebm-icons";
