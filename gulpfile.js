@@ -11,6 +11,7 @@ let fileinclude = require('gulp-file-include');
 let source = require('vinyl-source-stream');
 let resolveNode = require('rollup-plugin-node-resolve')
 let commons = require('rollup-plugin-commonjs');
+let browserSync = require('browser-sync').create();
 
 let fs                = require('fs');
 let path              = require('path');
@@ -71,8 +72,9 @@ cssTaskDictionary.forEach(taskDef => {
         cascade: false,
         flexbox: true,
         }))
-      .pipe(gulp.dest(path.join(cssDest, taskDef.module, taskDef.ctrl))
-    );
+      .pipe(gulp.dest(path.join(cssDest, taskDef.module, taskDef.ctrl)));
+
+    browserSync.reload({stream:true});
   });
 
   // Instantiate ctrl specific watch tasks
@@ -130,6 +132,8 @@ jsTaskDictionary.forEach(taskDef => {
       .pipe(sourcemaps.write('./'))
       .pipe(gulp.dest(path.join(jsDest, module, ctrl)));
 
+    browserSync.reload();
+
     return $rollup;
   });
 
@@ -141,22 +145,6 @@ jsTaskDictionary.forEach(taskDef => {
   })
 });
 
-// Watch for js/control files changes
-// It will trigger all js tasks
-gulp.task('control', () => {
-  gulp.watch(`${publicFolder}/js/control/*.js`, jsTaskList);
-});
-watchTaskList.push('control');
-
-// Watch for css/global
-// Triggers all css tasks
-gulp.task('global', () => {
-  gulp.watch(`${cssSrcPath}/global/*.scss`, cssTaskList);
-  gulp.watch(`${cssSrcPath}/_ebm-overrides.scss`, cssTaskList);
-  gulp.watch(`${cssSrcPath}/global.scss`, cssTaskList);
-});
-watchTaskList.push('global');
-
 // Fileinclude
 gulp.task('fileinclude', function() {
   gulp.src(['./html/*.html'])
@@ -165,9 +153,32 @@ gulp.task('fileinclude', function() {
       basepath: '@file'
     }))
     .pipe(gulp.dest(htmlDest));
+
+  browserSync.reload();
+
   gulp.watch(`${htmlSrcPath}/*.html`, ['fileinclude']);
 });
 watchTaskList.push('fileinclude');
+
+gulp.task('browser-sync', function() {
+  browserSync.init({
+    server: {
+      baseDir: `${publicFolder}/src`,
+    },
+    port: 3000,
+    open: true,
+  });
+});
+watchTaskList.push('browser-sync');
+
+// Watch for global files
+gulp.task('global', () => {
+  gulp.watch(`${cssSrcPath}/common/*.scss`, cssTaskList);
+  gulp.watch(`${cssSrcPath}/*.scss`, cssTaskList);
+  gulp.watch(`${publicFolder}/js/control/*.js`, jsTaskList);
+  gulp.watch(`${publicFolder}/html/**/*.html`, ['fileinclude']);
+});
+watchTaskList.push('global');
 
 // Build styles task
 gulp.task('styles', cssTaskList);
