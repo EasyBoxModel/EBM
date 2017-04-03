@@ -1,0 +1,27 @@
+@for $i from 1 through length($grayscale-list) {
+  .text-#{nth($grayscale-sufix-list, $i)} {
+    @for $j from 1 through length($headings-list) {
+      #{nth($headings-list, $j)},
+      #{nth($headings-class-list, $j)} {
+        color: #{nth($grayscale-list, $i)} !important;
+      }
+    }
+    @for $j from 1 through length($text-responsive-elements-list) {
+      #{nth($text-responsive-elements-list, $j)} {
+        color: #{nth($grayscale-list, $i)} !important;
+      }
+    }
+    a:not(.btn) {
+      color: #{nth($grayscale-list, $i)} !important;
+      &:hover {
+        color: #{darken(nth($grayscale-list, $i), 21%)} !important;
+      }
+    }
+    color: #{nth($grayscale-list, $i)} !important;
+  }
+  a.text-#{nth($grayscale-sufix-list, $i)}:not(.btn) {
+    &:hover {
+      color: #{darken(nth($grayscale-list, $i), 21%)} !important;
+    }
+  }
+}

@@ -1,0 +1,5 @@
+// Grayscale
+@for $i from 1 through length($grayscale-list) {
+  .bg-#{nth($grayscale-sufix-list, $i)} {background-color: #{nth($grayscale-list, $i)}};
+  .bg-#{nth($grayscale-sufix-list, $i)}-shade {background-color: #{darken(nth($grayscale-list, $i), 21%)};}
+}

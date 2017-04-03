@@ -12,6 +12,7 @@ let source = require('vinyl-source-stream');
 let resolveNode = require('rollup-plugin-node-resolve')
 let commons = require('rollup-plugin-commonjs');
 let browserSync = require('browser-sync').create();
+let reload = browserSync.reload;
 
 let fs                = require('fs');
 let path              = require('path');
@@ -73,8 +74,6 @@ cssTaskDictionary.forEach(taskDef => {
         flexbox: true,
         }))
       .pipe(gulp.dest(path.join(cssDest, taskDef.module, taskDef.ctrl)));
-
-    browserSync.reload({stream:true});
   });
 
   // Instantiate ctrl specific watch tasks
@@ -132,8 +131,6 @@ jsTaskDictionary.forEach(taskDef => {
       .pipe(sourcemaps.write('./'))
       .pipe(gulp.dest(path.join(jsDest, module, ctrl)));
 
-    browserSync.reload();
-
     return $rollup;
   });
 
@@ -154,8 +151,6 @@ gulp.task('fileinclude', function() {
     }))
     .pipe(gulp.dest(htmlDest));
 
-  browserSync.reload();
-
   gulp.watch(`${htmlSrcPath}/*.html`, ['fileinclude']);
 });
 watchTaskList.push('fileinclude');
@@ -175,8 +170,13 @@ watchTaskList.push('browser-sync');
 gulp.task('global', () => {
   gulp.watch(`${cssSrcPath}/common/*.scss`, cssTaskList);
   gulp.watch(`${cssSrcPath}/*.scss`, cssTaskList);
+  gulp.watch(`${srcFolder}/ebm/**/**.scss`, cssTaskList);
+  gulp.watch(`${srcFolder}/third-party/bootstrap4/**/**.scss`, cssTaskList);
+  gulp.watch(`${srcFolder}/third-party/animate/**/**.scss`, cssTaskList);
   gulp.watch(`${publicFolder}/js/control/*.js`, jsTaskList);
   gulp.watch(`${publicFolder}/html/**/*.html`, ['fileinclude']);
+
+  gulp.watch(`${publicFolder}/src/**/**`).on('change', reload);
 });
 watchTaskList.push('global');
 

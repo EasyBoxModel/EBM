@@ -1,0 +1,5 @@
+// Bluescale
+@for $i from 1 through length($bluescale-list) {
+  .bg-#{nth($bluescale-sufix-list, $i)} {background-color: #{nth($bluescale-list, $i)}};
+  .bg-#{nth($bluescale-sufix-list, $i)}-shade {background-color: #{darken(nth($bluescale-list, $i), 21%)};}
+}
