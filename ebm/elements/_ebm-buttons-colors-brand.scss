@@ -1,0 +1,18 @@
+a.btn,
+button.btn,
+input[type="submit"].btn,
+.btn {
+    // Brand colors and bluescale extension
+    @for $i from 1 through length($brand-colors-sufix-list) {
+        &.btn-#{nth($brand-colors-sufix-list, $i)} {
+          background-color: #{nth($brand-colors-list, $i)};
+            border-color: #{nth($brand-colors-list, $i)};
+            color: white;
+            &:hover {
+                background-color: #{darken(nth($brand-colors-list, $i), $buttons-custom-color-control)};
+                border-color: #{darken(nth($brand-colors-list, $i), 3%)};
+                color: darken(white, 3%);
+            }
+        }
+    }
+}

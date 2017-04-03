@@ -1,0 +1,18 @@
+a.btn,
+button.btn,
+input[type="submit"].btn,
+.btn {
+    // Bluescale Buttons Extension
+    @for $i from 1 through length($bluescale-sufix-list) {
+        &.btn-#{nth($bluescale-sufix-list, $i)} {
+          background-color: #{nth($bluescale-list, $i)};
+            border-color: #{nth($bluescale-list, $i)};
+            color: white;
+            &:hover {
+                background-color: #{darken(nth($bluescale-list, $i), $buttons-custom-color-control)};
+                border-color: #{darken(nth($bluescale-list, $i), 3%)};
+                color: darken(white, 3%);
+            }
+        }
+    }
+}

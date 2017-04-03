@@ -1,0 +1,15 @@
+// Bootstrap 3 Custom Buttons
+a.btn,
+button.btn,
+input[type="submit"].btn,
+.btn {
+    @for $i from 1 through length($social-colors-list) {
+        &.btn-#{nth($social-colors-sufix-list, $i)} {
+            background: #{nth($social-colors-list, $i)};
+            color: white;
+            &:hover {
+                background: #{darken(nth($social-colors-list, $i), 14%)};
+            }
+        }
+    }
+}

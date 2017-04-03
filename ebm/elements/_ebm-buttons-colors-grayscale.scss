@@ -1,0 +1,31 @@
+a.btn,
+button.btn,
+input[type="submit"].btn,
+.btn {
+    // Grayscale Buttons Extension
+    @for $i from 1 through length($grayscale-sufix-list) {
+        &.btn-#{nth($grayscale-sufix-list, $i)} {
+            $color: #{nth($grayscale-sufix-list, $i)};
+            @if $color == "gray-dark" {
+                color: white;
+            } @else if $color == "gray" {
+                color: white;
+            } @else {
+                color: $body-color;
+            }
+          background-color: #{nth($grayscale-list, $i)};
+            border-color: #{nth($grayscale-list, $i)};
+            &:hover {
+                @if $color == "gray-dark" {
+                    color: $gray-lightest;
+                } @else if $color == "gray" {
+                    color: $gray-lightest;
+                } @else {
+                    color: darken($body-color, 7%);
+                }
+                background-color: #{darken(nth($grayscale-list, $i), $buttons-custom-color-control)};
+                border-color: #{darken(nth($grayscale-list, $i), 3%)};
+            }
+        }
+    }
+}

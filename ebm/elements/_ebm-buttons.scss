@@ -11,86 +11,18 @@ input[type="submit"].btn,
         border-radius: 0 !important;
     }
     &.btn-xl {
-        font-size: $font-size-h3;
-        font-size: px-to-rem($font-size-h3);
-        padding: 12px 21px;
         padding: px-to-rem(12px) px-to-rem(21px);
+        font-size: px-to-rem($font-size-h3);
+        font-size: $font-size-h3;
+        padding: 12px 21px;
     }
     &.btn-xxl {
-        font-size: $font-size-h1;
-        font-size: px-to-rem($font-size-h1);
-        padding: 14px 24px;
         padding: px-to-rem(14px) px-to-rem(24px);
-        // @include light;
+        font-size: px-to-rem($font-size-h1);
+        font-size: $font-size-h1;
+        padding: 14px 24px;
     }
     &.btn-xs {
         font-size: 12px !important;
-    }
-    @for $i from 1 through length($social-colors-list) {
-        &.btn-#{nth($social-colors-sufix-list, $i)} {
-            background: #{nth($social-colors-list, $i)};
-            color: white;
-            &:hover {
-                background: #{darken(nth($social-colors-list, $i), 14%)};
-            }
-        }
-    }
-}
-
-a.btn,
-button.btn,
-input[type="submit"].btn,
-.btn {
-    // Grayscale Buttons Extension
-    @for $i from 1 through length($grayscale-sufix-list) {
-        &.btn-#{nth($grayscale-sufix-list, $i)} {
-            $color: #{nth($grayscale-sufix-list, $i)};
-            @if $color == "gray-dark" {
-                color: white;
-            } @else if $color == "gray" {
-                color: white;
-            } @else {
-                color: $body-color;
-            }
-          background-color: #{nth($grayscale-list, $i)};
-            border-color: #{nth($grayscale-list, $i)};
-            &:hover {
-                @if $color == "gray-dark" {
-                    color: $gray-lightest;
-                } @else if $color == "gray" {
-                    color: $gray-lightest;
-                } @else {
-                    color: darken($body-color, 7%);
-                }
-                background-color: #{darken(nth($grayscale-list, $i), $buttons-custom-color-control)};
-                border-color: #{darken(nth($grayscale-list, $i), 3%)};
-            }
-        }
-    }
-    // Bluescale Buttons Extension
-    @for $i from 1 through length($bluescale-sufix-list) {
-        &.btn-#{nth($bluescale-sufix-list, $i)} {
-          background-color: #{nth($bluescale-list, $i)};
-            border-color: #{nth($bluescale-list, $i)};
-            color: white;
-            &:hover {
-                background-color: #{darken(nth($bluescale-list, $i), $buttons-custom-color-control)};
-                border-color: #{darken(nth($bluescale-list, $i), 3%)};
-                color: darken(white, 3%);
-            }
-        }
-    }
-    // Brand colors and bluescale extension
-    @for $i from 1 through length($brand-colors-sufix-list) {
-        &.btn-#{nth($brand-colors-sufix-list, $i)} {
-          background-color: #{nth($brand-colors-list, $i)};
-            border-color: #{nth($brand-colors-list, $i)};
-            color: white;
-            &:hover {
-                background-color: #{darken(nth($brand-colors-list, $i), $buttons-custom-color-control)};
-                border-color: #{darken(nth($brand-colors-list, $i), 3%)};
-                color: darken(white, 3%);
-            }
-        }
     }
 }
