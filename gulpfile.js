@@ -23,17 +23,17 @@ let jsTaskList        = [];
 let watchTaskList     = [];
 
 // SRC PATH definitions
-let publicFolder = '.';
+let destFolder = '.';
 let srcFolder = '.';
 
 let cssSrcPath = `${srcFolder}/sass`;
-let cssDest    = `${publicFolder}/src/css`;
+let cssDest    = `${destFolder}/src/css`;
 
 let jsSrcPath = `${srcFolder}/js/src`;
-let jsDest    = `${publicFolder}/src/js`;
+let jsDest    = `${destFolder}/src/js`;
 
 let htmlSrcPath = `${srcFolder}/html`;
-let htmlDest    = `${publicFolder}/src`;
+let htmlDest    = `${destFolder}/src`;
 
 // Gather Scss src files to watch and compile
 (fs.readdirSync(cssSrcPath) || []).filter(directory => {
@@ -158,7 +158,7 @@ watchTaskList.push('fileinclude');
 gulp.task('browser-sync', function() {
   browserSync.init({
     server: {
-      baseDir: `${publicFolder}/src`,
+      baseDir: `${destFolder}/src`,
     },
     port: 3000,
     open: true,
@@ -173,10 +173,10 @@ gulp.task('global', () => {
   gulp.watch(`${srcFolder}/ebm/**/**.scss`, cssTaskList);
   gulp.watch(`${srcFolder}/third-party/bootstrap4/**/**.scss`, cssTaskList);
   gulp.watch(`${srcFolder}/third-party/animate/**/**.scss`, cssTaskList);
-  gulp.watch(`${publicFolder}/js/control/*.js`, jsTaskList);
-  gulp.watch(`${publicFolder}/html/**/*.html`, ['fileinclude']);
+  gulp.watch(`${destFolder}/js/control/*.js`, jsTaskList);
+  gulp.watch(`${destFolder}/html/**/*.html`, ['fileinclude']);
 
-  gulp.watch(`${publicFolder}/src/**/**`).on('change', reload);
+  gulp.watch(`${destFolder}/src/**/**`).on('change', reload);
 });
 watchTaskList.push('global');
 
