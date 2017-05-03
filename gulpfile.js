@@ -13,6 +13,8 @@ let resolveNode = require('rollup-plugin-node-resolve')
 let commons = require('rollup-plugin-commonjs');
 let browserSync = require('browser-sync').create();
 let reload = browserSync.reload;
+let moduleImporter = require('sass-module-importer');
+let bourbon = require('node-bourbon');
 
 let fs                = require('fs');
 let path              = require('path');
@@ -57,17 +59,19 @@ cssTaskDictionary.forEach(taskDef => {
   cssTaskList.push(taskName);
 
   // Output compressed styles for prod and dev
-  let outputStyle = {outputStyle: 'expanded'};
+  let sassOptions = {outputStyle: 'expanded'};
   if (process.env.ENV == 'prod' || process.env.ENV == 'dev') {
-    outputStyle.outputStyle = 'compressed';
+    sassOptions.outputStyle = 'compressed';
   }
+  sassOptions.importer = moduleImporter();
+  sassOptions.includePaths = bourbon.includePaths;
 
   // Sass will watch for changes in these actions
   let srcPathFile = path.join(cssSrcPath, taskDef.module, taskDef.ctrl, taskDef.action);
 
   gulp.task(taskName, () => {
     gulp.src([srcPathFile])
-      .pipe(sass(outputStyle).on('error', sass.logError))
+      .pipe(sass(sassOptions).on('error', sass.logError))
       .pipe(autoprefixer({
         browsers: ['last 2 versions'],
         cascade: false,
