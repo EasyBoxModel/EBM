@@ -13,7 +13,6 @@ let resolveNode = require('rollup-plugin-node-resolve')
 let commons = require('rollup-plugin-commonjs');
 let browserSync = require('browser-sync').create();
 let reload = browserSync.reload;
-let moduleImporter = require('sass-module-importer');
 let bourbon = require('node-bourbon');
 
 let fs                = require('fs');
@@ -25,17 +24,17 @@ let jsTaskList        = [];
 let watchTaskList     = [];
 
 // SRC PATH definitions
-let destFolder = '.';
-let srcFolder = '.';
+let destFolder = './build';
+let srcFolder = './src';
 
 let cssSrcPath = `${srcFolder}/sass`;
-let cssDest    = `${destFolder}/src/css`;
+let cssDest    = `${destFolder}/css`;
 
 let jsSrcPath = `${srcFolder}/js/src`;
-let jsDest    = `${destFolder}/src/js`;
+let jsDest    = `${destFolder}/js`;
 
 let htmlSrcPath = `${srcFolder}/html`;
-let htmlDest    = `${destFolder}/src`;
+let htmlDest    = `${destFolder}`;
 
 // Gather Scss src files to watch and compile
 (fs.readdirSync(cssSrcPath) || []).filter(directory => {
@@ -63,7 +62,6 @@ cssTaskDictionary.forEach(taskDef => {
   if (process.env.ENV == 'prod' || process.env.ENV == 'dev') {
     sassOptions.outputStyle = 'compressed';
   }
-  sassOptions.importer = moduleImporter();
   sassOptions.includePaths = bourbon.includePaths;
 
   // Sass will watch for changes in these actions
@@ -88,7 +86,7 @@ cssTaskDictionary.forEach(taskDef => {
   });
 });
 
-// Read ./public/js/src/ files
+// Read ./public/js/build/ files
 (fs.readdirSync(jsSrcPath) || []).filter(directory => {
   return fs.lstatSync(path.join(jsSrcPath, directory)).isDirectory();
 }).forEach(module => {
@@ -148,7 +146,7 @@ jsTaskDictionary.forEach(taskDef => {
 
 // Fileinclude
 gulp.task('fileinclude', function() {
-  gulp.src(['./html/*.html'])
+  gulp.src([`${srcFolder}/html/*.html`])
     .pipe(fileinclude({
       prefix: '@@',
       basepath: '@file'
@@ -162,7 +160,7 @@ watchTaskList.push('fileinclude');
 gulp.task('browser-sync', function() {
   browserSync.init({
     server: {
-      baseDir: `${destFolder}/src`,
+      baseDir: `${destFolder}`,
     },
     port: 3000,
     open: true,
@@ -180,7 +178,7 @@ gulp.task('global', () => {
   gulp.watch(`${destFolder}/js/control/*.js`, jsTaskList);
   gulp.watch(`${destFolder}/html/**/*.html`, ['fileinclude']);
 
-  gulp.watch(`${destFolder}/src/**/**`).on('change', reload);
+  gulp.watch(`${destFolder}/**/**`).on('change', reload);
 });
 watchTaskList.push('global');
 

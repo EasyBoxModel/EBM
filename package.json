@@ -11,7 +11,7 @@
   },
   "author": "netpoe",
   "license": "ISC",
-  "devDependencies": {
+  "dependencies": {
     "bootstrap": "~4.0.0-alpha.6",
     "browser-sync": "^2.18.8",
     "gulp": "^3.9.1",
@@ -30,8 +30,6 @@
     "rollup-plugin-commonjs": "^5.0.4",
     "rollup-plugin-node-resolve": "^2.0.0",
     "rollup-stream": "^1.14.0",
-    "sass-module-importer": "^1.4.0",
     "vinyl-source-stream": "^1.1.0"
-  },
-  "dependencies": {}
+  }
 }
