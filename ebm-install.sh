@@ -17,21 +17,47 @@ function ebm_install
 
     local ebm="./node_modules/ebm"
 
-    mkdir -p $src_directory
-    mv $ebm/gulpfile.js $src_directory
-    mv $ebm/sass $src_directory
-    mv $ebm/js $src_directory
-    mv $ebm/html $src_directory
+    if [ ! -f "./gulpfile.js" ]; then
+        mv $ebm/gulpfile.js .
+    fi
 
-    mkdir -p ./$dest_directory/img
-    mv $ebm/icons $dest_directory
-    mv $ebm/fonts $dest_directory
+    # Handle src files
+    if [ ! -d "$src_directory" ]; then
+        mkdir -p $src_directory
+    fi
 
-    mv $ebm/ebm/control $ebm/
-    mv $ebm/ebm/elements $ebm/
-    mv $ebm/ebm/functions $ebm/
-    mv $ebm/ebm/helpers $ebm/
-    mv $ebm/ebm/modules $ebm/
+    src_files=( 'sass' 'js' 'html' )
+    for file in "${src_files[@]}"
+    do
+        if [ -d "$src_directory/$file" ]; then
+            mv $ebm/$file/* $src_directory/$file
+        else
+            mv $ebm/$file $src_directory
+        fi
+        rm -rf $ebm/$file
+    done
+
+    # Handle destination directory
+    if [ ! -d "$dest_directory" ]; then
+        mkdir ./$dest_directory
+    fi
+
+    dest_directories=( 'icons' 'img' 'fonts' )
+    for directory in "${dest_directories[@]}"
+    do
+        if [ -d "$dest_directory/$directory" ]; then
+            mv $ebm/$directory/* $dest_directory/$directory
+        else
+            mv $ebm/$directory $dest_directory
+        fi
+    done
+
+    # Handle EBM directories
+    ebm_directories=( 'control' 'elements' 'functions' 'helpers' 'modules' )
+    for directory in "${ebm_directories[@]}"
+    do
+        mv $ebm/ebm/$directory $ebm/
+    done
     rm -rf $ebm/ebm
 }
 
