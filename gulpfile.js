@@ -171,7 +171,7 @@ watchTaskList.push('browser-sync');
 // Watch for global files
 gulp.task('global', () => {
   gulp.watch(`${cssSrcPath}/common/*.scss`, cssTaskList);
-  gulp.watch(`${cssSrcPath}/*.scss`, cssTaskList);
+  gulp.watch(`${cssSrcPath}/**/*.scss`, cssTaskList);
   gulp.watch(`${srcFolder}/ebm/**/**.scss`, cssTaskList);
   gulp.watch(`${srcFolder}/third-party/bootstrap4/**/**.scss`, cssTaskList);
   gulp.watch(`${srcFolder}/third-party/animate/**/**.scss`, cssTaskList);
