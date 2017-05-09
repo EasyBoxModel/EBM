@@ -1,23 +1,12 @@
-# Easy Box Model (EBM) 3.0.0 - Gulp Optimized
+# Easy Box Model (EBM) 3.1.0 - Gulp Optimized
 
 ## Getting started
 
-- Install the framework of your preference, `cd` into the `assets` folder (it may be the `public` in most of the cases)
-- `git clone https://github.com/EasyBoxModel/EBM.git .`
-- `npm install`
+- Install the framework of your preference
+- `npm install easyboxmodel/ebm` (make sure you have a package.json file)
+- `sh ./node_modules/ebm/ebm-install <framework_src_directory> <fw_dest_directory>`
 - `gulp` or `gulp watch` to watch for changes
-- Open the `gulpfile.js` and change `PUBLIC` to match the public assets __destination__ folder and `SRC_FOLDER` to match the source folder
-- You may use these handy terminal commands:
-
-```bash
-export dest_path="public"
-export resources_path="resources/assets";
-export resources_esc_path="resources\/assets";
-sed -i '' "s/PUBLIC/$dest_path/g" "gulpfile.js"
-sed -i '' "s/SRC_FOLDER/$resources_esc_path/g" "gulpfile.js"
-sed -i '' "s/SRC_FOLDER/$resources_esc_path/g" "$resources_path/sass/global.scss"
-sed -i '' "s/SRC_FOLDER/$resources_esc_path/g" "$resources_path/sass/_ebm-imports-reference.scss"
-```
+- Open the `gulpfile.js` and change `srcFolder` to match the framework assets source directory and `publicFolder` to match the destination directory
 
 ## Usage
 
@@ -52,6 +41,10 @@ The `profile.scss` file may import the `global.scss` which manages the shared st
 ```
 
 In order to have a `css/users/user/profile.css` file available for your HTML `link` tags, just do a `gulp` or `gulp-styles`. Choose `gulp-watch` instead to watch for changes.
+
+### HTML
+
+The `html` folder will compile your html files to the surce destination directory and you can see your changes in the host you are working on
 
 ### JS
 
