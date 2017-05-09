@@ -1,12 +1,12 @@
-let Vue = require('vue');
+// let Vue = require('vue');
 
-let Component = Vue.extend({
-  template: '#name',
-  data(){
-    return {}
-  },
-  ready(){},
-  methods: {}
-});
+// let Component = Vue.extend({
+//   template: '#name',
+//   data(){
+//     return {}
+//   },
+//   ready(){},
+//   methods: {}
+// });
 
-Vue.component('name', Component);
+// Vue.component('name', Component);

@@ -13,6 +13,7 @@ let resolveNode = require('rollup-plugin-node-resolve')
 let commons = require('rollup-plugin-commonjs');
 let browserSync = require('browser-sync').create();
 let reload = browserSync.reload;
+let bourbon = require('node-bourbon');
 
 let fs                = require('fs');
 let path              = require('path');
@@ -23,17 +24,17 @@ let jsTaskList        = [];
 let watchTaskList     = [];
 
 // SRC PATH definitions
-let publicFolder = '.';
-let srcFolder = '.';
+let destFolder = './build';
+let srcFolder = './src';
 
 let cssSrcPath = `${srcFolder}/sass`;
-let cssDest    = `${publicFolder}/src/css`;
+let cssDest    = `${destFolder}/css`;
 
 let jsSrcPath = `${srcFolder}/js/src`;
-let jsDest    = `${publicFolder}/src/js`;
+let jsDest    = `${destFolder}/js`;
 
 let htmlSrcPath = `${srcFolder}/html`;
-let htmlDest    = `${publicFolder}/src`;
+let htmlDest    = `${destFolder}`;
 
 // Gather Scss src files to watch and compile
 (fs.readdirSync(cssSrcPath) || []).filter(directory => {
@@ -57,17 +58,18 @@ cssTaskDictionary.forEach(taskDef => {
   cssTaskList.push(taskName);
 
   // Output compressed styles for prod and dev
-  let outputStyle = {outputStyle: 'expanded'};
+  let sassOptions = {outputStyle: 'expanded'};
   if (process.env.ENV == 'prod' || process.env.ENV == 'dev') {
-    outputStyle.outputStyle = 'compressed';
+    sassOptions.outputStyle = 'compressed';
   }
+  sassOptions.includePaths = bourbon.includePaths;
 
   // Sass will watch for changes in these actions
   let srcPathFile = path.join(cssSrcPath, taskDef.module, taskDef.ctrl, taskDef.action);
 
   gulp.task(taskName, () => {
     gulp.src([srcPathFile])
-      .pipe(sass(outputStyle).on('error', sass.logError))
+      .pipe(sass(sassOptions).on('error', sass.logError))
       .pipe(autoprefixer({
         browsers: ['last 2 versions'],
         cascade: false,
@@ -84,7 +86,7 @@ cssTaskDictionary.forEach(taskDef => {
   });
 });
 
-// Read ./public/js/src/ files
+// Read ./public/js/build/ files
 (fs.readdirSync(jsSrcPath) || []).filter(directory => {
   return fs.lstatSync(path.join(jsSrcPath, directory)).isDirectory();
 }).forEach(module => {
@@ -144,7 +146,7 @@ jsTaskDictionary.forEach(taskDef => {
 
 // Fileinclude
 gulp.task('fileinclude', function() {
-  gulp.src(['./html/*.html'])
+  gulp.src([`${srcFolder}/html/*.html`])
     .pipe(fileinclude({
       prefix: '@@',
       basepath: '@file'
@@ -158,7 +160,7 @@ watchTaskList.push('fileinclude');
 gulp.task('browser-sync', function() {
   browserSync.init({
     server: {
-      baseDir: `${publicFolder}/src`,
+      baseDir: `${destFolder}`,
     },
     port: 3000,
     open: true,
@@ -169,14 +171,14 @@ watchTaskList.push('browser-sync');
 // Watch for global files
 gulp.task('global', () => {
   gulp.watch(`${cssSrcPath}/common/*.scss`, cssTaskList);
-  gulp.watch(`${cssSrcPath}/*.scss`, cssTaskList);
+  gulp.watch(`${cssSrcPath}/**/*.scss`, cssTaskList);
   gulp.watch(`${srcFolder}/ebm/**/**.scss`, cssTaskList);
   gulp.watch(`${srcFolder}/third-party/bootstrap4/**/**.scss`, cssTaskList);
   gulp.watch(`${srcFolder}/third-party/animate/**/**.scss`, cssTaskList);
-  gulp.watch(`${publicFolder}/js/control/*.js`, jsTaskList);
-  gulp.watch(`${publicFolder}/html/**/*.html`, ['fileinclude']);
+  gulp.watch(`${destFolder}/js/control/*.js`, jsTaskList);
+  gulp.watch(`${destFolder}/html/**/*.html`, ['fileinclude']);
 
-  gulp.watch(`${publicFolder}/src/**/**`).on('change', reload);
+  gulp.watch(`${destFolder}/**/**`).on('change', reload);
 });
 watchTaskList.push('global');
 
