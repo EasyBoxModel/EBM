@@ -5,6 +5,11 @@
   @include flex-column-space-between;
 }
 .section-header,
+.section-content,
+.section-footer {
+  position: relative;
+}
+.section-header,
 .section-footer {}
 .section-header {
   @include header-padding;
