@@ -11,8 +11,8 @@ $custom-radio-label-color: $brand-info;
 .custom-radio-checkbox {
   input[type="radio"],
   input[type="checkbox"] {
-    visibility: hidden;
     position: absolute;
+    opacity: 0;
     &:checked + label {
       @include custom-radio-label;
     }
