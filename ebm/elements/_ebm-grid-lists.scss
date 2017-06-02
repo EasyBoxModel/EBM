@@ -10,6 +10,9 @@ $grid-list-item-height: 350px;
     padding: $container-fluid;
     position: relative;
     float: left;
+    .form-group {
+      margin-bottom: 0;
+    }
   }
   &.grid-list-item-height {
     .grid-list-item,
