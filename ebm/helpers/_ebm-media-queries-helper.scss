@@ -26,27 +26,31 @@ $md-up: "#{$screen} and (min-width: #{$screen-desktop})" !default;
 
 $lg-up: "#{$screen} and (min-width: #{$screen-lg-desktop})" !default;
 
-// VARIABLES LIST FOR EBM 
+$xl-up: "#{$screen} and (min-width: #{$xl-desktop})" !default;
 
-$media-only-list: 
-	$xs-only, 
-	$sm-only, 
-	$md-only, 
-	$lg-only;
+$xxl-up: "#{$screen} and (min-width: #{$xxl-desktop})" !default;
 
-$media-down-list: 
-	$sm-down, 
-	$md-down, 
-	$lg-down;
-	
-$media-up-list: 	
-	$xs-up, 
-	$sm-up, 
-	$md-up, 
-	$lg-up;
+// VARIABLES LIST FOR EBM
 
-$media-control-list: 
-  $xs-only, 
-  $sm-up, 
-  $md-up, 
+$media-only-list:
+  $xs-only,
+  $sm-only,
+  $md-only,
+  $lg-only;
+
+$media-down-list:
+  $sm-down,
+  $md-down,
+  $lg-down;
+
+$media-up-list:
+  $xs-up,
+  $sm-up,
+  $md-up,
+  $lg-up;
+
+$media-control-list:
+  $xs-only,
+  $sm-up,
+  $md-up,
   $lg-up;
