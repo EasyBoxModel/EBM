@@ -3,9 +3,9 @@ $ebm-alert-left-width-control: 70px;
 .ebm-alert {
   @include box-shadow-default;
   border: 2px solid $gray-lightest;
+  margin-bottom: px-to-rem(21px);
   background-color: white;
   margin-bottom: 21px;
-  margin-bottom: px-to-rem(21px);
   position: relative;
   .alert-left {
     @include position(absolute, 0 null 0 0);
@@ -31,6 +31,15 @@ $ebm-alert-left-width-control: 70px;
   .alert-content,
   .alert-footer {
     padding: $container-fluid;
+  }
+  .alert-close {
+    @include position(absolute, get-spacer(2, y) get-spacer(2, y) null null);
+    &:hover {
+      cursor: pointer;
+    }
+    i {
+
+    }
   }
 
   &.ebm-alert-info {
