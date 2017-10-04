@@ -27,22 +27,6 @@ $color-youtube:     #F23030 !default;
 $color-instagram:   #4187FB !default;
 
 // COLOR LISTS
-// EBM:REF
-$grayscale-list:
-  $gray-dark,
-  $gray,
-  $gray-light,
-  $gray-lighter,
-  $gray-lightest,
-  #fff;
-
-$brand-colors-list:
-  $brand-primary,
-  $brand-success,
-  $brand-info,
-  $brand-warning,
-  $brand-danger;
-
 $bluescale-list:
   $blue-darker,
   $blue-dark,
@@ -60,22 +44,6 @@ $social-colors-list:
   $color-linkedin;
 
 // COLOR SUFIX's
-// EBM:REF
-$grayscale-sufix-list:
-  'gray-dark',
-  'gray',
-  'gray-light',
-  'gray-lighter',
-  'gray-lightest',
-  'white';
-
-$brand-colors-sufix-list:
-  'primary',
-  'success',
-  'info',
-  'warning',
-  'danger';
-
 $bluescale-sufix-list:
   'blue-darker',
   'blue-dark',
@@ -299,12 +267,12 @@ $input-type-list:
 
 // Fontsize list
 $font-size-list:
-  $font-size-h1,
-  $font-size-h2,
-  $font-size-h3,
-  $font-size-h4,
-  $font-size-h5,
-  $font-size-h6;
+  $h1-font-size,
+  $h2-font-size,
+  $h3-font-size,
+  $h4-font-size,
+  $h5-font-size,
+  $h6-font-size;
 
 // B4 grid config
 $screen-phone: map-get($grid-breakpoints, sm);
@@ -314,13 +282,13 @@ $screen-lg-desktop: map-get($grid-breakpoints, xl);
 // $screen-xl-desktop: map-get($grid-breakpoints, xl);
 
 // CUSTOM CONTAINER VARIABLES
-$container-xs: 480px + $grid-gutter-width-base;
+$container-xs: 480px + $grid-gutter-width;
 $container-sm: map-get($container-max-widths, sm);
 $container-md: map-get($container-max-widths, md);
 $container-lg: map-get($container-max-widths, lg);
 $container-xl: map-get($container-max-widths, xl);
 $container-xxl: 84rem;
-$container-fluid: $grid-gutter-width-base / 2;
+$container-fluid: $grid-gutter-width / 2;
 
 /*
   Text in rem units
@@ -376,14 +344,15 @@ $global-sufix:              "ebm-" !default;
 $importantize:              "!important"    !default;
 
 // ALT FONT for FONTS_CUSTOM
-$font-family-alt:         "alt-font", $font-family-sans-serif;
+$font-family-alt:         'Oleo Script', cursive, $font-family-sans-serif;
+$font-family-serif:       'Sanchez', cursive, $font-family-sans-serif;
 
 $icon-fonts-path: "/icons/";
 
 // Hero unit
 $hero-unit-height-control: 810px;
 $hero-unit-height-control-mobile: 100vh;
-$header-height-control: 70px;
+$header-height-control: 98px;
 $header-height-mobile: $header-height-control - 30;
 $logo-width-control-mobile: 94px;
 $logo-width-control: 132px;

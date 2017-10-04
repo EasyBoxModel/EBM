@@ -1,3 +1,3 @@
-@function get-spacer($size, $xy){
-  @return map-get(map-get($spacers, $size), $xy);
+@function get-spacer($size){
+  @return map-get($spacers, $size);
 }

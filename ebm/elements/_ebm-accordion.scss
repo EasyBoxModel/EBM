@@ -16,7 +16,7 @@ $accordion-active-state-icon: "\e939";
     }
     &.active {
       .dropdown-wrapper {
-        background-color: $gray-lightest;
+        background-color: $gray-100;
         &:before {
           content: $accordion-active-state-icon;
         }
@@ -32,12 +32,12 @@ $accordion-active-state-icon: "\e939";
     padding-bottom: $container-fluid;
     padding-left: $container-fluid;
     padding-top: $container-fluid;
-    border: 1px solid $gray-lightest;
+    border: 1px solid $gray-100;
     position: relative;
     &:hover {
       cursor: pointer;
       .dropdown-wrapper {
-        background-color: $gray-lightest;
+        background-color: $gray-100;
       }
     }
   }
@@ -45,7 +45,7 @@ $accordion-active-state-icon: "\e939";
   .dropdown-wrapper {
     @include position(absolute, 0 0 0 null);
     @include flex-column-center;
-    border-left: 1px solid $gray-lightest;
+    border-left: 1px solid $gray-100;
     width: $accordion-width-control;
     text-align: center;
     height: 100%;
@@ -58,7 +58,7 @@ $accordion-active-state-icon: "\e939";
     }
   }
   .middle {
-    border: 1px solid $gray-lightest;
+    border: 1px solid $gray-100;
     padding: $container-fluid;
     display: none;
   }

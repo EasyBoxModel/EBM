@@ -7,9 +7,9 @@ $grid-list-item-height: 350px;
   padding: 0;
   .grid-list-item,
   > li {
-    padding-bottom: get-spacer(3, y);
-    padding-right: get-spacer(3, y);
-    padding-left: get-spacer(3, y);
+    padding-bottom: get-spacer(3);
+    padding-right: get-spacer(3);
+    padding-left: get-spacer(3);
     position: relative;
     float: left;
     .form-group {

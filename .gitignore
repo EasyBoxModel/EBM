@@ -9,6 +9,7 @@
 style.min.css
 style.unprefixed.css
 style.prefixed.css
+/build
 
 ## Node.js
 lib-cov

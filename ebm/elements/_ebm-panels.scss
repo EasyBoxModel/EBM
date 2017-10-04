@@ -13,8 +13,8 @@
         @include flex-row-space-between;
         @include normalize-text;
         // background-color: $gray-lighter;
-        border-bottom: 1px solid $gray-lightest;
-        border-top: 1px solid $gray-lightest;
+        border-bottom: 1px solid $gray-100;
+        border-top: 1px solid $gray-100;
         [class*="col-"], .actions, .panel-title {
             @include flex-column-center;
             min-height: 28px;
@@ -31,7 +31,7 @@
     }
     > .bottom {
         @include normalize-text;
-        border-top: 1px solid $gray-lightest;
+        border-top: 1px solid $gray-100;
     }
     .actions {
         text-align: right;

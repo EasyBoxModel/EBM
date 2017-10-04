@@ -2,7 +2,7 @@ $ebm-alert-left-width-control: 70px;
 
 .ebm-alert {
   @include box-shadow-default;
-  border: 2px solid $gray-lightest;
+  border: 2px solid $gray-100;
   margin-bottom: px-to-rem(21px);
   background-color: white;
   margin-bottom: 21px;
@@ -11,7 +11,7 @@ $ebm-alert-left-width-control: 70px;
     @include position(absolute, 0 null 0 0);
     @include flex-column-center;
     @include flex-align-center;
-    border-right: 1px solid $gray-lightest;
+    border-right: 1px solid $gray-100;
     height: 100%;
     width: $ebm-alert-left-width-control;
     i {
@@ -23,7 +23,7 @@ $ebm-alert-left-width-control: 70px;
   }
   .alert-header {
     @include normalize-text;
-    border-bottom: 1px solid $gray-lightest;
+    border-bottom: 1px solid $gray-100;
   }
   .alert-content {}
   .alert-footer {}

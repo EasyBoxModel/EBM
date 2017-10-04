@@ -17,9 +17,9 @@ input[type="submit"].btn,
             border-color: #{nth($grayscale-list, $i)};
             &:hover {
                 @if $color == "gray-dark" {
-                    color: $gray-lightest;
+                    color: $gray-100;
                 } @else if $color == "gray" {
-                    color: $gray-lightest;
+                    color: $gray-100;
                 } @else {
                     color: darken($body-color, 7%);
                 }
