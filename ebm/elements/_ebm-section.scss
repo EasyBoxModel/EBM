@@ -1,9 +1,7 @@
 /*
   EBM Section
 */
-.section {
-  @include flex-column-space-between;
-}
+.section {}
 .section-header,
 .section-content,
 .section-footer {
@@ -11,27 +9,14 @@
 }
 .section-header,
 .section-footer {}
-.section-header {
-  @include header-padding;
-  @include normalize-text;
-  color: $gray;
-}
-.section-content {
-  min-height: 40vh;
-}
-.section-footer {
-  @include header-padding($header-height-control / 2);
-  text-align: center;
-}
+.section-header {}
+.section-content {}
+.section-footer {}
 
 @media #{$sm-down} {
   body {
     .section-header,
-    .section-footer {
-      @include header-padding($header-height-control / 2);
-    }
-    .section-content {
-      min-height: 40vh;
-    }
+    .section-footer {}
+    .section-content {}
   }
 }
