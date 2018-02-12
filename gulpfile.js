@@ -13,7 +13,6 @@ let resolveNode = require('rollup-plugin-node-resolve')
 let commons = require('rollup-plugin-commonjs');
 let browserSync = require('browser-sync').create();
 let reload = browserSync.reload;
-let bourbon = require('node-bourbon');
 
 let fs                = require('fs');
 let path              = require('path');
@@ -24,17 +23,17 @@ let jsTaskList        = [];
 let watchTaskList     = [];
 
 // SRC PATH definitions
-let destFolder = './build';
-let srcFolder = './src';
+let publicFolder = './build';
+let srcFolder = '.';
 
 let cssSrcPath = `${srcFolder}/sass`;
-let cssDest    = `${destFolder}/css`;
+let cssDest    = `${publicFolder}/css`;
 
 let jsSrcPath = `${srcFolder}/js/src`;
-let jsDest    = `${destFolder}/js`;
+let jsDest    = `${publicFolder}/js`;
 
 let htmlSrcPath = `${srcFolder}/html`;
-let htmlDest    = `${destFolder}`;
+let htmlDest    = `${publicFolder}`;
 
 // Gather Scss src files to watch and compile
 (fs.readdirSync(cssSrcPath) || []).filter(directory => {
@@ -52,30 +51,31 @@ let htmlDest    = `${destFolder}`;
 
 cssTaskDictionary.forEach(taskDef => {
 
-  let action = taskDef.action.replace(/\.scss/, '').replace(/_/, '');
+  let action = taskDef.action.replace(/\.scss/, '');
+  action = action.replace(/_/, '');
   let taskSuffix = '-' + taskDef.module + '-' + taskDef.ctrl + '-' + action;
   let taskName = 'css' + taskSuffix;
   cssTaskList.push(taskName);
 
   // Output compressed styles for prod and dev
-  let sassOptions = {outputStyle: 'expanded'};
-  if (process.env.ENV == 'prod' || process.env.ENV == 'dev') {
-    sassOptions.outputStyle = 'compressed';
-  }
-  sassOptions.includePaths = bourbon.includePaths;
+  let outputStyle = {outputStyle: 'expanded'};
+  outputStyle.outputStyle = 'compressed';
+  // if (process.env.ENV == 'prod' || process.env.ENV == 'dev') {
+  // }
 
   // Sass will watch for changes in these actions
   let srcPathFile = path.join(cssSrcPath, taskDef.module, taskDef.ctrl, taskDef.action);
 
   gulp.task(taskName, () => {
     gulp.src([srcPathFile])
-      .pipe(sass(sassOptions).on('error', sass.logError))
+      .pipe(sass(outputStyle).on('error', sass.logError))
       .pipe(autoprefixer({
         browsers: ['last 2 versions'],
         cascade: false,
         flexbox: true,
         }))
-      .pipe(gulp.dest(path.join(cssDest, taskDef.module, taskDef.ctrl)));
+      .pipe(gulp.dest(path.join(cssDest, taskDef.module, taskDef.ctrl))
+    );
   });
 
   // Instantiate ctrl specific watch tasks
@@ -86,7 +86,7 @@ cssTaskDictionary.forEach(taskDef => {
   });
 });
 
-// Read ./public/js/build/ files
+// Read ./public/js/src/ files
 (fs.readdirSync(jsSrcPath) || []).filter(directory => {
   return fs.lstatSync(path.join(jsSrcPath, directory)).isDirectory();
 }).forEach(module => {
@@ -144,43 +144,49 @@ jsTaskDictionary.forEach(taskDef => {
   })
 });
 
+// Watch for js/control files changes
+// It will trigger all js tasks
+gulp.task('control', () => {
+  gulp.watch(`${publicFolder}/js/control/*.js`, jsTaskList);
+});
+watchTaskList.push('control');
+
+// Watch for css/global
+// Triggers all css tasks
+gulp.task('global', () => {
+  gulp.watch(`${cssSrcPath}/global/*.scss`, cssTaskList);
+  gulp.watch(`${cssSrcPath}/_ebm-overrides.scss`, cssTaskList);
+  gulp.watch(`${cssSrcPath}/global.scss`, cssTaskList);
+
+  gulp.watch(`${publicFolder}/**/**`).on('change', reload);
+});
+watchTaskList.push('global');
+
 // Fileinclude
 gulp.task('fileinclude', function() {
-  gulp.src([`${srcFolder}/html/*.html`])
+  gulp.src([`!${htmlSrcPath}/includes/**`, `!${htmlSrcPath}/exchange/components/**`, `${htmlSrcPath}/**/*.html`])
     .pipe(fileinclude({
       prefix: '@@',
       basepath: '@file'
     }))
     .pipe(gulp.dest(htmlDest));
-
-  gulp.watch(`${htmlSrcPath}/*.html`, ['fileinclude']);
+  gulp.watch(`${htmlSrcPath}/**/*.html`, ['fileinclude']);
 });
 watchTaskList.push('fileinclude');
 
 gulp.task('browser-sync', function() {
   browserSync.init({
-    server: {
-      baseDir: `${destFolder}`,
-    },
     port: 3000,
-    open: true,
+    open: false,
+    server: {
+      baseDir: htmlDest
+    },
+    ui: {
+      port: 3001
+    }
   });
 });
 watchTaskList.push('browser-sync');
-
-// Watch for global files
-gulp.task('global', () => {
-  gulp.watch(`${cssSrcPath}/common/*.scss`, cssTaskList);
-  gulp.watch(`${cssSrcPath}/**/*.scss`, cssTaskList);
-  gulp.watch(`${srcFolder}/ebm/**/**.scss`, cssTaskList);
-  gulp.watch(`${srcFolder}/third-party/bootstrap4/**/**.scss`, cssTaskList);
-  gulp.watch(`${srcFolder}/third-party/animate/**/**.scss`, cssTaskList);
-  gulp.watch(`${destFolder}/js/control/*.js`, jsTaskList);
-  gulp.watch(`${destFolder}/html/**/*.html`, ['fileinclude']);
-
-  gulp.watch(`${destFolder}/**/**`).on('change', reload);
-});
-watchTaskList.push('global');
 
 // Build styles task
 gulp.task('styles', cssTaskList);
