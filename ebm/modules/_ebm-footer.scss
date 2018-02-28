@@ -1,6 +1,6 @@
 .footer {
   @include normalize-text;
-  background-color: $gray-dark;
+  background-color: $gray-900;
   .row {
     > div {
       @include flex-column-center;
