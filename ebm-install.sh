@@ -27,14 +27,14 @@ function ebm_install
     fi
 
     src_files=( 'sass' 'js' 'html' )
-    for file in "${src_files[@]}"
+    for directory in "${src_files[@]}"
     do
-        if [ -d "$src_directory/$file" ]; then
-            mv $ebm/$file/* $src_directory/$file
+        if [ -d "$src_directory/$directory" ]; then
+            mv $ebm/$directory/* $src_directory/$directory
         else
-            mv $ebm/$file $src_directory
+            mv $ebm/$directory $src_directory
         fi
-        rm -rf $ebm/$file
+        rm -rf $ebm/$directory
     done
 
     # Handle destination directory
@@ -56,9 +56,8 @@ function ebm_install
     ebm_directories=( 'control' 'elements' 'functions' 'helpers' 'modules' )
     for directory in "${ebm_directories[@]}"
     do
-        mv $ebm/ebm/$directory $ebm/
+        mv $ebm/$directory $ebm/
     done
-    rm -rf $ebm/ebm
 }
 
 ebm_install $1 $2

@@ -2,6 +2,7 @@ $ebm-alert-left-width-control: 70px;
 
 .ebm-alert {
   @include box-shadow-default;
+  @include normalize-text;
   border: 2px solid $gray-100;
   margin-bottom: px-to-rem(21px);
   background-color: white;
@@ -15,7 +16,7 @@ $ebm-alert-left-width-control: 70px;
     height: 100%;
     width: $ebm-alert-left-width-control;
     i {
-      font-size: $font-size-h3;
+      font-size: $h3-font-size;
     }
   }
   .alert-right {
@@ -33,7 +34,7 @@ $ebm-alert-left-width-control: 70px;
     padding: $container-fluid;
   }
   .alert-close {
-    @include position(absolute, get-spacer(2, y) get-spacer(2, y) null null);
+    @include position(absolute, get-spacer(2) get-spacer(2) null null);
     &:hover {
       cursor: pointer;
     }
@@ -43,27 +44,27 @@ $ebm-alert-left-width-control: 70px;
   }
 
   &.ebm-alert-info {
-    border-color: $brand-info;
+    border-color: theme-color('info');
     .alert-left {
-      border-color: $brand-info;
+      border-color: theme-color('info');
     }
   }
   &.ebm-alert-danger {
-    border-color: $brand-danger;
+    border-color: theme-color('danger');
     .alert-left {
-      border-color: $brand-danger;
+      border-color: theme-color('danger');
     }
   }
   &.ebm-alert-warning {
-    border-color: $brand-warning;
+    border-color: theme-color('warning');
     .alert-left {
-      border-color: $brand-warning;
+      border-color: theme-color('warning');
     }
   }
   &.ebm-alert-success {
-    border-color: $brand-success;
+    border-color: theme-color('success');
     .alert-left {
-      border-color: $brand-success;
+      border-color: theme-color('success');
     }
   }
 }
