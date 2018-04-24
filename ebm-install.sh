@@ -51,13 +51,6 @@ function ebm_install
             mv $ebm/$directory $dest_directory
         fi
     done
-
-    # Handle EBM directories
-    ebm_directories=( 'control' 'elements' 'functions' 'helpers' 'modules' )
-    for directory in "${ebm_directories[@]}"
-    do
-        mv $ebm/$directory $ebm/
-    done
 }
 
 ebm_install $1 $2
