@@ -1,7 +1,7 @@
 {
   "name": "ebm",
-  "version": "3.1.2",
-  "description": "Easy Box Model (gulp)",
+  "version": "4.0.0",
+  "description": "Easy Box Model (gulp / angular 6)",
   "main": "index.js",
   "private": true,
   "scripts": {},
@@ -12,24 +12,9 @@
   "author": "netpoe",
   "license": "ISC",
   "dependencies": {
-    "bootstrap": "^4.1.0",
-    "browser-sync": "^2.23.7",
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "^5.0.0",
-    "gulp-buffer": "0.0.2",
-    "gulp-file-include": "^2.0.1",
-    "gulp-rename": "^1.2.2",
     "gulp-sass": "^4.0.1",
-    "gulp-sourcemaps": "^2.6.4",
-    "gulp-streamify": "^1.0.2",
-    "gulp-uglify": "^3.0.0",
-    "gulp-util": "^3.0.8",
-    "jquery": "^3.3.1",
-    "node-bourbon": "^4.2.8",
-    "popper.js": "^1.14.3",
-    "rollup-plugin-commonjs": "^9.1.0",
-    "rollup-plugin-node-resolve": "^3.3.0",
-    "rollup-stream": "^1.24.1",
-    "vinyl-source-stream": "^2.0.0"
+    "gulp-style-aliases": "^1.1.11"
   }
 }
